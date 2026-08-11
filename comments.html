@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анализ 1000 комментариев</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/comments.css">
+</head>
+<body class="comments-page">
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <span class="logo__mark">◆</span>
+        <a href="index.html" class="logo__text logo__link">DemoSite</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="comments.html" class="nav__link nav__link--active">Комментарии</a>
+      </nav>
+      <span class="badge" id="total-badge">1000 комментариев</span>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="dashboard-hero container">
+      <p class="hero__label">Сегментация отзывов</p>
+      <h1 class="hero__title">Кто пишет и о чём</h1>
+      <p class="hero__desc">
+        Интерактивный разбор 1000 сгенерированных комментариев.
+        Наведи или кликни на сегмент графика — справа появятся цитаты-источники.
+      </p>
+      <div class="sentiment-row" id="sentiment-row"></div>
+    </section>
+
+    <div class="dashboard-grid container">
+      <section class="panel panel--chart">
+        <div class="panel__head">
+          <h2 class="panel__title">Кто пишет</h2>
+          <p class="panel__sub">Сегмент аудитории · доля от 1000 комментариев</p>
+        </div>
+        <div class="chart-wrap">
+          <svg id="persona-chart" class="donut-chart" viewBox="0 0 420 320" aria-label="График по аудитории"></svg>
+          <ul id="persona-legend" class="legend"></ul>
+        </div>
+      </section>
+
+      <section class="panel panel--chart">
+        <div class="panel__head">
+          <h2 class="panel__title">О чём пишут</h2>
+          <p class="panel__sub">Тема комментария · количество упоминаний</p>
+        </div>
+        <svg id="topic-chart" class="bar-chart" viewBox="0 0 520 360" aria-label="График по темам"></svg>
+      </section>
+
+      <section class="panel panel--heatmap">
+        <div class="panel__head">
+          <h2 class="panel__title">Матрица: аудитория × тема</h2>
+          <p class="panel__sub">Интенсивность цвета = число комментариев · клик для цитат</p>
+        </div>
+        <div id="heatmap" class="heatmap"></div>
+      </section>
+
+      <aside class="panel panel--quotes" id="quotes-panel">
+        <div class="panel__head">
+          <h2 class="panel__title">Цитаты-источники</h2>
+          <p class="panel__sub" id="quotes-filter">Выберите сегмент на графике</p>
+        </div>
+        <div id="quotes-list" class="quotes-list">
+          <div class="quotes-placeholder">
+            <span class="quotes-placeholder__icon">"</span>
+            <p>Наведите на сегмент круговой или столбчатой диаграммы, либо кликните ячейку тепловой карты.</p>
+            <p class="quotes-placeholder__hint">Показываем до 8 цитат с ID, автором, датой и текстом.</p>
+          </div>
+        </div>
+        <div class="quotes-footer">
+          <span id="quotes-count"></span>
+          <button type="button" class="btn-secondary" id="show-more" hidden>Показать ещё</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+
+  <script src="js/comments-data.js"></script>
+  <script src="js/comments-dashboard.js"></script>
+</body>
+</html>
