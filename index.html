@@ -1,83 +1,142 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Демо — сайт-заглушка</title>
+  <title>Revitalift — Dashboard (PULSAR data)</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pulsar.css">
+  <link rel="stylesheet" href="css/blueprint.css">
 </head>
-<body>
-  <header class="header">
+<body class="pulsar-page bp-page">
+  <header class="header pulsar-header">
     <div class="container header__inner">
       <div class="logo">
-        <span class="logo__mark">◆</span>
-        <span class="logo__text">DemoSite</span>
+        <span class="logo__mark pulsar-mark">✦</span>
+        <span class="logo__text">Revitalift <span class="logo__sub">Dashboard</span></span>
       </div>
-      <nav class="nav">
-        <a href="#stats" class="nav__link">Статистика</a>
-        <a href="#products" class="nav__link">Товары</a>
-        <a href="#users" class="nav__link">Пользователи</a>
-        <a href="comments.html" class="nav__link">Комментарии</a>
-        <a href="pulsar-de.html" class="nav__link">PULSAR</a>
-      </nav>
-      <span class="badge">Демо-данные</span>
+      <div class="bp-header__links">
+        <span class="badge pulsar-badge">PULSAR · filter v6 · classified_v5</span>
+        <a class="bp-link" href="blueprint.html">Spec</a>
+        <a class="bp-link" href="demo.html">Old demo</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <p class="hero__label">Сайт-заглушка</p>
-        <h1 class="hero__title">Демонстрация данных</h1>
-        <p class="hero__desc">
-          Временная страница для презентации макета и тестовых данных.
-          Все значения ниже — фиктивные.
+  <main class="pulsar-main">
+    <section class="pulsar-hero container">
+      <div class="pulsar-hero__text">
+        <p class="pulsar-eyebrow">Revitalift · Anti-aging insights</p>
+        <h1 class="pulsar-title">German consumer conversation dashboard</h1>
+        <p class="pulsar-desc">
+          Live view from <strong>38,840 classified German comments</strong> (filter v6 + keyword rules).
+          Data: <code>data/dashboard_generated.js</code> · Chart 6: fixed Appinio survey.
         </p>
       </div>
+      <div class="kpi-row" id="kpi-row"></div>
     </section>
 
-    <section id="stats" class="section">
-      <div class="container">
-        <h2 class="section__title">Ключевые показатели</h2>
-        <div id="stats-grid" class="stats-grid"></div>
+    <div class="pulsar-layout container">
+      <div class="pulsar-charts">
+        <section class="chart-section" id="mood-map">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="mood-eyebrow"></p>
+            <h2 class="section-title" id="mood-title"></h2>
+          </div>
+          <div class="chart-panel">
+            <svg id="mood-chart" viewBox="0 0 320 320" class="mood-svg" aria-label="Mood map"></svg>
+            <div id="mood-legend" class="mood-legend"></div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="topic-landscape">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="topic-eyebrow"></p>
+            <h2 class="section-title" id="topic-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--topics">
+            <p class="topic-split-legend"><span class="topic-split-legend__pos">positive</span><span class="topic-split-legend__neg">negative / warning</span></p>
+            <div id="topics-chart" class="topics-chart" role="list"></div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="segmentation">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="seg-eyebrow"></p>
+            <h2 class="section-title" id="seg-title"></h2>
+          </div>
+          <div class="chart-panel">
+            <svg id="seg-chart" viewBox="0 0 420 420" class="seg-svg" aria-label="Segmentation"></svg>
+            <div id="seg-legend" class="mood-legend"></div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="procedure-effects">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="proc-eyebrow"></p>
+            <h2 class="section-title" id="proc-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--nested">
+            <p class="bubble-hint" id="proc-hint"></p>
+            <div id="proc-chart" class="nested-bars-chart" aria-label="Procedure effects chart"></div>
+            <div id="proc-legend" class="bubble-legend"></div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="skincare-ingredients">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="ing-eyebrow"></p>
+            <h2 class="section-title" id="ing-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--nested">
+            <p class="bubble-hint" id="ing-hint"></p>
+            <div id="ing-chart" class="nested-bars-chart" aria-label="Skincare ingredients chart"></div>
+            <div id="ing-legend" class="bubble-legend"></div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="decision-drivers">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="drv-eyebrow"></p>
+            <h2 class="section-title" id="drv-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--drivers">
+            <p class="bubble-hint" id="drv-source"></p>
+            <div id="drivers-chart" class="drivers-chart"></div>
+          </div>
+        </section>
       </div>
-    </section>
 
-    <section id="products" class="section section--alt">
-      <div class="container">
-        <h2 class="section__title">Каталог товаров</h2>
-        <div id="products-grid" class="cards-grid"></div>
-      </div>
-    </section>
-
-    <section id="users" class="section">
-      <div class="container">
-        <h2 class="section__title">Последние пользователи</h2>
-        <div class="table-wrap">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Имя</th>
-                <th>Email</th>
-                <th>Роль</th>
-                <th>Статус</th>
-              </tr>
-            </thead>
-            <tbody id="users-table"></tbody>
-          </table>
+      <aside class="quotes-panel" id="quotes-panel">
+        <div class="quotes-panel__head">
+          <h3>Quotes from comments</h3>
+          <p id="quote-context">Click a chart segment to see quotes</p>
         </div>
-      </div>
-    </section>
+        <div class="quote-filters" id="quote-filters"></div>
+        <div id="quote-list" class="quote-list">
+          <div class="quote-empty">
+            <div class="quote-empty__icon">❝</div>
+            <p>Click a segment — matching sample quotes appear here.</p>
+          </div>
+        </div>
+        <div class="quotes-panel__foot">
+          <span id="quote-meta"></span>
+          <div class="quote-nav" id="quote-nav">
+            <button type="button" class="quote-nav__btn" id="quote-prev" aria-label="Previous comments" disabled>←</button>
+            <button type="button" class="quote-nav__btn" id="quote-next" aria-label="Next comments" disabled>→</button>
+          </div>
+        </div>
+      </aside>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© 2026 DemoSite — заглушка для демонстрации</p>
-      <p class="footer__note">Данные загружаются из <code>data/demo-data.json</code></p>
-    </div>
-  </footer>
+  <div id="pulsar-tip" class="pulsar-tip" hidden></div>
 
-  <script src="js/app.js"></script>
+  <script src="js/dashboard-taxonomy-de.js"></script>
+  <script src="data/dashboard_generated.js"></script>
+  <script src="data/dashboard_comments.js"></script>
+  <script src="js/dashboard-utils.js"></script>
+  <script src="js/nested-bars.js"></script>
+  <script src="js/dashboard-app.js"></script>
 </body>
 </html>

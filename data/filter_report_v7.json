@@ -1,0 +1,89 @@
+{
+  "version": "v7",
+  "input_file": "merged_all_deduped.csv",
+  "config_file": "data/definite_remove_terms.json",
+  "excluded_sources": [
+    "Forums"
+  ],
+  "require_german": true,
+  "definite_remove_pattern_count": 218,
+  "total_rows": 135493,
+  "kept": 38449,
+  "rejected": 97044,
+  "kept_percent": 28.38,
+  "definite_remove_by_category": {
+    "beauty_keyword_traps": 2956,
+    "automotive": 1547,
+    "offtopic_life": 1203,
+    "tv_anime_gaming_filler": 786,
+    "body_unrelated": 655,
+    "fertility_unrelated_medical": 610,
+    "tmj_bruxism": 520,
+    "tech_streaming": 197
+  },
+  "language_rejects_summary": {
+    "detect": 7509,
+    "short": 516,
+    "detect_failed": 4
+  },
+  "reject_reasons_top30": {
+    "no_beauty_signal": 32884,
+    "source_excluded:Forums": 20921,
+    "keyword_trap:weak_falten_only": 9139,
+    "keyword_trap:filler_without_cosmetic_context": 7964,
+    "too_short": 6832,
+    "language_not_german:detect:en:1.00": 5764,
+    "keyword_trap:politics_without_beauty": 1617,
+    "definite_remove:beauty_keyword_traps:zitronenfalter": 1601,
+    "language_not_german:short:markers:0": 516,
+    "definite_remove:offtopic_life:promi-zähne": 454,
+    "definite_remove:tv_anime_gaming_filler:\\bfiller episode": 440,
+    "definite_remove:offtopic_life:zahnarzt": 408,
+    "definite_remove:tmj_bruxism:\\bkiefer(?!linie)": 357,
+    "definite_remove:beauty_keyword_traps:sauerteig": 350,
+    "keyword_trap:idiom_falten": 342,
+    "definite_remove:fertility_unrelated_medical:hautkrebs": 341,
+    "language_not_german:detect:en:0.86": 310,
+    "definite_remove:automotive:\\bgolf\\b": 302,
+    "keyword_trap:politics_weak_beauty": 284,
+    "definite_remove:automotive:\\bwerkstatt\\b": 281,
+    "definite_remove:tv_anime_gaming_filler:\\banime\\b": 266,
+    "definite_remove:beauty_keyword_traps:wäsche.{0,20}falten": 264,
+    "keyword_trap:offtopic_noise": 223,
+    "keyword_trap:filler_non_cosmetic": 208,
+    "definite_remove:offtopic_life:fahrrad": 192,
+    "language_not_german:detect:en:0.71": 164,
+    "definite_remove:body_unrelated:brustvergrößerung": 148,
+    "definite_remove:beauty_keyword_traps:megathread": 143,
+    "definite_remove:body_unrelated:fettabsaugung": 140,
+    "definite_remove:body_unrelated:\\bbbl\\b": 136
+  },
+  "kept_by_source": {
+    "Instagram Public": 10628,
+    "Reddit": 8938,
+    "Youtube": 5448,
+    "TikTok": 4472,
+    "Facebook Pages": 3657,
+    "Reviews": 2603,
+    "X": 2049,
+    "Blogs": 630,
+    "Threads": 24
+  },
+  "rejected_by_source": {
+    "Reddit": 47734,
+    "Youtube": 20990,
+    "Forums": 20921,
+    "X": 4581,
+    "Instagram Public": 1096,
+    "Blogs": 739,
+    "Facebook Pages": 401,
+    "TikTok": 391,
+    "Reviews": 175,
+    "Threads": 16
+  },
+  "outputs": {
+    "filtered": "data/merged_filtered_v7.csv",
+    "rejected": "data/merged_rejected_v7.csv",
+    "report": "data/filter_report_v7.json"
+  }
+}
