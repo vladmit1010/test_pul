@@ -11,7 +11,15 @@
   }
 
   function displayTopics() {
-    return U ? U.getTopicLandscapeTopics(D.topicLandscape) : [...topicPool()].sort((a, b) => b.count - a.count);
+    const raw = U ? U.getTopicLandscapeTopics(D.topicLandscape) : [...topicPool()].sort((a, b) => b.count - a.count);
+    if (raw && raw.grouped) return raw;
+    return raw;
+  }
+
+  function flatTopicsForKpi() {
+    const d = displayTopics();
+    if (d && d.grouped) return d.flat;
+    return d;
   }
 
   function findTopic(id) {
@@ -22,8 +30,36 @@
   let activeFilter = null;
   let quotePage = 0;
 
-  const commentIndex = window.DashboardCommentIndex;
-  const commentPool = commentIndex?.pool || [];
+  let commentIndex = window.DashboardCommentIndex || null;
+  let commentPool = commentIndex?.pool || [];
+
+  function refreshCommentIndex() {
+    commentIndex = window.DashboardCommentIndex || null;
+    commentPool = commentIndex?.pool || [];
+    if (activeFilter) renderQuotes();
+  }
+
+  // If comments.js used defer, it may arrive after this IIFE
+  if (!commentIndex) {
+    window.addEventListener('load', refreshCommentIndex);
+  }
+  document.addEventListener('DOMContentLoaded', refreshCommentIndex);
+
+  function loadCommentIndexAsync() {
+    if (window.DashboardCommentIndex) {
+      refreshCommentIndex();
+      return;
+    }
+    const existing = document.querySelector('script[data-dashboard-comments]');
+    if (existing) return;
+    const s = document.createElement('script');
+    s.src = 'data/dashboard_comments.js';
+    s.async = true;
+    s.dataset.dashboardComments = '1';
+    s.onload = refreshCommentIndex;
+    s.onerror = () => console.warn('[dashboard] comment index failed to load');
+    document.head.appendChild(s);
+  }
 
   const quoteList = document.getElementById('quote-list');
   const quoteContext = document.getElementById('quote-context');
@@ -120,8 +156,52 @@
     return indices.map((i) => commentPool[i]).filter(Boolean);
   }
 
+  const TOPIC_SENTIMENT = {
+    positive: { label: 'Positive', moods: ['enthusiastic', 'satisfied'] },
+    neutral: { label: 'Neutral', moods: ['seeking', 'conflicted'] },
+    negative: { label: 'Negative / Warning', moods: ['disappointed', 'cautioning'] },
+  };
+
+  function topicSentimentMoods(sentiment) {
+    return TOPIC_SENTIMENT[sentiment]?.moods || [];
+  }
+
   function filterComments(filter) {
     if (!filter) return [];
+    // Ensure late-loaded comment index is picked up
+    if (!commentIndex && window.DashboardCommentIndex) refreshCommentIndex();
+    if (filter.type === 'word') {
+      const term = (filter.id || '').toLowerCase();
+      const pool = commentPool.length ? commentPool : D.comments || [];
+      const segOk = (c) => {
+        if (filter.segment === 'skincare-first') return c.segment === 'skincare-first';
+        if (filter.segment === 'procedure') {
+          return c.segment === 'procedure-open' || c.segment === 'procedure-curious';
+        }
+        return true;
+      };
+      return pool.filter((c) => segOk(c) && String(c.text || '').toLowerCase().includes(term));
+    }
+    if (filter.type === 'concern' || filter.type === 'need' || filter.type === 'path') {
+      const quotes = D.agingPaths?.quotes || {};
+      if (filter.type === 'concern') return quotes[`concern:${filter.id}`] || [];
+      if (filter.type === 'need') return quotes[`need:${filter.id}`] || [];
+      const term = (filter.label || filter.id || '').toLowerCase().split(/[\s/]+/)[0];
+      const pool = commentPool.length ? commentPool : D.comments || [];
+      return pool.filter((c) => String(c.text || '').toLowerCase().includes(term)).slice(0, 80);
+    }
+    if (filter.type === 'retinol-fear' || filter.type === 'retinol-hope') {
+      const quotes = D.retinolDeepDive?.quotes || {};
+      const key = filter.type === 'retinol-fear' ? `fear:${filter.id}` : `hope:${filter.id}`;
+      return quotes[key] || [];
+    }
+    if (filter.type === 'topic-sentiment') {
+      const moods = new Set(topicSentimentMoods(filter.sentiment));
+      const base = commentIndex
+        ? poolComments(commentIndex.topic?.[filter.id])
+        : (D.comments || []).filter((c) => (c.topics || []).includes(filter.id));
+      return base.filter((c) => moods.has(c.mood));
+    }
     if (commentIndex) {
       if (filter.type === 'mood') return poolComments(commentIndex.mood?.[filter.id]);
       if (filter.type === 'topic') return poolComments(commentIndex.topic?.[filter.id]);
@@ -136,21 +216,9 @@
       }
       return [];
     }
-    if (filter.type === 'mood') return D.comments.filter((c) => c.mood === filter.id);
-    if (filter.type === 'topic') return D.comments.filter((c) => (c.topics || []).includes(filter.id));
-    if (filter.type === 'segment') return D.comments.filter((c) => c.segment === filter.id);
-    if (filter.type === 'procedure') return D.comments.filter((c) => c.procedure === filter.id);
-    if (filter.type === 'procedure-tone') {
-      return D.comments.filter(
-        (c) => c.procedure === filter.procedure && c.procedureTone === filter.tone,
-      );
-    }
-    if (filter.type === 'ingredient') return D.comments.filter((c) => c.ingredient === filter.id);
-    if (filter.type === 'ingredient-tone') {
-      return D.comments.filter(
-        (c) => c.ingredient === filter.ingredient && c.ingredientTone === filter.tone,
-      );
-    }
+    if (filter.type === 'mood') return (D.comments || []).filter((c) => c.mood === filter.id);
+    if (filter.type === 'topic') return (D.comments || []).filter((c) => (c.topics || []).includes(filter.id));
+    if (filter.type === 'segment') return (D.comments || []).filter((c) => c.segment === filter.id);
     return [];
   }
 
@@ -158,6 +226,14 @@
     if (!filter) return 0;
     if (filter.type === 'mood') return D.moodMap.moods.find((x) => x.id === filter.id)?.count || 0;
     if (filter.type === 'topic') return findTopic(filter.id)?.count || 0;
+    if (filter.type === 'topic-sentiment') {
+      const t = findTopic(filter.id);
+      if (!t) return 0;
+      if (filter.sentiment === 'positive') return t.positive || 0;
+      if (filter.sentiment === 'neutral') return t.neutral || 0;
+      if (filter.sentiment === 'negative') return t.negative || 0;
+      return t.count || 0;
+    }
     if (filter.type === 'segment') return D.segmentation.segments.find((x) => x.id === filter.id)?.count || 0;
     if (filter.type === 'procedure' || filter.type === 'procedure-tone') {
       const block = U ? U.resolveBubbleChart(D.procedureEffects, 'chart4') : D.procedureEffects;
@@ -184,6 +260,9 @@
     if (!a || !b || a.type !== b.type) return false;
     if (a.type === 'procedure-tone') return a.procedure === b.procedure && a.tone === b.tone;
     if (a.type === 'ingredient-tone') return a.ingredient === b.ingredient && a.tone === b.tone;
+    if (a.type === 'word') return a.id === b.id && a.segment === b.segment;
+    if (a.type === 'path') return a.id === b.id && a.parentId === b.parentId;
+    if (a.type === 'topic-sentiment') return a.id === b.id && a.sentiment === b.sentiment;
     return a.id === b.id;
   }
 
@@ -197,6 +276,9 @@
     });
     document.querySelectorAll('.topic-bar--active, .topic-bar--dim').forEach((el) => {
       el.classList.remove('topic-bar--active', 'topic-bar--dim');
+    });
+    document.querySelectorAll('.topic-bar__fill--active, .topic-bar__fill--dim').forEach((el) => {
+      el.classList.remove('topic-bar__fill--active', 'topic-bar__fill--dim');
     });
     document.querySelectorAll('.driver-bar--active, .driver-bar--dim').forEach((el) => {
       el.classList.remove('driver-bar--active', 'driver-bar--dim');
@@ -221,11 +303,18 @@
         el.classList.toggle('mood-legend__item--active', el.dataset.id === filter.id);
       });
     }
-    if (filter.type === 'topic') {
+    if (filter.type === 'topic' || filter.type === 'topic-sentiment') {
       document.querySelectorAll('.topic-bar').forEach((el) => {
         const match = el.dataset.id === filter.id;
         el.classList.toggle('topic-bar--active', match);
         el.classList.toggle('topic-bar--dim', !match);
+        if (filter.type === 'topic-sentiment') {
+          el.querySelectorAll('[data-sentiment]').forEach((seg) => {
+            const segMatch = match && seg.dataset.sentiment === filter.sentiment;
+            seg.classList.toggle('topic-bar__fill--active', segMatch);
+            seg.classList.toggle('topic-bar__fill--dim', match && !segMatch);
+          });
+        }
       });
     }
     if (filter.type === 'driver') {
@@ -280,6 +369,18 @@
       quoteContext.textContent = `Topic: ${t?.label || filter.id}`;
       chips.push(t?.label, `${t?.count || 0} mentions`);
     }
+    if (filter.type === 'topic-sentiment') {
+      const t = findTopic(filter.id);
+      const sLabel = TOPIC_SENTIMENT[filter.sentiment]?.label || filter.sentiment;
+      const n =
+        filter.sentiment === 'positive'
+          ? t?.positive
+          : filter.sentiment === 'neutral'
+            ? t?.neutral
+            : t?.negative;
+      quoteContext.textContent = `${t?.label || filter.id} · ${sLabel}`;
+      chips.push(t?.label, sLabel, `${n || 0}`);
+    }
     if (filter.type === 'segment') {
       const s = D.segmentation.segments.find((x) => x.id === filter.id);
       quoteContext.textContent = s?.label || filter.id;
@@ -314,6 +415,30 @@
         : resolved.sentiments.find((x) => x.id === filter.tone);
       quoteContext.textContent = `${p?.label} · ${s?.label || filter.tone}`;
       chips.push(p?.label, s?.label);
+    }
+    if (filter.type === 'word') {
+      quoteContext.textContent = `Begriff: ${filter.id}`;
+      chips.push(filter.id, filter.segment === 'skincare-first' ? 'Skincare-First' : 'Procedure');
+    }
+    if (filter.type === 'concern') {
+      quoteContext.textContent = `Concern: ${filter.label || filter.id}`;
+      chips.push('Concern', filter.label || filter.id);
+    }
+    if (filter.type === 'need') {
+      quoteContext.textContent = `Need: ${filter.label || filter.id}`;
+      chips.push('Need', filter.label || filter.id);
+    }
+    if (filter.type === 'path') {
+      quoteContext.textContent = `${filter.parentLabel || ''} → ${filter.label || filter.id}`;
+      chips.push('Path', filter.label || filter.id);
+    }
+    if (filter.type === 'retinol-fear') {
+      quoteContext.textContent = `Retinol Fear: ${filter.label || filter.id}`;
+      chips.push('Retinol', 'Fear', filter.label || filter.id);
+    }
+    if (filter.type === 'retinol-hope') {
+      quoteContext.textContent = `Retinol Hope: ${filter.label || filter.id}`;
+      chips.push('Retinol', 'Hope', filter.label || filter.id);
     }
     quoteFilters.innerHTML = chips.filter(Boolean).map((c) => `<span class="quote-chip">${esc(c)}</span>`).join('');
   }
@@ -369,6 +494,31 @@
     if (quoteNext) quoteNext.disabled = quotePage >= totalPages - 1;
   }
 
+  function corpusFooterBits() {
+    const m = D.meta || {};
+    const bits = [];
+    if (m.period) bits.push(m.period);
+    if (m.platforms_label) bits.push(m.platforms_label);
+    if (m.total_comments) bits.push(`n=${Number(m.total_comments).toLocaleString('de-DE')}`);
+    return bits;
+  }
+
+  function ensureFootnote(panelOrChartId, text) {
+    const panel =
+      typeof panelOrChartId === 'string'
+        ? document.getElementById(panelOrChartId)?.closest('.chart-panel') ||
+          document.getElementById(panelOrChartId)
+        : panelOrChartId;
+    if (!panel || !text) return;
+    let el = panel.querySelector(':scope > .chart-footnote');
+    if (!el) {
+      el = document.createElement('p');
+      el.className = 'chart-footnote';
+      panel.appendChild(el);
+    }
+    el.textContent = text;
+  }
+
   function renderKpis() {
     const row = document.getElementById('kpi-row');
     if (!row) return;
@@ -377,12 +527,12 @@
     const pos = moods
       .filter((m) => m.id === 'enthusiastic' || m.id === 'satisfied')
       .reduce((s, m) => s + m.count, 0);
-    const advisory = moods.find((m) => m.id === 'advisory')?.count || 0;
-    const topTopic = displayTopics()[0] || [...topicPool()].sort((a, b) => b.count - a.count)[0];
+    const advisory = moods.find((m) => m.id === 'cautioning' || m.id === 'advisory')?.count || 0;
+    const topTopic = flatTopicsForKpi()[0] || [...topicPool()].sort((a, b) => b.count - a.count)[0];
     row.innerHTML = [
       { label: 'Comments', value: String(total), hint: 'sample total', color: 'var(--rose)' },
       { label: 'Positive mood', value: `${Math.round((pos / total) * 100)}%`, hint: 'enthusiastic + satisfied', color: 'var(--mint)' },
-      { label: 'Advisory', value: `${Math.round((advisory / total) * 100)}%`, hint: 'warnings & caution', color: 'var(--sky)' },
+      { label: 'Cautioning', value: `${Math.round((advisory / total) * 100)}%`, hint: 'warnings to others', color: 'var(--sky)' },
       { label: `Top topic`, value: String(topTopic?.count || 0), hint: topTopic?.label || '', color: 'var(--lavender)' },
     ]
       .map(
@@ -488,42 +638,105 @@
       })
       .join('');
     bindDonutInteractions(svg, 'mood', 'mood-legend');
+    ensureFootnote(
+      'mood-chart',
+      [...corpusFooterBits(), mm.note || 'Anteile = klassifizierbare Kommentare'].filter(Boolean).join(' · '),
+    );
   }
 
   function renderTopics() {
     const tl = D.topicLandscape;
     document.getElementById('topic-eyebrow').textContent = tl.eyebrow;
     document.getElementById('topic-title').textContent = tl.title;
-    const topics = displayTopics();
-    const max = topics.reduce((m, t) => Math.max(m, t.count), 0) || 1;
+    const display = displayTopics();
     const root = document.getElementById('topics-chart');
-    root.innerHTML = topics
-      .map((t) => {
-        const width = Math.max(4, Math.round((t.count / max) * 100));
-        const posW = t.count ? Math.round((t.positive / t.count) * width) : 0;
-        const negW = width - posW;
-        return `<button type="button" class="topic-bar" data-id="${esc(t.id)}" role="listitem">
+    const legend = document.querySelector('.topic-split-legend');
+    if (legend) {
+      legend.innerHTML =
+        '<span class="topic-split-legend__pos">positive</span>' +
+        '<span class="topic-split-legend__neu">neutral</span>' +
+        '<span class="topic-split-legend__neg">negative / warning</span>';
+    }
+
+    function renderBlock(topics, title) {
+      const max = topics.reduce((m, t) => Math.max(m, t.count), 0) || 1;
+      const head = title ? `<h4 class="topic-block-title">${esc(title)}</h4>` : '';
+      const bars = topics
+        .map((t) => {
+          const scale = Math.max(0.06, t.count / max);
+          const pos = t.positive || 0;
+          const neu = t.neutral || Math.max(0, (t.count || 0) - pos - (t.negative || 0));
+          const neg = t.negative || 0;
+          const seg = (key, n, cls) =>
+            n > 0
+              ? `<span class="${cls}" data-sentiment="${key}" title="${key}: ${n}" style="flex:${n} 1 0"></span>`
+              : '';
+          return `<button type="button" class="topic-bar" data-id="${esc(t.id)}" role="listitem">
           <span class="topic-bar__label">${esc(t.label)}</span>
-          <span class="topic-bar__track-split" style="width:${width}%">
-            <span class="topic-bar__fill-pos" style="width:${posW}%"></span>
-            <span class="topic-bar__fill-neg" style="width:${negW}%"></span>
+          <span class="topic-bar__track-split" aria-hidden="true">
+            <span class="topic-bar__magnitude" style="--bar-scale:${scale.toFixed(4)}">
+              ${seg('positive', pos, 'topic-bar__fill-pos')}
+              ${seg('neutral', neu, 'topic-bar__fill-neu')}
+              ${seg('negative', neg, 'topic-bar__fill-neg')}
+            </span>
           </span>
-          <span class="topic-bar__value">${t.count}</span>
+          <span class="topic-bar__value">${t.count.toLocaleString('de-DE')}</span>
         </button>`;
-      })
-      .join('');
+        })
+        .join('');
+      return `${head}<div class="topic-block">${bars}</div>`;
+    }
+
+    let html = '';
+    let allTopics = [];
+    if (display && display.grouped) {
+      const labels = tl.blocks || { A: 'Verfahren & Wirkstoffe', B: 'Kontext & Haltung' };
+      html = renderBlock(display.A, labels.A) + renderBlock(display.B, labels.B);
+      allTopics = [...display.A, ...display.B];
+    } else {
+      allTopics = display || [];
+      html = renderBlock(allTopics, null);
+    }
+    root.innerHTML = html;
     root.querySelectorAll('.topic-bar').forEach((el) => {
-      const t = topics.find((x) => x.id === el.dataset.id);
-      el.addEventListener('click', () => setFilter({ type: 'topic', id: el.dataset.id }));
+      const t = allTopics.find((x) => x.id === el.dataset.id);
+      el.addEventListener('click', (e) => {
+        const seg = e.target.closest('[data-sentiment]');
+        if (seg && el.contains(seg)) {
+          e.stopPropagation();
+          setFilter({ type: 'topic-sentiment', id: el.dataset.id, sentiment: seg.dataset.sentiment });
+          return;
+        }
+        setFilter({ type: 'topic', id: el.dataset.id });
+      });
       el.addEventListener('mousemove', (e) => {
+        const seg = e.target.closest('[data-sentiment]');
+        const pos = t.positive || 0;
+        const neu = t.neutral || 0;
+        const neg = t.negative || 0;
+        if (seg) {
+          const key = seg.dataset.sentiment;
+          const n = key === 'positive' ? pos : key === 'neutral' ? neu : neg;
+          const label = TOPIC_SENTIMENT[key]?.label || key;
+          showTip(
+            `<strong>${esc(t.label)}</strong><br>${esc(label)}: ${n.toLocaleString('de-DE')} · Klick für Zitate`,
+            e.clientX,
+            e.clientY,
+          );
+          return;
+        }
         showTip(
-          `<strong>${esc(t.label)}</strong><br>${t.count} mentions · +${t.positive} / −${t.negative}`,
+          `<strong>${esc(t.label)}</strong><br>${t.count} mentions · +${pos} / ~${neu} / −${neg}`,
           e.clientX,
           e.clientY,
         );
       });
       el.addEventListener('mouseleave', hideTip);
     });
+    ensureFootnote(
+      'topics-chart',
+      [...corpusFooterBits(), tl.note || 'Mehrfachnennungen möglich'].filter(Boolean).join(' · '),
+    );
   }
 
   function renderSegmentation() {
@@ -576,14 +789,80 @@
       })
       .join('');
     bindDonutInteractions(svg, 'segment', 'seg-legend');
+    ensureFootnote(
+      'seg-chart',
+      [
+        ...corpusFooterBits(),
+        sg.note ||
+          `Positioniert: ${(sg.n_positioned || 0).toLocaleString('de-DE')} · nicht repräsentativ für DE 39–65`,
+      ]
+        .filter(Boolean)
+        .join(' · '),
+    );
+  }
+
+  function renderWordclouds() {
+    if (!window.PulsarWordcloud) return;
+    const skin = D.skincareWordcloud;
+    const proc = D.procedureWordcloud;
+
+    if (proc) {
+      document.getElementById('proc-eyebrow').textContent = proc.eyebrow;
+      document.getElementById('proc-title').textContent = proc.title;
+      // Ensure curious outline is explained in legend
+      const legend = [...(proc.legend || [])];
+      if (!legend.some((l) => /curious/i.test(l.label || ''))) {
+        legend.push({ id: 'curious-mark', label: 'gestrichelt ≈ eher Curious', color: 'transparent' });
+      }
+      window.PulsarWordcloud.render({
+        containerEl: document.getElementById('proc-chart'),
+        legendEl: document.getElementById('proc-legend'),
+        hintEl: document.getElementById('proc-hint'),
+        tableEl: document.getElementById('proc-table'),
+        data: { ...proc, legend },
+        showTip,
+        hideTip,
+        onSelect: (t) => setFilter({ type: 'word', id: t.term, segment: 'procedure' }),
+      });
+      ensureFootnote(
+        'proc-chart',
+        [...corpusFooterBits(), 'Open+Curious normalisiert · gestrichelte Begriffe: Curious-Anteil ≥55%']
+          .filter(Boolean)
+          .join(' · '),
+      );
+    }
+
+    if (skin) {
+      document.getElementById('ing-eyebrow').textContent = skin.eyebrow;
+      document.getElementById('ing-title').textContent = skin.title;
+      window.PulsarWordcloud.render({
+        containerEl: document.getElementById('ing-chart'),
+        legendEl: document.getElementById('ing-legend'),
+        hintEl: document.getElementById('ing-hint'),
+        tableEl: document.getElementById('ing-table'),
+        data: skin,
+        showTip,
+        hideTip,
+        onSelect: (t) => setFilter({ type: 'word', id: t.term, segment: 'skincare-first' }),
+      });
+      ensureFootnote(
+        'ing-chart',
+        [...corpusFooterBits(), 'Skincare-First only · Tabelle = relative Übergewichtung vs. Procedure']
+          .filter(Boolean)
+          .join(' · '),
+      );
+    }
   }
 
   function renderNestedBubbles(cfg, chartId, legendId, hintId, filterPrefix) {
-    if (!window.PulsarNestedBars) return;
+    // Live dashboard uses wordclouds for charts 4–5.
+    if (!window.PulsarNestedBars || !cfg) return;
     const chartKey = filterPrefix === 'procedure' ? 'chart4' : 'chart5';
     const block = U ? U.resolveBubbleChart(cfg, chartKey) : cfg;
-    document.getElementById(hintId.replace('-hint', '-eyebrow')).textContent = block.eyebrow;
-    document.getElementById(hintId.replace('-hint', '-title')).textContent = block.title;
+    const eyebrowEl = document.getElementById(hintId.replace('-hint', '-eyebrow'));
+    const titleEl = document.getElementById(hintId.replace('-hint', '-title'));
+    if (eyebrowEl) eyebrowEl.textContent = block.eyebrow;
+    if (titleEl) titleEl.textContent = block.title;
     window.PulsarNestedBars.renderNestedBars({
       containerEl: document.getElementById(chartId),
       legendEl: document.getElementById(legendId),
@@ -613,6 +892,71 @@
         }
       },
     });
+  }
+
+  function renderRetinolDeepDive() {
+    if (!window.PulsarRetinolTornado || !D.retinolDeepDive) return;
+    const block = D.retinolDeepDive;
+    document.getElementById('retinol-eyebrow').textContent = block.eyebrow;
+    document.getElementById('retinol-title').textContent = block.title;
+    window.PulsarRetinolTornado.render({
+      containerEl: document.getElementById('retinol-chart'),
+      hintEl: document.getElementById('retinol-hint'),
+      data: block,
+      showTip,
+      hideTip,
+      onSelect: (sel) => {
+        setFilter({
+          type: sel.side === 'fear' ? 'retinol-fear' : 'retinol-hope',
+          id: sel.id,
+          label: sel.label,
+        });
+      },
+    });
+    ensureFootnote(
+      'retinol-chart',
+      [
+        ...corpusFooterBits(),
+        `klassifiziert ${(block.n_classified || 0).toLocaleString('de-DE')} / ${(block.n_retinol || 0).toLocaleString('de-DE')}`,
+        `nicht klassifiziert ${block.unclassified_share_pct || 0}%`,
+      ]
+        .filter(Boolean)
+        .join(' · '),
+    );
+  }
+
+  function renderAgingPaths() {
+    if (!window.PulsarAgingPaths || !D.agingPaths) return;
+    const block = D.agingPaths;
+    document.getElementById('paths-eyebrow').textContent = block.eyebrow;
+    document.getElementById('paths-title').textContent = block.title;
+    window.PulsarAgingPaths.render({
+      containerEl: document.getElementById('paths-chart'),
+      hintEl: document.getElementById('paths-hint'),
+      data: block,
+      showTip,
+      hideTip,
+      onSelect: (sel) => {
+        if (!sel) return;
+        setFilter({
+          type: sel.type,
+          id: sel.id,
+          label: sel.label,
+          parentKind: sel.parentKind,
+          parentId: sel.parentId,
+          parentLabel: sel.parentLabel,
+        });
+      },
+    });
+    ensureFootnote(
+      'paths-chart',
+      [
+        ...corpusFooterBits(),
+        `klassifizierbar ${(block.n_classified || 0).toLocaleString('de-DE')} (${block.classified_share_pct || 0}%)`,
+      ]
+        .filter(Boolean)
+        .join(' · '),
+    );
   }
 
   function renderDrivers() {
@@ -672,11 +1016,45 @@
     );
   }
 
-  renderKpis();
-  renderMoodMap();
-  renderTopics();
-  renderSegmentation();
-  renderNestedBubbles(D.procedureEffects, 'proc-chart', 'proc-legend', 'proc-hint', 'procedure');
-  renderNestedBubbles(D.skincareIngredients, 'ing-chart', 'ing-legend', 'ing-hint', 'ingredient');
-  renderDrivers();
+  function safe(name, fn) {
+    try {
+      fn();
+    } catch (err) {
+      console.error(`[dashboard] ${name} failed`, err);
+    }
+  }
+
+  safe('kpis', renderKpis);
+  safe('mood', renderMoodMap);
+  safe('topics', renderTopics);
+  safe('segmentation', renderSegmentation);
+  safe('wordclouds', renderWordclouds);
+  safe('agingPaths', renderAgingPaths);
+  safe('retinol', renderRetinolDeepDive);
+  safe('drivers', renderDrivers);
+
+  (function bindDownloadMenu() {
+    const btn = document.getElementById('download-btn');
+    const panel = document.getElementById('download-panel');
+    if (!btn || !panel) return;
+    const close = () => {
+      panel.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    };
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = panel.hidden;
+      panel.hidden = !open;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', close);
+    panel.addEventListener('click', (e) => e.stopPropagation());
+  })();
+
+  // Load 5MB comment index after first paint — Chrome file:// often freezes on sync parse
+  if (typeof requestAnimationFrame === 'function') {
+    requestAnimationFrame(() => setTimeout(loadCommentIndexAsync, 0));
+  } else {
+    setTimeout(loadCommentIndexAsync, 50);
+  }
 })();

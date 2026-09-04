@@ -1,7 +1,16 @@
 {
-  "topic_threshold": 0.38,
-  "topic_max": 4,
+  "topic_threshold": 0.50,
+  "topic_max": 6,
   "entity_threshold": 0.40,
   "tone_threshold": 0.36,
-  "review_confidence_below": 0.32
+  "review_confidence_below": 0.32,
+  "topic_emb_allowlist": [
+    "aging-signs",
+    "pressure",
+    "safety",
+    "natural",
+    "vitamin-c",
+    "niacinamide-peptides",
+    "hyaluronic-acid"
+  ]
 }

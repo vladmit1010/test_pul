@@ -114,6 +114,12 @@
     }
   },
   "chart1_moodMap": {
+    "schema_note": "LOP REV Dashboard_Prompts — 6 moods. Cautioning wins over positive if concrete warning to others. Conflicted = unresolved ambivalence.",
+    "sentiment_buckets": {
+      "positive": ["enthusiastic", "satisfied"],
+      "neutral": ["seeking", "conflicted"],
+      "negative": ["disappointed", "cautioning"]
+    },
     "moods": [
       {
         "id": "enthusiastic",
@@ -126,9 +132,14 @@
         "color": "#e8c98a"
       },
       {
-        "id": "neutral",
-        "label": "Neutral",
+        "id": "seeking",
+        "label": "Seeking",
         "color": "#b8c4d4"
+      },
+      {
+        "id": "conflicted",
+        "label": "Conflicted",
+        "color": "#c4a882"
       },
       {
         "id": "disappointed",
@@ -136,72 +147,51 @@
         "color": "#c9a0b8"
       },
       {
-        "id": "advisory",
-        "label": "Advisory",
+        "id": "cautioning",
+        "label": "Cautioning",
         "color": "#7eb8d4"
       }
     ]
   },
   "chart2_topicLandscape": {
-    "topN": 10,
+    "topN": 20,
+    "blocks": {
+      "A": "Verfahren & Wirkstoffe",
+      "B": "Kontext & Haltung"
+    },
+    "sentiment_from_mood": {
+      "positive": ["enthusiastic", "satisfied"],
+      "neutral": ["seeking", "conflicted"],
+      "negative": ["disappointed", "cautioning"]
+    },
     "candidates": [
-      {
-        "id": "botox",
-        "label": "Botox / neuromodulators"
-      },
-      {
-        "id": "fillers",
-        "label": "Hyaluronic fillers"
-      },
-      {
-        "id": "laser",
-        "label": "Laser therapies"
-      },
-      {
-        "id": "retinol",
-        "label": "Retinol & retinoids"
-      },
-      {
-        "id": "price",
-        "label": "Cost discussions"
-      },
-      {
-        "id": "facelift",
-        "label": "Surgical facelift"
-      },
-      {
-        "id": "celebrity",
-        "label": "Celebrity / influencer"
-      },
-      {
-        "id": "peel",
-        "label": "Chemical peel / microneedling"
-      },
-      {
-        "id": "pressure",
-        "label": "Societal pressure"
-      },
-      {
-        "id": "spf",
-        "label": "SPF / prevention"
-      },
-      {
-        "id": "threads",
-        "label": "Thread lift / HIFU"
-      },
-      {
-        "id": "natural",
-        "label": "Natural aging / no intervention"
-      }
+      { "id": "botox", "label": "Botox / Neuromodulatoren", "block": "A" },
+      { "id": "fillers", "label": "Hyaluron-Filler", "block": "A" },
+      { "id": "laser", "label": "Laser-Therapien", "block": "A" },
+      { "id": "threads", "label": "Fadenlifting & Ultraschall-Lifting", "block": "A" },
+      { "id": "facelift", "label": "Chirurgische Eingriffe", "block": "A" },
+      { "id": "peel", "label": "Peeling & Microneedling", "block": "A" },
+      { "id": "retinol", "label": "Retinoide", "block": "A" },
+      { "id": "vitamin-c", "label": "Vitamin C", "block": "A" },
+      { "id": "hyaluronic-acid", "label": "Hyaluronsäure (topisch)", "block": "A" },
+      { "id": "niacinamide-peptides", "label": "Niacinamid & Peptide", "block": "A" },
+      { "id": "spf", "label": "Sonnenschutz & Prävention", "block": "A" },
+      { "id": "aging-signs", "label": "Hautalterungs-Zeichen", "block": "B" },
+      { "id": "price", "label": "Kosten & Preis-Leistung", "block": "B" },
+      { "id": "pressure", "label": "Gesellschaftlicher Druck", "block": "B" },
+      { "id": "safety", "label": "Sicherheit & Vertrauen", "block": "B" },
+      { "id": "natural", "label": "Natürlichkeit & Authentizität", "block": "B" },
+      { "id": "celebrity", "label": "Prominente & Influencer-Diskurs", "block": "B" }
     ]
   },
   "chart3_segmentation": {
+    "rule": "Exactly one segment when personal positioning is clear; otherwise segment=null (unpositioned). Percents use positioned subset only.",
     "segments": [
       {
         "id": "procedure-open",
         "label": "Procedure-open",
         "color": "#e8a0bf",
-        "description": "Already had procedures, wants to maintain results"
+        "description": "Already had procedures, wants to maintain / refresh results"
       },
       {
         "id": "procedure-curious",
@@ -213,7 +203,7 @@
         "id": "skincare-first",
         "label": "Skincare-first",
         "color": "#7ecdb8",
-        "description": "No procedures, expects results from skincare"
+        "description": "Rejects or excludes procedures; expects results from skincare"
       }
     ]
   },

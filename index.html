@@ -6,19 +6,29 @@
   <title>Revitalift — Dashboard (PULSAR data)</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pulsar.css">
-  <link rel="stylesheet" href="css/blueprint.css">
 </head>
-<body class="pulsar-page bp-page">
+<body class="pulsar-page">
   <header class="header pulsar-header">
     <div class="container header__inner">
       <div class="logo">
         <span class="logo__mark pulsar-mark">✦</span>
         <span class="logo__text">Revitalift <span class="logo__sub">Dashboard</span></span>
       </div>
-      <div class="bp-header__links">
-        <span class="badge pulsar-badge">PULSAR · filter v6 · classified_v5</span>
-        <a class="bp-link" href="blueprint.html">Spec</a>
-        <a class="bp-link" href="demo.html">Old demo</a>
+      <div class="header__actions">
+        <span class="badge pulsar-badge">PULSAR · filter v7 · classified_v8</span>
+        <div class="download-menu">
+          <button type="button" class="download-btn" id="download-btn" aria-expanded="false" aria-haspopup="true">
+            Daten laden
+          </button>
+          <div class="download-menu__panel" id="download-panel" hidden>
+            <a class="download-menu__link" href="data/export_dashboard_classification_v8.xlsx" download>
+              Klassifikation · XLSX
+            </a>
+            <a class="download-menu__link" href="data/export_comments_v8.csv" download>
+              Rohkommentare · CSV
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -29,8 +39,8 @@
         <p class="pulsar-eyebrow">Revitalift · Anti-aging insights</p>
         <h1 class="pulsar-title">German consumer conversation dashboard</h1>
         <p class="pulsar-desc">
-          Live view from <strong>38,840 classified German comments</strong> (filter v6 + keyword rules).
-          Data: <code>data/dashboard_generated.js</code> · Chart 6: fixed Appinio survey.
+          Live view from <strong>classified German comments</strong> (filter v7 + LOP REV mood/topic rules v8).
+          Data: <code>data/dashboard_generated.js</code> · Chart 8: fixed Appinio survey.
         </p>
       </div>
       <div class="kpi-row" id="kpi-row"></div>
@@ -71,27 +81,55 @@
           </div>
         </section>
 
-        <section class="chart-section" id="procedure-effects">
-          <div class="section-head">
-            <p class="pulsar-eyebrow" id="proc-eyebrow"></p>
-            <h2 class="section-title" id="proc-title"></h2>
-          </div>
-          <div class="chart-panel chart-panel--nested">
-            <p class="bubble-hint" id="proc-hint"></p>
-            <div id="proc-chart" class="nested-bars-chart" aria-label="Procedure effects chart"></div>
-            <div id="proc-legend" class="bubble-legend"></div>
-          </div>
-        </section>
-
         <section class="chart-section" id="skincare-ingredients">
           <div class="section-head">
             <p class="pulsar-eyebrow" id="ing-eyebrow"></p>
             <h2 class="section-title" id="ing-title"></h2>
           </div>
-          <div class="chart-panel chart-panel--nested">
+          <div class="chart-panel chart-panel--wordcloud">
             <p class="bubble-hint" id="ing-hint"></p>
-            <div id="ing-chart" class="nested-bars-chart" aria-label="Skincare ingredients chart"></div>
-            <div id="ing-legend" class="bubble-legend"></div>
+            <div id="ing-legend" class="wc-legend"></div>
+            <div class="wc-layout">
+              <div id="ing-chart" class="wordcloud-host" aria-label="Skincare wordcloud"></div>
+              <div id="ing-table" class="wc-table-host"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="procedure-effects">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="proc-eyebrow"></p>
+            <h2 class="section-title" id="proc-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--wordcloud">
+            <p class="bubble-hint" id="proc-hint"></p>
+            <div id="proc-legend" class="wc-legend"></div>
+            <div class="wc-layout">
+              <div id="proc-chart" class="wordcloud-host" aria-label="Procedure wordcloud"></div>
+              <div id="proc-table" class="wc-table-host"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="aging-paths">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="paths-eyebrow"></p>
+            <h2 class="section-title" id="paths-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--paths">
+            <p class="bubble-hint" id="paths-hint"></p>
+            <div id="paths-chart" class="paths-chart" aria-label="Aging concerns and needs chart"></div>
+          </div>
+        </section>
+
+        <section class="chart-section" id="retinol-deepdive">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="retinol-eyebrow"></p>
+            <h2 class="section-title" id="retinol-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--retinol">
+            <p class="bubble-hint" id="retinol-hint"></p>
+            <div id="retinol-chart" class="retinol-chart" aria-label="Retinol fears and hopes chart"></div>
           </div>
         </section>
 
@@ -134,9 +172,10 @@
 
   <script src="js/dashboard-taxonomy-de.js"></script>
   <script src="data/dashboard_generated.js"></script>
-  <script src="data/dashboard_comments.js"></script>
   <script src="js/dashboard-utils.js"></script>
-  <script src="js/nested-bars.js"></script>
+  <script src="js/wordcloud.js"></script>
+  <script src="js/paths-drilldown.js"></script>
+  <script src="js/retinol-tornado.js"></script>
   <script src="js/dashboard-app.js"></script>
 </body>
 </html>

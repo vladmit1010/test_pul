@@ -230,7 +230,7 @@ window.DashboardData = {
 
   /** Chart 6 — fixed Appinio survey % (not from comments) */
   decisionDrivers: {
-    eyebrow: '6. Category-Wide Decision Drivers',
+    eyebrow: '8. Category-Wide Decision Drivers (Appinio)',
     title: 'Whom do German consumers trust when it comes to anti-aging?',
     source: 'Appinio · Emotional Trust Builders · n=450',
     drivers: [

@@ -24,48 +24,154 @@ from tqdm import tqdm
 
 ROOT = Path(__file__).resolve().parents[1]
 REF = ROOT / "data" / "dashboard-reference.json"
-DEFAULT_INPUT = ROOT / "data" / "merged_filtered_v6.csv"
-OUT_JSONL = ROOT / "data" / "classified_v5.jsonl"
-OUT_REVIEW = ROOT / "data" / "review_queue_v5.csv"
+DEFAULT_INPUT = ROOT / "data" / "merged_filtered_v7.csv"
+OUT_JSONL = ROOT / "data" / "classified_v8.jsonl"
+OUT_REVIEW = ROOT / "data" / "review_queue_v8.csv"
 CONFIG = ROOT / "scripts" / "classify_config.json"
 
 MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 
-# German-rich label text for better embedding match
+# German-rich label text for better embedding match (LOP REV 6 moods)
 MOOD_LABELS = {
-    "enthusiastic": "begeistert ich liebe mein ergebnis bester entschluss empfehle es weiter endlich für mich",
-    "satisfied": "zufrieden gutes ergebnis würde es wieder machen hat funktioniert zufriedenstellend",
-    "neutral": "was kostet wie lange hält es erfahrung frage vergleiche noch unsicher information",
-    "disappointed": "enttäuscht hat nichts gebracht geld verschwendet enttäuschend schlecht bereue",
-    "advisory": "vorsicht informieren komplikationen warnung bitte beachten risiko ärztin arzt erfahrung warnen",
+    "enthusiastic": (
+        "begeistert ich liebe mein ergebnis bester entschluss empfehle es weiter "
+        "endlich für mich game changer fühle mich wie neugeboren"
+    ),
+    "satisfied": (
+        "zufrieden gutes ergebnis würde es wieder machen hat funktioniert "
+        "macht seinen job kein drama einfach gut gemacht"
+    ),
+    "seeking": (
+        "was kostet wie lange hält es erfahrung frage vergleiche noch unsicher "
+        "information womit soll ich anfangen lohnt sich worauf achten"
+    ),
+    "conflicted": (
+        "hin und hergerissen zwiespältig ambivalent einerseits andererseits "
+        "schäme mich gesellschaftsdruck schönheitsdruck eigentlich dagegen aber "
+        "will und will nicht unsicher ob ich es machen soll reizt mich aber angst"
+    ),
+    "disappointed": (
+        "enttäuscht hat nichts gebracht geld verschwendet enttäuschend schlecht bereue "
+        "sieht man kaum einen unterschied habe mir mehr erwartet"
+    ),
+    "cautioning": (
+        "vorsicht informieren komplikationen warnung bitte beachten risiko finger weg "
+        "arzt klinik frozen look lasst euch nicht blenden zweite meinung"
+    ),
 }
 
 SEGMENT_LABELS = {
-    "procedure-open": "hatte schon botox filler behandlung termin auffrischung wartung nächster termin maintenance",
-    "procedure-curious": "überlege es mir angst traue mich nicht erste beratung vorsichtig interessiert aber unsicher",
-    "skincare-first": "kein botox keine nadeln nur skincare hautpflege retinol serum creme ohne eingriff",
+    "procedure-open": (
+        "hatte schon botox filler behandlung termin auffrischung wartung nächster termin "
+        "maintenance nachspritzen lasse regelmäßig machen zweite sitzung"
+    ),
+    "procedure-curious": (
+        "überlege es mir angst traue mich nicht erste beratung vorsichtig interessiert "
+        "aber unsicher tut laser weh angst vor nadeln irgendwann vielleicht"
+    ),
+    "skincare-first": (
+        "kein botox keine nadeln nur skincare hautpflege retinol serum creme ohne eingriff "
+        "setze auf pflege nie unters messer anti-aging-routine"
+    ),
 }
 
+# Chart 2 topics — Block A + B from LOP REV prompts
 TOPIC_KEYWORDS = {
-    "botox": ["botox", "botulinum", "botulinotoxin", "baby botox", "masseter"],
+    "botox": ["botox", "botulinum", "botulinotoxin", "dysport", "xeomin", "fältchen-spritze", "boti", "baby botox", "masseter"],
     "fillers": [
         "lippenfiller",
+        "lippenunterspritz",
+        "wangenfiller",
+        "jawline-filler",
+        "jawline filler",
+        "nasolabialfalten-filler",
+        "tränenrinnen-filler",
         "dermal filler",
         "hyaluron unterspritz",
         "unterspritz",
         "juvederm",
         "restylane",
+        "skinbooster",
+        "profhilo",
     ],
-    "laser": ["laserbehandlung", "laser", "ipl", "fotona"],
-    "retinol": ["retinol", "retinal", "retinoid", "tretinoin", "vitamin a"],
+    "laser": ["laserbehandlung", "fraxel", "co2-laser", "co2 laser", "fraktionierter laser", "pigmentlaser", "ipl", "fotona"],
+    "threads": [
+        "fadenlifting",
+        "thread lift",
+        "pdo faden",
+        "pdo-faden",
+        "silhouette soft",
+        "ultherapy",
+        "hifu",
+        "ultraschall-lifting",
+        "ultraschalllifting",
+    ],
+    "facelift": ["facelift", "facelifting", "gesichtsstraffung", "lidstraffung", "blepharoplastik", "halslift", "stirnlift"],
+    "peel": [
+        "peeling",
+        "microneedling",
+        "fruchtsäure",
+        "chemisches peeling",
+        "aha-peeling",
+        "bha-peeling",
+        "dermapen",
+        "morpheus8",
+        "tca-peeling",
+    ],
+    "retinol": ["retinol", "retinal", "retinoid", "tretinoin", "vitamin a", "tret"],
+    "vitamin-c": ["vitamin c", "vitamin-c", "ascorbinsäure", "l-ascorbic"],
+    "hyaluronic-acid": ["hyaluronsäure", "hyaluron serum", "hyaluron creme", "hyaluron pflege", "ha-serum"],
+    "niacinamide-peptides": ["niacinamid", "niacinamide", "vitamin b3", "peptide", "kupfer-peptid", "kupferpeptid"],
+    "spf": ["spf", "sonnenschutz", "uv-schutz", "sonnencreme", "lichtschutzfaktor", "lsf", "face yoga", "gua sha", "prävention"],
+    "aging-signs": [
+        "hautalterung",
+        "alterungserscheinungen",
+        "alterszeichen",
+        "elastizitätsverlust",
+        "schlaffe haut",
+        "altersflecken",
+        "pigmentflecken",
+        "volumenverlust",
+        "erschlaffung",
+        "faltenbildung",
+        "nasolabialfalten",
+        "stirnfalten",
+        "krähenfüße",
+        "marionettenfalten",
+        "tiefe falten",
+        "konturverlust",
+    ],
     "price": [],
-    "facelift": ["facelift", "facelifting", "gesichtsstraffung", "lidstraffung", "blepharoplastik"],
-    "celebrity": ["promi", "celebrity", "influencer", "kim kardashian", "kanye west"],
-    "peel": ["peeling", "microneedling", "fruchtsäure", "chemisches peeling"],
-    "pressure": ["schönheitswahn", "jugendkult", "gesellschaftsdruck", "soll man"],
-    "spf": ["spf", "sonnenschutz", "uv-schutz", "sonnencreme", "lichtschutzfaktor", "lsf"],
-    "threads": ["fadenlifting", "pdo faden", "pdo-faden"],
-    "natural": ["natürlich altern", "ohne eingriff", "aging gracefully", "no intervention"],
+    "pressure": [
+        "schönheitswahn",
+        "jugendkult",
+        "gesellschaftsdruck",
+        "soll man",
+        "alle machen es",
+        "filter-druck",
+        "beauty-standards",
+        "alt wirken",
+        "schamgefühl",
+    ],
+    "safety": [
+        "nebenwirkung",
+        "komplikation",
+        "seriöser arzt",
+        "zertifizierung",
+        "zweite meinung",
+        "beratungsqualität",
+        "wem kann man glauben",
+    ],
+    "natural": [
+        "natürlich altern",
+        "natürlich aussehen",
+        "ohne eingriff",
+        "aging gracefully",
+        "frozen look",
+        "man soll es nicht sehen",
+        "noch ich selbst",
+    ],
+    "celebrity": ["promi", "celebrity", "influencer", "kim kardashian", "vorher-nachher", "hat sie oder"],
 }
 
 PRICE_PATTERNS = [
@@ -180,19 +286,343 @@ NEG_WORDS = re.compile(
 
 DISAPPOINTED_OVERRIDE = re.compile(
     r"\b(allerg|vertrage nicht|nicht vertragen|jucken|rote pickel|"
-    r"null wirkung|hat nichts gebracht|geld verschwendet|bereu|enttäuscht)\b",
+    r"null wirkung|hat nichts gebracht|geld verschwendet|bereu|enttäuscht|"
+    r"geld zum fenster|würde ich nicht wieder|kaum einen unterschied|"
+    r"habe mir mehr erwartet)\b",
     re.I,
 )
-ADVISORY_OVERRIDE = re.compile(
-    r"\b(vorsicht|warnung|risiko|abraten|komplikation|ärztin|arzt|"
-    r"anatomie|nebeneffekt|sicherheit)\b",
+CAUTIONING_OVERRIDE = re.compile(
+    r"\b(finger weg|bitte vorher (gut )?informieren|lasst euch nicht|"
+    r"hätte ich vorher wissen|komplikation(en)?|"
+    r"warnung vor|abraten von|nicht empfehlen\.|sehr unnatürlich|"
+    r"frozen look.{0,20}(vorsicht|warn|finger)|"
+    r"zweite meinung (einholen|holen))\b",
     re.I,
 )
 ENTHUSIASTIC_OVERRIDE = re.compile(
-    r"\b(begeistert|liebe es|beste entscheidung|empfehle|ausverkauft|wunderschön|"
-    r"definitiv nachkaufen|mega gut|highlight)\b",
+    r"\b(begeistert|liebe es|beste entscheidung|empfehle|kaufempfehlung|"
+    r"wunderschön|definitiv nachkaufen|mega gut|highlight|game.?changer|"
+    r"wie neugeboren|klare kaufempfehlung|muss ich haben)\b",
     re.I,
 )
+SATISFIED_OVERRIDE = re.compile(
+    r"\b(bin zufrieden|sehr zufrieden|zufrieden damit|würde es wieder|"
+    r"hat genau das|macht seinen job|kein drama|gut gemacht|"
+    r"lässt sich gut|zieht schnell ein|kann ich empfehlen)\b",
+    re.I,
+)
+SEEKING_OVERRIDE = re.compile(
+    r"\b(was kostet|wie lange hält|hat jemand erfahrung|wollte nur mal fragen|"
+    r"kenne mich noch nicht|womit soll ich|lohnt sich|worauf muss ich|"
+    r"wie läuft das ab|erfahrung mit|wieso braucht|ernst gemeinte frage|"
+    r"überlege|unsicher|was haltet ihr|tipps\?|ratschlag)\b",
+    re.I,
+)
+BEAUTY_MOOD_CTX = re.compile(
+    r"\b(botox|filler|unterspritz|retinol|anti.?aging|schönheits|falten|ästhet|"
+    r"hyaluron|facelift|laser|eingriff|hautpflege|skincare|microneedling|peeling|"
+    r"neuromodulator|lidstraffung|fadenlift)\b",
+    re.I,
+)
+CONFLICTED_OVERRIDE = re.compile(
+    r"("
+    r"hin-?\s*und\s*hergerissen|zwie(spältig|gespalten)|ambivalent|"
+    r"einerseits.{0,120}andererseits|pro und contra|für und wider|"
+    r"schäme mich|will mich nicht verbiegen|"
+    r"weiß nicht(,| ob) ich .{0,30}(will|machen|soll|lassen|traut)|"
+    r"traue mich (nicht|kaum).{0,30}aber|"
+    r"eigentlich (dagegen|kein fan|nichts von|abgelehnt).{0,60}aber|"
+    r"immer abgelehnt.{0,40}aber|"
+    r"ich will( es)? und will( es)? nicht|"
+    r"mit mir (selbst )?im konflikt|fühle mich zerrissen|"
+    r"(gesellschaftsdruck|schönheitsdruck|sozialer druck|alle machen (es|botox|filler))"
+    r".{0,100}(überlege|unsicher|vielleicht doch|trotzdem|mich gefragt)|"
+    r"(überlege|unsicher|vielleicht doch).{0,80}"
+    r"(gesellschaftsdruck|schönheitsdruck|sozialer druck|alle machen)|"
+    r"(würde (gern|gerne)|reizt mich|verlockend|interessiert mich).{0,80}"
+    r"(aber|doch).{0,60}(angst|sorge|schäme|unsicher|risiko|nebenwirkung|bereuen)|"
+    r"(angst vor|sorge vor|schäme).{0,60}(aber|doch).{0,60}"
+    r"(würde (gern|gerne)|überlege|reizt|verlockend)"
+    r")",
+    re.I,
+)
+CONFLICTED_SOFT = re.compile(
+    r"\b(aber|doch|jedoch|einerseits|andererseits|trotzdem|obwohl|"
+    r"unsicher|überlege|zwie|ambival|druck|schäme|dagegen)\b",
+    re.I,
+)
+MIXED_CONFLICTED = re.compile(
+    r"\b(aber|doch|jedoch|einerseits|andererseits|trotzdem|obwohl)\b",
+    re.I,
+)
+NEGATION_NEAR = re.compile(
+    r"\b(kein|keine|keinen|nicht|nie|bloß kein|ohne|kein interesse an)\b",
+    re.I,
+)
+
+
+def is_negated_mention(text: str, term: str, window: int = 40) -> bool:
+    """True if term appears near negation (verneinte Nennung zählt nicht)."""
+    lower = text.lower()
+    t = term.lower()
+    start = 0
+    while True:
+        idx = lower.find(t, start)
+        if idx < 0:
+            return False
+        left = lower[max(0, idx - window) : idx]
+        if NEGATION_NEAR.search(left):
+            return True
+        start = idx + len(t)
+
+
+def apply_mood_rules(text: str, mood: str, mood_scores: list[tuple[str, float]] | None = None) -> str:
+    # Map legacy embedding ids
+    if mood == "neutral":
+        mood = "seeking"
+    if mood == "advisory":
+        mood = "cautioning"
+
+    def fallback(exclude: set[str]) -> str:
+        if mood_scores:
+            for mid, _ in mood_scores:
+                m = "seeking" if mid == "neutral" else ("cautioning" if mid == "advisory" else mid)
+                if m not in exclude:
+                    return m
+        return "seeking"
+
+    # 1) Concrete warning to others → Cautioning
+    if CAUTIONING_OVERRIDE.search(text) or (
+        re.search(r"\b(vorsicht|warnung|finger weg)\b", text, re.I)
+        and re.search(r"\b(bitte|arzt|klinik|andere|euch|niemand)\b", text, re.I)
+    ):
+        return "cautioning"
+
+    # 2) Unresolved ambivalence (needs beauty context)
+    if CONFLICTED_OVERRIDE.search(text) and BEAUTY_MOOD_CTX.search(text):
+        return "conflicted"
+
+    # 3) Own negative outcome
+    if RAGEBAIT.search(text) or NEGATIVE_EXPERIENCE.search(text) or DISAPPOINTED_OVERRIDE.search(text):
+        return "disappointed"
+
+    # 4) Strong positive
+    if (
+        PROMO_MOOD.search(text)
+        or BRAND_PROMO.search(text)
+        or CLINIC_PROMO.search(text)
+        or ENTHUSIASTIC_OVERRIDE.search(text)
+        or re.search(r"\b(bin begeistert|liebe diese|must-have|getestet und bin)\b", text, re.I)
+    ):
+        return "enthusiastic"
+
+    if SATISFIED_OVERRIDE.search(text):
+        return "satisfied"
+
+    # 4b) Mixed stance in beauty talk → Conflicted (after hard pos/neg overrides)
+    if (
+        BEAUTY_MOOD_CTX.search(text)
+        and MIXED_CONFLICTED.search(text)
+        and POS_WORDS.search(text)
+        and NEG_WORDS.search(text)
+    ):
+        return "conflicted"
+
+    # 5) Questions / orientation
+    if SEEKING_OVERRIDE.search(text) or BEAUTY_QUESTION.search(text):
+        return "seeking"
+
+    if CLINIC_EDU.search(text) or EDUCATIONAL.search(text):
+        return "seeking"
+
+    # Soft-correct overused embedding labels without cues
+    if mood == "conflicted":
+        if BEAUTY_MOOD_CTX.search(text) and CONFLICTED_SOFT.search(text):
+            return "conflicted"
+        return fallback({"conflicted"})
+    if mood == "cautioning" and not re.search(
+        r"\b(vorsicht|warn|komplikation|finger weg|risiko|nebeneffekt)\b", text, re.I
+    ):
+        return fallback({"cautioning", "conflicted"})
+
+    return mood
+
+
+def apply_segment_rules(text: str, segment: str) -> tuple[str | None, bool]:
+    """Return (segment_id or None, positioned). Unpositioned → (None, False)."""
+    lower = text.lower()
+
+    # Explicit skincare-first rejection
+    if re.search(
+        r"\b(kein botox|keine nadel|ohne botox|nie unters messer|nie unter die nadel|"
+        r"kein interesse an eingriff|setze lieber auf (gute )?pflege|"
+        r"anti-?aging-?routine|voll auf retinol|prävention statt reparatur)\b",
+        text,
+        re.I,
+    ):
+        return "skincare-first", True
+
+    # Procedure-open: past experience + maintenance language
+    if re.search(
+        r"\b(auffrisch|wartungsspritze|nachspritz|nächster termin|regelmäßig machen|"
+        r"zweite(s|n)? (mal|sitzung)|dritte(s|n)? (mal|sitzung)|behandlungsserie|"
+        r"hatte schon|habe .* gemacht und|lasse .* wieder|nachkorrektur)\b",
+        text,
+        re.I,
+    ) and re.search(
+        r"\b(botox|filler|unterspritz|laser|hifu|ultherapy|peeling|microneedling|"
+        r"faden|facelift|behandlung|ästhetik)\b",
+        text,
+        re.I,
+    ):
+        return "procedure-open", True
+
+    # Procedure-curious: interest + hesitation
+    if BEAUTY_QUESTION.search(text) or CLINIC_EDU.search(text):
+        return "procedure-curious", True
+    if re.search(
+        r"\b(überlege|traue mich nicht|angst vor|noch nicht so weit|"
+        r"erst(mal)? informieren|irgendwann vielleicht|tut .{0,20} weh|"
+        r"wie viel ausfallzeit|lohnt sich das oder)\b",
+        text,
+        re.I,
+    ) and re.search(
+        r"\b(botox|filler|laser|hifu|peeling|microneedling|faden|facelift|unterspritz|eingriff)\b",
+        text,
+        re.I,
+    ):
+        return "procedure-curious", True
+
+    if re.search(r"\b(botox|filler|unterspritz|behandlung|ästhetik|hifu|laserbehandlung)\b", text, re.I):
+        if PROCEDURE_CONTEXT.search(text):
+            if re.search(r"\b(überlege|angst|erste mal|unsicher|würde)\b", text, re.I):
+                return "procedure-curious", True
+            if re.search(r"\b(hatte|termin|wieder|auffrisch|wartung|schon)\b", text, re.I):
+                return "procedure-open", True
+            return "procedure-curious", True
+
+    # Implicit skincare-first: skincare as anti-aging strategy without procedures
+    if re.search(
+        r"\b(retinol|serum|spf|sonnenschutz|niacinamid|hautpflege|skincare|"
+        r"feuchtigkeitscreme|morgenroutine|abendroutine)\b",
+        text,
+        re.I,
+    ) and not re.search(
+        r"\b(botox|filler|unterspritz|laserbehandlung|facelift|hifu|fadenlifting)\b",
+        text,
+        re.I,
+    ):
+        if re.search(r"\b(anti.?aging|falten|haut|routine|wirku?ng|ergebnis)\b", text, re.I):
+            return "skincare-first", True
+
+    # Embedding fallback: trust only if clear personal stance markers
+    if segment in ("procedure-open", "procedure-curious", "skincare-first"):
+        if re.search(
+            r"\b(ich|mein|meine|mir|mich|habe|hatte|würde|will|möchte)\b",
+            text,
+            re.I,
+        ):
+            return segment, True
+
+    return None, False
+
+
+def keyword_hits(text: str, keywords: dict[str, list[str]]) -> dict[str, float]:
+    lower = text.lower()
+    hits = {}
+    for tid, terms in keywords.items():
+        for term in terms:
+            if len(term) < 3:
+                continue
+            if term in lower and not is_negated_mention(text, term):
+                hits[tid] = max(hits.get(tid, 0), 0.92)
+                break
+    return hits
+
+
+def topic_keyword_hits(text: str) -> dict[str, float]:
+    lower = text.lower()
+    hits = {}
+    for tid, terms in TOPIC_KEYWORDS.items():
+        if tid == "price":
+            if any(p.search(text) for p in PRICE_PATTERNS) and not PRICE_BLOCK.search(text):
+                # Negated price talk still OK as topic; no term list
+                hits[tid] = 0.9
+            continue
+        if tid == "spf":
+            if any(p.search(text) for p in SPF_PATTERNS):
+                # Skip if only negated SPF
+                if not (
+                    is_negated_mention(text, "spf")
+                    and not any(p.search(text) for p in SPF_PATTERNS[1:])
+                ):
+                    hits[tid] = 0.9
+            continue
+        if tid == "hyaluronic-acid":
+            # Topical only — injection context → fillers instead
+            if re.search(r"\b(hyaluron|hyaluronsäure|\bha\b)\b", text, re.I):
+                if re.search(r"\b(spritze|unterspritz|termin|arzt|filler|injekt)\b", text, re.I):
+                    continue
+                if re.search(r"\b(serum|creme|pflege|topisch|feuchtigkeit)\b", text, re.I):
+                    if not is_negated_mention(text, "hyaluron"):
+                        hits[tid] = 0.9
+            continue
+        for term in terms:
+            if len(term) < 3:
+                continue
+            if term not in lower:
+                continue
+            if is_negated_mention(text, term):
+                continue
+            if tid == "fillers" and not COSMETIC_FILLER_TOPIC.search(text):
+                if not re.search(
+                    r"\bfiller\b.*(gesicht|lippe|ästhetik|unterspritz|hyaluron|jawline)|"
+                    r"(gesicht|lippe|ästhetik|unterspritz|hyaluron|jawline).*\bfiller\b|"
+                    r"unterspritz",
+                    text,
+                    re.I,
+                ):
+                    break
+            if tid == "botox":
+                if BOTOX_GOSSIP.search(text) or POLITICS_BOTOX.search(text):
+                    break
+                if "botox" in lower or "botulinum" in lower:
+                    if not COSMETIC_BOTOX.search(text) and not BOTOX_SHORT.search(text):
+                        # Allow Boti / Dysport / Xeomin without full context
+                        if not re.search(r"\b(boti|dysport|xeomin|fältchen-spritze)\b", lower):
+                            break
+            if tid == "laser":
+                if NON_COSMETIC_LASER_TOPIC.search(text) and not COSMETIC_LASER_TOPIC.search(text):
+                    break
+                # Exclude hair removal / tattoo / veins outside anti-aging
+                if re.search(
+                    r"\b(haarentfernung|tattoo.?entfer|besenreiser|gefäßlaser)\b",
+                    text,
+                    re.I,
+                ):
+                    break
+                if "laser" in lower and not COSMETIC_LASER_TOPIC.search(text):
+                    if not re.search(r"\b(ipl|fraxel|co2|pigmentlaser|fraktioniert)\b", lower):
+                        break
+            if tid == "celebrity" and not CELEBRITY_TOPIC.search(text):
+                if not re.search(r"\b(vorher.?nachher|hat sie oder)\b", text, re.I):
+                    break
+            if tid == "aging-signs":
+                # Specific aging-sign language only (bare "Falten"/"Trockenheit" too noisy)
+                if not re.search(
+                    r"\b(hautalterung|alterungserscheinungen|alterszeichen|"
+                    r"elastizit[aä]tsverlust|schlaffe haut|altersflecken|"
+                    r"pigmentflecken|volumenverlust|erschlaffung|faltenbildung|"
+                    r"nasolabialfalten|stirnfalten|kr[aä]henf[uü](ß|sse)|"
+                    r"marionettenfalten|tiefe[rn]? falten|konturverlust|"
+                    r"anti.?aging.{0,40}(falte|alter)|hautalter)\b",
+                    text,
+                    re.I,
+                ):
+                    continue
+            hits[tid] = 0.9
+            break
+    return hits
 
 
 @dataclass
@@ -259,105 +689,6 @@ def flatten_chart5_level2(ref: dict) -> LabelSet:
     return LabelSet(ids, texts, kw)
 
 
-def apply_mood_rules(text: str, mood: str) -> str:
-    if RAGEBAIT.search(text) or NEGATIVE_EXPERIENCE.search(text):
-        return "disappointed"
-    if BEAUTY_QUESTION.search(text):
-        return "neutral"
-    if CLINIC_EDU.search(text) and not DISAPPOINTED_OVERRIDE.search(text):
-        return "advisory"
-    if EDUCATIONAL.search(text) and not DISAPPOINTED_OVERRIDE.search(text):
-        return "advisory"
-    if DISAPPOINTED_OVERRIDE.search(text):
-        return "disappointed"
-    if (
-        PROMO_MOOD.search(text)
-        or BRAND_PROMO.search(text)
-        or CLINIC_PROMO.search(text)
-        or re.search(r"\b(bin begeistert|liebe diese|must-have|getestet und bin)\b", text, re.I)
-    ) and not DISAPPOINTED_OVERRIDE.search(text):
-        return "enthusiastic"
-    if ENTHUSIASTIC_OVERRIDE.search(text) and not DISAPPOINTED_OVERRIDE.search(text):
-        return "enthusiastic"
-    if ADVISORY_OVERRIDE.search(text) and mood in ("satisfied", "neutral", "enthusiastic"):
-        return "advisory"
-    if re.search(r"\b(was kostet|wie lange|erfahrung\?|überlege|unsicher)\b", text, re.I):
-        return "neutral"
-    return mood
-
-
-def apply_segment_rules(text: str, segment: str) -> str:
-    lower = text.lower()
-    if BEAUTY_QUESTION.search(text) or CLINIC_EDU.search(text):
-        return "procedure-curious"
-    if "kein botox" in lower or "keine nadel" in lower or "ohne botox" in lower:
-        return "skincare-first"
-    if re.search(r"\b(botox|filler|unterspritz|behandlung|ästhetik|hifu|laserbehandlung)\b", text, re.I):
-        if PROCEDURE_CONTEXT.search(text):
-            if re.search(r"\b(überlege|angst|erste mal|unsicher|würde)\b", text, re.I):
-                return "procedure-curious"
-            if re.search(r"\b(hatte|termin|wieder|auffrisch|wartung|schon)\b", text, re.I):
-                return "procedure-open"
-            return "procedure-curious"
-    return segment
-
-
-def keyword_hits(text: str, keywords: dict[str, list[str]]) -> dict[str, float]:
-    lower = text.lower()
-    hits = {}
-    for tid, terms in keywords.items():
-        for term in terms:
-            if len(term) < 3:
-                continue
-            if term in lower:
-                hits[tid] = max(hits.get(tid, 0), 0.92)
-                break
-    return hits
-
-
-def topic_keyword_hits(text: str) -> dict[str, float]:
-    lower = text.lower()
-    hits = {}
-    for tid, terms in TOPIC_KEYWORDS.items():
-        if tid == "price":
-            if any(p.search(text) for p in PRICE_PATTERNS) and not PRICE_BLOCK.search(text):
-                hits[tid] = 0.9
-            continue
-        if tid == "spf":
-            if any(p.search(text) for p in SPF_PATTERNS):
-                hits[tid] = 0.9
-            continue
-        for term in terms:
-            if len(term) < 3:
-                continue
-            if term in lower:
-                if tid == "fillers" and not COSMETIC_FILLER_TOPIC.search(text):
-                    if not re.search(
-                        r"\bfiller\b.*(gesicht|lippe|ästhetik|unterspritz|hyaluron)|"
-                        r"(gesicht|lippe|ästhetik|unterspritz|hyaluron).*\bfiller\b",
-                        text,
-                        re.I,
-                    ):
-                        break
-                if tid == "botox":
-                    if BOTOX_GOSSIP.search(text) or POLITICS_BOTOX.search(text):
-                        break
-                    if "botox" in lower or "botulinum" in lower:
-                        if not COSMETIC_BOTOX.search(text) and not BOTOX_SHORT.search(text):
-                            break
-                if tid == "laser":
-                    if NON_COSMETIC_LASER_TOPIC.search(text) and not COSMETIC_LASER_TOPIC.search(text):
-                        break
-                    if "laser" in lower and not COSMETIC_LASER_TOPIC.search(text):
-                        if not re.search(r"\bipl\b", lower):
-                            break
-                if tid == "celebrity" and not CELEBRITY_TOPIC.search(text):
-                    break
-                hits[tid] = 0.9
-                break
-    return hits
-
-
 def cosine_top(emb: np.ndarray, label_embs: np.ndarray, labels: LabelSet, top_k: int = 1):
     sims = label_embs @ emb
     order = np.argsort(-sims)
@@ -414,12 +745,27 @@ def classify_batch(
         mood_scores = merge_scores(mood_kw, cosine_top(emb, mood_embs, moods, 5))
         seg_scores = merge_scores(seg_kw, cosine_top(emb, seg_embs, segments, 3))
         mood, mood_sc = mood_scores[0]
-        segment, seg_sc = seg_scores[0]
-        mood = apply_mood_rules(text, mood)
-        segment = apply_segment_rules(text, segment)
+        emb_segment, seg_sc = seg_scores[0]
+        mood = apply_mood_rules(text, mood, mood_scores)
+        segment, positioned = apply_segment_rules(text, emb_segment)
 
         topic_kw = topic_keyword_hits(text)
-        topics_ids = [t for t, s in topic_kw.items() if s >= 0.85][: cfg["topic_max"]]
+        emb_topics = cosine_above(emb, topic_embs, topics, cfg["topic_threshold"])
+        allow = set(cfg.get("topic_emb_allowlist") or [])
+        for tid, sc in emb_topics:
+            if tid in topic_kw:
+                continue
+            # Strict topics (botox/fillers/laser/…) only via keywords
+            if allow and tid not in allow:
+                continue
+            topic_kw[tid] = sc
+        kw_ids = [t for t, s in sorted(topic_kw.items(), key=lambda x: -x[1]) if s >= 0.85]
+        emb_ids = [
+            t
+            for t, s in sorted(topic_kw.items(), key=lambda x: -x[1])
+            if s < 0.85 and s >= cfg["topic_threshold"] and t not in kw_ids
+        ]
+        topics_ids = (kw_ids + emb_ids)[: cfg["topic_max"]]
         topic_merged = sorted(topic_kw.items(), key=lambda x: -x[1])
 
         pos = bool(POS_WORDS.search(text))
@@ -428,7 +774,7 @@ def classify_batch(
         procedure = procedure_tone = ingredient = ingredient_tone = None
         proc_sc = ing_sc = 0.0
 
-        if segment in ("procedure-open", "procedure-curious"):
+        if positioned and segment in ("procedure-open", "procedure-curious"):
             pk = keyword_hits(text, procedures.keywords)
             if pk:
                 p_emb = merge_scores(pk, cosine_top(emb, proc_embs, procedures, 3))
@@ -442,7 +788,7 @@ def classify_batch(
                         if tone_best and tone_best[1] >= cfg["tone_threshold"]:
                             procedure_tone = tone_best[0]
 
-        if segment == "skincare-first":
+        if positioned and segment == "skincare-first":
             ik = keyword_hits(text, ingredients.keywords)
             if ik:
                 i_emb = merge_scores(ik, cosine_top(emb, ing_embs, ingredients, 3))
@@ -456,7 +802,7 @@ def classify_batch(
                         if tone_best and tone_best[1] >= cfg["tone_threshold"]:
                             ingredient_tone = tone_best[0]
 
-        min_conf = min(mood_sc, seg_sc)
+        min_conf = mood_sc if not positioned else min(mood_sc, seg_sc)
         results.append(
             {
                 "id": row["id"],
@@ -466,9 +812,10 @@ def classify_batch(
                 "mood": mood,
                 "mood_score": round(mood_sc, 4),
                 "segment": segment,
-                "segment_score": round(seg_sc, 4),
+                "segment_positioned": positioned,
+                "segment_score": round(seg_sc, 4) if positioned else None,
                 "topics": topics_ids,
-                "topic_scores": {t: round(s, 4) for t, s in topic_merged[:5]},
+                "topic_scores": {t: round(s, 4) for t, s in topic_merged[:8]},
                 "sentiment_positive": pos,
                 "sentiment_negative": neg,
                 "procedure": procedure,
@@ -485,9 +832,9 @@ def classify_batch(
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default=str(ROOT / "data" / "merged_filtered_v6.csv"))
-    parser.add_argument("--output-jsonl", default=str(ROOT / "data" / "classified_v5.jsonl"))
-    parser.add_argument("--output-review", default=str(ROOT / "data" / "review_queue_v5.csv"))
+    parser.add_argument("--input", default=str(ROOT / "data" / "merged_filtered_v7.csv"))
+    parser.add_argument("--output-jsonl", default=str(ROOT / "data" / "classified_v8.jsonl"))
+    parser.add_argument("--output-review", default=str(ROOT / "data" / "review_queue_v8.csv"))
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--batch-size", type=int, default=128)
     args = parser.parse_args()

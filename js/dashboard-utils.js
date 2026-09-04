@@ -18,10 +18,26 @@ window.DashboardUtils = {
     return landscape.candidates || landscape.topics || [];
   },
 
-  /** Chart 2 display list: top N by count from the candidate pool. */
+  /** Chart 2 display list: top N by count from the candidate pool.
+   *  If blocks A/B exist, return block-grouped lists (ranked within each block). */
   getTopicLandscapeTopics(landscape) {
+    const pool = this.getTopicPool(landscape);
+    const blocks = landscape?.blocks;
+    if (blocks && (blocks.A || blocks.B)) {
+      const byBlock = { A: [], B: [] };
+      pool.forEach((t) => {
+        const b = t.block === 'B' ? 'B' : 'A';
+        byBlock[b].push(t);
+      });
+      return {
+        grouped: true,
+        A: this.topN(byBlock.A, byBlock.A.length, 'count'),
+        B: this.topN(byBlock.B, byBlock.B.length, 'count'),
+        flat: this.topN(pool, landscape?.topN ?? pool.length, 'count'),
+      };
+    }
     const limit = landscape?.topN ?? landscape?.top_n ?? 10;
-    return this.topN(this.getTopicPool(landscape), limit, 'count');
+    return this.topN(pool, limit, 'count');
   },
 
   findTopic(landscape, id) {
