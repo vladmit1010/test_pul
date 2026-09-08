@@ -1,24 +1,33 @@
-# Classification plan — fast medium quality (~2 days)
+# Classification plan — embeddings + keywords (same stack as v8)
 
-## Approach: Embeddings + keywords (no manual gold, no full LLM)
+## Current run (v9)
 
-| Step | What | Time |
-|------|------|------|
-| 1 | `classify_comments.py` on `merged_filtered_v2.csv` | ~30–90 min (53k, CPU) |
-| 2 | `aggregate_dashboard.py` → counts + sample quotes | ~5 min |
-| 3 | Review `review_queue.csv` (low confidence) together | ~2–4 h |
-| 4 | Tune thresholds in `classify_config.json`, re-run if needed | ~1 h |
+| | |
+|---|---|
+| Input | `data/merged_filtered_v9.csv` (~375k) |
+| Output | `data/classified_v9.jsonl`, `data/review_queue_v9.csv` |
+| Command | `python3 scripts/classify_comments.py` |
+| Pilot | `python3 scripts/classify_comments.py --limit 5000` |
+
+## Approach
+
+Multilingual MiniLM embeddings + keyword boost (no full LLM). Labels: mood (6), segment (3), topics, procedure/ingredient + tones.
 
 ## Model
 
-`paraphrase-multilingual-MiniLM-L12-v2` — fast, good DE, runs locally.
+`paraphrase-multilingual-MiniLM-L12-v2`
 
-## Output files
+## After classify
 
-- `data/classified_v1.jsonl` — one JSON per comment + scores
-- `data/review_queue.csv` — lowest-confidence rows for manual check
-- `data/dashboard_generated.js` — counts for dashboard (chart 6 = Appinio unchanged)
+```bash
+python3 scripts/aggregate_dashboard.py
+python3 scripts/aggregate_wordclouds.py
+python3 scripts/aggregate_chart6.py
+python3 scripts/aggregate_retinol.py
+```
 
-## Quality expectation
+Update those scripts’ input paths to `classified_v9.jsonl` if needed.
 
-~70–80% usable for dashboard aggregates; quotes filtered by confidence ≥ 0.5.
+## Mood names (client brief 2026-09)
+
+Client rename: Seeking→Intrigued, Cautioning→Warning. Classifier still writes `seeking` / `cautioning` ids for pipeline compatibility; map in UI/taxonomy when rebuilding dashboard.

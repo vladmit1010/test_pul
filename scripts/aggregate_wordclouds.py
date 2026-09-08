@@ -11,7 +11,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CLASSIFIED = ROOT / "data" / "classified_v8.jsonl"
+CLASSIFIED = ROOT / "data" / "classified_v10.jsonl"
 OUT_JS = ROOT / "data" / "dashboard_generated.js"
 MAX_TERMS = 40
 OVERWEIGHT_N = 20
@@ -46,6 +46,20 @@ STOP = {
     "the", "and", "for", "you", "your", "with", "this", "that", "from", "are",
     "was", "have", "has", "been", "will", "can", "just", "about", "into", "get",
     "one", "all", "but", "not", "out", "they", "she", "his", "her", "him",
+    # product / ingredient / routine noise (skincare cloud)
+    "serum", "creme", "reinigung", "maske", "toner", "retinol", "hyaluron",
+    "hyaluronsäure", "niacinamid", "niacinamide", "vitamin", "peptid", "peptide",
+    "spf", "routine", "auftragen", "layering", "dosierung", "sonnencreme",
+    "sonnenschutz", "hautpflege", "skincare", "morgenroutine", "abendroutine",
+    "pipette", "drops", "loreal", "garnier", "cerave", "la-roche", "eucerin",
+    "isana", "nivea", "olay", "vichy", "bioderma", "avene", "the-ordinary",
+}
+
+# Standalone procedure names — excluded from procedure cloud (emotional language kept)
+PROCEDURE_HARD_EXCLUDE = {
+    "botox", "filler", "laser", "hifu", "facelift", "microneedling", "fadenlifting",
+    "peeling", "peels", "prp", "ultherapy", "morpheus8", "dermapen", "juvederm",
+    "restylane", "dysport", "xeomin", "unterspritzung", "unterspritzen",
 }
 
 # Lemma / variant merge
@@ -223,7 +237,7 @@ def load_jsonl(path: Path) -> list[dict]:
     return rows
 
 
-def normalize_token(tok: str) -> str | None:
+def normalize_token(tok: str, hard_exclude: set[str] | None = None) -> str | None:
     t = tok.lower().strip("-")
     if len(t) < 4 or t in STOP or t.isdigit():
         return None
@@ -231,10 +245,13 @@ def normalize_token(tok: str) -> str | None:
         return None
     if t in {"amp", "nbsp", "quot", "lt", "gt"}:
         return None
-    return LEMMA.get(t, t)
+    t = LEMMA.get(t, t)
+    if t in STOP or (hard_exclude and t in hard_exclude):
+        return None
+    return t
 
 
-def extract_terms(text: str) -> list[str]:
+def extract_terms(text: str, hard_exclude: set[str] | None = None) -> list[str]:
     raw = TOKEN_RE.findall(text.lower())
     # bigrams first
     terms: list[str] = []
@@ -243,10 +260,12 @@ def extract_terms(text: str) -> list[str]:
         if i + 1 < len(raw):
             pair = (raw[i], raw[i + 1])
             if pair in BIGRAMS:
-                terms.append(BIGRAMS[pair])
+                bg = BIGRAMS[pair]
+                if bg not in STOP and (not hard_exclude or bg not in hard_exclude):
+                    terms.append(bg)
                 i += 2
                 continue
-        norm = normalize_token(raw[i])
+        norm = normalize_token(raw[i], hard_exclude=hard_exclude)
         if norm:
             terms.append(norm)
         i += 1
@@ -260,7 +279,11 @@ def family_for(term: str, families: dict) -> tuple[str, str]:
     return "other", "#b8c4d4"
 
 
-def count_segment(rows: list[dict], segments: set[str]) -> tuple[Counter, int, int]:
+def count_segment(
+    rows: list[dict],
+    segments: set[str],
+    hard_exclude: set[str] | None = None,
+) -> tuple[Counter, int, int]:
     """Return term counts, n_docs, n_tokens."""
     counts: Counter = Counter()
     n_docs = 0
@@ -270,7 +293,7 @@ def count_segment(rows: list[dict], segments: set[str]) -> tuple[Counter, int, i
             continue
         if r.get("segment_positioned") is False:
             continue
-        terms = extract_terms(r.get("text") or "")
+        terms = extract_terms(r.get("text") or "", hard_exclude=hard_exclude)
         if not terms:
             continue
         n_docs += 1
@@ -431,9 +454,9 @@ def patch_dashboard(payload: dict) -> None:
     data["skincareWordcloud"] = payload["skincareWordcloud"]
     data["procedureWordcloud"] = payload["procedureWordcloud"]
     # Keep old nested charts for now but mark superseded
-    data["meta"]["wordclouds"] = "v1 from classified_v8"
+    data["meta"]["wordclouds"] = "v2 from classified_v10"
     js = (
-        f"/** AUTO-GENERATED from classified_v8.jsonl — do not edit by hand */\n"
+        f"/** AUTO-GENERATED from classified_v10.jsonl — do not edit by hand */\n"
         f"window.DashboardData = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
     )
     OUT_JS.write_text(js, encoding="utf-8")
@@ -448,8 +471,12 @@ def main() -> None:
     print(f"Loaded {len(rows)} rows")
 
     skin_c, skin_docs, skin_tok = count_segment(rows, {"skincare-first"})
-    open_c, open_docs, open_tok = count_segment(rows, {"procedure-open"})
-    cur_c, cur_docs, cur_tok = count_segment(rows, {"procedure-curious"})
+    open_c, open_docs, open_tok = count_segment(
+        rows, {"procedure-open"}, hard_exclude=PROCEDURE_HARD_EXCLUDE
+    )
+    cur_c, cur_docs, cur_tok = count_segment(
+        rows, {"procedure-curious"}, hard_exclude=PROCEDURE_HARD_EXCLUDE
+    )
 
     # Combined procedure cloud: normalize each segment then average rates
     open_r = per_1000(open_c, open_tok)
@@ -509,7 +536,7 @@ def main() -> None:
     payload = {
         "skincareWordcloud": {
             "eyebrow": "4. Skincare-First Wordcloud",
-            "title": "The Language of Skincare-First Consumers: Top Themes in Conversation",
+            "title": "The Language of Skincare-First Consumers",
             "n_docs": skin_docs,
             "n_tokens": skin_tok,
             "terms": skin_cloud,
@@ -524,7 +551,7 @@ def main() -> None:
         },
         "procedureWordcloud": {
             "eyebrow": "5. Procedure-Open & Procedure-Curious Wordcloud",
-            "title": "The Language of Procedure-Open & Procedure-Curious: Top Themes in Conversation",
+            "title": "The Language of Procedure-Open & Procedure-Curious",
             "n_docs_open": open_docs,
             "n_docs_curious": cur_docs,
             "n_tokens_open": open_tok,

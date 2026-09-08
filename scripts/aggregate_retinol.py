@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CLASSIFIED = ROOT / "data" / "classified_v8.jsonl"
+CLASSIFIED = ROOT / "data" / "classified_v10.jsonl"
 OUT_JS = ROOT / "data" / "dashboard_generated.js"
 
 RETINOL_MENTION = re.compile(

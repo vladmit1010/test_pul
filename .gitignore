@@ -1,0 +1,45 @@
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# --- Raw PULSAR / merge (not needed to render dashboard) ---
+pulsar/
+merged_all_deduped.csv
+merged_all_deduped.xlsx
+
+# Spreadsheets / exports / briefs (not used by UI render)
+*.xlsx
+*.xls
+*.docx
+
+# --- Pipeline outputs under data/ (keep only dashboard runtime) ---
+# Ignore everything in data/, then allowlist what the static UI loads.
+data/*
+!data/dashboard_generated.js
+!data/dashboard_comments.js
+!data/dashboard-reference.json
+!data/definite_remove_terms.json
+
+# Explicit heavy patterns (if paths move outside data/)
+**/classified_*.jsonl
+**/merged_filtered*.csv
+**/merged_rejected*.csv
+**/review_queue*.csv
+**/export_*.csv
+**/export_*.xlsx
+**/*.log
+
+# Cursor / local agent junk
+.git/cursor/

@@ -26,8 +26,11 @@ ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "merged_all_deduped.csv"
 CONFIG = ROOT / "data" / "definite_remove_terms.json"
 
-MIN_TEXT_LEN = 35
+# Brief: Mindestlänge ≥ 30 Zeichen
+MIN_TEXT_LEN = 30
 REQUIRE_GERMAN = True
+
+csv.field_size_limit(50_000_000)
 
 BEAUTY_WHITELIST = [
     r"\bbotox\b",
@@ -95,6 +98,16 @@ BEAUTY_WHITELIST = [
     r"bakuchiol",
     r"centella",
     r"\bcica\b",
+    # Chart 6 — Neck / Décolleté / Hands aging
+    r"halsfalten",
+    r"truthahnhals",
+    r"schlaffer hals",
+    r"dekollet[eé]",
+    r"knitterfalten",
+    r"handrücken",
+    r"hände verraten",
+    r"hals verrät",
+    r"altersflecken auf den händen",
     r"schönheits?op",
     r"ästhetik",
     r"kosmetik",
@@ -243,6 +256,30 @@ BOTOX_INSULT = re.compile(
 )
 FOREIGN_SCRIPT = re.compile(r"[\u0900-\u097F\u0600-\u06FF\u4E00-\u9FFF]")
 
+# Brief excludes pure clinic/product ads. Hard CTA / ad markers.
+MARKETING_CTA = re.compile(
+    r"(buche jetzt|jetzt erhältlich|online bestellbar|link in bio|link unten|"
+    r"#ad\b|\[anzeige\]|\(anzeige\)|anzeige\s*\||\|\s*anzeige|"
+    r"termine?\s+verfügbar|plätze frei|rabattaktion|jetzt bestellen|"
+    r"jetzt anfragen|termin per dm|\bdoctolib\b|willkommen bei|"
+    r"brandneue produkte|erstbehandlung bei|#kosmetikstudio|#beautylounge|"
+    r"#tiktokshop|tiktokshop|wir suchen ein modell|begrenzte termine|"
+    r"jetzt über den link|shop now|%\s*(rabatt|sparen)|\d+\s*%\s*sparen)",
+    re.I,
+)
+CLINIC_WE_VOICE = re.compile(
+    r"\b(unsere kundinnen|unsere patientinnen|bei uns im (store|studio|institut)|"
+    r"wir bieten|unsere praxis|unser studio|unsere behandlung|unsere top-behandlungen|"
+    r"wir kombinieren|meine patientinnen)\b",
+    re.I,
+)
+PERSONAL_CONSUMER = re.compile(
+    r"\b(ich habe|ich hatte|ich bin|bei mir|mein ergebnis|meine haut hat|"
+    r"mir wurde|ich bereue|ich überlege|meine erfahrung|ich würde|"
+    r"hab mir|habe mir|nach meiner|seit ich)\b",
+    re.I,
+)
+
 DE_MARKERS = re.compile(
     r"\b(der|die|das|und|ich|nicht|ist|mit|für|auf|eine|einem|habe|aber|auch|"
     r"nur|sehr|schon|wenn|wie|was|dass|bin|sind|wird|haben|können|würde|"
@@ -266,9 +303,19 @@ def load_config() -> tuple[set[str], list[tuple[str, str, re.Pattern]]]:
 EXCLUDED_SOURCES, DEFINITE_REMOVE = load_config()
 
 
-def norm_row(row: list[str]) -> dict[str, str]:
+def norm_row(row: dict[str, str] | list[str]) -> dict[str, str]:
+    """Accept DictReader rows (preferred) or legacy 5-col positional lists."""
+    if isinstance(row, dict):
+        d = {
+            "id": (row.get("id") or "").lstrip("\ufeff"),
+            "source": row.get("source") or "",
+            "title": row.get("title") or "",
+            "content": row.get("content") or "",
+            "date": row.get("date") or row.get("date (UTC)") or "",
+        }
+        return d
     keys = ["id", "source", "title", "content", "date"]
-    padded = (row + [""] * 5)[:5]
+    padded = (list(row) + [""] * 5)[:5]
     d = dict(zip(keys, padded))
     d["id"] = d["id"].lstrip("\ufeff")
     return d
@@ -325,8 +372,31 @@ def match_definite_remove(text: str) -> str | None:
     return None
 
 
+def match_marketing_promo(text: str) -> str | None:
+    """Drop pure ads/clinic marketing (brief: no personal stance). Keep personal consumer talk."""
+    if MARKETING_CTA.search(text) and not PERSONAL_CONSUMER.search(text):
+        return "keyword_trap:marketing_cta"
+    hashtags = re.findall(r"#\w+", text)
+    if len(hashtags) >= 6 and CLINIC_WE_VOICE.search(text) and not PERSONAL_CONSUMER.search(text):
+        return "keyword_trap:clinic_hashtag_promo"
+    if CLINIC_WE_VOICE.search(text) and MARKETING_CTA.search(text) and not PERSONAL_CONSUMER.search(text):
+        return "keyword_trap:clinic_we_cta"
+    # Long marketing copy: we-voice + many emoji stars + no personal consumer stance
+    if (
+        CLINIC_WE_VOICE.search(text)
+        and not PERSONAL_CONSUMER.search(text)
+        and len(text) >= 280
+        and (text.count("✨") + text.count("🤍") + text.count("🌿")) >= 3
+    ):
+        return "keyword_trap:clinic_marketing_copy"
+    return None
+
+
 def match_keyword_trap(text: str, beauty_hits: int) -> str | None:
     """Beauty-adjacent keywords in politics, idioms, or wrong product context."""
+    promo = match_marketing_promo(text)
+    if promo:
+        return promo
     if HOME_FURNITURE.search(text) and not STRONG_BEAUTY.search(text):
         return "keyword_trap:home_furniture"
     if INTERIOR_NOISE.search(text) and not STRONG_BEAUTY.search(text):
@@ -436,10 +506,15 @@ def main() -> None:
     definite_by_category = Counter()
 
     language_rejects = Counter()
+    processed = 0
 
     with INPUT.open(encoding="utf-8", errors="replace", newline="") as f:
-        reader = csv.reader(f, delimiter=";")
-        next(reader)
+        # Header-aware: merged_all_deduped.csv has slim extra cols before/after core fields
+        reader = csv.DictReader(f, delimiter=";")
+        if not reader.fieldnames or "content" not in reader.fieldnames:
+            raise SystemExit(
+                f"Expected CSV header with content column in {INPUT}; got {reader.fieldnames}"
+            )
 
         for row in reader:
             item = norm_row(row)
@@ -458,6 +533,12 @@ def main() -> None:
                     definite_by_category[cat] += 1
                 if reason.startswith("language_not_german:"):
                     language_rejects[reason.split(":", 1)[1].split(":")[0]] += 1
+            processed += 1
+            if processed % 25000 == 0:
+                print(
+                    f"… {processed:,}  kept={len(kept):,}  rejected={len(rejected):,}",
+                    flush=True,
+                )
 
     fieldnames = ["id", "source", "title", "content", "date"]
 

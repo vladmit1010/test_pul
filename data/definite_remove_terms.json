@@ -194,6 +194,46 @@
         "kiefer.*\\bcmd\\b"
       ]
     },
+    "clinic_product_promo": {
+      "label": "Clinic / product ads & CTA marketing (no personal consumer stance)",
+      "patterns": [
+        "\\bbuche jetzt\\b",
+        "jetzt erhältlich",
+        "online bestellbar",
+        "link in bio",
+        "link unten",
+        "\\b#ad\\b",
+        "\\[anzeige\\]",
+        "\\(anzeige\\)",
+        "anzeige\\|",
+        "\\| anzeige",
+        "termine? verfügbar",
+        "plätze frei",
+        "rabattaktion",
+        "jetzt bestellen",
+        "jetzt anfragen",
+        "termin per dm",
+        "\\bdoctolib\\b",
+        "vereinbare.*termin",
+        "willkommen bei",
+        "brandneue produkte",
+        "erstbehandlung bei",
+        "#kosmetikstudio",
+        "#beautylounge",
+        "#tiktokshop",
+        "tiktokshop",
+        "unsere kundinnen",
+        "bei uns im store",
+        "wir suchen ein modell",
+        "modell für trichopigment",
+        "begrenzte termine",
+        "% zu sparen",
+        "\\d+\\s*%\\s*(rabatt|sparen)",
+        "jetzt über den link",
+        "shop now",
+        "link in der bio"
+      ]
+    },
     "beauty_keyword_traps": {
       "label": "Skincare keyword used in non-cosmetic context (idioms, politics, products)",
       "patterns": [

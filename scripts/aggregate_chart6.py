@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Aggregate Chart 6 — Aging Concerns, Skin Needs & Paths (drill-down)."""
+"""Aggregate Chart 6 — Aging Concerns & Paths (drill-down)."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CLASSIFIED = ROOT / "data" / "classified_v8.jsonl"
+CLASSIFIED = ROOT / "data" / "classified_v10.jsonl"
 OUT_JS = ROOT / "data" / "dashboard_generated.js"
 
 NEGATION = re.compile(
@@ -37,18 +37,22 @@ def compile_terms(terms: list[str]) -> list[tuple[str, re.Pattern]]:
 CONCERNS = {
     "structural-wrinkling": {
         "label": "Structural Wrinkling",
-        "pair": "wrinkle-reduction",
+        "pair": None,
         "terms": [
             "stirnfalten", "zornesfalte", "nasolabialfalten", "krähenfüße", "marionettenfalten",
             "faltenbildung", "tiefe falten", "feine linien", "fältchen", "falten",
+            "glattere haut", "weniger falten", "falten weniger sichtbar", "glatteres hautbild",
+            "faltenreduktion",
         ],
     },
     "sagging-contour": {
         "label": "Sagging and Loss of Contour",
-        "pair": "firmness-lifting",
+        "pair": None,
         "terms": [
             "schlaffe haut", "erschlaffung", "spannkraft verloren", "hängende wangen",
             "konturverlust", "jawline verloren", "hängebäckchen", "doppelkinn", "schlaff",
+            "straffere haut", "festere konturen", "gestrafft", "mehr spannkraft",
+            "definierte kontur",
         ],
     },
     "collagen-volume": {
@@ -56,31 +60,37 @@ CONCERNS = {
         "pair": None,
         "terms": [
             "kollagenabbau", "kollagenverlust", "dünnere haut", "haut wird dünner",
-            "volumenverlust", "eingefallene wangen",
+            "volumenverlust", "eingefallene wangen", "gesicht wirkt eingefallen",
         ],
     },
     "barrier-dryness": {
         "label": "Barrier Fragility / Dryness",
-        "pair": "plump-hydrated",
+        "pair": None,
         "terms": [
             "trockene haut", "feuchtigkeitsmangel", "barriere geschädigt", "empfindliche haut",
             "gereizte haut", "schuppig", "spannt",
+            "pralle haut", "aufgepolstert", "gut durchfeuchtet", "mehr feuchtigkeit",
+            "gepolsterte haut",
         ],
     },
     "hyperpigmentation": {
         "label": "Hyperpigmentation",
-        "pair": "even-complexion",
+        "pair": None,
         "terms": [
             "altersflecken", "pigmentflecken", "dunkle flecken", "sonnenflecken", "melasma",
             "ungleichmäßiger teint", "fleckiger hautton",
+            "ebenmäßiger teint", "ebenmäßiger hautton", "gleichmäßiger hautton",
+            "einheitlicher teint", "weniger dunkle flecken", "ebenmäßig",
         ],
     },
     "dullness": {
         "label": "Dullness",
-        "pair": "glow-radiance",
+        "pair": None,
         "terms": [
             "fahle haut", "fahler teint", "glanzlos", "grauer teint", "müde haut",
             "keine ausstrahlung",
+            "strahlender teint", "strahlend", "glowy", "leuchtkraft", "frischer teint",
+            "ausstrahlung",
         ],
     },
     "dark-circles": {
@@ -88,81 +98,25 @@ CONCERNS = {
         "pair": None,
         "terms": [
             "augenringe", "dunkle schatten unter den augen", "tränensäcke", "müde augen",
-            "schlupflider",
+            "schlupflider", "sehe immer müde aus",
         ],
     },
     "pores-texture": {
         "label": "Enlarged Pores & Texture",
-        "pair": "refined-pores",
+        "pair": None,
         "terms": [
             "große poren", "vergrößerte poren", "unebene textur", "raue haut", "unebenheiten",
-        ],
-    },
-}
-
-NEEDS = {
-    "wrinkle-reduction": {
-        "label": "Visible Wrinkle Reduction",
-        "pair": "structural-wrinkling",
-        "terms": [
-            "glattere haut", "weniger falten", "falten weniger sichtbar", "glatteres hautbild",
-            "faltenreduktion",
-        ],
-    },
-    "firmness-lifting": {
-        "label": "Firmness & Lifting",
-        "pair": "sagging-contour",
-        "terms": [
-            "straffere haut", "festere konturen", "gestrafft", "mehr spannkraft",
-            "definierte kontur",
-        ],
-    },
-    "plump-hydrated": {
-        "label": "Plump & Hydrated Skin",
-        "pair": "barrier-dryness",
-        "terms": [
-            "pralle haut", "aufgepolstert", "gut durchfeuchtet", "mehr feuchtigkeit",
-            "gepolsterte haut",
-        ],
-    },
-    "glow-radiance": {
-        "label": "Glow & Radiance",
-        "pair": "dullness",
-        "terms": [
-            "strahlender teint", "strahlend", "glowy", "leuchtkraft", "frischer teint",
-            "ausstrahlung",
-        ],
-    },
-    "even-complexion": {
-        "label": "Even Complexion",
-        "pair": "hyperpigmentation",
-        "terms": [
-            "ebenmäßiger teint", "ebenmäßiger hautton", "gleichmäßiger hautton",
-            "einheitlicher teint", "weniger dunkle flecken", "ebenmäßig",
-        ],
-    },
-    "refined-pores": {
-        "label": "Refined Pores & Smooth Texture",
-        "pair": "pores-texture",
-        "terms": [
             "feinporig", "verfeinerte poren", "weniger sichtbare poren", "glatte textur",
             "samtige haut",
         ],
     },
-    "youthful-fresh": {
-        "label": "Youthful & Fresh Appearance",
+    "neck-decollete-hands": {
+        "label": "Neck, Décolleté & Hands",
         "pair": None,
         "terms": [
-            "jünger aussehen", "frischer look", "verjüngt", "jugendlich wirken",
-            "ausgeruht aussehen",
-        ],
-    },
-    "prevention": {
-        "label": "Long-Term Protection & Prevention",
-        "pair": None,
-        "terms": [
-            "vorbeugen", "schützt vor weiterer alterung", "haut bleibt gesund",
-            "langfristiger erfolg", "prävention",
+            "halsfalten", "truthahnhals", "schlaffer hals", "dekolleté", "dekollete",
+            "knitterfalten", "handrücken", "hände verraten", "hals verrät",
+            "altersflecken auf den händen",
         ],
     },
 }
@@ -286,7 +240,6 @@ def build_matchers(catalog: dict) -> dict[str, list[tuple[str, re.Pattern]]]:
 
 
 CONCERN_M = build_matchers(CONCERNS)
-NEED_M = build_matchers(NEEDS)
 PROC_M = build_matchers(PATHS_PROC)
 ING_M = build_matchers(PATHS_ING)
 
@@ -311,7 +264,6 @@ def find_hits(text: str, matchers: dict[str, list[tuple[str, re.Pattern]]]) -> d
     for _, start, end, cid, term in candidates:
         if any(start < e and end > s for s, e in used_spans):
             continue
-        # Special: ebenmäßig* only Even Complexion need — handled by catalog exclusivity
         used_spans.append((start, end))
         hits.setdefault(cid, []).append((start, term))
     return hits
@@ -355,9 +307,9 @@ def patch_dashboard(payload: dict) -> None:
     body = text[m.end() :].rstrip().rstrip(";")
     data = json.loads(body)
     data["agingPaths"] = payload
-    data["meta"]["chart6"] = "agingPaths v1"
+    data["meta"]["chart6"] = "agingPaths v2"
     js = (
-        "/** AUTO-GENERATED from classified_v8.jsonl — do not edit by hand */\n"
+        "/** AUTO-GENERATED from classified_v10.jsonl — do not edit by hand */\n"
         f"window.DashboardData = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
     )
     OUT_JS.write_text(js, encoding="utf-8")
@@ -371,15 +323,12 @@ def main() -> None:
     print(f"Loaded {len(rows)}")
 
     concern_c: Counter = Counter()
-    need_c: Counter = Counter()
     concern_term: dict[str, Counter] = defaultdict(Counter)
-    need_term: dict[str, Counter] = defaultdict(Counter)
-    # co-occurrence: concern|need id -> path id -> {total, strong}
+    # co-occurrence: concern id -> path id -> {total, strong}
     co: dict[str, dict[str, Counter]] = defaultdict(lambda: defaultdict(Counter))
     classified = 0
     unclassified_terms: Counter = Counter()
     by_seg_concern: dict[str, Counter] = defaultdict(Counter)
-    by_seg_need: dict[str, Counter] = defaultdict(Counter)
 
     quote_pool: dict[str, list[dict]] = defaultdict(list)
 
@@ -388,14 +337,12 @@ def main() -> None:
         if len(text) < 30:
             continue
         ch = find_hits(text, CONCERN_M)
-        nh = find_hits(text, NEED_M)
-        # Collision: ebenmäßig already only in needs; uneben in pores unless teint→hyperpigmentation
+        # Collision: uneben in pores unless teint→hyperpigmentation
         if "pores-texture" in ch and re.search(r"uneben\w*.{0,20}(teint|hautton|farbe)", text, re.I):
-            # move to hyperpigmentation
             ch.pop("pores-texture", None)
             ch.setdefault("hyperpigmentation", []).append((0, "uneben+teint"))
 
-        if not ch and not nh:
+        if not ch:
             for w in re.findall(r"[A-Za-zÄÖÜäöüß]{5,}", text.lower()):
                 if w not in {
                     "nicht", "oder", "aber", "wenn", "auch", "noch", "schon", "haben",
@@ -417,16 +364,6 @@ def main() -> None:
                     {"id": r["id"], "text": text[:400], "segment": seg, "mood": r.get("mood")}
                 )
 
-        for nid, hits in nh.items():
-            need_c[nid] += 1
-            by_seg_need[seg][nid] += 1
-            for _, term in hits:
-                need_term[nid][term] += 1
-            if len(quote_pool[f"need:{nid}"]) < 40:
-                quote_pool[f"need:{nid}"].append(
-                    {"id": r["id"], "text": text[:400], "segment": seg, "mood": r.get("mood")}
-                )
-
         paths = find_path_hits(text)
         if not paths:
             continue
@@ -442,10 +379,9 @@ def main() -> None:
                     return i
             return max(0, len(sentences) - 1)
 
-        keys = [f"concern:{c}" for c in ch] + [f"need:{n}" for n in nh]
-        for key in keys:
-            cat_id = key.split(":", 1)[1]
-            src_hits = ch.get(cat_id) or nh.get(cat_id) or [(0, "")]
+        for cid in ch:
+            key = f"concern:{cid}"
+            src_hits = ch.get(cid) or [(0, "")]
             src_pos = src_hits[0][0]
             src_si = sentence_index(src_pos)
             for pid, phits in paths.items():
@@ -458,7 +394,7 @@ def main() -> None:
                 else:
                     co[key][pid]["weak"] += 1
 
-    def pack_side(counter: Counter, catalog: dict, term_map: dict[str, Counter], kind: str) -> list[dict]:
+    def pack_concerns(counter: Counter, catalog: dict, term_map: dict[str, Counter]) -> list[dict]:
         items = []
         for cid, count in counter.most_common():
             meta = catalog[cid]
@@ -469,7 +405,7 @@ def main() -> None:
                 {
                     "id": cid,
                     "label": meta["label"],
-                    "kind": kind,
+                    "kind": "concern",
                     "count": count,
                     "pair": meta.get("pair"),
                     "top_term": top_term,
@@ -479,10 +415,9 @@ def main() -> None:
             )
         return items
 
-    concerns = pack_side(concern_c, CONCERNS, concern_term, "concern")
-    needs = pack_side(need_c, NEEDS, need_term, "need")
+    concerns = pack_concerns(concern_c, CONCERNS, concern_term)
 
-    # Build drilldowns
+    # Build drilldowns (concern → path co-occurrence only)
     drilldowns = {}
     path_meta = {**PATHS_PROC, **PATHS_ING}
     for key, paths in co.items():
@@ -513,27 +448,26 @@ def main() -> None:
         }
 
     payload = {
-        "eyebrow": "6. Aging Concerns, Skin Needs & Paths",
-        "title": "Aging Concerns, Skin Needs & The Paths to Solve Them",
-        "note": "Mehrfachnennungen möglich, Summe über 100 %",
+        "eyebrow": "6. Aging Concerns & The Paths to Solve Them",
+        "title": "Aging Concerns & The Paths to Solve Them",
+        "note": "Mehrfachnennungen möglich",
         "n_total": len(rows),
         "n_classified": classified,
         "classified_share_pct": round(100.0 * classified / len(rows), 1) if rows else 0,
         "unclassified_themes": [w for w, _ in unclassified_terms.most_common(5)],
         "concerns": concerns,
-        "needs": needs,
+        "needs": [],
         "drilldowns": drilldowns,
         "quotes": {k: v[:8] for k, v in quote_pool.items()},
         "by_segment": {
             "concerns": {s: dict(c) for s, c in by_seg_concern.items()},
-            "needs": {s: dict(c) for s, c in by_seg_need.items()},
+            "needs": {},
         },
     }
 
     patch_dashboard(payload)
     print(f"Classified {classified}/{len(rows)} ({payload['classified_share_pct']}%)")
     print("Top concerns:", [(c["id"], c["count"]) for c in concerns[:5]])
-    print("Top needs:", [(n["id"], n["count"]) for n in needs[:5]])
     print(f"Drilldown keys: {len(drilldowns)}")
     print(f"Wrote into {OUT_JS}")
 

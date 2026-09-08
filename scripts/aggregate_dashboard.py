@@ -17,6 +17,15 @@ QUOTES_PER_BUCKET = 150
 MIN_CONF = 0.0  # use all classified rows for chart counts
 QUOTE_MIN_CONF = 0.35
 
+# Classifier still emits seeking/cautioning; dashboard brief uses intrigued/warning
+MOOD_REMAP = {"seeking": "intrigued", "cautioning": "warning"}
+
+
+def normalize_mood(mood: str | None) -> str | None:
+    if not mood:
+        return mood
+    return MOOD_REMAP.get(mood, mood)
+
 # Chart 6 — fixed Appinio survey (not derived from comments)
 DECISION_DRIVERS = {
     "eyebrow": "8. Category-Wide Decision Drivers (Appinio)",
@@ -44,13 +53,14 @@ def load_jsonl(path: Path) -> list[dict]:
 
 
 def row_to_quote(r: dict) -> dict:
-    tags = [r["mood"]]
+    mood = normalize_mood(r.get("mood"))
+    tags = [mood] if mood else []
     if r.get("segment"):
         tags.append(r["segment"])
     q = {
         "id": r["id"],
         "text": r["text"][:500],
-        "mood": r["mood"],
+        "mood": mood,
         "segment": r.get("segment"),
         "topics": r.get("topics") or [],
         "tags": tags,
@@ -90,7 +100,7 @@ def build_comment_index(rows: list[dict]) -> dict:
 
     sorted_rows = sorted(rows, key=lambda x: -x.get("confidence", 0))
     for r in sorted_rows:
-        add("mood", r["mood"], r)
+        add("mood", normalize_mood(r.get("mood")) or r.get("mood"), r)
         if r.get("segment"):
             add("segment", r["segment"], r)
         for t in r.get("topics") or []:
@@ -161,21 +171,26 @@ def corpus_meta(rows: list[dict]) -> dict:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default=str(ROOT / "data" / "classified_v8.jsonl"))
-    parser.add_argument("--source-label", default="PULSAR classified_v8 (filter v7, LOP REV moods)")
+    parser.add_argument("--input", default=str(ROOT / "data" / "classified_v10.jsonl"))
+    parser.add_argument(
+        "--source-label",
+        default="PULSAR classified_v10 (filter v10 · promo cut · spectrum moods intrigued/warning)",
+    )
     args = parser.parse_args()
 
     classified_path = Path(args.input)
     ref = json.loads(REF.read_text(encoding="utf-8"))
     rows = [r for r in load_jsonl(classified_path) if r.get("confidence", 0) >= MIN_CONF]
+    for r in rows:
+        r["mood"] = normalize_mood(r.get("mood"))
     print(f"Aggregating {len(rows)} rows (confidence >= {MIN_CONF})")
 
     cmeta = corpus_meta(rows)
 
     mood_buckets = ref.get("chart1_moodMap", {}).get("sentiment_buckets") or {
         "positive": ["enthusiastic", "satisfied"],
-        "neutral": ["seeking", "conflicted"],
-        "negative": ["disappointed", "cautioning"],
+        "neutral": ["intrigued", "conflicted"],
+        "negative": ["disappointed", "warning"],
     }
     pos_moods = set(mood_buckets["positive"])
     neu_moods = set(mood_buckets["neutral"])
@@ -218,7 +233,7 @@ def main():
     # Sample quotes for legacy embed (hero / fallback)
     quotes = []
     seen = set()
-    for mood in ["enthusiastic", "satisfied", "seeking", "conflicted", "disappointed", "cautioning"]:
+    for mood in ["enthusiastic", "satisfied", "intrigued", "conflicted", "disappointed", "warning"]:
         pool = sorted(
             [r for r in rows if r["mood"] == mood and r.get("confidence", 0) >= QUOTE_MIN_CONF],
             key=lambda x: -x.get("confidence", 0),
@@ -284,16 +299,17 @@ def main():
             "n_positioned": len(positioned),
             "n_unpositioned": unpositioned_n,
             "positioned_share_pct": round(100.0 * len(positioned) / len(rows), 1) if rows else 0,
-            "classifier": "paraphrase-multilingual-MiniLM-L12-v2 + LOP REV rules v8",
+            "classifier": "paraphrase-multilingual-MiniLM-L12-v2 + filter v10 / classified_v10",
             "period": cmeta.get("period"),
             "platforms": cmeta.get("platforms"),
             "platforms_label": cmeta.get("platforms_label"),
         },
         "moodMap": {
             "eyebrow": "1. Mood Map",
-            "title": "The emotional spectrum of anti-aging",
+            "title": "THE EMOTIONAL SPECTRUM OF ANTI-AGING",
+            "axis_label": "Zuwendung ← → Abwendung",
             "moods": mood_map,
-            "note": "Anteile auf klassifizierbare Kommentare · Cautioning hat Vorrang bei Warnung an Dritte",
+            "note": "Anteile auf klassifizierbare Kommentare · Warning vorrangig bei Warnung an Dritte",
         },
         "topicLandscape": {
             "eyebrow": "2. Topic Landscape",

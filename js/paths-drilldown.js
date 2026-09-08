@@ -1,17 +1,17 @@
 /**
- * Chart 6 — dual ranking (concerns / needs) + path drill-down.
+ * Chart 6 — ranked Aging Concerns + path drill-down (client brief 2026-09).
  */
 window.PulsarAgingPaths = {
   render(opts) {
     const { containerEl, hintEl, data, onSelect, onDrill, showTip, hideTip } = opts;
     if (!containerEl || !data) return;
 
-    let view = 'overview'; // or 'drill'
-    let active = null; // { kind, id, label }
+    let view = 'overview';
+    let active = null;
 
     if (hintEl) {
       hintEl.textContent =
-        `${data.note || ''} · klassifizierbar ${data.n_classified?.toLocaleString('de-DE') || 0}` +
+        `${data.note || 'Mehrfachnennungen möglich'} · klassifizierbar ${data.n_classified?.toLocaleString('de-DE') || 0}` +
         ` / ${data.n_total?.toLocaleString('de-DE') || 0} (${data.classified_share_pct || 0}%)`;
     }
 
@@ -22,119 +22,69 @@ window.PulsarAgingPaths = {
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;');
 
-    function pairGaps() {
-      const concernRank = {};
-      data.concerns.forEach((c, i) => {
-        concernRank[c.id] = i;
-      });
-      const needRank = {};
-      data.needs.forEach((n, i) => {
-        needRank[n.id] = i;
-      });
-      const gaps = new Set();
-      data.needs.forEach((n) => {
-        if (!n.pair) return;
-        const cr = concernRank[n.pair];
-        const nr = needRank[n.id];
-        if (cr == null || nr == null) return;
-        if (Math.abs(cr - nr) >= 3) {
-          gaps.add(n.id);
-          gaps.add(n.pair);
-        }
-      });
-      return gaps;
-    }
-
     function renderOverview() {
       view = 'overview';
       active = null;
-      const gaps = pairGaps();
-      const maxC = Math.max(1, ...(data.concerns || []).map((x) => x.count));
-      const maxN = Math.max(1, ...(data.needs || []).map((x) => x.count));
+      const concerns = data.concerns || [];
 
-      const col = (items, max, tone) =>
-        items
-          .map((item) => {
-            const w = Math.max(6, Math.round((item.count / max) * 100));
-            const gap = gaps.has(item.id) ? ' paths-bar--gap' : '';
-            const conc = item.concentrated ? ' paths-bar--concentrated' : '';
-            return `<button type="button" class="paths-bar paths-bar--${tone}${gap}${conc}" data-kind="${item.kind}" data-id="${esc(item.id)}">
-              <span class="paths-bar__label">${esc(item.label)}</span>
-              <span class="paths-bar__track"><span class="paths-bar__fill" style="width:${w}%"></span></span>
-              <span class="paths-bar__value">${item.count}</span>
-            </button>`;
-          })
-          .join('');
-
-      const concernById = Object.fromEntries((data.concerns || []).map((c) => [c.id, c]));
-      const needById = Object.fromEntries((data.needs || []).map((n) => [n.id, n]));
-      const gapParts = [];
-      (data.needs || []).forEach((n) => {
-        if (!n.pair || !gaps.has(n.id)) return;
-        const c = concernById[n.pair];
-        if (c) gapParts.push(`${esc(c.label)} ↔ ${esc(n.label)}`);
-      });
-      (data.concerns || []).forEach((c) => {
-        if (!gaps.has(c.id) || !c.pair) return;
-        const n = needById[c.pair];
-        if (n && !gapParts.some((p) => p.includes(esc(n.label)))) {
-          gapParts.push(`${esc(c.label)} ↔ ${esc(n.label)}`);
-        }
-      });
-      const gapList = gapParts.slice(0, 4).join(' · ');
+      const rows = concerns
+        .map((item, i) => {
+          const conc = item.concentrated ? ' paths-rank__row--concentrated' : '';
+          const star = item.concentrated ? ' <span class="paths-rank__star" title=">60% Volumen von einem Suchbegriff">★</span>' : '';
+          const blurb = item.blurb || item.description || '';
+          return `<button type="button" class="paths-rank__row${conc}" data-kind="concern" data-id="${esc(item.id)}">
+            <span class="paths-rank__num">${i + 1}</span>
+            <span class="paths-rank__body">
+              <span class="paths-rank__name">${esc(item.label)}${star}</span>
+              ${blurb ? `<span class="paths-rank__blurb">${esc(blurb)}</span>` : ''}
+            </span>
+            <span class="paths-rank__n">${(item.count || 0).toLocaleString('de-DE')}</span>
+          </button>`;
+        })
+        .join('');
 
       containerEl.innerHTML = `
-        <div class="paths-overview">
-          <div class="paths-col">
-            <h4 class="paths-col__title paths-col__title--concern">Top Aging Concerns</h4>
-            <div class="paths-col__list">${col(data.concerns || [], maxC, 'concern')}</div>
-          </div>
-          <div class="paths-col">
-            <h4 class="paths-col__title paths-col__title--need">Top Skin Needs</h4>
-            <div class="paths-col__list">${col(data.needs || [], maxN, 'need')}</div>
-          </div>
+        <div class="paths-rank">
+          <h4 class="paths-rank__title">Aging Concerns</h4>
+          <div class="paths-rank__list">${rows}</div>
         </div>
-        <p class="paths-footnote">Klick auf einen Balken → Lösungswege · gestrichelte Markierung = Rank-Gap ≥ 3 zwischen Concern↔Need · ★ = Kategorie von einem Begriff dominiert (&gt;60%)${
-          gapList ? `<br><span class="paths-footnote__gaps">Gap-Paare: ${gapList}</span>` : ''
-        }</p>`;
+        <p class="paths-footnote">Klick auf eine Zeile → Lösungswege (Procedures / Ingredients) · absolute n, keine %-Werte · ★ = Kategorie von einem Begriff dominiert (&gt;60%)</p>`;
 
-      containerEl.querySelectorAll('.paths-bar').forEach((el) => {
-        const kind = el.dataset.kind;
-        const id = el.dataset.id;
-        const item = (kind === 'concern' ? data.concerns : data.needs).find((x) => x.id === id);
+      containerEl.querySelectorAll('.paths-rank__row').forEach((el) => {
         el.addEventListener('click', () => {
-          if (onSelect) onSelect({ type: kind, id, label: item?.label });
-          renderDrill(kind, id, item?.label || id);
+          const id = el.dataset.id;
+          const item = concerns.find((c) => c.id === id);
+          if (!item) return;
+          active = { kind: 'concern', id, label: item.label };
+          if (typeof onSelect === 'function') onSelect(active);
+          renderDrill(item);
         });
-        el.addEventListener('mousemove', (e) => {
-          if (!showTip || !item) return;
-          const pair = item.pair ? `<br>gekoppelt mit: ${item.pair}` : '';
-          const conc = item.concentrated
-            ? `<br>Konzentration: ${Math.round(item.concentration * 100)}% auf „${item.top_term}“`
-            : '';
-          showTip(
-            `<strong>${esc(item.label)}</strong><br>${item.count} Nennungen${pair}${conc}`,
-            e.clientX,
-            e.clientY,
-          );
+        el.addEventListener('mouseenter', () => {
+          if (typeof showTip === 'function') showTip(el, el.querySelector('.paths-rank__name')?.textContent || '');
         });
-        el.addEventListener('mouseleave', () => hideTip && hideTip());
+        el.addEventListener('mouseleave', () => {
+          if (typeof hideTip === 'function') hideTip();
+        });
       });
     }
 
-    function renderDrill(kind, id, label) {
+    function renderDrill(concern) {
       view = 'drill';
-      active = { kind, id, label };
-      const key = `${kind}:${id}`;
-      const dd = (data.drilldowns && data.drilldowns[key]) || { basis: 0, paths: [], low_n: true };
-      const paths = dd.paths || [];
-      const max = Math.max(1, ...paths.map((p) => p.count));
+      const dd =
+        (data.drilldowns && data.drilldowns[`concern:${concern.id}`]) ||
+        (data.drilldowns && data.drilldowns[concern.id]) ||
+        null;
+      const list = (dd && dd.paths) || (data.paths && data.paths[concern.id]) || concern.paths || [];
+      const paths = Array.isArray(list) ? list : [];
+      const basis = (dd && dd.basis) || paths.reduce((s, p) => s + (p.count || 0), 0) || concern.count || 0;
+      const max = Math.max(1, ...paths.map((p) => p.count || 0), 1);
+      const low = basis < 30 ? '<p class="paths-drill__warn">⚠️ geringe Fallzahl (Basis &lt; 30)</p>' : '';
 
       const bars = paths
         .map((p) => {
-          const w = Math.max(6, Math.round((p.count / max) * 100));
-          const tone = p.kind === 'ingredient' ? 'ingredient' : 'procedure';
-          return `<button type="button" class="paths-bar paths-bar--${tone}" data-path="${esc(p.id)}" data-kind="${esc(p.kind)}">
+          const w = Math.max(6, Math.round(((p.count || 0) / max) * 100));
+          const tone = p.kind === 'ingredient' || p.type === 'ingredient' ? 'ing' : 'proc';
+          return `<button type="button" class="paths-bar paths-bar--${tone}" data-path="${esc(p.id)}">
             <span class="paths-bar__label">${esc(p.label)}</span>
             <span class="paths-bar__track"><span class="paths-bar__fill" style="width:${w}%"></span></span>
             <span class="paths-bar__value">${p.count}</span>
@@ -142,65 +92,35 @@ window.PulsarAgingPaths = {
         })
         .join('');
 
-      const warn = dd.low_n
-        ? `<p class="paths-warn">⚠ geringe Fallzahl (Basis n=${dd.basis})</p>`
-        : '';
-
       containerEl.innerHTML = `
         <div class="paths-drill">
-          <div class="paths-drill__head">
-            <button type="button" class="paths-back" id="paths-back">← Zurück</button>
-            <div>
-              <h4 class="paths-drill__title">Lösungswege · ${esc(label)}</h4>
-              <p class="paths-drill__sub">Basis: n=${dd.basis} Beiträge mit Concern/Need + Lösungsweg</p>
-            </div>
-          </div>
-          ${warn}
-          <div class="paths-drill__legend">
-            <span class="paths-pill paths-pill--procedure">Procedures</span>
-            <span class="paths-pill paths-pill--ingredient">Skincare Ingredients</span>
-          </div>
-          <div class="paths-col__list">${bars || '<p class="quote-empty">Keine Lösungswege oberhalb der Schwelle.</p>'}</div>
+          <button type="button" class="paths-drill__back" id="paths-back">← Zurück zur Rangliste</button>
+          <h4 class="paths-drill__title">${esc(concern.label)}</h4>
+          <p class="paths-drill__basis">Basis: ${basis.toLocaleString('de-DE')} Beiträge mit Concern + Lösungsweg</p>
+          ${low}
+          <div class="paths-drill__list">${bars || '<p class="paths-empty">Keine Lösungswege über dem Schwellenwert.</p>'}</div>
         </div>`;
 
-      containerEl.querySelector('#paths-back')?.addEventListener('click', () => {
-        renderOverview();
-        if (onDrill) onDrill(null);
-      });
-
-      containerEl.querySelectorAll('.paths-bar[data-path]').forEach((el) => {
-        const p = paths.find((x) => x.id === el.dataset.path);
+      document.getElementById('paths-back')?.addEventListener('click', renderOverview);
+      containerEl.querySelectorAll('.paths-bar').forEach((el) => {
         el.addEventListener('click', () => {
-          if (onSelect) {
+          if (typeof onDrill === 'function') {
+            onDrill({ concernId: concern.id, pathId: el.dataset.path });
+          }
+          if (typeof onSelect === 'function') {
             onSelect({
-              type: 'path',
-              id: p.id,
-              label: p.label,
-              parentKind: kind,
-              parentId: id,
-              parentLabel: label,
+              type: 'aging-path',
+              id: el.dataset.path,
+              label: el.querySelector('.paths-bar__label')?.textContent || el.dataset.path,
+              parentKind: 'concern',
+              parentId: concern.id,
+              parentLabel: concern.label,
             });
           }
         });
-        el.addEventListener('mousemove', (e) => {
-          if (!showTip || !p) return;
-          showTip(
-            `<strong>${esc(p.label)}</strong><br>${p.count} · stark ${p.strong || 0} / schwach ${p.weak || 0}`,
-            e.clientX,
-            e.clientY,
-          );
-        });
-        el.addEventListener('mouseleave', () => hideTip && hideTip());
       });
-
-      if (onDrill) onDrill(active);
     }
 
     renderOverview();
-    return {
-      showOverview: renderOverview,
-      getView: () => view,
-      getActive: () => active,
-    };
   },
 };

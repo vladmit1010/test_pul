@@ -24,9 +24,9 @@ from tqdm import tqdm
 
 ROOT = Path(__file__).resolve().parents[1]
 REF = ROOT / "data" / "dashboard-reference.json"
-DEFAULT_INPUT = ROOT / "data" / "merged_filtered_v7.csv"
-OUT_JSONL = ROOT / "data" / "classified_v8.jsonl"
-OUT_REVIEW = ROOT / "data" / "review_queue_v8.csv"
+DEFAULT_INPUT = ROOT / "data" / "merged_filtered_v10.csv"
+OUT_JSONL = ROOT / "data" / "classified_v10.jsonl"
+OUT_REVIEW = ROOT / "data" / "review_queue_v10.csv"
 CONFIG = ROOT / "scripts" / "classify_config.json"
 
 MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
@@ -190,8 +190,19 @@ BOTOX_SHORT = re.compile(
 )
 POLITICS_BOTOX = re.compile(r"\b(botox opa|botox.?vladi|klopp)\b", re.I)
 CLINIC_PROMO = re.compile(
-    r"\b(willkommen bei|plätze frei|brandneue produkte|jetzt erhältlich bei|"
-    r"erstbehandlung bei|termin per dm|#kosmetikstudio)\b",
+    r"\b(willkommen bei|plätze frei|brandneue produkte|jetzt erhältlich|"
+    r"erstbehandlung bei|termin per dm|#kosmetikstudio|#beautylounge|"
+    r"buche jetzt|online bestellbar|link in bio|link unten|#ad\b|"
+    r"\[anzeige\]|\(anzeige\)|termine?\s+verfügbar|jetzt bestellen|"
+    r"tiktokshop|unsere kundinnen|bei uns im store|begrenzte termine|"
+    r"rabattaktion|%\s*(rabatt|sparen)|wir bieten|unsere praxis|"
+    r"unser studio|unsere (top-)?behandlung)\b",
+    re.I,
+)
+PERSONAL_FIRSTPERSON = re.compile(
+    r"\b(ich habe|ich hatte|ich bin|bei mir|mein ergebnis|meine haut|"
+    r"mir wurde|ich bereue|meine erfahrung|hab mir|habe mir|"
+    r"nach meiner|seit ich|ich würde es|bin begeistert von meinem)\b",
     re.I,
 )
 
@@ -263,7 +274,9 @@ BEAUTY_QUESTION = re.compile(
 )
 PROMO_MOOD = re.compile(
     r"\b(neu bei|ausverkauft|jetzt erhältlich|bist du bereit|highlight|revolutionär|"
-    r"🚨|mega toll|begeistert von|entdecke jetzt|we love|glow, aber wissenschaftlich)\b",
+    r"🚨|mega toll|entdecke jetzt|we love|glow, aber wissenschaftlich|"
+    r"buche jetzt|online bestellbar|link in bio|#ad\b|anzeige|"
+    r"unsere kundinnen|wir bieten dir|für strahlende haut🤍)\b",
     re.I,
 )
 PROCEDURE_CONTEXT = re.compile(
@@ -391,6 +404,14 @@ def apply_mood_rules(text: str, mood: str, mood_scores: list[tuple[str, float]] 
                     return m
         return "seeking"
 
+    # 0) Marketing / clinic promo without personal consumer stance → Intrigued/seeking
+    #    (brief: ads are not Enthusiastic; ideally filtered upstream)
+    is_promo = bool(
+        CLINIC_PROMO.search(text) or BRAND_PROMO.search(text) or PROMO_MOOD.search(text)
+    )
+    if is_promo and not PERSONAL_FIRSTPERSON.search(text):
+        return "seeking"
+
     # 1) Concrete warning to others → Cautioning
     if CAUTIONING_OVERRIDE.search(text) or (
         re.search(r"\b(vorsicht|warnung|finger weg)\b", text, re.I)
@@ -406,14 +427,16 @@ def apply_mood_rules(text: str, mood: str, mood_scores: list[tuple[str, float]] 
     if RAGEBAIT.search(text) or NEGATIVE_EXPERIENCE.search(text) or DISAPPOINTED_OVERRIDE.search(text):
         return "disappointed"
 
-    # 4) Strong positive
-    if (
-        PROMO_MOOD.search(text)
-        or BRAND_PROMO.search(text)
-        or CLINIC_PROMO.search(text)
-        or ENTHUSIASTIC_OVERRIDE.search(text)
-        or re.search(r"\b(bin begeistert|liebe diese|must-have|getestet und bin)\b", text, re.I)
+    # 4) Strong personal positive (NOT bare promo — handled above)
+    if ENTHUSIASTIC_OVERRIDE.search(text) or re.search(
+        r"\b(bin begeistert|liebe diese|must-have|getestet und bin|"
+        r"beste entscheidung|game.?changer|wie neugeboren)\b",
+        text,
+        re.I,
     ):
+        # Short emoji praise / soft hype without personal outcome → satisfied
+        if not PERSONAL_FIRSTPERSON.search(text) and len(text) < 120:
+            return "satisfied"
         return "enthusiastic"
 
     if SATISFIED_OVERRIDE.search(text):
@@ -428,7 +451,7 @@ def apply_mood_rules(text: str, mood: str, mood_scores: list[tuple[str, float]] 
     ):
         return "conflicted"
 
-    # 5) Questions / orientation
+    # 5) Questions / orientation / remaining edu
     if SEEKING_OVERRIDE.search(text) or BEAUTY_QUESTION.search(text):
         return "seeking"
 
@@ -436,6 +459,8 @@ def apply_mood_rules(text: str, mood: str, mood_scores: list[tuple[str, float]] 
         return "seeking"
 
     # Soft-correct overused embedding labels without cues
+    if mood == "enthusiastic" and is_promo:
+        return "seeking"
     if mood == "conflicted":
         if BEAUTY_MOOD_CTX.search(text) and CONFLICTED_SOFT.search(text):
             return "conflicted"
@@ -832,9 +857,9 @@ def classify_batch(
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default=str(ROOT / "data" / "merged_filtered_v7.csv"))
-    parser.add_argument("--output-jsonl", default=str(ROOT / "data" / "classified_v8.jsonl"))
-    parser.add_argument("--output-review", default=str(ROOT / "data" / "review_queue_v8.csv"))
+    parser.add_argument("--input", default=str(DEFAULT_INPUT))
+    parser.add_argument("--output-jsonl", default=str(OUT_JSONL))
+    parser.add_argument("--output-review", default=str(OUT_REVIEW))
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--batch-size", type=int, default=128)
     args = parser.parse_args()

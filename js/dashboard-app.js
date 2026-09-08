@@ -158,8 +158,8 @@
 
   const TOPIC_SENTIMENT = {
     positive: { label: 'Positive', moods: ['enthusiastic', 'satisfied'] },
-    neutral: { label: 'Neutral', moods: ['seeking', 'conflicted'] },
-    negative: { label: 'Negative / Warning', moods: ['disappointed', 'cautioning'] },
+    neutral: { label: 'Neutral', moods: ['intrigued', 'seeking', 'conflicted'] },
+    negative: { label: 'Negative / Warning', moods: ['disappointed', 'warning', 'cautioning'] },
   };
 
   function topicSentimentMoods(sentiment) {
@@ -202,6 +202,12 @@
         : (D.comments || []).filter((c) => (c.topics || []).includes(filter.id));
       return base.filter((c) => moods.has(c.mood));
     }
+    if (filter.type === 'topic-pair') {
+      const base = commentIndex
+        ? poolComments(commentIndex.topic?.[filter.a])
+        : (D.comments || []).filter((c) => (c.topics || []).includes(filter.a));
+      return base.filter((c) => (c.topics || []).includes(filter.b));
+    }
     if (commentIndex) {
       if (filter.type === 'mood') return poolComments(commentIndex.mood?.[filter.id]);
       if (filter.type === 'topic') return poolComments(commentIndex.topic?.[filter.id]);
@@ -226,6 +232,7 @@
     if (!filter) return 0;
     if (filter.type === 'mood') return D.moodMap.moods.find((x) => x.id === filter.id)?.count || 0;
     if (filter.type === 'topic') return findTopic(filter.id)?.count || 0;
+    if (filter.type === 'topic-pair') return filter.weight || commentsFor(filter).length;
     if (filter.type === 'topic-sentiment') {
       const t = findTopic(filter.id);
       if (!t) return 0;
@@ -263,6 +270,12 @@
     if (a.type === 'word') return a.id === b.id && a.segment === b.segment;
     if (a.type === 'path') return a.id === b.id && a.parentId === b.parentId;
     if (a.type === 'topic-sentiment') return a.id === b.id && a.sentiment === b.sentiment;
+    if (a.type === 'topic-pair') {
+      return (
+        (a.a === b.a && a.b === b.b) ||
+        (a.a === b.b && a.b === b.a)
+      );
+    }
     return a.id === b.id;
   }
 
@@ -270,6 +283,9 @@
     document.querySelectorAll('.mood-slice-g').forEach((el) => {
       el.classList.remove('mood-slice-g--active', 'mood-slice-g--dim', 'mood-slice-g--hover');
       el.style.removeProperty('--pop');
+    });
+    document.querySelectorAll('.mood-spectrum__seg').forEach((el) => {
+      el.classList.remove('is-active', 'is-dim');
     });
     document.querySelectorAll('.mood-legend__item--active').forEach((el) => {
       el.classList.remove('mood-legend__item--active');
@@ -298,6 +314,13 @@
         vis.classList.toggle('mood-slice-g--dim', !match);
         setPiePop(vis, match ? 12 : 0);
       });
+      if (filter.type === 'mood') {
+        document.querySelectorAll('#mood-chart .mood-spectrum__seg').forEach((el) => {
+          const match = el.dataset.id === filter.id;
+          el.classList.toggle('is-active', match);
+          el.classList.toggle('is-dim', !match);
+        });
+      }
       const legId = filter.type === 'mood' ? 'mood-legend' : 'seg-legend';
       document.querySelectorAll(`#${legId} .mood-legend__item`).forEach((el) => {
         el.classList.toggle('mood-legend__item--active', el.dataset.id === filter.id);
@@ -368,6 +391,10 @@
       const t = findTopic(filter.id);
       quoteContext.textContent = `Topic: ${t?.label || filter.id}`;
       chips.push(t?.label, `${t?.count || 0} mentions`);
+    }
+    if (filter.type === 'topic-pair') {
+      quoteContext.textContent = `Paar: ${filter.labelA || filter.a} + ${filter.labelB || filter.b}`;
+      chips.push('gemeinsam genannt', filter.weight ? `${filter.weight}×` : null);
     }
     if (filter.type === 'topic-sentiment') {
       const t = findTopic(filter.id);
@@ -527,12 +554,12 @@
     const pos = moods
       .filter((m) => m.id === 'enthusiastic' || m.id === 'satisfied')
       .reduce((s, m) => s + m.count, 0);
-    const advisory = moods.find((m) => m.id === 'cautioning' || m.id === 'advisory')?.count || 0;
+    const advisory = moods.find((m) => m.id === 'warning' || m.id === 'cautioning' || m.id === 'advisory')?.count || 0;
     const topTopic = flatTopicsForKpi()[0] || [...topicPool()].sort((a, b) => b.count - a.count)[0];
     row.innerHTML = [
-      { label: 'Comments', value: String(total), hint: 'sample total', color: 'var(--rose)' },
+      { label: 'Comments', value: String(total), hint: 'klassifizierter Korpus', color: 'var(--rose)' },
       { label: 'Positive mood', value: `${Math.round((pos / total) * 100)}%`, hint: 'enthusiastic + satisfied', color: 'var(--mint)' },
-      { label: 'Cautioning', value: `${Math.round((advisory / total) * 100)}%`, hint: 'warnings to others', color: 'var(--sky)' },
+      { label: 'Warning', value: `${Math.round((advisory / total) * 100)}%`, hint: 'warnings to others', color: 'var(--sky)' },
       { label: `Top topic`, value: String(topTopic?.count || 0), hint: topTopic?.label || '', color: 'var(--lavender)' },
     ]
       .map(
@@ -600,44 +627,65 @@
     document.getElementById('mood-eyebrow').textContent = mm.eyebrow;
     document.getElementById('mood-title').textContent = mm.title;
     const moods = mm.moods;
-    const svg = document.getElementById('mood-chart');
-    const total = totalFrom(moods);
-    const cx = 160;
-    const cy = 160;
-    const r = 132;
-    let angle = 0;
-    const slices = moods
+    const host = document.getElementById('mood-chart');
+    const total = totalFrom(moods) || 1;
+
+    // Weighted mean marker (cats 1..6) — orientation only
+    let weighted = 0;
+    moods.forEach((m, i) => {
+      weighted += (i + 1) * (m.count || 0);
+    });
+    const meanPos = ((weighted / total - 1) / 5) * 100;
+
+    const axis = mm.axis_label || 'Zuwendung ← → Abwendung';
+    const segments = moods
       .map((m) => {
-        const sweep = total ? (m.count / total) * 360 : 0;
-        const start = angle;
-        const end = angle + sweep;
-        const mid = start + sweep / 2;
-        angle = end;
-        const pct = total ? Math.round((m.count / total) * 100) : 0;
-        const d = piePath(cx, cy, r, start, end - 0.45);
-        const [lx, ly] = polar(cx, cy, r * 0.62, mid);
-        const rad = ((mid - 90) * Math.PI) / 180;
-        return `<g class="mood-slice" data-id="${esc(m.id)}" data-color="${esc(m.color)}">
-          <path class="mood-hit" d="${d}" fill="transparent"/>
-          <g class="mood-slice-g" style="--ox:${Math.cos(rad)};--oy:${Math.sin(rad)};--pop:0;--glow:${esc(m.color)}">
-            <path class="mood-slice__body" d="${d}" fill="${m.color}" stroke="#0c0e14" stroke-width="3"/>
-            <text class="mood-slice__pct" x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle">${pct}%</text>
-          </g>
-        </g>`;
-      })
-      .join('');
-    svg.innerHTML = slices;
-    document.getElementById('mood-legend').innerHTML = moods
-      .map((m) => {
-        const pct = total ? Math.round((m.count / total) * 100) : 0;
-        return `<button type="button" class="mood-legend__item" data-id="${esc(m.id)}">
-          <span class="mood-legend__swatch" style="background:${m.color}"></span>
-          <span class="mood-legend__label">${esc(m.label)}</span>
-          <span class="mood-legend__pct">${pct}% · ${m.count}</span>
+        const pct = Math.round(((m.count || 0) / total) * 100);
+        const flex = Math.max(pct, pct < 4 ? 4 : pct);
+        return `<button type="button" class="mood-spectrum__seg" data-id="${esc(m.id)}" data-color="${esc(m.color)}" style="flex:${flex};--seg:${esc(m.color)}" title="${esc(m.label)}: ${pct}% · n=${m.count}">
+          <span class="mood-spectrum__name">${esc(m.label)}</span>
+          <span class="mood-spectrum__pct">${pct}%</span>
+          <span class="mood-spectrum__n">n=${(m.count || 0).toLocaleString('de-DE')}</span>
         </button>`;
       })
       .join('');
-    bindDonutInteractions(svg, 'mood', 'mood-legend');
+
+    host.outerHTML = `<div id="mood-chart" class="mood-spectrum" aria-label="Mood spectrum">
+      <p class="mood-spectrum__axis">${esc(axis)}</p>
+      <div class="mood-spectrum__bar">${segments}
+        <span class="mood-spectrum__mean" style="left:${meanPos.toFixed(2)}%" title="Gewichteter Mittelwert (Orientierung)"></span>
+      </div>
+    </div>`;
+
+    document.getElementById('mood-legend').innerHTML = moods
+      .map((m) => {
+        const pct = Math.round(((m.count || 0) / total) * 100);
+        return `<button type="button" class="mood-legend__item" data-id="${esc(m.id)}">
+          <span class="mood-legend__swatch" style="background:${m.color}"></span>
+          <span class="mood-legend__label">${esc(m.label)}</span>
+          <span class="mood-legend__pct">${pct}% · ${(m.count || 0).toLocaleString('de-DE')}</span>
+        </button>`;
+      })
+      .join('');
+
+    const chart = document.getElementById('mood-chart');
+    const activate = (id) => {
+      chart.querySelectorAll('.mood-spectrum__seg').forEach((el) => {
+        el.classList.toggle('is-active', el.dataset.id === id);
+        el.classList.toggle('is-dim', el.dataset.id !== id);
+      });
+      document.querySelectorAll('#mood-legend .mood-legend__item').forEach((el) => {
+        el.classList.toggle('mood-legend__item--active', el.dataset.id === id);
+      });
+      setFilter({ type: 'mood', id });
+    };
+    chart.querySelectorAll('.mood-spectrum__seg').forEach((el) => {
+      el.addEventListener('click', () => activate(el.dataset.id));
+    });
+    document.querySelectorAll('#mood-legend .mood-legend__item').forEach((el) => {
+      el.addEventListener('click', () => activate(el.dataset.id));
+    });
+
     ensureFootnote(
       'mood-chart',
       [...corpusFooterBits(), mm.note || 'Anteile = klassifizierbare Kommentare'].filter(Boolean).join(' · '),
@@ -986,6 +1034,48 @@
     });
   }
 
+  function renderConversationLandscape() {
+    if (!window.PulsarConversationLandscape || !D.conversationLandscape) return;
+    const block = D.conversationLandscape;
+    document.getElementById('landscape-eyebrow').textContent = block.eyebrow || '9. Conversation Landscape';
+    document.getElementById('landscape-title').textContent = block.title || 'Conversation clusters';
+    window.PulsarConversationLandscape.render({
+      containerEl: document.getElementById('landscape-chart'),
+      hintEl: document.getElementById('landscape-hint'),
+      howtoEl: document.getElementById('landscape-howto'),
+      legendEl: document.getElementById('landscape-legend'),
+      detailEl: document.getElementById('landscape-detail'),
+      data: block,
+      showTip,
+      hideTip,
+      onSelect: (sel) => {
+        if (!sel) return;
+        if (sel.type === 'topic-pair') {
+          setFilter({
+            type: 'topic-pair',
+            a: sel.a,
+            b: sel.b,
+            labelA: sel.labelA,
+            labelB: sel.labelB,
+            weight: sel.weight,
+          });
+          return;
+        }
+        if (sel.type === 'topic') setFilter({ type: 'topic', id: sel.id });
+      },
+    });
+    ensureFootnote(
+      'landscape-chart',
+      [
+        ...corpusFooterBits(),
+        block.method || 'topic co-occurrence',
+        `${(block.nodes || []).length} Themen · ${(block.edges || []).length} Paare · ${(block.clusters || []).length} Cluster`,
+      ]
+        .filter(Boolean)
+        .join(' · '),
+    );
+  }
+
   if (quotePrev) {
     quotePrev.addEventListener('click', () => {
       if (quotePage > 0) {
@@ -1032,6 +1122,7 @@
   safe('agingPaths', renderAgingPaths);
   safe('retinol', renderRetinolDeepDive);
   safe('drivers', renderDrivers);
+  safe('landscape', renderConversationLandscape);
 
   (function bindDownloadMenu() {
     const btn = document.getElementById('download-btn');

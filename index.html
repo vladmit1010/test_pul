@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revitalift — Dashboard (PULSAR data)</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pulsar.css">
+  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/pulsar.css?v=10c">
 </head>
 <body class="pulsar-page">
   <header class="header pulsar-header">
@@ -15,18 +15,13 @@
         <span class="logo__text">Revitalift <span class="logo__sub">Dashboard</span></span>
       </div>
       <div class="header__actions">
-        <span class="badge pulsar-badge">PULSAR · filter v7 · classified_v8</span>
+        <span class="badge pulsar-badge">PULSAR · filter v10 · classified_v10</span>
         <div class="download-menu">
-          <button type="button" class="download-btn" id="download-btn" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="download-btn" id="download-btn" aria-expanded="false" aria-haspopup="true" hidden>
             Daten laden
           </button>
           <div class="download-menu__panel" id="download-panel" hidden>
-            <a class="download-menu__link" href="data/export_dashboard_classification_v8.xlsx" download>
-              Klassifikation · XLSX
-            </a>
-            <a class="download-menu__link" href="data/export_comments_v8.csv" download>
-              Rohkommentare · CSV
-            </a>
+            <!-- Heavy export files are gitignored; re-add locally if needed -->
           </div>
         </div>
       </div>
@@ -39,7 +34,7 @@
         <p class="pulsar-eyebrow">Revitalift · Anti-aging insights</p>
         <h1 class="pulsar-title">German consumer conversation dashboard</h1>
         <p class="pulsar-desc">
-          Live view from <strong>classified German comments</strong> (filter v7 + LOP REV mood/topic rules v8).
+          Live view from <strong>classified German comments</strong> (filter v9 + spectrum moods).
           Data: <code>data/dashboard_generated.js</code> · Chart 8: fixed Appinio survey.
         </p>
       </div>
@@ -54,7 +49,7 @@
             <h2 class="section-title" id="mood-title"></h2>
           </div>
           <div class="chart-panel">
-            <svg id="mood-chart" viewBox="0 0 320 320" class="mood-svg" aria-label="Mood map"></svg>
+            <div id="mood-chart" class="mood-spectrum" aria-label="Mood spectrum"></div>
             <div id="mood-legend" class="mood-legend"></div>
           </div>
         </section>
@@ -143,6 +138,26 @@
             <div id="drivers-chart" class="drivers-chart"></div>
           </div>
         </section>
+
+        <section class="chart-section" id="conversation-landscape">
+          <div class="section-head">
+            <p class="pulsar-eyebrow" id="landscape-eyebrow"></p>
+            <h2 class="section-title" id="landscape-title"></h2>
+          </div>
+          <div class="chart-panel chart-panel--landscape">
+            <p class="bubble-hint" id="landscape-hint"></p>
+            <ul class="landscape-howto" id="landscape-howto" hidden></ul>
+            <div class="landscape-layout">
+              <div id="landscape-chart" class="landscape-chart" aria-label="Conversation landscape"></div>
+              <aside class="landscape-side">
+                <div id="landscape-legend" class="landscape-legend"></div>
+                <div id="landscape-detail" class="landscape-detail" aria-live="polite">
+                  <p class="landscape-detail__empty">Klicke ein Thema oder eine Linie, um Details zu sehen.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
       </div>
 
       <aside class="quotes-panel" id="quotes-panel">
@@ -170,12 +185,13 @@
 
   <div id="pulsar-tip" class="pulsar-tip" hidden></div>
 
-  <script src="js/dashboard-taxonomy-de.js"></script>
-  <script src="data/dashboard_generated.js"></script>
-  <script src="js/dashboard-utils.js"></script>
-  <script src="js/wordcloud.js"></script>
-  <script src="js/paths-drilldown.js"></script>
-  <script src="js/retinol-tornado.js"></script>
-  <script src="js/dashboard-app.js"></script>
+  <script src="js/dashboard-taxonomy-de.js?v=10"></script>
+  <script src="data/dashboard_generated.js?v=10c"></script>
+  <script src="js/dashboard-utils.js?v=10"></script>
+  <script src="js/wordcloud.js?v=10"></script>
+  <script src="js/paths-drilldown.js?v=10"></script>
+  <script src="js/retinol-tornado.js?v=10"></script>
+  <script src="js/conversation-landscape.js?v=10c"></script>
+  <script src="js/dashboard-app.js?v=10c"></script>
 </body>
 </html>

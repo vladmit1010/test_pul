@@ -1,99 +1,101 @@
-/** AUTO-GENERATED from classified_v8.jsonl — do not edit by hand */
+/** AUTO-GENERATED — do not edit by hand */
 window.DashboardData = {
   "meta": {
     "schema_version": 2,
-    "source": "PULSAR classified_v8 (filter v7, LOP REV moods)",
-    "total_comments": 38449,
-    "n_positioned": 26999,
-    "n_unpositioned": 11450,
-    "positioned_share_pct": 70.2,
-    "classifier": "paraphrase-multilingual-MiniLM-L12-v2 + LOP REV rules v8",
-    "period": "2025-07 – 2026-08",
+    "source": "PULSAR classified_v10 (filter v10 · promo cut · spectrum moods)",
+    "total_comments": 331195,
+    "n_positioned": 231551,
+    "n_unpositioned": 99644,
+    "positioned_share_pct": 69.9,
+    "classifier": "paraphrase-multilingual-MiniLM-L12-v2 + filter v10 / classified_v10",
+    "period": "2025-09 – 2026-09",
     "platforms": [
       {
         "name": "Instagram Public",
-        "count": 10628
-      },
-      {
-        "name": "Reddit",
-        "count": 8938
-      },
-      {
-        "name": "Youtube",
-        "count": 5448
+        "count": 186258
       },
       {
         "name": "TikTok",
-        "count": 4472
+        "count": 55545
       },
       {
         "name": "Facebook Pages",
-        "count": 3657
+        "count": 45241
       },
       {
-        "name": "Reviews",
-        "count": 2603
+        "name": "Reddit",
+        "count": 16476
       },
       {
         "name": "X",
-        "count": 2049
+        "count": 10658
       },
       {
-        "name": "Blogs",
-        "count": 630
+        "name": "Youtube",
+        "count": 9534
+      },
+      {
+        "name": "Reviews",
+        "count": 4120
       },
       {
         "name": "Threads",
-        "count": 24
+        "count": 2421
+      },
+      {
+        "name": "Blogs",
+        "count": 942
       }
     ],
-    "platforms_label": "Instagram Public 10.628 · Reddit 8.938 · Youtube 5.448 · TikTok 4.472 · Facebook Pages 3.657",
-    "wordclouds": "v1 from classified_v8",
-    "chart6": "agingPaths v1",
-    "chart7": "retinolDeepDive v1"
+    "platforms_label": "Instagram Public 186.258 · TikTok 55.545 · Facebook Pages 45.241 · Reddit 16.476 · X 10.658",
+    "wordclouds": "v2 from classified_v10",
+    "chart6": "agingPaths v2",
+    "chart7": "retinolDeepDive v1",
+    "conversationLandscape": "v1 topic co-occurrence"
   },
   "moodMap": {
     "eyebrow": "1. Mood Map",
-    "title": "The emotional spectrum of anti-aging",
+    "title": "THE EMOTIONAL SPECTRUM OF ANTI-AGING",
+    "axis_label": "Zuwendung ← → Abwendung",
     "moods": [
       {
         "id": "enthusiastic",
         "label": "Enthusiastic",
         "color": "#f0a86e",
-        "count": 13054
+        "count": 124094
       },
       {
         "id": "satisfied",
         "label": "Satisfied",
         "color": "#e8c98a",
-        "count": 6643
+        "count": 53948
       },
       {
-        "id": "seeking",
-        "label": "Seeking",
+        "id": "intrigued",
+        "label": "Intrigued",
         "color": "#b8c4d4",
-        "count": 7708
+        "count": 63449
       },
       {
         "id": "conflicted",
         "label": "Conflicted",
         "color": "#c4a882",
-        "count": 2195
+        "count": 16495
       },
       {
         "id": "disappointed",
         "label": "Disappointed",
         "color": "#c9a0b8",
-        "count": 5521
+        "count": 36088
       },
       {
-        "id": "cautioning",
-        "label": "Cautioning",
+        "id": "warning",
+        "label": "Warning",
         "color": "#7eb8d4",
-        "count": 3328
+        "count": 37121
       }
     ],
-    "note": "Anteile auf klassifizierbare Kommentare · Cautioning hat Vorrang bei Warnung an Dritte"
+    "note": "Anteile auf klassifizierbare Kommentare · Warning vorrangig bei Warnung an Dritte"
   },
   "topicLandscape": {
     "eyebrow": "2. Topic Landscape",
@@ -108,154 +110,154 @@ window.DashboardData = {
         "id": "botox",
         "label": "Botox / Neuromodulatoren",
         "block": "A",
-        "count": 1956,
-        "positive": 815,
-        "neutral": 765,
-        "negative": 376
+        "count": 8296,
+        "positive": 4114,
+        "neutral": 2730,
+        "negative": 1452
       },
       {
         "id": "fillers",
         "label": "Hyaluron-Filler",
         "block": "A",
-        "count": 1012,
-        "positive": 504,
-        "neutral": 336,
-        "negative": 172
+        "count": 7070,
+        "positive": 4230,
+        "neutral": 1685,
+        "negative": 1155
       },
       {
         "id": "laser",
         "label": "Laser-Therapien",
         "block": "A",
-        "count": 692,
-        "positive": 304,
-        "neutral": 220,
-        "negative": 168
+        "count": 8110,
+        "positive": 4209,
+        "neutral": 2425,
+        "negative": 1476
       },
       {
         "id": "threads",
         "label": "Fadenlifting & Ultraschall-Lifting",
         "block": "A",
-        "count": 248,
-        "positive": 132,
-        "neutral": 86,
-        "negative": 30
+        "count": 2625,
+        "positive": 1726,
+        "neutral": 610,
+        "negative": 289
       },
       {
         "id": "facelift",
         "label": "Chirurgische Eingriffe",
         "block": "A",
-        "count": 506,
-        "positive": 282,
-        "neutral": 156,
-        "negative": 68
+        "count": 5779,
+        "positive": 3497,
+        "neutral": 1533,
+        "negative": 749
       },
       {
         "id": "peel",
         "label": "Peeling & Microneedling",
         "block": "A",
-        "count": 4136,
-        "positive": 2149,
-        "neutral": 1335,
-        "negative": 652
+        "count": 32609,
+        "positive": 20351,
+        "neutral": 7749,
+        "negative": 4509
       },
       {
         "id": "retinol",
         "label": "Retinoide",
         "block": "A",
-        "count": 3925,
-        "positive": 2202,
-        "neutral": 1041,
-        "negative": 682
+        "count": 15637,
+        "positive": 7872,
+        "neutral": 4123,
+        "negative": 3642
       },
       {
         "id": "vitamin-c",
         "label": "Vitamin C",
         "block": "A",
-        "count": 2690,
-        "positive": 1425,
-        "neutral": 678,
-        "negative": 587
+        "count": 18615,
+        "positive": 9992,
+        "neutral": 3979,
+        "negative": 4644
       },
       {
         "id": "hyaluronic-acid",
         "label": "Hyaluronsäure (topisch)",
         "block": "A",
-        "count": 4528,
-        "positive": 2771,
-        "neutral": 905,
-        "negative": 852
+        "count": 14701,
+        "positive": 8677,
+        "neutral": 3262,
+        "negative": 2762
       },
       {
         "id": "niacinamide-peptides",
         "label": "Niacinamid & Peptide",
         "block": "A",
-        "count": 3091,
-        "positive": 1806,
-        "neutral": 811,
-        "negative": 474
+        "count": 14916,
+        "positive": 9059,
+        "neutral": 3573,
+        "negative": 2284
       },
       {
         "id": "spf",
         "label": "Sonnenschutz & Prävention",
         "block": "A",
-        "count": 3624,
-        "positive": 1480,
-        "neutral": 1501,
-        "negative": 643
+        "count": 20891,
+        "positive": 8102,
+        "neutral": 8752,
+        "negative": 4037
       },
       {
         "id": "aging-signs",
         "label": "Hautalterungs-Zeichen",
         "block": "B",
-        "count": 4153,
-        "positive": 1914,
-        "neutral": 1288,
-        "negative": 951
+        "count": 138286,
+        "positive": 77861,
+        "neutral": 31673,
+        "negative": 28752
       },
       {
         "id": "price",
         "label": "Kosten & Preis-Leistung",
         "block": "B",
-        "count": 2549,
-        "positive": 946,
-        "neutral": 1027,
-        "negative": 576
+        "count": 15655,
+        "positive": 5996,
+        "neutral": 6178,
+        "negative": 3481
       },
       {
         "id": "pressure",
         "label": "Gesellschaftlicher Druck",
         "block": "B",
-        "count": 93,
-        "positive": 29,
-        "neutral": 39,
-        "negative": 25
+        "count": 270,
+        "positive": 74,
+        "neutral": 109,
+        "negative": 87
       },
       {
         "id": "safety",
         "label": "Sicherheit & Vertrauen",
         "block": "B",
-        "count": 356,
-        "positive": 88,
-        "neutral": 106,
-        "negative": 162
+        "count": 2576,
+        "positive": 760,
+        "neutral": 838,
+        "negative": 978
       },
       {
         "id": "natural",
         "label": "Natürlichkeit & Authentizität",
         "block": "B",
-        "count": 262,
-        "positive": 63,
-        "neutral": 47,
-        "negative": 152
+        "count": 1576,
+        "positive": 774,
+        "neutral": 366,
+        "negative": 436
       },
       {
         "id": "celebrity",
         "label": "Prominente & Influencer-Diskurs",
         "block": "B",
-        "count": 241,
-        "positive": 113,
-        "neutral": 82,
-        "negative": 46
+        "count": 1534,
+        "positive": 783,
+        "neutral": 437,
+        "negative": 314
       }
     ],
     "note": "Mehrfachnennungen möglich, Summe über 100 % · Sentiment aus Mood (Chart 1)"
@@ -263,33 +265,33 @@ window.DashboardData = {
   "segmentation": {
     "eyebrow": "3. Consumer Segmentation",
     "title": "One category, three anti-aging mindsets",
-    "n_positioned": 26999,
-    "n_unpositioned": 11450,
-    "positioned_share_pct": 70.2,
+    "n_positioned": 231551,
+    "n_unpositioned": 99644,
+    "positioned_share_pct": 69.9,
     "segments": [
       {
         "id": "procedure-open",
         "label": "Procedure-open",
         "color": "#e8a0bf",
         "description": "Already had procedures, wants to maintain / refresh results",
-        "count": 2383
+        "count": 19438
       },
       {
         "id": "procedure-curious",
         "label": "Procedure-curious",
         "color": "#b4a7d6",
         "description": "Interested but hesitant, looking for safer middle ground",
-        "count": 7007
+        "count": 55570
       },
       {
         "id": "skincare-first",
         "label": "Skincare-first",
         "color": "#7ecdb8",
         "description": "Rejects or excludes procedures; expects results from skincare",
-        "count": 17609
+        "count": 156543
       }
     ],
-    "note": "Anteile nur über Kommentare mit erkennbarer Positionierung (26.999 / 38.449 = 70.2%). Abbildung des Online-Diskurses — nicht repräsentativ für deutsche Frauen 39–65."
+    "note": "Anteile nur über Kommentare mit erkennbarer Positionierung (231.551 / 331.195 = 69.9%). Abbildung des Online-Diskurses — nicht repräsentativ für deutsche Frauen 39–65."
   },
   "procedureEffects": {
     "eyebrow": "4. Procedure-Open & Procedure-Curious",
@@ -297,31 +299,59 @@ window.DashboardData = {
     "aggregates": {
       "procedures": [
         {
-          "id": "microneedling",
-          "tones": [
-            {
-              "tone": "wrinkle-reduction",
-              "count": 11
-            },
-            {
-              "tone": "skin-tightening",
-              "count": 10
-            },
-            {
-              "tone": "medical-benefit",
-              "count": 9
-            }
-          ]
-        },
-        {
           "id": "prp",
           "tones": [
             {
               "tone": "medical-benefit",
-              "count": 23
+              "count": 334
             },
             {
               "tone": "skin-tightening",
+              "count": 2
+            },
+            {
+              "tone": "natural-look",
+              "count": 1
+            },
+            {
+              "tone": "allergic-reaction",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "microneedling",
+          "tones": [
+            {
+              "tone": "skin-tightening",
+              "count": 124
+            },
+            {
+              "tone": "medical-benefit",
+              "count": 58
+            },
+            {
+              "tone": "wrinkle-reduction",
+              "count": 49
+            },
+            {
+              "tone": "scarring",
+              "count": 6
+            },
+            {
+              "tone": "unnatural-look",
+              "count": 5
+            },
+            {
+              "tone": "natural-look",
+              "count": 4
+            },
+            {
+              "tone": "responsible-consultation",
+              "count": 2
+            },
+            {
+              "tone": "volume-restoration",
               "count": 1
             }
           ]
@@ -331,11 +361,35 @@ window.DashboardData = {
           "tones": [
             {
               "tone": "skin-tightening",
-              "count": 12
+              "count": 97
             },
             {
               "tone": "medical-benefit",
-              "count": 7
+              "count": 19
+            },
+            {
+              "tone": "wrinkle-reduction",
+              "count": 16
+            },
+            {
+              "tone": "scarring",
+              "count": 8
+            },
+            {
+              "tone": "allergic-reaction",
+              "count": 3
+            },
+            {
+              "tone": "responsible-consultation",
+              "count": 2
+            },
+            {
+              "tone": "natural-look",
+              "count": 1
+            },
+            {
+              "tone": "unnatural-look",
+              "count": 1
             }
           ]
         },
@@ -344,32 +398,19 @@ window.DashboardData = {
           "tones": [
             {
               "tone": "skin-tightening",
-              "count": 8
-            },
-            {
-              "tone": "medical-benefit",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "id": "peeling",
-          "tones": [
-            {
-              "tone": "skin-tightening",
-              "count": 3
+              "count": 98
             },
             {
               "tone": "wrinkle-reduction",
-              "count": 2
+              "count": 5
             },
             {
               "tone": "medical-benefit",
-              "count": 2
+              "count": 5
             },
             {
-              "tone": "allergic-reaction",
-              "count": 1
+              "tone": "scarring",
+              "count": 2
             }
           ]
         },
@@ -378,36 +419,59 @@ window.DashboardData = {
           "tones": [
             {
               "tone": "skin-tightening",
-              "count": 6
+              "count": 62
             },
             {
               "tone": "wrinkle-reduction",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "id": "rhinoplasty",
-          "tones": [
-            {
-              "tone": "skin-tightening",
-              "count": 7
-            }
-          ]
-        },
-        {
-          "id": "mesotherapy",
-          "tones": [
-            {
-              "tone": "skin-tightening",
               "count": 5
             },
             {
-              "tone": "responsible-consultation",
-              "count": 1
+              "tone": "natural-look",
+              "count": 2
             },
             {
               "tone": "medical-benefit",
+              "count": 2
+            },
+            {
+              "tone": "volume-restoration",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "microcurrent",
+          "tones": [
+            {
+              "tone": "medical-benefit",
+              "count": 27
+            },
+            {
+              "tone": "skin-tightening",
+              "count": 16
+            },
+            {
+              "tone": "allergic-reaction",
+              "count": 7
+            },
+            {
+              "tone": "wrinkle-reduction",
+              "count": 3
+            },
+            {
+              "tone": "unnatural-look",
+              "count": 3
+            },
+            {
+              "tone": "natural-look",
+              "count": 2
+            },
+            {
+              "tone": "vascular-complications",
+              "count": 1
+            },
+            {
+              "tone": "scarring",
               "count": 1
             }
           ]
@@ -417,44 +481,51 @@ window.DashboardData = {
           "tones": [
             {
               "tone": "skin-tightening",
-              "count": 5
-            },
-            {
-              "tone": "scarring",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "id": "microcurrent",
-          "tones": [
-            {
-              "tone": "skin-tightening",
-              "count": 3
-            },
-            {
-              "tone": "medical-benefit",
-              "count": 1
+              "count": 43
             },
             {
               "tone": "wrinkle-reduction",
-              "count": 1
+              "count": 4
+            },
+            {
+              "tone": "medical-benefit",
+              "count": 2
+            },
+            {
+              "tone": "responsible-consultation",
+              "count": 2
+            },
+            {
+              "tone": "natural-look",
+              "count": 2
             },
             {
               "tone": "scarring",
+              "count": 1
+            },
+            {
+              "tone": "refreshed-look",
               "count": 1
             }
           ]
         },
         {
-          "id": "hyaluron-filler",
+          "id": "radiofrequency",
           "tones": [
             {
               "tone": "skin-tightening",
+              "count": 48
+            },
+            {
+              "tone": "medical-benefit",
               "count": 5
             },
             {
               "tone": "volume-restoration",
+              "count": 1
+            },
+            {
+              "tone": "wrinkle-reduction",
               "count": 1
             }
           ]
@@ -463,16 +534,75 @@ window.DashboardData = {
           "id": "skinbooster",
           "tones": [
             {
+              "tone": "medical-benefit",
+              "count": 25
+            },
+            {
               "tone": "skin-tightening",
-              "count": 4
+              "count": 21
+            },
+            {
+              "tone": "natural-look",
+              "count": 2
             },
             {
               "tone": "refreshed-look",
               "count": 1
             },
             {
-              "tone": "medical-benefit",
+              "tone": "wrinkle-reduction",
               "count": 1
+            }
+          ]
+        },
+        {
+          "id": "mesotherapy",
+          "tones": [
+            {
+              "tone": "skin-tightening",
+              "count": 23
+            },
+            {
+              "tone": "medical-benefit",
+              "count": 9
+            },
+            {
+              "tone": "wrinkle-reduction",
+              "count": 4
+            },
+            {
+              "tone": "scarring",
+              "count": 2
+            },
+            {
+              "tone": "natural-look",
+              "count": 1
+            },
+            {
+              "tone": "responsible-consultation",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "rhinoplasty",
+          "tones": [
+            {
+              "tone": "skin-tightening",
+              "count": 38
+            },
+            {
+              "tone": "wrinkle-reduction",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "id": "lipolysis-injection",
+          "tones": [
+            {
+              "tone": "skin-tightening",
+              "count": 37
             }
           ]
         }
@@ -485,187 +615,76 @@ window.DashboardData = {
     "aggregates": {
       "procedures": [
         {
-          "id": "niacinamide",
-          "tones": [
-            {
-              "tone": "rejuvenation",
-              "count": 136
-            },
-            {
-              "tone": "hydration",
-              "count": 50
-            },
-            {
-              "tone": "radiance",
-              "count": 43
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 28
-            },
-            {
-              "tone": "firming",
-              "count": 25
-            },
-            {
-              "tone": "prevention",
-              "count": 18
-            },
-            {
-              "tone": "pigmentation",
-              "count": 13
-            },
-            {
-              "tone": "brightening",
-              "count": 11
-            }
-          ]
-        },
-        {
           "id": "spf",
           "tones": [
             {
               "tone": "rejuvenation",
-              "count": 210
+              "count": 738
             },
             {
               "tone": "prevention",
-              "count": 50
+              "count": 549
+            },
+            {
+              "tone": "radiance",
+              "count": 260
             },
             {
               "tone": "hydration",
+              "count": 180
+            },
+            {
+              "tone": "pigmentation",
+              "count": 133
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 63
+            },
+            {
+              "tone": "firming",
+              "count": 39
+            },
+            {
+              "tone": "sensitivity",
               "count": 37
-            },
-            {
-              "tone": "pigmentation",
-              "count": 28
-            },
-            {
-              "tone": "dryness",
-              "count": 4
-            },
-            {
-              "tone": "firming",
-              "count": 4
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 4
-            },
-            {
-              "tone": "radiance",
-              "count": 3
             }
           ]
         },
         {
-          "id": "retinol",
+          "id": "niacinamide",
           "tones": [
             {
               "tone": "rejuvenation",
-              "count": 115
-            },
-            {
-              "tone": "firming",
-              "count": 23
+              "count": 292
             },
             {
               "tone": "hydration",
-              "count": 20
+              "count": 182
+            },
+            {
+              "tone": "radiance",
+              "count": 157
             },
             {
               "tone": "soothing-repair",
-              "count": 14
+              "count": 99
             },
             {
-              "tone": "sensitivity",
-              "count": 8
-            },
-            {
-              "tone": "pigmentation",
-              "count": 7
+              "tone": "firming",
+              "count": 93
             },
             {
               "tone": "prevention",
-              "count": 6
-            },
-            {
-              "tone": "radiance",
-              "count": 6
-            }
-          ]
-        },
-        {
-          "id": "aha",
-          "tones": [
-            {
-              "tone": "rejuvenation",
-              "count": 43
-            },
-            {
-              "tone": "hydration",
-              "count": 18
-            },
-            {
-              "tone": "radiance",
-              "count": 16
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 11
-            },
-            {
-              "tone": "firming",
-              "count": 7
-            },
-            {
-              "tone": "pore-refining",
-              "count": 6
-            },
-            {
-              "tone": "scars",
-              "count": 5
-            },
-            {
-              "tone": "sensitivity",
-              "count": 5
-            }
-          ]
-        },
-        {
-          "id": "glycerin",
-          "tones": [
-            {
-              "tone": "hydration",
-              "count": 34
-            },
-            {
-              "tone": "rejuvenation",
-              "count": 22
-            },
-            {
-              "tone": "dryness",
-              "count": 13
-            },
-            {
-              "tone": "radiance",
-              "count": 12
-            },
-            {
-              "tone": "prevention",
-              "count": 9
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 6
+              "count": 75
             },
             {
               "tone": "pigmentation",
-              "count": 5
+              "count": 54
             },
             {
-              "tone": "barrier-repair",
-              "count": 4
+              "tone": "brightening",
+              "count": 53
             }
           ]
         },
@@ -674,34 +693,293 @@ window.DashboardData = {
           "tones": [
             {
               "tone": "rejuvenation",
-              "count": 69
+              "count": 321
             },
             {
               "tone": "firming",
-              "count": 9
+              "count": 70
             },
             {
               "tone": "hydration",
-              "count": 7
-            },
-            {
-              "tone": "wrinkles",
-              "count": 6
+              "count": 61
             },
             {
               "tone": "soothing-repair",
-              "count": 6
+              "count": 54
+            },
+            {
+              "tone": "prevention",
+              "count": 36
+            },
+            {
+              "tone": "radiance",
+              "count": 28
+            },
+            {
+              "tone": "sensitivity",
+              "count": 24
             },
             {
               "tone": "dryness",
-              "count": 5
+              "count": 16
+            }
+          ]
+        },
+        {
+          "id": "aloe",
+          "tones": [
+            {
+              "tone": "hydration",
+              "count": 110
+            },
+            {
+              "tone": "rejuvenation",
+              "count": 101
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 43
+            },
+            {
+              "tone": "prevention",
+              "count": 34
+            },
+            {
+              "tone": "firming",
+              "count": 30
+            },
+            {
+              "tone": "dryness",
+              "count": 25
+            },
+            {
+              "tone": "radiance",
+              "count": 20
+            },
+            {
+              "tone": "smoothing",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "id": "retinol",
+          "tones": [
+            {
+              "tone": "rejuvenation",
+              "count": 156
+            },
+            {
+              "tone": "firming",
+              "count": 55
+            },
+            {
+              "tone": "hydration",
+              "count": 28
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 24
+            },
+            {
+              "tone": "sensitivity",
+              "count": 16
+            },
+            {
+              "tone": "prevention",
+              "count": 15
+            },
+            {
+              "tone": "pigmentation",
+              "count": 13
+            },
+            {
+              "tone": "radiance",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "id": "aha",
+          "tones": [
+            {
+              "tone": "rejuvenation",
+              "count": 78
+            },
+            {
+              "tone": "hydration",
+              "count": 51
+            },
+            {
+              "tone": "firming",
+              "count": 47
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 39
+            },
+            {
+              "tone": "radiance",
+              "count": 29
+            },
+            {
+              "tone": "sensitivity",
+              "count": 22
+            },
+            {
+              "tone": "pore-refining",
+              "count": 13
+            },
+            {
+              "tone": "scars",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "id": "glycerin",
+          "tones": [
+            {
+              "tone": "hydration",
+              "count": 91
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 73
+            },
+            {
+              "tone": "rejuvenation",
+              "count": 42
+            },
+            {
+              "tone": "radiance",
+              "count": 41
+            },
+            {
+              "tone": "prevention",
+              "count": 24
+            },
+            {
+              "tone": "dryness",
+              "count": 23
+            },
+            {
+              "tone": "barrier-repair",
+              "count": 13
+            },
+            {
+              "tone": "sensitivity",
+              "count": 8
+            }
+          ]
+        },
+        {
+          "id": "pdrn-skincare",
+          "tones": [
+            {
+              "tone": "rejuvenation",
+              "count": 78
+            },
+            {
+              "tone": "radiance",
+              "count": 76
+            },
+            {
+              "tone": "firming",
+              "count": 41
+            },
+            {
+              "tone": "hydration",
+              "count": 34
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 22
+            },
+            {
+              "tone": "scars",
+              "count": 19
+            },
+            {
+              "tone": "plump-skin",
+              "count": 16
+            },
+            {
+              "tone": "dryness",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "id": "ceramides",
+          "tones": [
+            {
+              "tone": "hydration",
+              "count": 70
+            },
+            {
+              "tone": "rejuvenation",
+              "count": 63
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 53
+            },
+            {
+              "tone": "prevention",
+              "count": 23
+            },
+            {
+              "tone": "firming",
+              "count": 20
+            },
+            {
+              "tone": "barrier-repair",
+              "count": 9
+            },
+            {
+              "tone": "dryness",
+              "count": 9
+            },
+            {
+              "tone": "smoothing",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "id": "urea",
+          "tones": [
+            {
+              "tone": "soothing-repair",
+              "count": 175
+            },
+            {
+              "tone": "hydration",
+              "count": 28
+            },
+            {
+              "tone": "rejuvenation",
+              "count": 14
+            },
+            {
+              "tone": "pigmentation",
+              "count": 6
+            },
+            {
+              "tone": "firming",
+              "count": 6
             },
             {
               "tone": "prevention",
               "count": 5
             },
             {
-              "tone": "pigmentation",
+              "tone": "dryness",
+              "count": 3
+            },
+            {
+              "tone": "radiance",
               "count": 3
             }
           ]
@@ -711,212 +989,72 @@ window.DashboardData = {
           "tones": [
             {
               "tone": "rejuvenation",
-              "count": 49
+              "count": 87
             },
             {
               "tone": "firming",
-              "count": 12
-            },
-            {
-              "tone": "hydration",
-              "count": 8
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 6
-            },
-            {
-              "tone": "prevention",
-              "count": 5
-            },
-            {
-              "tone": "pigmentation",
-              "count": 3
-            },
-            {
-              "tone": "wrinkles",
-              "count": 2
-            },
-            {
-              "tone": "brightening",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "id": "aloe",
-          "tones": [
-            {
-              "tone": "rejuvenation",
-              "count": 25
-            },
-            {
-              "tone": "prevention",
-              "count": 18
+              "count": 22
             },
             {
               "tone": "hydration",
               "count": 16
             },
             {
-              "tone": "dryness",
+              "tone": "brightening",
+              "count": 14
+            },
+            {
+              "tone": "soothing-repair",
+              "count": 13
+            },
+            {
+              "tone": "prevention",
               "count": 11
             },
             {
-              "tone": "firming",
-              "count": 6
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 3
-            },
-            {
-              "tone": "pigmentation",
-              "count": 2
-            },
-            {
               "tone": "radiance",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "id": "ceramides",
-          "tones": [
-            {
-              "tone": "rejuvenation",
-              "count": 15
-            },
-            {
-              "tone": "hydration",
-              "count": 12
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 6
-            },
-            {
-              "tone": "firming",
-              "count": 5
-            },
-            {
-              "tone": "prevention",
-              "count": 5
+              "count": 8
             },
             {
               "tone": "dryness",
               "count": 3
-            },
-            {
-              "tone": "barrier-repair",
-              "count": 3
-            },
-            {
-              "tone": "smoothing",
-              "count": 1
             }
           ]
         },
         {
-          "id": "pdrn-skincare",
+          "id": "zinc",
           "tones": [
             {
               "tone": "rejuvenation",
-              "count": 16
+              "count": 62
+            },
+            {
+              "tone": "prevention",
+              "count": 38
             },
             {
               "tone": "hydration",
-              "count": 6
-            },
-            {
-              "tone": "radiance",
-              "count": 5
-            },
-            {
-              "tone": "soothing-repair",
-              "count": 5
-            },
-            {
-              "tone": "scars",
-              "count": 4
-            },
-            {
-              "tone": "firming",
-              "count": 3
+              "count": 33
             },
             {
               "tone": "sensitivity",
-              "count": 1
-            },
-            {
-              "tone": "dryness",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "id": "sod",
-          "tones": [
-            {
-              "tone": "rejuvenation",
-              "count": 18
+              "count": 17
             },
             {
               "tone": "radiance",
-              "count": 5
+              "count": 9
             },
             {
-              "tone": "hydration",
-              "count": 3
+              "tone": "soothing-repair",
+              "count": 7
             },
             {
               "tone": "pigmentation",
-              "count": 3
+              "count": 5
             },
             {
               "tone": "firming",
               "count": 3
-            },
-            {
-              "tone": "prevention",
-              "count": 2
-            },
-            {
-              "tone": "dryness",
-              "count": 2
-            },
-            {
-              "tone": "brightening",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "id": "coq10",
-          "tones": [
-            {
-              "tone": "rejuvenation",
-              "count": 24
-            },
-            {
-              "tone": "firming",
-              "count": 4
-            },
-            {
-              "tone": "dryness",
-              "count": 1
-            },
-            {
-              "tone": "prevention",
-              "count": 1
-            },
-            {
-              "tone": "smoothing",
-              "count": 1
-            },
-            {
-              "tone": "barrier-repair",
-              "count": 1
             }
           ]
         }
@@ -967,43 +1105,38 @@ window.DashboardData = {
   },
   "comments": [
     {
-      "id": "0_221687_190_3742572499360547667",
-      "text": "✨ Direktes Wow-Ergebnis nach Endolift – und zwei weitere Patientinnen buchen spontan ihre Termine.👉 Manchmal überzeugt ein Blick mehr als jede Beratung. 🤍Caelistic doctors, deine spezialisierte Arztpraxis für Faltenbehandlung, Botox, Hyaluron, Sculptra, PhilArt, Fettwegspritze und ambulante Operationen in Ulm 🤍#beauty #skincare #aesthetics #endolift #glowingskin #reels #bydrbergmann",
+      "id": "0_225891_190_3870167238472911588",
+      "text": "Hinter dem Wunsch nach einer Schönheitsoperation steht häufig ein tieferliegendes Bedürfnis: das Streben nach Kontrolle, über den eigenen Körper, das eigene Selbstbild und manchmal auch über das Leben insgesamt! 🗝️#selbstbestimmung #selbstwert #mentalegesundheit #ästhetischemedizin #bonn",
       "mood": "enthusiastic",
       "segment": null,
-      "topics": [
-        "botox"
-      ],
+      "topics": [],
       "tags": [
         "enthusiastic"
       ]
     },
     {
-      "id": "0_221687_140_7657602750242393376",
-      "text": "Lass dich nicht veräppeln! 😒 #skincare #teuer #retinol #hyperpigmentation",
+      "id": "0_225895_190_3897448617233646909",
+      "text": "Schon im TV entdeckt? 📺Im Zentrum der Kampagne steht der bewusste Bruch mit überholten gesellschaftlichen Erwartungen an Schönheit. Statt äußerer Ideale rückt Merz Spezial den wichtigsten Maßstab in den Fokus: den eigenen. Die Kampagne macht mit ihrem Slogan „Sei schön zu dir\" deutlich, dass Schönheit vor allem dann entsteht, wenn wir gut mit uns selbst umgehen – von innen heraus.Unsere Kollagen Schönheits-Formel Pulver ist dafür da, dich im Alltag leise zu unterstützen – im Hintergrund deiner R",
       "mood": "enthusiastic",
       "segment": null,
-      "topics": [
-        "price"
-      ],
+      "topics": [],
       "tags": [
         "enthusiastic"
       ]
     },
     {
-      "id": "0_219424_140_7657547246489062688",
-      "text": "Ich teste damit du es nicht musst. #falten #botox #hautpflege #drmelaxinskincare #facecare",
+      "id": "0_225895_140_7616356140678499606",
+      "text": "Kein Warten mehr auf Ergebnisse! Unsere Creme zeigt Effekte sofort – probier's jetzt aus!#gesichtscreme #hautpflege #fyy #fittial #facecare",
       "mood": "enthusiastic",
-      "segment": "skincare-first",
+      "segment": null,
       "topics": [],
       "tags": [
-        "enthusiastic",
-        "skincare-first"
+        "enthusiastic"
       ]
     },
     {
-      "id": "0_219424_126_t1_o6qukrz",
-      "text": "Rasiert euch endlich eine Glatze und hört auf mit dieser fitzeligen Kacke auf dem Kopf Mit nem gesunden verstand, kritisiert man doch jegliche art von schönheitsop",
+      "id": "0_225891_126_t1_p2d225a",
+      "text": "Warum sind manche Beauty Eingriffe verpönt, andere nicht? Ist halt verpöhnt wenn mans sieht. Und das passiert halt bei Botox zumindest öter bzw ist sogar absichtlich unnatürlich",
       "mood": "satisfied",
       "segment": null,
       "topics": [],
@@ -1012,8 +1145,8 @@ window.DashboardData = {
       ]
     },
     {
-      "id": "0_221687_140_7638672559906508065",
-      "text": "Retinol muss nicht reizen 💡 — wenn Du diesen Schritt nicht vergisst. #skincare #retinol #ceramide #facesoffey",
+      "id": "0_225891_190_3960518718677452719",
+      "text": "Bei einer Unterlidstraffung zählt nicht nur die Operation selbst, sondern auch die richtige Nachbehandlung. 👁️Nach dem Eingriff ist es besonders wichtig, die Wundränder zu stabilisieren und den Heilungsverlauf sorgfältig zu begleiten. Denn ein natürliches Ergebnis entsteht nicht nur während der OP, sondern auch in den Tagen danach. ✨Wenn du über eine Ober- oder Unterlidstraffung nachdenkst und wissen möchtest, welche Methode für dich geeignet ist, vereinbare jetzt deine persönliche Beratung über",
       "mood": "satisfied",
       "segment": null,
       "topics": [],
@@ -1022,53 +1155,53 @@ window.DashboardData = {
       ]
     },
     {
-      "id": "0_221687_140_7631965849741577505",
-      "text": "#skincare #hautpflege #aha #unreinheiten #glowingskin",
+      "id": "0_225898_190_3767641546699596358",
+      "text": "BERATUNGSchönheit ist kein festes Konzept.Schönheit ist ein-  Gefühl. - Ein Ausdruck - Ein MomentManchmal lautManchmal leiseManchmal wild Manchmal sanftUnd genau DAS macht Schönheit so unglaublich facettenreich.Es gibt nicht nur ein Schön.Es gibt viele.So viele, wie es Menschen gibt.Unser Ansatzpunkt bei jeder Beratung ist: 🫶🏼INDIVIDUALITÄTJeder bringt etwas Besonderes mit - Haarstruktur, Ausstrahlung, Energie, Haut- und Augenfarbe, Persönlichkeit.Wir Friseure*innen  dürfen all das hervorholen, ",
       "mood": "satisfied",
-      "segment": null,
-      "topics": [],
-      "tags": [
-        "satisfied"
-      ]
-    },
-    {
-      "id": "0_219424_190_3940934467645009188",
-      "text": "Mehr Sicherheit in der ästhetischen Medizinbeginnt mit Sichtbarkeit.Mit dem Apache L187 Ultraschallsystem erhalten Ärzteeine hochauflösende Echtzeitdarstellungoberflächlicher Strukturen – direkt während derBehandlung.Gerade bei Fillern im Gesichtsbereich kann Ultraschallhelfen, Gefäße zu identifizieren und Risiken zureduzieren. Gleichzeitig eröffnet er neue Möglichkeitenin der präoperativen Analyse, postoperativen Kontrolleund Diagnostik.Das kabellose Handheld-System arbeitet mit einerhochfreque",
-      "mood": "seeking",
-      "segment": null,
-      "topics": [],
-      "tags": [
-        "seeking"
-      ]
-    },
-    {
-      "id": "0_219424_190_3933289322813558422",
-      "text": "IndikationenFeine Fältchen der UnterliderDünne, erschlaffte HautLeichte bis mäßige Augenringe Hautqualität mit mesotherapie Vorbeugende HautalterungNicht geeignet bei ausgeprägten Tränensänenrinnen mit deutlichem Volumenverlust – hierfür ist meist ein anderes Behandlungskonzept erforderlich.Sitzung 1ca. 1 ml pro Seite Sehr oberflächlich in die Subkutis Kleine Mikrodepots entlang des infraorbitalen Bereichs.Langsame Injektion mit minimalem Druck.Abstand:14–21 Tage bis zur nächsten Sitzung",
-      "mood": "seeking",
       "segment": null,
       "topics": [
-        "aging-signs"
+        "natural"
       ],
       "tags": [
-        "seeking"
+        "satisfied"
       ]
     },
     {
-      "id": "0_221687_26_1702313937996105",
-      "text": "Angst vor Nadeln? Damit bist du nicht allein.Viele Menschen fühlen sich bei dem Gedanken an Spritzen oder Injektionen unwohl und verzichten deshalb auf ästhetische Behandlungen, obwohl sie sich eine frischere und besser durchfeuchtete Haut wünschen.Mit Infuzion System® gibt es eine nadelfreie Alternative: Hochwertige Hyaluronsäure wird mithilfe spezieller Technologie sanft in die Haut eingebracht – ganz ohne Injektionen.Deine Vorteile:- Keine Nadeln-️ Keine Ausfallzeit-️ Keine Schwellungen oder ",
+      "id": "0_225891_190_3737335295646683394",
+      "text": "Manche wollen bei der Beratung nur die schönen Seiten hören @toth_aesthetic 💦💉 Aber auch über mögliche Risiken müssen wir sprechen selbst wenn sie sehr selten auftretenSo bist du bestens informiert und erkennst im Ernstfall sofort, worauf du achten musstNEUES STADTPORTAL #ästhetischemedizin #aufklärung #zwickau #hyaluron #botox #münchen #muc #botoxcapilar #bótox #botoxévida #botoxandfillers #lippen #gesicht",
+      "mood": "intrigued",
+      "segment": null,
+      "topics": [
+        "botox",
+        "retinol"
+      ],
+      "tags": [
+        "intrigued"
+      ]
+    },
+    {
+      "id": "0_225891_9_60696639192384595",
+      "text": "Es könnten auch dadurch wirklich ernste Schädigungen für das Selbstbewusstsein entstehen. Solche Unsicherheiten zu wecken ist genau der Grund, warum so viele heutzutage früher und häufiger zu einer Schönheitsoperation tendieren.",
+      "mood": "intrigued",
+      "segment": null,
+      "topics": [],
+      "tags": [
+        "intrigued"
+      ]
+    },
+    {
+      "id": "0_225890_26_10236325656854401",
+      "text": "Siehst du im Spiegel, wie schön du bist? Oder siehst du eher deine Mängel und Makel? Nicht, weil dein Blick trügt,sondern weil er trainiert wurde –auf Fehler statt auf Schönheit.Wir leben in einer Gesellschaft die Frauen gelehrt hat, sich selbst zu vermessen:in Zentimetern, Falten, Likes.Ein Patriarchat, das Schönheit zur Währung machte –und uns glauben ließ, unser Wertläge in Jugend, Glätte und Anpassung.Doch wahre Schönheit hat keine Symmetrie.Sie leuchtet dort, wo jemand ganz bei sich angekom",
       "mood": "conflicted",
-      "segment": "procedure-curious",
-      "topics": [
-        "hyaluronic-acid"
-      ],
+      "segment": null,
+      "topics": [],
       "tags": [
-        "conflicted",
-        "procedure-curious"
+        "conflicted"
       ]
     },
     {
-      "id": "0_221687_140_7562124098856570115",
-      "text": "Noch nicht sooo tief? 😏 Genau – aber ein bisschen Prävention wirkt Wunder 💛 #faltenprävention #Hautverjüngung #skincare #skintok #ästhetischemedizin #hyaluron #btx #münchen #schwabing #loveyourglowde",
+      "id": "0_225891_126_t1_olc7xt1",
+      "text": "Der Wunsch Normschön zu sein muss wieder entstigmatisiert werden Besserer Vorschlag: wir halten alle ganz grundsätzlich die Schnauze zu den Äußerlichkeiten anderer. Uns geht weder die Gesundheit (zu dünn, zu dick, du kannst nicht stillen mit gemachten Brüsten, Botox ist ein Nervengift usw usf) noch die Optik (gefärbte Haare, Piercings, Stil usw usf) anderer Personen auch nur einen Scheiss an. Maximal ein nettes Kompliment, und das wars.",
       "mood": "disappointed",
       "segment": null,
       "topics": [],
@@ -1077,465 +1210,463 @@ window.DashboardData = {
       ]
     },
     {
-      "id": "0_218685_15_55420703752523688",
-      "text": "„Neue Warnung vor Gesichts-Fillern: Scans zeigen bislang unterschätzte Gefahr blockierter Arterien\" Expertinnen und Experten warnen erneut vor den Risiken kosmetischer Filler-Injektionen im Gesicht. Aktuelle Untersuchungen zeigen, dass falsch gesetzte Filler blutführende Gefäße blockieren können – mit potenziell schweren Folgen wie Gewebeschäden, Hautverlust oder sogar Erblindung. Ultraschallstudie analysiert 100 Komplikationsfälle Ein internationales Forschungsteam hat mithilfe von Ultraschallu",
-      "mood": "cautioning",
+      "id": "0_225891_126_t3_1vdpeay",
+      "text": "Streak 2: Schönheitsoperation ​Unzählige Leute, besonders Frauen,  haben kosmetische Operation so erhaltet (Passt hier das Verb \"sich unterziehen\" oder nicht?), dass alle fast ähnlich aussiehen. Das Grund dafür liegt nicht nur in der Unzufreidenheit von dem Selbstbild und davon, wie man scheint, sondern auch in der gesellschaftliche Druck, die Schönste zu sein, die  durch anstiegenden Schönheitstandard entsteht hat.",
+      "mood": "warning",
       "segment": null,
-      "topics": [
-        "safety"
-      ],
+      "topics": [],
       "tags": [
-        "cautioning"
+        "warning"
       ]
     }
   ],
   "skincareWordcloud": {
     "eyebrow": "4. Skincare-First Wordcloud",
-    "title": "The Language of Skincare-First Consumers: Top Themes in Conversation",
-    "n_docs": 17609,
-    "n_tokens": 860354,
+    "title": "The Language of Skincare-First Consumers",
+    "n_docs": 156500,
+    "n_tokens": 7288332,
     "terms": [
       {
-        "term": "serum",
-        "count": 9848,
-        "per_1000": 11.45,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 7.9345
-      },
-      {
-        "term": "hautpflege",
-        "count": 8928,
-        "per_1000": 10.38,
-        "family": "routine",
-        "color": "#7eb8d4",
-        "weight": 5.0864
-      },
-      {
-        "term": "retinol",
-        "count": 5079,
-        "per_1000": 5.9,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 3.4585
-      },
-      {
-        "term": "spf",
-        "count": 3279,
-        "per_1000": 3.81,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 3.4106
-      },
-      {
-        "term": "falten",
-        "count": 4433,
-        "per_1000": 5.15,
-        "family": "concern",
-        "color": "#e07070",
-        "weight": 3.2604
-      },
-      {
-        "term": "creme",
-        "count": 3492,
-        "per_1000": 4.06,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 2.8135
+        "term": "strahlung",
+        "count": 41205,
+        "per_1000": 5.65,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 2.921
       },
       {
         "term": "feuchtigkeit",
-        "count": 5278,
-        "per_1000": 6.13,
+        "count": 38519,
+        "per_1000": 5.29,
         "family": "result",
         "color": "#7ecdb8",
-        "weight": 2.7449
-      },
-      {
-        "term": "hyaluronsäure",
-        "count": 5322,
-        "per_1000": 6.19,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 2.6592
-      },
-      {
-        "term": "strahlung",
-        "count": 4367,
-        "per_1000": 5.08,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 2.6225
-      },
-      {
-        "term": "routine",
-        "count": 2128,
-        "per_1000": 2.47,
-        "family": "routine",
-        "color": "#7eb8d4",
-        "weight": 1.449
+        "weight": 2.3648
       },
       {
         "term": "pflege",
-        "count": 3835,
-        "per_1000": 4.46,
+        "count": 46946,
+        "per_1000": 6.44,
         "family": "other",
         "color": "#b8c4d4",
-        "weight": 1.1828
+        "weight": 1.7093
       },
       {
-        "term": "niacinamid",
-        "count": 2011,
-        "per_1000": 2.34,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 1.1457
-      },
-      {
-        "term": "vitamin",
-        "count": 3827,
-        "per_1000": 4.45,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 1.0928
-      },
-      {
-        "term": "poren",
-        "count": 1238,
-        "per_1000": 1.44,
+        "term": "falten",
+        "count": 15697,
+        "per_1000": 2.15,
         "family": "concern",
         "color": "#e07070",
-        "weight": 0.9974
+        "weight": 1.3628
       },
       {
         "term": "kollagen",
-        "count": 1562,
-        "per_1000": 1.82,
+        "count": 16175,
+        "per_1000": 2.22,
         "family": "ingredient",
         "color": "#e8a86e",
-        "weight": 0.9949
-      },
-      {
-        "term": "anwendung",
-        "count": 1512,
-        "per_1000": 1.76,
-        "family": "routine",
-        "color": "#7eb8d4",
-        "weight": 0.908
+        "weight": 1.2162
       },
       {
         "term": "trockenheit",
-        "count": 1429,
-        "per_1000": 1.66,
+        "count": 16914,
+        "per_1000": 2.32,
         "family": "concern",
         "color": "#e07070",
-        "weight": 0.7762
+        "weight": 1.0846
       },
       {
-        "term": "botox",
-        "count": 2228,
-        "per_1000": 2.59,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.7528
-      },
-      {
-        "term": "pigmentflecken",
-        "count": 1528,
-        "per_1000": 1.78,
+        "term": "poren",
+        "count": 9863,
+        "per_1000": 1.35,
         "family": "concern",
         "color": "#e07070",
-        "weight": 0.7357
-      },
-      {
-        "term": "wirkt",
-        "count": 2076,
-        "per_1000": 2.41,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.7014
-      },
-      {
-        "term": "produkte",
-        "count": 2501,
-        "per_1000": 2.91,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.668
-      },
-      {
-        "term": "skin",
-        "count": 1761,
-        "per_1000": 2.05,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.6652
+        "weight": 0.9381
       },
       {
         "term": "natürlich",
-        "count": 2620,
-        "per_1000": 3.05,
+        "count": 30765,
+        "per_1000": 4.22,
         "family": "other",
         "color": "#b8c4d4",
-        "weight": 0.6598
-      },
-      {
-        "term": "anti-aging",
-        "count": 2747,
-        "per_1000": 3.19,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.6563
-      },
-      {
-        "term": "peptide",
-        "count": 925,
-        "per_1000": 1.08,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 0.6299
-      },
-      {
-        "term": "frischer",
-        "count": 980,
-        "per_1000": 1.14,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.6242
-      },
-      {
-        "term": "aloe",
-        "count": 607,
-        "per_1000": 0.71,
-        "family": "ingredient",
-        "color": "#e8a86e",
-        "weight": 0.5468
-      },
-      {
-        "term": "frische",
-        "count": 646,
-        "per_1000": 0.75,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.4399
-      },
-      {
-        "term": "rötungen",
-        "count": 669,
-        "per_1000": 0.78,
-        "family": "concern",
-        "color": "#e07070",
-        "weight": 0.4261
-      },
-      {
-        "term": "unreinheiten",
-        "count": 818,
-        "per_1000": 0.95,
-        "family": "concern",
-        "color": "#e07070",
-        "weight": 0.4254
-      },
-      {
-        "term": "frisch",
-        "count": 566,
-        "per_1000": 0.66,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.4163
-      },
-      {
-        "term": "augenringe",
-        "count": 729,
-        "per_1000": 0.85,
-        "family": "concern",
-        "color": "#e07070",
-        "weight": 0.4153
+        "weight": 0.9146
       },
       {
         "term": "skincareroutine",
-        "count": 858,
-        "per_1000": 1.0,
+        "count": 15422,
+        "per_1000": 2.12,
         "family": "routine",
         "color": "#7eb8d4",
-        "weight": 0.3991
+        "weight": 0.8468
       },
       {
-        "term": "bakuchiol",
-        "count": 630,
-        "per_1000": 0.73,
+        "term": "beauty",
+        "count": 21844,
+        "per_1000": 3.0,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7953
+      },
+      {
+        "term": "körper",
+        "count": 21260,
+        "per_1000": 2.92,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7741
+      },
+      {
+        "term": "skin",
+        "count": 16891,
+        "per_1000": 2.32,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7532
+      },
+      {
+        "term": "produkte",
+        "count": 23032,
+        "per_1000": 3.16,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7262
+      },
+      {
+        "term": "frische",
+        "count": 8771,
+        "per_1000": 1.2,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.705
+      },
+      {
+        "term": "wirkt",
+        "count": 17500,
+        "per_1000": 2.4,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.698
+      },
+      {
+        "term": "braucht",
+        "count": 20688,
+        "per_1000": 2.84,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.6974
+      },
+      {
+        "term": "anwendung",
+        "count": 8719,
+        "per_1000": 1.2,
+        "family": "routine",
+        "color": "#7eb8d4",
+        "weight": 0.6181
+      },
+      {
+        "term": "aloe",
+        "count": 5430,
+        "per_1000": 0.75,
         "family": "ingredient",
         "color": "#e8a86e",
-        "weight": 0.3783
+        "weight": 0.5774
+      },
+      {
+        "term": "frischer",
+        "count": 7609,
+        "per_1000": 1.04,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.5721
+      },
+      {
+        "term": "frisch",
+        "count": 6050,
+        "per_1000": 0.83,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.5253
+      },
+      {
+        "term": "rötungen",
+        "count": 6707,
+        "per_1000": 0.92,
+        "family": "concern",
+        "color": "#e07070",
+        "weight": 0.5043
+      },
+      {
+        "term": "unreinheiten",
+        "count": 7988,
+        "per_1000": 1.1,
+        "family": "concern",
+        "color": "#e07070",
+        "weight": 0.4904
+      },
+      {
+        "term": "beautyroutine",
+        "count": 8144,
+        "per_1000": 1.12,
+        "family": "routine",
+        "color": "#7eb8d4",
+        "weight": 0.4804
+      },
+      {
+        "term": "pigmentflecken",
+        "count": 7745,
+        "per_1000": 1.06,
+        "family": "concern",
+        "color": "#e07070",
+        "weight": 0.4402
       },
       {
         "term": "frischen",
-        "count": 542,
-        "per_1000": 0.63,
+        "count": 5288,
+        "per_1000": 0.73,
         "family": "result",
         "color": "#7ecdb8",
-        "weight": 0.3452
+        "weight": 0.3976
       },
       {
         "term": "pickel",
-        "count": 446,
-        "per_1000": 0.52,
+        "count": 4396,
+        "per_1000": 0.6,
         "family": "concern",
         "color": "#e07070",
-        "weight": 0.328
-      },
-      {
-        "term": "elastizität",
-        "count": 560,
-        "per_1000": 0.65,
-        "family": "concern",
-        "color": "#e07070",
-        "weight": 0.3042
-      },
-      {
-        "term": "frisches",
-        "count": 468,
-        "per_1000": 0.54,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.2981
+        "weight": 0.3817
       },
       {
         "term": "pflegeroutine",
-        "count": 543,
-        "per_1000": 0.63,
+        "count": 6429,
+        "per_1000": 0.88,
         "family": "routine",
         "color": "#7eb8d4",
-        "weight": 0.2713
+        "weight": 0.3792
+      },
+      {
+        "term": "frisches",
+        "count": 4786,
+        "per_1000": 0.66,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.3599
       },
       {
         "term": "gesichtspflege",
-        "count": 561,
-        "per_1000": 0.65,
+        "count": 6199,
+        "per_1000": 0.85,
         "family": "ingredient",
         "color": "#e8a86e",
-        "weight": 0.2701
+        "weight": 0.3523
+      },
+      {
+        "term": "ausstrahlung",
+        "count": 5658,
+        "per_1000": 0.78,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.3474
+      },
+      {
+        "term": "elastizität",
+        "count": 3642,
+        "per_1000": 0.5,
+        "family": "concern",
+        "color": "#e07070",
+        "weight": 0.2335
+      },
+      {
+        "term": "hautpflegeroutine",
+        "count": 4206,
+        "per_1000": 0.58,
+        "family": "routine",
+        "color": "#7eb8d4",
+        "weight": 0.2169
+      },
+      {
+        "term": "skincare-routine",
+        "count": 3772,
+        "per_1000": 0.52,
+        "family": "routine",
+        "color": "#7eb8d4",
+        "weight": 0.2005
+      },
+      {
+        "term": "augenringe",
+        "count": 2697,
+        "per_1000": 0.37,
+        "family": "concern",
+        "color": "#e07070",
+        "weight": 0.1814
+      },
+      {
+        "term": "uv-strahlung",
+        "count": 2751,
+        "per_1000": 0.38,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.1689
+      },
+      {
+        "term": "feuchtigkeitspflege",
+        "count": 3326,
+        "per_1000": 0.46,
+        "family": "ingredient",
+        "color": "#e8a86e",
+        "weight": 0.1623
+      },
+      {
+        "term": "routinen",
+        "count": 2123,
+        "per_1000": 0.29,
+        "family": "routine",
+        "color": "#7eb8d4",
+        "weight": 0.1596
+      },
+      {
+        "term": "spf50",
+        "count": 1500,
+        "per_1000": 0.21,
+        "family": "ingredient",
+        "color": "#e8a86e",
+        "weight": 0.1427
+      },
+      {
+        "term": "vitaminc",
+        "count": 1732,
+        "per_1000": 0.24,
+        "family": "ingredient",
+        "color": "#e8a86e",
+        "weight": 0.1302
+      },
+      {
+        "term": "hautpflegetipps",
+        "count": 2307,
+        "per_1000": 0.32,
+        "family": "routine",
+        "color": "#7eb8d4",
+        "weight": 0.1267
       }
     ],
     "overweight": [
       {
-        "term": "sonnenpflege",
-        "ratio": 162.01,
-        "per_1000": 0.22,
-        "count": 188
-      },
-      {
-        "term": "sonnenfluid",
-        "ratio": 110.3,
-        "per_1000": 0.15,
-        "count": 128
-      },
-      {
-        "term": "feuchtigkeitsserum",
-        "ratio": 53.43,
+        "term": "sistascare",
+        "ratio": 468.2,
         "per_1000": 0.07,
-        "count": 62
+        "count": 535
       },
       {
-        "term": "uvb-schutz",
-        "ratio": 46.01,
-        "per_1000": 0.17,
-        "count": 145
+        "term": "anthelios",
+        "ratio": 248.61,
+        "per_1000": 0.11,
+        "count": 795
       },
       {
-        "term": "uv-filter",
-        "ratio": 42.23,
-        "per_1000": 0.17,
-        "count": 147
+        "term": "ultraleichtes",
+        "ratio": 228.41,
+        "per_1000": 0.04,
+        "count": 261
       },
       {
-        "term": "pumpspender",
-        "ratio": 38.4,
-        "per_1000": 0.14,
-        "count": 121
+        "term": "wachstumsbedingungen",
+        "ratio": 186.41,
+        "per_1000": 0.03,
+        "count": 213
       },
       {
-        "term": "uva-strahlen",
-        "ratio": 29.73,
-        "per_1000": 0.16,
+        "term": "image-skincare",
+        "ratio": 184.66,
+        "per_1000": 0.03,
+        "count": 211
+      },
+      {
+        "term": "sommer-routine",
+        "ratio": 150.53,
+        "per_1000": 0.02,
+        "count": 172
+      },
+      {
+        "term": "atopicontrol",
+        "ratio": 137.91,
+        "per_1000": 0.06,
+        "count": 441
+      },
+      {
+        "term": "lancaster",
+        "ratio": 121.65,
+        "per_1000": 0.02,
+        "count": 139
+      },
+      {
+        "term": "douglascosmetics",
+        "ratio": 120.77,
+        "per_1000": 0.02,
         "count": 138
       },
       {
-        "term": "gesichtsserum",
-        "ratio": 29.6,
-        "per_1000": 0.19,
-        "count": 162
+        "term": "frühlingsglowup",
+        "ratio": 111.14,
+        "per_1000": 0.02,
+        "count": 127
       },
       {
-        "term": "drmelaxin",
-        "ratio": 27.93,
-        "per_1000": 0.1,
-        "count": 88
+        "term": "ultraleichter",
+        "ratio": 107.64,
+        "per_1000": 0.02,
+        "count": 123
       },
       {
-        "term": "skincare-routine",
-        "ratio": 27.66,
-        "per_1000": 0.46,
-        "count": 399
+        "term": "dailyskincare",
+        "ratio": 107.64,
+        "per_1000": 0.02,
+        "count": 123
       },
       {
-        "term": "abendroutine",
-        "ratio": 26.79,
-        "per_1000": 0.27,
-        "count": 231
+        "term": "dailyspf",
+        "ratio": 101.52,
+        "per_1000": 0.02,
+        "count": 116
       },
       {
-        "term": "einziehende",
-        "ratio": 26.28,
-        "per_1000": 0.07,
-        "count": 61
+        "term": "retinolalternative",
+        "ratio": 96.27,
+        "per_1000": 0.02,
+        "count": 110
       },
       {
-        "term": "feuchtigkeitsspender",
-        "ratio": 25.57,
-        "per_1000": 0.1,
-        "count": 89
+        "term": "schmelzende",
+        "ratio": 96.27,
+        "per_1000": 0.02,
+        "count": 110
       },
       {
-        "term": "antioxidativen",
-        "ratio": 25.57,
-        "per_1000": 0.1,
-        "count": 89
+        "term": "sanftereinigung",
+        "ratio": 96.27,
+        "per_1000": 0.02,
+        "count": 110
       },
       {
-        "term": "verlangsamte",
-        "ratio": 24.82,
-        "per_1000": 0.12,
-        "count": 107
+        "term": "gesichtstonic",
+        "ratio": 92.77,
+        "per_1000": 0.01,
+        "count": 106
       },
       {
-        "term": "uvb-strahlen",
-        "ratio": 24.13,
-        "per_1000": 0.13,
-        "count": 112
+        "term": "dermatest",
+        "ratio": 89.27,
+        "per_1000": 0.01,
+        "count": 102
       },
       {
-        "term": "reichhaltig",
-        "ratio": 23.66,
-        "per_1000": 0.24,
-        "count": 204
+        "term": "brandsyoulove",
+        "ratio": 88.39,
+        "per_1000": 0.01,
+        "count": 101
       },
       {
-        "term": "anti-unreinheiten",
-        "ratio": 23.48,
-        "per_1000": 0.09,
-        "count": 74
-      },
-      {
-        "term": "luminous630",
-        "ratio": 23.17,
-        "per_1000": 0.08,
-        "count": 73
-      },
-      {
-        "term": "rizinusöl",
-        "ratio": 22.84,
-        "per_1000": 0.06,
-        "count": 53
+        "term": "velvetskinbeauty",
+        "ratio": 88.39,
+        "per_1000": 0.01,
+        "count": 101
       }
     ],
     "overweight_label": "Übergewichtung vs. Procedure-Open/Curious",
@@ -1564,493 +1695,493 @@ window.DashboardData = {
   },
   "procedureWordcloud": {
     "eyebrow": "5. Procedure-Open & Procedure-Curious Wordcloud",
-    "title": "The Language of Procedure-Open & Procedure-Curious: Top Themes in Conversation",
-    "n_docs_open": 2383,
-    "n_docs_curious": 7007,
-    "n_tokens_open": 136510,
-    "n_tokens_curious": 370707,
+    "title": "The Language of Procedure-Open & Procedure-Curious",
+    "n_docs_open": 19438,
+    "n_docs_curious": 55570,
+    "n_tokens_open": 1139600,
+    "n_tokens_curious": 3189188,
     "terms": [
       {
         "term": "behandlung",
-        "count": 6084,
-        "per_1000": 12.06,
+        "count": 60566,
+        "per_1000": 14.65,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 5.9129,
-        "curious_share": 0.726
-      },
-      {
-        "term": "botox",
-        "count": 2416,
-        "per_1000": 5.66,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 3.9254,
-        "curious_share": 0.57
+        "weight": 7.1827,
+        "curious_share": 0.698
       },
       {
         "term": "ergebnis",
-        "count": 2405,
-        "per_1000": 4.7,
+        "count": 24470,
+        "per_1000": 5.92,
         "family": "result",
         "color": "#7ecdb8",
-        "weight": 2.5765,
-        "curious_share": 0.738
+        "weight": 3.2451,
+        "curious_share": 0.698
       },
       {
         "term": "natürlich",
-        "count": 2460,
-        "per_1000": 4.6,
+        "count": 21807,
+        "per_1000": 5.01,
         "family": "result",
         "color": "#7ecdb8",
-        "weight": 2.3766,
-        "curious_share": 0.775
+        "weight": 2.5903,
+        "curious_share": 0.741
       },
       {
         "term": "termin",
-        "count": 1241,
-        "per_1000": 3.46,
+        "count": 9041,
+        "per_1000": 3.65,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 2.1925,
-        "curious_share": 0.376
-      },
-      {
-        "term": "laser",
-        "count": 1045,
-        "per_1000": 2.18,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 1.5095,
-        "curious_share": 0.682
-      },
-      {
-        "term": "microneedling",
-        "count": 1792,
-        "per_1000": 3.47,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 1.4907,
-        "curious_share": 0.747
-      },
-      {
-        "term": "filler",
-        "count": 923,
-        "per_1000": 1.86,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 1.1743,
-        "curious_share": 0.714
-      },
-      {
-        "term": "falten",
-        "count": 1696,
-        "per_1000": 3.2,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.8496,
-        "curious_share": 0.767
-      },
-      {
-        "term": "viele",
-        "count": 1389,
-        "per_1000": 2.83,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.8224,
-        "curious_share": 0.703
-      },
-      {
-        "term": "beratung",
-        "count": 781,
-        "per_1000": 1.39,
-        "family": "process",
-        "color": "#9aa3b2",
-        "weight": 0.7624,
-        "curious_share": 0.813
-      },
-      {
-        "term": "hyaluronsäure",
-        "count": 2090,
-        "per_1000": 4.1,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.7393,
-        "curious_share": 0.735
-      },
-      {
-        "term": "zeit",
-        "count": 995,
-        "per_1000": 2.16,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.7016,
-        "curious_share": 0.645
-      },
-      {
-        "term": "arzt",
-        "count": 450,
-        "per_1000": 0.89,
-        "family": "process",
-        "color": "#9aa3b2",
-        "weight": 0.6892,
-        "curious_share": 0.729
-      },
-      {
-        "term": "hautpflege",
-        "count": 1678,
-        "per_1000": 3.24,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.6669,
-        "curious_share": 0.747
+        "weight": 2.3065,
+        "curious_share": 0.126
       },
       {
         "term": "strahlung",
-        "count": 1408,
-        "per_1000": 3.07,
+        "count": 17276,
+        "per_1000": 4.28,
         "family": "other",
         "color": "#b8c4d4",
-        "weight": 0.6642,
-        "curious_share": 0.642
+        "weight": 0.9266,
+        "curious_share": 0.678
       },
       {
-        "term": "jede",
-        "count": 1087,
-        "per_1000": 2.02,
-        "family": "other",
-        "color": "#b8c4d4",
-        "weight": 0.657,
-        "curious_share": 0.779
-      },
-      {
-        "term": "praxis",
-        "count": 521,
-        "per_1000": 0.97,
+        "term": "beratung",
+        "count": 7247,
+        "per_1000": 1.64,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 0.6145,
-        "curious_share": 0.777
+        "weight": 0.8988,
+        "curious_share": 0.753
       },
       {
-        "term": "selbst",
-        "count": 1061,
-        "per_1000": 2.04,
+        "term": "beauty",
+        "count": 12138,
+        "per_1000": 2.92,
         "family": "other",
         "color": "#b8c4d4",
-        "weight": 0.5412,
-        "curious_share": 0.752
+        "weight": 0.7751,
+        "curious_share": 0.703
       },
       {
-        "term": "peeling",
-        "count": 396,
-        "per_1000": 0.81,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 0.4769,
-        "curious_share": 0.694
+        "term": "zeit",
+        "count": 9443,
+        "per_1000": 2.38,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7737,
+        "curious_share": 0.662
       },
       {
-        "term": "wirkung",
-        "count": 363,
-        "per_1000": 0.76,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.4482,
-        "curious_share": 0.672
-      },
-      {
-        "term": "facelift",
-        "count": 333,
-        "per_1000": 0.8,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 0.4363,
-        "curious_share": 0.55
-      },
-      {
-        "term": "natürlichen",
-        "count": 494,
-        "per_1000": 0.93,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.4336,
-        "curious_share": 0.771
-      },
-      {
-        "term": "preis",
-        "count": 289,
-        "per_1000": 0.58,
-        "family": "process",
-        "color": "#9aa3b2",
-        "weight": 0.4049,
+        "term": "viele",
+        "count": 11045,
+        "per_1000": 2.64,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7664,
         "curious_share": 0.709
       },
       {
-        "term": "hautstraffung",
-        "count": 416,
-        "per_1000": 0.79,
+        "term": "sichtbar",
+        "count": 12568,
+        "per_1000": 3.18,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7298,
+        "curious_share": 0.66
+      },
+      {
+        "term": "wirkt",
+        "count": 10181,
+        "per_1000": 2.49,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.7228,
+        "curious_share": 0.69
+      },
+      {
+        "term": "falten",
+        "count": 11691,
+        "per_1000": 2.62,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.6963,
+        "curious_share": 0.76
+      },
+      {
+        "term": "selbst",
+        "count": 10548,
+        "per_1000": 2.44,
+        "family": "other",
+        "color": "#b8c4d4",
+        "weight": 0.6477,
+        "curious_share": 0.735
+      },
+      {
+        "term": "praxis",
+        "count": 4133,
+        "per_1000": 0.93,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.5904,
+        "curious_share": 0.755
+      },
+      {
+        "term": "wirkung",
+        "count": 3470,
+        "per_1000": 0.8,
         "family": "result",
         "color": "#7ecdb8",
-        "weight": 0.3387,
-        "curious_share": 0.764
+        "weight": 0.4697,
+        "curious_share": 0.737
+      },
+      {
+        "term": "natürlichen",
+        "count": 4319,
+        "per_1000": 0.99,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.4642,
+        "curious_share": 0.74
+      },
+      {
+        "term": "arzt",
+        "count": 2732,
+        "per_1000": 0.6,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.4631,
+        "curious_share": 0.78
       },
       {
         "term": "termine",
-        "count": 244,
-        "per_1000": 0.53,
+        "count": 3071,
+        "per_1000": 0.76,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 0.308,
-        "curious_share": 0.652
+        "weight": 0.4426,
+        "curious_share": 0.683
+      },
+      {
+        "term": "hautstraffung",
+        "count": 3634,
+        "per_1000": 0.86,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.3706,
+        "curious_share": 0.715
       },
       {
         "term": "nadel",
-        "count": 208,
-        "per_1000": 0.43,
+        "count": 2135,
+        "per_1000": 0.53,
         "family": "fear",
         "color": "#e07070",
-        "weight": 0.2955,
-        "curious_share": 0.697
-      },
-      {
-        "term": "hifu",
-        "count": 169,
-        "per_1000": 0.37,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 0.286,
-        "curious_share": 0.639
+        "weight": 0.3643,
+        "curious_share": 0.683
       },
       {
         "term": "gesichtsbehandlung",
-        "count": 311,
-        "per_1000": 0.65,
+        "count": 3589,
+        "per_1000": 0.91,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 0.2369,
-        "curious_share": 0.682
+        "weight": 0.3332,
+        "curious_share": 0.655
       },
       {
-        "term": "schmerzen",
-        "count": 212,
-        "per_1000": 0.42,
-        "family": "fear",
-        "color": "#e07070",
-        "weight": 0.2159,
-        "curious_share": 0.731
-      },
-      {
-        "term": "beratungstermin",
-        "count": 329,
-        "per_1000": 0.48,
+        "term": "preis",
+        "count": 1420,
+        "per_1000": 0.37,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 0.1915,
-        "curious_share": 0.954
-      },
-      {
-        "term": "sitzung",
-        "count": 139,
-        "per_1000": 0.31,
-        "family": "process",
-        "color": "#9aa3b2",
-        "weight": 0.1844,
-        "curious_share": 0.604
-      },
-      {
-        "term": "lasern",
-        "count": 173,
-        "per_1000": 0.28,
-        "family": "procedure",
-        "color": "#7eb8d4",
-        "weight": 0.1784,
-        "curious_share": 0.879
-      },
-      {
-        "term": "straffung",
-        "count": 185,
-        "per_1000": 0.33,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.1696,
-        "curious_share": 0.816
-      },
-      {
-        "term": "faltenbehandlung",
-        "count": 230,
-        "per_1000": 0.43,
-        "family": "process",
-        "color": "#9aa3b2",
-        "weight": 0.165,
-        "curious_share": 0.783
-      },
-      {
-        "term": "angst",
-        "count": 148,
-        "per_1000": 0.24,
-        "family": "fear",
-        "color": "#e07070",
-        "weight": 0.164,
-        "curious_share": 0.892
+        "weight": 0.255,
+        "curious_share": 0.637
       },
       {
         "term": "sitzungen",
-        "count": 158,
+        "count": 1636,
+        "per_1000": 0.43,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.224,
+        "curious_share": 0.616
+      },
+      {
+        "term": "straffung",
+        "count": 1883,
+        "per_1000": 0.43,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.2226,
+        "curious_share": 0.745
+      },
+      {
+        "term": "sitzung",
+        "count": 1245,
+        "per_1000": 0.36,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.2135,
+        "curious_share": 0.518
+      },
+      {
+        "term": "schmerzen",
+        "count": 1489,
+        "per_1000": 0.36,
+        "family": "fear",
+        "color": "#e07070",
+        "weight": 0.184,
+        "curious_share": 0.708
+      },
+      {
+        "term": "laserhaarentfernung",
+        "count": 1756,
+        "per_1000": 0.46,
+        "family": "procedure",
+        "color": "#7eb8d4",
+        "weight": 0.1648,
+        "curious_share": 0.62
+      },
+      {
+        "term": "hautberatung",
+        "count": 2017,
+        "per_1000": 0.32,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.1415,
+        "curious_share": 1.0
+      },
+      {
+        "term": "natürlichkeit",
+        "count": 1458,
+        "per_1000": 0.3,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.1309,
+        "curious_share": 0.816
+      },
+      {
+        "term": "diodenlaser",
+        "count": 984,
+        "per_1000": 0.26,
+        "family": "procedure",
+        "color": "#7eb8d4",
+        "weight": 0.1236,
+        "curious_share": 0.603
+      },
+      {
+        "term": "faltenbehandlung",
+        "count": 1392,
         "per_1000": 0.31,
         "family": "process",
         "color": "#9aa3b2",
-        "weight": 0.1603,
-        "curious_share": 0.734
+        "weight": 0.122,
+        "curious_share": 0.754
+      },
+      {
+        "term": "angst",
+        "count": 938,
+        "per_1000": 0.17,
+        "family": "fear",
+        "color": "#e07070",
+        "weight": 0.118,
+        "curious_share": 0.913
       },
       {
         "term": "peelings",
-        "count": 139,
-        "per_1000": 0.29,
+        "count": 917,
+        "per_1000": 0.21,
         "family": "procedure",
         "color": "#7eb8d4",
-        "weight": 0.1598,
-        "curious_share": 0.676
+        "weight": 0.1153,
+        "curious_share": 0.743
+      },
+      {
+        "term": "beratungsgespräch",
+        "count": 1263,
+        "per_1000": 0.29,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.1076,
+        "curious_share": 0.752
+      },
+      {
+        "term": "risiko",
+        "count": 734,
+        "per_1000": 0.16,
+        "family": "fear",
+        "color": "#e07070",
+        "weight": 0.1044,
+        "curious_share": 0.759
+      },
+      {
+        "term": "natürlichschön",
+        "count": 1067,
+        "per_1000": 0.24,
+        "family": "result",
+        "color": "#7ecdb8",
+        "weight": 0.1012,
+        "curious_share": 0.744
       },
       {
         "term": "lipfiller",
-        "count": 140,
-        "per_1000": 0.29,
+        "count": 734,
+        "per_1000": 0.19,
         "family": "procedure",
         "color": "#7eb8d4",
-        "weight": 0.149,
-        "curious_share": 0.693
+        "weight": 0.0985,
+        "curious_share": 0.635
       },
       {
-        "term": "zufrieden",
-        "count": 137,
-        "per_1000": 0.28,
-        "family": "result",
-        "color": "#7ecdb8",
-        "weight": 0.1457,
-        "curious_share": 0.693
+        "term": "nebenwirkung",
+        "count": 920,
+        "per_1000": 0.21,
+        "family": "fear",
+        "color": "#e07070",
+        "weight": 0.0949,
+        "curious_share": 0.738
+      },
+      {
+        "term": "terminvereinbarung",
+        "count": 1119,
+        "per_1000": 0.24,
+        "family": "process",
+        "color": "#9aa3b2",
+        "weight": 0.0882,
+        "curious_share": 0.791
+      },
+      {
+        "term": "schmerzfrei",
+        "count": 706,
+        "per_1000": 0.19,
+        "family": "fear",
+        "color": "#e07070",
+        "weight": 0.0876,
+        "curious_share": 0.615
       }
     ],
     "overweight": [
       {
-        "term": "schönheitsop",
-        "ratio": 20.44,
-        "per_1000": 0.9,
-        "count": 333
+        "term": "lombagine",
+        "ratio": 159.01,
+        "per_1000": 0.14,
+        "count": 445
       },
       {
-        "term": "seitenprofil",
-        "ratio": 20.07,
-        "per_1000": 0.29,
-        "count": 109
+        "term": "zinkmangel",
+        "ratio": 87.19,
+        "per_1000": 0.08,
+        "count": 244
       },
       {
-        "term": "angst vor",
-        "ratio": 13.62,
-        "per_1000": 0.2,
-        "count": 74
+        "term": "anlagebedingtem",
+        "ratio": 73.61,
+        "per_1000": 0.06,
+        "count": 206
       },
       {
-        "term": "lächerlich",
-        "ratio": 13.5,
-        "per_1000": 0.3,
+        "term": "doppelherzpharma",
+        "ratio": 55.21,
+        "per_1000": 0.1,
+        "count": 309
+      },
+      {
+        "term": "brautmakeup",
+        "ratio": 42.88,
+        "per_1000": 0.04,
+        "count": 120
+      },
+      {
+        "term": "butylhydroxytoluol",
+        "ratio": 42.52,
+        "per_1000": 0.04,
+        "count": 119
+      },
+      {
+        "term": "hochdosisozontherapie",
+        "ratio": 39.9,
+        "per_1000": 0.11,
+        "count": 335
+      },
+      {
+        "term": "multipassozon",
+        "ratio": 39.9,
+        "per_1000": 0.11,
+        "count": 335
+      },
+      {
+        "term": "pflichttext",
+        "ratio": 39.66,
+        "per_1000": 0.03,
+        "count": 111
+      },
+      {
+        "term": "androgenetische",
+        "ratio": 39.31,
+        "per_1000": 0.03,
         "count": 110
       },
       {
-        "term": "vereinbare",
-        "ratio": 12.12,
-        "per_1000": 0.98,
-        "count": 362
+        "term": "doppelherz",
+        "ratio": 37.52,
+        "per_1000": 0.03,
+        "count": 105
+      },
+      {
+        "term": "cetylalkohol",
+        "ratio": 37.52,
+        "per_1000": 0.03,
+        "count": 105
+      },
+      {
+        "term": "stimuliere",
+        "ratio": 37.16,
+        "per_1000": 0.03,
+        "count": 104
+      },
+      {
+        "term": "patrichaflatwood",
+        "ratio": 36.81,
+        "per_1000": 0.03,
+        "count": 103
+      },
+      {
+        "term": "zusammensetz",
+        "ratio": 36.81,
+        "per_1000": 0.03,
+        "count": 103
+      },
+      {
+        "term": "bridalmakeup",
+        "ratio": 30.73,
+        "per_1000": 0.03,
+        "count": 86
+      },
+      {
+        "term": "gesundheitbochum",
+        "ratio": 28.41,
+        "per_1000": 0.1,
+        "count": 318
       },
       {
         "term": "behandlungsplan",
-        "ratio": 11.14,
-        "per_1000": 0.33,
-        "count": 121
+        "ratio": 26.57,
+        "per_1000": 0.26,
+        "count": 818
       },
       {
-        "term": "kostenlose",
-        "ratio": 10.51,
-        "per_1000": 0.85,
-        "count": 314
+        "term": "spurenelement",
+        "ratio": 24.66,
+        "per_1000": 0.02,
+        "count": 69
       },
       {
-        "term": "schönheitsoperationen",
-        "ratio": 9.21,
-        "per_1000": 0.13,
-        "count": 50
-      },
-      {
-        "term": "beratungstermin",
-        "ratio": 7.71,
-        "per_1000": 0.85,
-        "count": 314
-      },
-      {
-        "term": "tränensäcke",
-        "ratio": 7.04,
-        "per_1000": 0.41,
-        "count": 153
-      },
-      {
-        "term": "concealer",
-        "ratio": 6.75,
-        "per_1000": 0.45,
-        "count": 165
-      },
-      {
-        "term": "augenringe",
-        "ratio": 5.71,
-        "per_1000": 3.39,
-        "count": 1256
-      },
-      {
-        "term": "augenringen",
-        "ratio": 5.43,
-        "per_1000": 0.16,
-        "count": 59
-      },
-      {
-        "term": "erstellen",
-        "ratio": 4.34,
-        "per_1000": 0.29,
-        "count": 106
-      },
-      {
-        "term": "schlupflider",
-        "ratio": 3.9,
-        "per_1000": 0.14,
-        "count": 53
-      },
-      {
-        "term": "weiterhin",
-        "ratio": 3.87,
-        "per_1000": 0.17,
-        "count": 63
-      },
-      {
-        "term": "behandlungskonzepte",
-        "ratio": 3.68,
-        "per_1000": 0.16,
-        "count": 60
-      },
-      {
-        "term": "ausführliche",
-        "ratio": 3.25,
-        "per_1000": 0.14,
-        "count": 53
-      },
-      {
-        "term": "volumenverlust",
-        "ratio": 3.1,
-        "per_1000": 0.16,
-        "count": 59
-      },
-      {
-        "term": "angst",
-        "ratio": 3.04,
-        "per_1000": 0.36,
-        "count": 132
+        "term": "patrichaflatwooddort",
+        "ratio": 24.66,
+        "per_1000": 0.02,
+        "count": 69
       }
     ],
     "overweight_label": "Übergewichtung Procedure-Curious vs. Procedure-Open",
@@ -2078,834 +2209,883 @@ window.DashboardData = {
     ]
   },
   "agingPaths": {
-    "eyebrow": "6. Aging Concerns, Skin Needs & Paths",
-    "title": "Aging Concerns, Skin Needs & The Paths to Solve Them",
-    "note": "Mehrfachnennungen möglich, Summe über 100 %",
-    "n_total": 38449,
-    "n_classified": 18422,
-    "classified_share_pct": 47.9,
+    "eyebrow": "6. Aging Concerns & The Paths to Solve Them",
+    "title": "Aging Concerns & The Paths to Solve Them",
+    "note": "Mehrfachnennungen möglich",
+    "n_total": 331195,
+    "n_classified": 154664,
+    "classified_share_pct": 46.7,
     "unclassified_themes": [
-      "botox",
-      "hyaluron",
-      "serum",
       "skincare",
-      "einen"
+      "beauty",
+      "pflege",
+      "sondern",
+      "vitamin"
     ],
     "concerns": [
+      {
+        "id": "dullness",
+        "label": "Dullness",
+        "kind": "concern",
+        "count": 63834,
+        "pair": null,
+        "top_term": "strahlend",
+        "concentration": 0.728,
+        "concentrated": true
+      },
       {
         "id": "structural-wrinkling",
         "label": "Structural Wrinkling",
         "kind": "concern",
-        "count": 7992,
-        "pair": "wrinkle-reduction",
-        "top_term": "falten",
-        "concentration": 0.887,
-        "concentrated": true
-      },
-      {
-        "id": "dark-circles",
-        "label": "Dark Circles & Under-Eye",
-        "kind": "concern",
-        "count": 3189,
+        "count": 49411,
         "pair": null,
-        "top_term": "augenringe",
-        "concentration": 1.029,
+        "top_term": "falten",
+        "concentration": 0.741,
         "concentrated": true
       },
       {
         "id": "barrier-dryness",
         "label": "Barrier Fragility / Dryness",
         "kind": "concern",
-        "count": 2466,
-        "pair": "plump-hydrated",
-        "top_term": "spannt",
-        "concentration": 0.468,
+        "count": 36692,
+        "pair": null,
+        "top_term": "trockene haut",
+        "concentration": 0.405,
         "concentrated": false
       },
       {
         "id": "hyperpigmentation",
         "label": "Hyperpigmentation",
         "kind": "concern",
-        "count": 1985,
-        "pair": "even-complexion",
-        "top_term": "pigmentflecken",
-        "concentration": 1.165,
+        "count": 28303,
+        "pair": null,
+        "top_term": "ebenmäßig",
+        "concentration": 0.651,
+        "concentrated": true
+      },
+      {
+        "id": "dark-circles",
+        "label": "Dark Circles & Under-Eye",
+        "kind": "concern",
+        "count": 13660,
+        "pair": null,
+        "top_term": "augenringe",
+        "concentration": 0.978,
         "concentrated": true
       },
       {
         "id": "sagging-contour",
         "label": "Sagging and Loss of Contour",
         "kind": "concern",
-        "count": 729,
-        "pair": "firmness-lifting",
-        "top_term": "schlaff",
-        "concentration": 0.425,
-        "concentrated": false
-      },
-      {
-        "id": "dullness",
-        "label": "Dullness",
-        "kind": "concern",
-        "count": 548,
-        "pair": "glow-radiance",
-        "top_term": "fahle haut",
-        "concentration": 0.566,
+        "count": 10986,
+        "pair": null,
+        "top_term": "straffere haut",
+        "concentration": 0.287,
         "concentrated": false
       },
       {
         "id": "pores-texture",
         "label": "Enlarged Pores & Texture",
         "kind": "concern",
-        "count": 333,
-        "pair": "refined-pores",
-        "top_term": "unebenheiten",
-        "concentration": 0.372,
+        "count": 5022,
+        "pair": null,
+        "top_term": "verfeinerte poren",
+        "concentration": 0.275,
         "concentrated": false
+      },
+      {
+        "id": "neck-decollete-hands",
+        "label": "Neck, Décolleté & Hands",
+        "kind": "concern",
+        "count": 3847,
+        "pair": null,
+        "top_term": "dekolleté",
+        "concentration": 1.051,
+        "concentrated": true
       },
       {
         "id": "collagen-volume",
         "label": "Collagen & Volume Loss",
         "kind": "concern",
-        "count": 267,
+        "count": 1888,
         "pair": null,
         "top_term": "volumenverlust",
-        "concentration": 0.592,
+        "concentration": 0.558,
         "concentrated": false
       }
     ],
-    "needs": [
-      {
-        "id": "glow-radiance",
-        "label": "Glow & Radiance",
-        "kind": "need",
-        "count": 4845,
-        "pair": "dullness",
-        "top_term": "strahlend",
-        "concentration": 0.947,
-        "concentrated": true
-      },
-      {
-        "id": "even-complexion",
-        "label": "Even Complexion",
-        "kind": "need",
-        "count": 2221,
-        "pair": "hyperpigmentation",
-        "top_term": "ebenmäßig",
-        "concentration": 0.981,
-        "concentrated": true
-      },
-      {
-        "id": "wrinkle-reduction",
-        "label": "Visible Wrinkle Reduction",
-        "kind": "need",
-        "count": 774,
-        "pair": "structural-wrinkling",
-        "top_term": "glattere haut",
-        "concentration": 0.549,
-        "concentrated": false
-      },
-      {
-        "id": "firmness-lifting",
-        "label": "Firmness & Lifting",
-        "kind": "need",
-        "count": 637,
-        "pair": "sagging-contour",
-        "top_term": "mehr spannkraft",
-        "concentration": 0.449,
-        "concentrated": false
-      },
-      {
-        "id": "plump-hydrated",
-        "label": "Plump & Hydrated Skin",
-        "kind": "need",
-        "count": 607,
-        "pair": "barrier-dryness",
-        "top_term": "mehr feuchtigkeit",
-        "concentration": 0.399,
-        "concentrated": false
-      },
-      {
-        "id": "prevention",
-        "label": "Long-Term Protection & Prevention",
-        "kind": "need",
-        "count": 347,
-        "pair": null,
-        "top_term": "prävention",
-        "concentration": 0.807,
-        "concentrated": true
-      },
-      {
-        "id": "youthful-fresh",
-        "label": "Youthful & Fresh Appearance",
-        "kind": "need",
-        "count": 303,
-        "pair": null,
-        "top_term": "verjüngt",
-        "concentration": 0.488,
-        "concentrated": false
-      },
-      {
-        "id": "refined-pores",
-        "label": "Refined Pores & Smooth Texture",
-        "kind": "need",
-        "count": 106,
-        "pair": "pores-texture",
-        "top_term": "verfeinerte poren",
-        "concentration": 0.774,
-        "concentrated": true
-      }
-    ],
+    "needs": [],
     "drilldowns": {
-      "concern:structural-wrinkling": {
-        "basis": 8814,
+      "concern:sagging-contour": {
+        "basis": 10992,
         "low_n": false,
         "paths": [
           {
             "id": "collagen",
             "label": "Collagen",
             "kind": "ingredient",
-            "count": 1386,
-            "strong": 840,
-            "weak": 546
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 1166,
-            "strong": 476,
-            "weak": 690
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 1129,
-            "strong": 708,
-            "weak": 421
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 1094,
-            "strong": 668,
-            "weak": 426
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 1010,
-            "strong": 609,
-            "weak": 401
+            "count": 4171,
+            "strong": 2451,
+            "weak": 1720
           },
           {
             "id": "microneedling-rf",
             "label": "Microneedling / RF",
             "kind": "procedure",
-            "count": 510,
-            "strong": 233,
-            "weak": 277
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 447,
-            "strong": 249,
-            "weak": 198
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 447,
-            "strong": 251,
-            "weak": 196
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 411,
-            "strong": 230,
-            "weak": 181
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 295,
-            "strong": 170,
-            "weak": 125
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 204,
-            "strong": 88,
-            "weak": 116
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 186,
-            "strong": 108,
-            "weak": 78
-          },
-          {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
-            "kind": "ingredient",
-            "count": 144,
-            "strong": 99,
-            "weak": 45
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 99,
-            "strong": 49,
-            "weak": 50
+            "count": 1436,
+            "strong": 618,
+            "weak": 818
           },
           {
             "id": "facelift",
             "label": "Facelift & Chirurgie",
             "kind": "procedure",
-            "count": 89,
-            "strong": 39,
-            "weak": 50
+            "count": 740,
+            "strong": 267,
+            "weak": 473
           },
           {
-            "id": "threads",
-            "label": "Thread Lifts",
-            "kind": "procedure",
-            "count": 54,
-            "strong": 10,
-            "weak": 44
+            "id": "spf",
+            "label": "SPF",
+            "kind": "ingredient",
+            "count": 664,
+            "strong": 277,
+            "weak": 387
           },
           {
-            "id": "prp",
-            "label": "PRP / Vampire Lift",
+            "id": "peptides",
+            "label": "Peptides",
+            "kind": "ingredient",
+            "count": 480,
+            "strong": 272,
+            "weak": 208
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 475,
+            "strong": 259,
+            "weak": 216
+          },
+          {
+            "id": "fillers",
+            "label": "Hyaluronic Fillers",
             "kind": "procedure",
-            "count": 49,
-            "strong": 23,
-            "weak": 26
+            "count": 458,
+            "strong": 224,
+            "weak": 234
+          },
+          {
+            "id": "botox",
+            "label": "Botox",
+            "kind": "procedure",
+            "count": 451,
+            "strong": 183,
+            "weak": 268
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 328,
+            "strong": 124,
+            "weak": 204
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 295,
+            "strong": 149,
+            "weak": 146
           },
           {
             "id": "ultrasound",
             "label": "Ultrasound Lifting",
             "kind": "procedure",
-            "count": 35,
-            "strong": 13,
-            "weak": 22
+            "count": 293,
+            "strong": 134,
+            "weak": 159
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 279,
+            "strong": 107,
+            "weak": 172
+          },
+          {
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 253,
+            "strong": 134,
+            "weak": 119
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 205,
+            "strong": 86,
+            "weak": 119
           },
           {
             "id": "body-contouring",
             "label": "Fat Reduction / Body Contouring",
             "kind": "procedure",
-            "count": 30,
-            "strong": 12,
-            "weak": 18
-          },
-          {
-            "id": "peels",
-            "label": "Chemical Peels",
-            "kind": "procedure",
-            "count": 29,
-            "strong": 14,
-            "weak": 15
-          }
-        ]
-      },
-      "need:glow-radiance": {
-        "basis": 7231,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 1299,
-            "strong": 796,
-            "weak": 503
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 970,
-            "strong": 418,
-            "weak": 552
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 886,
-            "strong": 462,
-            "weak": 424
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 681,
-            "strong": 451,
-            "weak": 230
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 661,
-            "strong": 355,
-            "weak": 306
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 608,
-            "strong": 323,
-            "weak": 285
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 422,
-            "strong": 269,
-            "weak": 153
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 336,
-            "strong": 184,
-            "weak": 152
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 282,
-            "strong": 161,
-            "weak": 121
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 279,
-            "strong": 155,
-            "weak": 124
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 247,
-            "strong": 136,
-            "weak": 111
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 227,
-            "strong": 99,
-            "weak": 128
-          },
-          {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
-            "kind": "ingredient",
-            "count": 116,
-            "strong": 64,
-            "weak": 52
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 64,
-            "strong": 31,
-            "weak": 33
-          },
-          {
-            "id": "peels",
-            "label": "Chemical Peels",
-            "kind": "procedure",
-            "count": 51,
-            "strong": 30,
-            "weak": 21
+            "count": 152,
+            "strong": 73,
+            "weak": 79
           },
           {
             "id": "prp",
             "label": "PRP / Vampire Lift",
             "kind": "procedure",
-            "count": 40,
-            "strong": 19,
-            "weak": 21
-          },
-          {
-            "id": "facelift",
-            "label": "Facelift & Chirurgie",
-            "kind": "procedure",
-            "count": 33,
-            "strong": 13,
-            "weak": 20
-          }
-        ]
-      },
-      "concern:barrier-dryness": {
-        "basis": 3390,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 597,
-            "strong": 302,
-            "weak": 295
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 569,
-            "strong": 227,
-            "weak": 342
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 360,
-            "strong": 179,
-            "weak": 181
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 279,
-            "strong": 128,
-            "weak": 151
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 258,
-            "strong": 115,
-            "weak": 143
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 252,
-            "strong": 131,
-            "weak": 121
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 186,
-            "strong": 71,
-            "weak": 115
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 167,
-            "strong": 92,
-            "weak": 75
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 165,
-            "strong": 63,
-            "weak": 102
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 162,
-            "strong": 98,
-            "weak": 64
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 111,
-            "strong": 41,
-            "weak": 70
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 108,
-            "strong": 43,
-            "weak": 65
-          },
-          {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
-            "kind": "ingredient",
-            "count": 58,
-            "strong": 30,
-            "weak": 28
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 53,
-            "strong": 13,
-            "weak": 40
-          },
-          {
-            "id": "peels",
-            "label": "Chemical Peels",
-            "kind": "procedure",
-            "count": 19,
-            "strong": 7,
-            "weak": 12
-          }
-        ]
-      },
-      "concern:dark-circles": {
-        "basis": 1089,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 152,
-            "strong": 74,
-            "weak": 78
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 133,
-            "strong": 45,
-            "weak": 88
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 119,
-            "strong": 55,
-            "weak": 64
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 118,
-            "strong": 53,
-            "weak": 65
+            "count": 123,
+            "strong": 46,
+            "weak": 77
           },
           {
             "id": "niacinamide",
             "label": "Niacinamide",
             "kind": "ingredient",
             "count": 85,
-            "strong": 48,
-            "weak": 37
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 83,
-            "strong": 39,
-            "weak": 44
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 77,
-            "strong": 35,
-            "weak": 42
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 58,
-            "strong": 32,
-            "weak": 26
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 50,
-            "strong": 23,
-            "weak": 27
-          },
-          {
-            "id": "facelift",
-            "label": "Facelift & Chirurgie",
-            "kind": "procedure",
-            "count": 47,
-            "strong": 13,
-            "weak": 34
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 46,
-            "strong": 23,
-            "weak": 23
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 35,
-            "strong": 12,
-            "weak": 23
+            "strong": 46,
+            "weak": 39
           },
           {
             "id": "vitamin-e",
             "label": "Vitamin E",
             "kind": "ingredient",
-            "count": 28,
-            "strong": 18,
-            "weak": 10
+            "count": 49,
+            "strong": 21,
+            "weak": 28
           },
           {
-            "id": "prp",
-            "label": "PRP / Vampire Lift",
-            "kind": "procedure",
-            "count": 22,
-            "strong": 11,
+            "id": "bakuchiol",
+            "label": "Bakuchiol",
+            "kind": "ingredient",
+            "count": 40,
+            "strong": 29,
             "weak": 11
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 15,
+            "strong": 5,
+            "weak": 10
+          }
+        ]
+      },
+      "concern:structural-wrinkling": {
+        "basis": 45142,
+        "low_n": false,
+        "paths": [
+          {
+            "id": "collagen",
+            "label": "Collagen",
+            "kind": "ingredient",
+            "count": 10858,
+            "strong": 6647,
+            "weak": 4211
+          },
+          {
+            "id": "botox",
+            "label": "Botox",
+            "kind": "procedure",
+            "count": 5290,
+            "strong": 3155,
+            "weak": 2135
+          },
+          {
+            "id": "spf",
+            "label": "SPF",
+            "kind": "ingredient",
+            "count": 5284,
+            "strong": 2316,
+            "weak": 2968
+          },
+          {
+            "id": "microneedling-rf",
+            "label": "Microneedling / RF",
+            "kind": "procedure",
+            "count": 4932,
+            "strong": 2357,
+            "weak": 2575
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 3632,
+            "strong": 2132,
+            "weak": 1500
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 2644,
+            "strong": 1541,
+            "weak": 1103
+          },
+          {
+            "id": "fillers",
+            "label": "Hyaluronic Fillers",
+            "kind": "procedure",
+            "count": 2286,
+            "strong": 1453,
+            "weak": 833
+          },
+          {
+            "id": "peptides",
+            "label": "Peptides",
+            "kind": "ingredient",
+            "count": 2078,
+            "strong": 1242,
+            "weak": 836
+          },
+          {
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 1658,
+            "strong": 865,
+            "weak": 793
           },
           {
             "id": "laser",
             "label": "Laser",
             "kind": "procedure",
-            "count": 20,
-            "strong": 9,
-            "weak": 11
+            "count": 1210,
+            "strong": 526,
+            "weak": 684
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 1076,
+            "strong": 610,
+            "weak": 466
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 958,
+            "strong": 431,
+            "weak": 527
+          },
+          {
+            "id": "facelift",
+            "label": "Facelift & Chirurgie",
+            "kind": "procedure",
+            "count": 906,
+            "strong": 394,
+            "weak": 512
+          },
+          {
+            "id": "vitamin-e",
+            "label": "Vitamin E",
+            "kind": "ingredient",
+            "count": 595,
+            "strong": 348,
+            "weak": 247
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 429,
+            "strong": 208,
+            "weak": 221
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 380,
+            "strong": 196,
+            "weak": 184
+          },
+          {
+            "id": "bakuchiol",
+            "label": "Bakuchiol",
+            "kind": "ingredient",
+            "count": 319,
+            "strong": 222,
+            "weak": 97
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 240,
+            "strong": 126,
+            "weak": 114
+          },
+          {
+            "id": "ultrasound",
+            "label": "Ultrasound Lifting",
+            "kind": "procedure",
+            "count": 205,
+            "strong": 98,
+            "weak": 107
+          },
+          {
+            "id": "body-contouring",
+            "label": "Fat Reduction / Body Contouring",
+            "kind": "procedure",
+            "count": 162,
+            "strong": 113,
+            "weak": 49
           }
         ]
       },
-      "concern:hyperpigmentation": {
-        "basis": 3150,
+      "concern:dullness": {
+        "basis": 45757,
+        "low_n": false,
+        "paths": [
+          {
+            "id": "collagen",
+            "label": "Collagen",
+            "kind": "ingredient",
+            "count": 8627,
+            "strong": 4897,
+            "weak": 3730
+          },
+          {
+            "id": "spf",
+            "label": "SPF",
+            "kind": "ingredient",
+            "count": 8578,
+            "strong": 3770,
+            "weak": 4808
+          },
+          {
+            "id": "microneedling-rf",
+            "label": "Microneedling / RF",
+            "kind": "procedure",
+            "count": 5414,
+            "strong": 3136,
+            "weak": 2278
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 4633,
+            "strong": 2600,
+            "weak": 2033
+          },
+          {
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 4295,
+            "strong": 2685,
+            "weak": 1610
+          },
+          {
+            "id": "peptides",
+            "label": "Peptides",
+            "kind": "ingredient",
+            "count": 2087,
+            "strong": 1211,
+            "weak": 876
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 2067,
+            "strong": 989,
+            "weak": 1078
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 2043,
+            "strong": 1283,
+            "weak": 760
+          },
+          {
+            "id": "botox",
+            "label": "Botox",
+            "kind": "procedure",
+            "count": 1472,
+            "strong": 622,
+            "weak": 850
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 1457,
+            "strong": 708,
+            "weak": 749
+          },
+          {
+            "id": "fillers",
+            "label": "Hyaluronic Fillers",
+            "kind": "procedure",
+            "count": 1222,
+            "strong": 631,
+            "weak": 591
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 1062,
+            "strong": 443,
+            "weak": 619
+          },
+          {
+            "id": "vitamin-e",
+            "label": "Vitamin E",
+            "kind": "ingredient",
+            "count": 932,
+            "strong": 503,
+            "weak": 429
+          },
+          {
+            "id": "facelift",
+            "label": "Facelift & Chirurgie",
+            "kind": "procedure",
+            "count": 573,
+            "strong": 232,
+            "weak": 341
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 343,
+            "strong": 170,
+            "weak": 173
+          },
+          {
+            "id": "bakuchiol",
+            "label": "Bakuchiol",
+            "kind": "ingredient",
+            "count": 339,
+            "strong": 195,
+            "weak": 144
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 337,
+            "strong": 152,
+            "weak": 185
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 146,
+            "strong": 54,
+            "weak": 92
+          },
+          {
+            "id": "ultrasound",
+            "label": "Ultrasound Lifting",
+            "kind": "procedure",
+            "count": 82,
+            "strong": 40,
+            "weak": 42
+          },
+          {
+            "id": "body-contouring",
+            "label": "Fat Reduction / Body Contouring",
+            "kind": "procedure",
+            "count": 48,
+            "strong": 23,
+            "weak": 25
+          }
+        ]
+      },
+      "concern:barrier-dryness": {
+        "basis": 22489,
         "low_n": false,
         "paths": [
           {
             "id": "spf",
             "label": "SPF",
             "kind": "ingredient",
-            "count": 704,
-            "strong": 331,
-            "weak": 373
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 426,
-            "strong": 257,
-            "weak": 169
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 393,
-            "strong": 212,
-            "weak": 181
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 380,
-            "strong": 233,
-            "weak": 147
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 252,
-            "strong": 136,
-            "weak": 116
+            "count": 5373,
+            "strong": 2060,
+            "weak": 3313
           },
           {
             "id": "hyaluronic-acid",
             "label": "Hyaluronic Acid",
             "kind": "ingredient",
-            "count": 210,
-            "strong": 91,
-            "weak": 119
+            "count": 3049,
+            "strong": 1695,
+            "weak": 1354
+          },
+          {
+            "id": "collagen",
+            "label": "Collagen",
+            "kind": "ingredient",
+            "count": 2510,
+            "strong": 1240,
+            "weak": 1270
+          },
+          {
+            "id": "botox",
+            "label": "Botox",
+            "kind": "procedure",
+            "count": 1861,
+            "strong": 944,
+            "weak": 917
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 1477,
+            "strong": 617,
+            "weak": 860
+          },
+          {
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 1378,
+            "strong": 632,
+            "weak": 746
           },
           {
             "id": "microneedling-rf",
             "label": "Microneedling / RF",
             "kind": "procedure",
-            "count": 210,
-            "strong": 86,
-            "weak": 124
+            "count": 1010,
+            "strong": 441,
+            "weak": 569
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 1002,
+            "strong": 478,
+            "weak": 524
           },
           {
             "id": "aha-bha",
             "label": "AHA/BHA Acids",
             "kind": "ingredient",
-            "count": 149,
-            "strong": 71,
-            "weak": 78
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 132,
-            "strong": 87,
-            "weak": 45
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 64,
-            "strong": 26,
-            "weak": 38
+            "count": 877,
+            "strong": 350,
+            "weak": 527
           },
           {
             "id": "fillers",
             "label": "Hyaluronic Fillers",
             "kind": "procedure",
-            "count": 58,
-            "strong": 26,
+            "count": 876,
+            "strong": 397,
+            "weak": 479
+          },
+          {
+            "id": "peptides",
+            "label": "Peptides",
+            "kind": "ingredient",
+            "count": 856,
+            "strong": 454,
+            "weak": 402
+          },
+          {
+            "id": "vitamin-e",
+            "label": "Vitamin E",
+            "kind": "ingredient",
+            "count": 820,
+            "strong": 437,
+            "weak": 383
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 582,
+            "strong": 191,
+            "weak": 391
+          },
+          {
+            "id": "facelift",
+            "label": "Facelift & Chirurgie",
+            "kind": "procedure",
+            "count": 300,
+            "strong": 78,
+            "weak": 222
+          },
+          {
+            "id": "bakuchiol",
+            "label": "Bakuchiol",
+            "kind": "ingredient",
+            "count": 161,
+            "strong": 88,
+            "weak": 73
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 105,
+            "strong": 46,
+            "weak": 59
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 90,
+            "strong": 40,
+            "weak": 50
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 78,
+            "strong": 37,
+            "weak": 41
+          },
+          {
+            "id": "ultrasound",
+            "label": "Ultrasound Lifting",
+            "kind": "procedure",
+            "count": 47,
+            "strong": 20,
+            "weak": 27
+          },
+          {
+            "id": "body-contouring",
+            "label": "Fat Reduction / Body Contouring",
+            "kind": "procedure",
+            "count": 37,
+            "strong": 10,
+            "weak": 27
+          }
+        ]
+      },
+      "concern:pores-texture": {
+        "basis": 5161,
+        "low_n": false,
+        "paths": [
+          {
+            "id": "microneedling-rf",
+            "label": "Microneedling / RF",
+            "kind": "procedure",
+            "count": 1356,
+            "strong": 617,
+            "weak": 739
+          },
+          {
+            "id": "collagen",
+            "label": "Collagen",
+            "kind": "ingredient",
+            "count": 1253,
+            "strong": 766,
+            "weak": 487
+          },
+          {
+            "id": "spf",
+            "label": "SPF",
+            "kind": "ingredient",
+            "count": 674,
+            "strong": 316,
+            "weak": 358
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 332,
+            "strong": 182,
+            "weak": 150
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 287,
+            "strong": 169,
+            "weak": 118
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 251,
+            "strong": 124,
+            "weak": 127
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 192,
+            "strong": 91,
+            "weak": 101
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 170,
+            "strong": 54,
+            "weak": 116
+          },
+          {
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 152,
+            "strong": 76,
+            "weak": 76
+          },
+          {
+            "id": "peptides",
+            "label": "Peptides",
+            "kind": "ingredient",
+            "count": 97,
+            "strong": 52,
+            "weak": 45
+          },
+          {
+            "id": "fillers",
+            "label": "Hyaluronic Fillers",
+            "kind": "procedure",
+            "count": 90,
+            "strong": 51,
+            "weak": 39
+          },
+          {
+            "id": "botox",
+            "label": "Botox",
+            "kind": "procedure",
+            "count": 67,
+            "strong": 14,
+            "weak": 53
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 63,
+            "strong": 31,
             "weak": 32
           },
           {
@@ -2913,2133 +3093,1208 @@ window.DashboardData = {
             "label": "Vitamin E",
             "kind": "ingredient",
             "count": 57,
-            "strong": 32,
-            "weak": 25
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 34,
-            "strong": 14,
-            "weak": 20
-          },
-          {
-            "id": "peels",
-            "label": "Chemical Peels",
-            "kind": "procedure",
-            "count": 33,
-            "strong": 10,
-            "weak": 23
-          },
-          {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
-            "kind": "ingredient",
-            "count": 29,
-            "strong": 17,
-            "weak": 12
-          }
-        ]
-      },
-      "concern:sagging-contour": {
-        "basis": 616,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 183,
-            "strong": 86,
-            "weak": 97
+            "strong": 39,
+            "weak": 18
           },
           {
             "id": "facelift",
             "label": "Facelift & Chirurgie",
             "kind": "procedure",
-            "count": 52,
-            "strong": 23,
-            "weak": 29
+            "count": 48,
+            "strong": 12,
+            "weak": 36
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 45,
+            "strong": 20,
+            "weak": 25
+          }
+        ]
+      },
+      "concern:hyperpigmentation": {
+        "basis": 31183,
+        "low_n": false,
+        "paths": [
+          {
+            "id": "spf",
+            "label": "SPF",
+            "kind": "ingredient",
+            "count": 6032,
+            "strong": 2621,
+            "weak": 3411
+          },
+          {
+            "id": "collagen",
+            "label": "Collagen",
+            "kind": "ingredient",
+            "count": 5766,
+            "strong": 3735,
+            "weak": 2031
           },
           {
             "id": "microneedling-rf",
             "label": "Microneedling / RF",
             "kind": "procedure",
-            "count": 50,
-            "strong": 17,
-            "weak": 33
+            "count": 5057,
+            "strong": 2584,
+            "weak": 2473
           },
           {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 42,
-            "strong": 8,
-            "weak": 34
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
+            "id": "vitamin-c",
+            "label": "Vitamin C",
             "kind": "ingredient",
-            "count": 40,
-            "strong": 16,
-            "weak": 24
+            "count": 2796,
+            "strong": 1797,
+            "weak": 999
           },
           {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 39,
-            "strong": 15,
-            "weak": 24
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
+            "id": "niacinamide",
+            "label": "Niacinamide",
             "kind": "ingredient",
-            "count": 37,
-            "strong": 14,
-            "weak": 23
+            "count": 2264,
+            "strong": 1505,
+            "weak": 759
           },
           {
             "id": "hyaluronic-acid",
             "label": "Hyaluronic Acid",
             "kind": "ingredient",
-            "count": 28,
-            "strong": 10,
-            "weak": 18
+            "count": 1951,
+            "strong": 1183,
+            "weak": 768
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 1748,
+            "strong": 919,
+            "weak": 829
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 1352,
+            "strong": 581,
+            "weak": 771
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 1221,
+            "strong": 664,
+            "weak": 557
           },
           {
             "id": "peptides",
             "label": "Peptides",
             "kind": "ingredient",
-            "count": 22,
-            "strong": 11,
+            "count": 923,
+            "strong": 555,
+            "weak": 368
+          },
+          {
+            "id": "vitamin-e",
+            "label": "Vitamin E",
+            "kind": "ingredient",
+            "count": 411,
+            "strong": 241,
+            "weak": 170
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 382,
+            "strong": 175,
+            "weak": 207
+          },
+          {
+            "id": "botox",
+            "label": "Botox",
+            "kind": "procedure",
+            "count": 356,
+            "strong": 151,
+            "weak": 205
+          },
+          {
+            "id": "fillers",
+            "label": "Hyaluronic Fillers",
+            "kind": "procedure",
+            "count": 328,
+            "strong": 178,
+            "weak": 150
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 192,
+            "strong": 91,
+            "weak": 101
+          },
+          {
+            "id": "bakuchiol",
+            "label": "Bakuchiol",
+            "kind": "ingredient",
+            "count": 192,
+            "strong": 118,
+            "weak": 74
+          },
+          {
+            "id": "facelift",
+            "label": "Facelift & Chirurgie",
+            "kind": "procedure",
+            "count": 124,
+            "strong": 56,
+            "weak": 68
+          },
+          {
+            "id": "ultrasound",
+            "label": "Ultrasound Lifting",
+            "kind": "procedure",
+            "count": 35,
+            "strong": 16,
+            "weak": 19
+          },
+          {
+            "id": "body-contouring",
+            "label": "Fat Reduction / Body Contouring",
+            "kind": "procedure",
+            "count": 33,
+            "strong": 22,
             "weak": 11
           },
           {
             "id": "threads",
             "label": "Thread Lifts",
             "kind": "procedure",
-            "count": 22,
-            "strong": 6,
-            "weak": 16
-          },
-          {
-            "id": "ultrasound",
-            "label": "Ultrasound Lifting",
-            "kind": "procedure",
             "count": 20,
             "strong": 8,
             "weak": 12
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 19,
-            "strong": 6,
-            "weak": 13
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 17,
-            "strong": 9,
-            "weak": 8
           }
         ]
       },
-      "need:prevention": {
-        "basis": 486,
+      "concern:neck-decollete-hands": {
+        "basis": 3925,
         "low_n": false,
         "paths": [
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 90,
-            "strong": 30,
-            "weak": 60
-          },
           {
             "id": "collagen",
             "label": "Collagen",
             "kind": "ingredient",
-            "count": 77,
-            "strong": 27,
-            "weak": 50
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 53,
-            "strong": 23,
-            "weak": 30
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 44,
-            "strong": 15,
-            "weak": 29
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 44,
-            "strong": 19,
-            "weak": 25
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 44,
-            "strong": 19,
-            "weak": 25
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 26,
-            "strong": 4,
-            "weak": 22
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 18,
-            "strong": 8,
-            "weak": 10
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 16,
-            "strong": 10,
-            "weak": 6
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 16,
-            "strong": 4,
-            "weak": 12
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 15,
-            "strong": 5,
-            "weak": 10
-          }
-        ]
-      },
-      "need:even-complexion": {
-        "basis": 3839,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 492,
-            "strong": 332,
-            "weak": 160
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 477,
-            "strong": 302,
-            "weak": 175
+            "count": 1027,
+            "strong": 462,
+            "weak": 565
           },
           {
             "id": "spf",
             "label": "SPF",
             "kind": "ingredient",
-            "count": 464,
-            "strong": 206,
-            "weak": 258
+            "count": 783,
+            "strong": 367,
+            "weak": 416
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 356,
+            "strong": 138,
+            "weak": 218
           },
           {
             "id": "microneedling-rf",
             "label": "Microneedling / RF",
             "kind": "procedure",
-            "count": 436,
-            "strong": 210,
-            "weak": 226
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 429,
-            "strong": 321,
-            "weak": 108
+            "count": 345,
+            "strong": 151,
+            "weak": 194
           },
           {
             "id": "retinol",
             "label": "Retinol / Retinal / Tretinoin",
             "kind": "ingredient",
-            "count": 374,
-            "strong": 200,
-            "weak": 174
+            "count": 194,
+            "strong": 95,
+            "weak": 99
           },
           {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 373,
-            "strong": 254,
-            "weak": 119
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 250,
-            "strong": 175,
-            "weak": 75
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 144,
-            "strong": 86,
-            "weak": 58
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 105,
-            "strong": 60,
-            "weak": 45
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 161,
+            "strong": 49,
+            "weak": 112
           },
           {
             "id": "fillers",
             "label": "Hyaluronic Fillers",
             "kind": "procedure",
-            "count": 74,
-            "strong": 45,
-            "weak": 29
+            "count": 146,
+            "strong": 53,
+            "weak": 93
           },
           {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
+            "id": "peptides",
+            "label": "Peptides",
             "kind": "ingredient",
-            "count": 56,
-            "strong": 33,
-            "weak": 23
+            "count": 140,
+            "strong": 64,
+            "weak": 76
           },
           {
             "id": "botox",
             "label": "Botox",
             "kind": "procedure",
-            "count": 46,
-            "strong": 21,
-            "weak": 25
+            "count": 132,
+            "strong": 50,
+            "weak": 82
           },
           {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 44,
-            "strong": 19,
-            "weak": 25
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 105,
+            "strong": 42,
+            "weak": 63
           },
           {
-            "id": "peels",
-            "label": "Chemical Peels",
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 103,
+            "strong": 29,
+            "weak": 74
+          },
+          {
+            "id": "facelift",
+            "label": "Facelift & Chirurgie",
             "kind": "procedure",
-            "count": 42,
+            "count": 92,
+            "strong": 36,
+            "weak": 56
+          },
+          {
+            "id": "ultrasound",
+            "label": "Ultrasound Lifting",
+            "kind": "procedure",
+            "count": 70,
             "strong": 25,
-            "weak": 17
+            "weak": 45
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 68,
+            "strong": 31,
+            "weak": 37
           },
           {
             "id": "prp",
             "label": "PRP / Vampire Lift",
             "kind": "procedure",
-            "count": 19,
-            "strong": 12,
-            "weak": 7
+            "count": 61,
+            "strong": 31,
+            "weak": 30
+          },
+          {
+            "id": "vitamin-e",
+            "label": "Vitamin E",
+            "kind": "ingredient",
+            "count": 60,
+            "strong": 27,
+            "weak": 33
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 46,
+            "strong": 20,
+            "weak": 26
+          },
+          {
+            "id": "peels",
+            "label": "Chemical Peels",
+            "kind": "procedure",
+            "count": 20,
+            "strong": 6,
+            "weak": 14
           }
         ]
       },
-      "concern:collagen-volume": {
-        "basis": 481,
+      "concern:dark-circles": {
+        "basis": 5199,
         "low_n": false,
         "paths": [
+          {
+            "id": "facelift",
+            "label": "Facelift & Chirurgie",
+            "kind": "procedure",
+            "count": 777,
+            "strong": 337,
+            "weak": 440
+          },
           {
             "id": "collagen",
             "label": "Collagen",
             "kind": "ingredient",
-            "count": 150,
-            "strong": 108,
-            "weak": 42
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 53,
-            "strong": 25,
-            "weak": 28
+            "count": 739,
+            "strong": 364,
+            "weak": 375
           },
           {
             "id": "spf",
             "label": "SPF",
             "kind": "ingredient",
-            "count": 52,
-            "strong": 18,
-            "weak": 34
+            "count": 681,
+            "strong": 376,
+            "weak": 305
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 426,
+            "strong": 190,
+            "weak": 236
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 412,
+            "strong": 205,
+            "weak": 207
           },
           {
             "id": "botox",
             "label": "Botox",
             "kind": "procedure",
-            "count": 42,
-            "strong": 18,
-            "weak": 24
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 32,
-            "strong": 9,
-            "weak": 23
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 28,
-            "strong": 9,
-            "weak": 19
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 23,
-            "strong": 8,
-            "weak": 15
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 21,
-            "strong": 10,
-            "weak": 11
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 15,
-            "strong": 9,
-            "weak": 6
-          }
-        ]
-      },
-      "concern:pores-texture": {
-        "basis": 569,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 92,
-            "strong": 41,
-            "weak": 51
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 75,
-            "strong": 47,
-            "weak": 28
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 69,
-            "strong": 37,
-            "weak": 32
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 65,
-            "strong": 32,
-            "weak": 33
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 62,
-            "strong": 24,
-            "weak": 38
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 51,
-            "strong": 27,
-            "weak": 24
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 42,
-            "strong": 19,
-            "weak": 23
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 33,
-            "strong": 16,
-            "weak": 17
+            "count": 290,
+            "strong": 144,
+            "weak": 146
           },
           {
             "id": "fillers",
             "label": "Hyaluronic Fillers",
             "kind": "procedure",
-            "count": 20,
-            "strong": 9,
-            "weak": 11
-          }
-        ]
-      },
-      "need:firmness-lifting": {
-        "basis": 974,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 264,
-            "strong": 161,
-            "weak": 103
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 117,
-            "strong": 64,
-            "weak": 53
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 84,
-            "strong": 37,
-            "weak": 47
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 77,
-            "strong": 33,
-            "weak": 44
+            "count": 274,
+            "strong": 137,
+            "weak": 137
           },
           {
             "id": "peptides",
             "label": "Peptides",
             "kind": "ingredient",
-            "count": 69,
-            "strong": 43,
-            "weak": 26
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 68,
-            "strong": 42,
-            "weak": 26
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 65,
-            "strong": 35,
-            "weak": 30
+            "count": 264,
+            "strong": 144,
+            "weak": 120
           },
           {
             "id": "vitamin-c",
             "label": "Vitamin C",
             "kind": "ingredient",
-            "count": 40,
-            "strong": 26,
-            "weak": 14
+            "count": 257,
+            "strong": 125,
+            "weak": 132
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 234,
+            "strong": 149,
+            "weak": 85
+          },
+          {
+            "id": "microneedling-rf",
+            "label": "Microneedling / RF",
+            "kind": "procedure",
+            "count": 230,
+            "strong": 100,
+            "weak": 130
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 196,
+            "strong": 96,
+            "weak": 100
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 126,
+            "strong": 46,
+            "weak": 80
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 114,
+            "strong": 52,
+            "weak": 62
+          },
+          {
+            "id": "vitamin-e",
+            "label": "Vitamin E",
+            "kind": "ingredient",
+            "count": 74,
+            "strong": 46,
+            "weak": 28
+          },
+          {
+            "id": "body-contouring",
+            "label": "Fat Reduction / Body Contouring",
+            "kind": "procedure",
+            "count": 34,
+            "strong": 28,
+            "weak": 6
+          },
+          {
+            "id": "bakuchiol",
+            "label": "Bakuchiol",
+            "kind": "ingredient",
+            "count": 30,
+            "strong": 15,
+            "weak": 15
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 27,
+            "strong": 15,
+            "weak": 12
+          }
+        ]
+      },
+      "concern:collagen-volume": {
+        "basis": 2702,
+        "low_n": false,
+        "paths": [
+          {
+            "id": "collagen",
+            "label": "Collagen",
+            "kind": "ingredient",
+            "count": 1123,
+            "strong": 755,
+            "weak": 368
+          },
+          {
+            "id": "spf",
+            "label": "SPF",
+            "kind": "ingredient",
+            "count": 245,
+            "strong": 96,
+            "weak": 149
+          },
+          {
+            "id": "fillers",
+            "label": "Hyaluronic Fillers",
+            "kind": "procedure",
+            "count": 230,
+            "strong": 100,
+            "weak": 130
           },
           {
             "id": "botox",
             "label": "Botox",
             "kind": "procedure",
-            "count": 38,
-            "strong": 17,
-            "weak": 21
+            "count": 186,
+            "strong": 71,
+            "weak": 115
+          },
+          {
+            "id": "microneedling-rf",
+            "label": "Microneedling / RF",
+            "kind": "procedure",
+            "count": 109,
+            "strong": 34,
+            "weak": 75
+          },
+          {
+            "id": "vitamin-c",
+            "label": "Vitamin C",
+            "kind": "ingredient",
+            "count": 108,
+            "strong": 36,
+            "weak": 72
+          },
+          {
+            "id": "retinol",
+            "label": "Retinol / Retinal / Tretinoin",
+            "kind": "ingredient",
+            "count": 105,
+            "strong": 41,
+            "weak": 64
+          },
+          {
+            "id": "hyaluronic-acid",
+            "label": "Hyaluronic Acid",
+            "kind": "ingredient",
+            "count": 101,
+            "strong": 42,
+            "weak": 59
+          },
+          {
+            "id": "aha-bha",
+            "label": "AHA/BHA Acids",
+            "kind": "ingredient",
+            "count": 95,
+            "strong": 43,
+            "weak": 52
+          },
+          {
+            "id": "peptides",
+            "label": "Peptides",
+            "kind": "ingredient",
+            "count": 93,
+            "strong": 52,
+            "weak": 41
           },
           {
             "id": "facelift",
             "label": "Facelift & Chirurgie",
             "kind": "procedure",
-            "count": 30,
-            "strong": 9,
-            "weak": 21
+            "count": 82,
+            "strong": 21,
+            "weak": 61
+          },
+          {
+            "id": "laser",
+            "label": "Laser",
+            "kind": "procedure",
+            "count": 51,
+            "strong": 10,
+            "weak": 41
+          },
+          {
+            "id": "threads",
+            "label": "Thread Lifts",
+            "kind": "procedure",
+            "count": 45,
+            "strong": 16,
+            "weak": 29
+          },
+          {
+            "id": "prp",
+            "label": "PRP / Vampire Lift",
+            "kind": "procedure",
+            "count": 45,
+            "strong": 19,
+            "weak": 26
+          },
+          {
+            "id": "niacinamide",
+            "label": "Niacinamide",
+            "kind": "ingredient",
+            "count": 34,
+            "strong": 12,
+            "weak": 22
           },
           {
             "id": "ultrasound",
             "label": "Ultrasound Lifting",
             "kind": "procedure",
-            "count": 20,
-            "strong": 9,
-            "weak": 11
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 19,
-            "strong": 7,
-            "weak": 12
-          },
-          {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
-            "kind": "ingredient",
-            "count": 18,
-            "strong": 13,
-            "weak": 5
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
             "count": 17,
-            "strong": 4,
-            "weak": 13
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 16,
-            "strong": 8,
-            "weak": 8
-          }
-        ]
-      },
-      "need:plump-hydrated": {
-        "basis": 864,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 266,
-            "strong": 187,
-            "weak": 79
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 126,
-            "strong": 35,
-            "weak": 91
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 91,
-            "strong": 61,
-            "weak": 30
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 67,
-            "strong": 37,
-            "weak": 30
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 61,
-            "strong": 36,
-            "weak": 25
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 52,
-            "strong": 24,
-            "weak": 28
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 43,
-            "strong": 23,
-            "weak": 20
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 42,
-            "strong": 24,
-            "weak": 18
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 26,
-            "strong": 8,
-            "weak": 18
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 25,
-            "strong": 10,
+            "strong": 2,
             "weak": 15
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 20,
-            "strong": 15,
-            "weak": 5
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 17,
-            "strong": 7,
-            "weak": 10
-          }
-        ]
-      },
-      "concern:dullness": {
-        "basis": 701,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 109,
-            "strong": 30,
-            "weak": 79
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 88,
-            "strong": 28,
-            "weak": 60
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 88,
-            "strong": 53,
-            "weak": 35
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 81,
-            "strong": 34,
-            "weak": 47
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 67,
-            "strong": 37,
-            "weak": 30
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 65,
-            "strong": 26,
-            "weak": 39
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 39,
-            "strong": 17,
-            "weak": 22
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 33,
-            "strong": 15,
-            "weak": 18
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 33,
-            "strong": 15,
-            "weak": 18
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 28,
-            "strong": 16,
-            "weak": 12
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 26,
-            "strong": 14,
-            "weak": 12
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 24,
-            "strong": 5,
-            "weak": 19
-          }
-        ]
-      },
-      "need:youthful-fresh": {
-        "basis": 408,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 62,
-            "strong": 30,
-            "weak": 32
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 51,
-            "strong": 21,
-            "weak": 30
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 50,
-            "strong": 18,
-            "weak": 32
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 42,
-            "strong": 18,
-            "weak": 24
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 33,
-            "strong": 11,
-            "weak": 22
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 33,
-            "strong": 15,
-            "weak": 18
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 24,
-            "strong": 13,
-            "weak": 11
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 23,
-            "strong": 5,
-            "weak": 18
-          },
-          {
-            "id": "facelift",
-            "label": "Facelift & Chirurgie",
-            "kind": "procedure",
-            "count": 16,
-            "strong": 8,
-            "weak": 8
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 15,
-            "strong": 6,
-            "weak": 9
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 13,
-            "strong": 2,
-            "weak": 11
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 13,
-            "strong": 5,
-            "weak": 8
-          }
-        ]
-      },
-      "need:wrinkle-reduction": {
-        "basis": 1254,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 274,
-            "strong": 211,
-            "weak": 63
-          },
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 175,
-            "strong": 99,
-            "weak": 76
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 155,
-            "strong": 93,
-            "weak": 62
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 113,
-            "strong": 52,
-            "weak": 61
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 75,
-            "strong": 45,
-            "weak": 30
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 71,
-            "strong": 38,
-            "weak": 33
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 70,
-            "strong": 43,
-            "weak": 27
-          },
-          {
-            "id": "botox",
-            "label": "Botox",
-            "kind": "procedure",
-            "count": 64,
-            "strong": 39,
-            "weak": 25
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 54,
-            "strong": 31,
-            "weak": 23
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 49,
-            "strong": 30,
-            "weak": 19
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 46,
-            "strong": 24,
-            "weak": 22
-          },
-          {
-            "id": "bakuchiol",
-            "label": "Bakuchiol",
-            "kind": "ingredient",
-            "count": 24,
-            "strong": 14,
-            "weak": 10
-          },
-          {
-            "id": "vitamin-e",
-            "label": "Vitamin E",
-            "kind": "ingredient",
-            "count": 18,
-            "strong": 11,
-            "weak": 7
-          },
-          {
-            "id": "laser",
-            "label": "Laser",
-            "kind": "procedure",
-            "count": 17,
-            "strong": 7,
-            "weak": 10
-          }
-        ]
-      },
-      "need:refined-pores": {
-        "basis": 215,
-        "low_n": false,
-        "paths": [
-          {
-            "id": "collagen",
-            "label": "Collagen",
-            "kind": "ingredient",
-            "count": 29,
-            "strong": 16,
-            "weak": 13
-          },
-          {
-            "id": "niacinamide",
-            "label": "Niacinamide",
-            "kind": "ingredient",
-            "count": 28,
-            "strong": 16,
-            "weak": 12
-          },
-          {
-            "id": "aha-bha",
-            "label": "AHA/BHA Acids",
-            "kind": "ingredient",
-            "count": 23,
-            "strong": 14,
-            "weak": 9
-          },
-          {
-            "id": "microneedling-rf",
-            "label": "Microneedling / RF",
-            "kind": "procedure",
-            "count": 22,
-            "strong": 6,
-            "weak": 16
-          },
-          {
-            "id": "retinol",
-            "label": "Retinol / Retinal / Tretinoin",
-            "kind": "ingredient",
-            "count": 22,
-            "strong": 10,
-            "weak": 12
-          },
-          {
-            "id": "spf",
-            "label": "SPF",
-            "kind": "ingredient",
-            "count": 21,
-            "strong": 2,
-            "weak": 19
-          },
-          {
-            "id": "hyaluronic-acid",
-            "label": "Hyaluronic Acid",
-            "kind": "ingredient",
-            "count": 21,
-            "strong": 4,
-            "weak": 17
-          },
-          {
-            "id": "vitamin-c",
-            "label": "Vitamin C",
-            "kind": "ingredient",
-            "count": 11,
-            "strong": 5,
-            "weak": 6
-          },
-          {
-            "id": "peptides",
-            "label": "Peptides",
-            "kind": "ingredient",
-            "count": 9,
-            "strong": 3,
-            "weak": 6
-          },
-          {
-            "id": "fillers",
-            "label": "Hyaluronic Fillers",
-            "kind": "procedure",
-            "count": 8,
-            "strong": 7,
-            "weak": 1
           }
         ]
       }
     },
     "quotes": {
-      "concern:structural-wrinkling": [
+      "concern:dullness": [
         {
-          "id": "0_219424_23_1683644271800527",
-          "text": "Gepflegtes leichtes Hautgefühl & Schutz Das Fläschchen des NIVEA Sun 2in1 Primer &amp; Serum liegt sehr gut in der Hand und hat ein schönes Design. Die Konsistenz des Serums ist leicht, lässt sich super verteilen und hinterlässt keine Rückstände. Sie zieht schnell ein und der UV Schutz besteht in wenigen Sekunden. Das Serum glättet die Haut durch das enthaltene Hyaluron, kleine Fältchen werden min",
+          "id": "0_225889_140_7556021024962252054",
+          "text": "Ich habe das neue Age Perfect Anti-Aging Serum von L'Oréal Paris entdeckt und bin absolut begeistert! Die innovative Duo-Formel kombiniert zwei Texturen in einem Serum: eine leichte, hydratisierende Textur und eine konzentrierte, wirkungsvolle Anti-Aging-Formel. 💧 Schon nach der ersten Anwendung fühlt sich meine Haut frischer und glatter an. 🌸 Nach einigen Tagen regelmäßiger Anwendung wirkt mein T",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_9_15753687047508848",
-          "text": "Sandra hat nie Botox machen lassen ????? Einfach Tİ Zeit, Bilder, Augenpartie mit jetzt vergleichen… Da hat man die Antwort! Sie hatte sehr ausgeprägte Krähenfüße .. und bitte nicht alles immer so verteufeln, einfach zu einem guten Arzt gehen.. Alle aber alle haben was machen lassen… !! Komme aus der Branche 😊",
+          "id": "0_225889_190_3733394547247031516",
+          "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeersamen-Öle für Schutz &amp; Glow🍃 Ginkgo-Extrakt zur Stärkung der Haut🧬 Peptide für straffere, elastischere Haut💫 Vegan | ",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733478883803689483",
+          "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht die Hautdichte und wird dadurch widerstandsfähiger – damit du morgens mit einem frischen, strahlenden Teint aufwachst. ",
           "segment": "skincare-first",
           "mood": "satisfied"
         },
         {
-          "id": "0_219424_126_t1_nxl2diy",
-          "text": "Erfahrung Zornesfalte Botox Klar 😊Ich habe Botox gegen die Zornesfalte machen lassen und kann ein bisschen aus eigener Erfahrung berichten. Die Behandlung selbst war viel weniger schlimm als gedacht, die Nadel ist sehr fein und der Schmerz eher ein kurzes Pieksen. Es dauert nur ein paar Minuten. Bei mir hält das Ergebnis etwa 4 bis 6 Monate, danach lässt die Wirkung langsam nach. Preislich kommt e",
-          "segment": "procedure-open",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_15_42767194116049055",
-          "text": "Schönheit von Innen: Warum die anspruchsvollsten Beauty-Routinen jetzt im Glas beginnen In einer Welt, in der die Regale der Luxus-Parfümerien mit hochwirksamen Seren, kostbaren Cremes und technologisch fortschrittlichen Masken gefüllt sind, haben wir gelernt, unsere Haut von außen zu perfektionieren. Wir investieren in sorgfältig kuratierte Pflegeroutinen, die auf die oberste Hautschicht, die Epi",
-          "segment": "unknown",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_126_t1_nxtd2yf",
-          "text": "Findet ihr ältere Frauen wirklich sexy? Ich glaube du machst dir zu viele Gedanken über dein Aussehen. Ich weiß nicht, ob das Teil deiner Unsicherheiten ist, aber es liest sich mindestens so. Was sind schon 5 Jahre? Es ist nicht so, dass sich jetzt schlagartig das Aussehen ändern wird. Einige Falten sind doch vollkommen in Ordnung. Wenn was hängt, dann hängt es eben. Nobody's perfect. Je länger di",
+          "id": "0_225889_190_3733536423874952158",
+          "text": "Stresshaut,  du bist nicht alleinFühlst du dich manchmal auch so? Voller Termine, Job, Familie und plötzlich zeigt deine Haut dir den ganzen Stress 😓.Müde, kleine Unreinheiten oder die ersten Fältchen… ich kenne das! 💖Die gute Nachricht: Du musst nicht alles alleine herausfinden.Ich helfe dir dabei, die richtige Pflege zu finden.  Abgestimmt nur auf dich 🌸.👉 Schreib mir eine Nachricht, und wir fin",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_9_39406504416207736",
-          "text": "Beide haben so ziemlich glatte Gesichter. Da ich nicht annehme, daß beide Botox spritzen lassen, fehlen mir also tatsächlich Falten, die vom Lachen oder sonstwo herrühren, womit sich wenigstens ein paar Rückschlüsse auf die Wesensart ziehen lassen könnten. Beide wirken wie emotionslose Hüllen, die sich an gängige Verhaltensmuster angepasst haben, um nicht aufzufallen, aber Eigeninitiative kann hie",
+          "id": "0_225889_26_1208689084607808",
+          "text": "✨ Entdecke die exklusive BEAUTY JUNGLE XMAS-Kollektion 2025 – Luxuspflege, die dich strahlend schön durch die Festtage begleitet! 🎄Sichere dir jetzt deine Favoriten – die Kollektion ist limitiert:✨ Beauty Jungle Special – Adventskalender der besonderen Art mit 6 Pflege-Highlights✨Retinol+ Set – Anti-Aging-Trio für glatte, strahlende Haut✨ Weitere exklusive Pflege-Sets für intensive Verwöhnmomente💝",
           "segment": "skincare-first",
-          "mood": "conflicted"
+          "mood": "cautioning"
         },
         {
-          "id": "0_219424_23_9228468903733414",
-          "text": "Tolle Nachtpflege Das Eucerin Hyaluron-Filler Hydra Nacht Gel überzeugt durch seine leichte, schnell einziehende Gel-Textur. Sie hinterlässt keinen Fettfilm und versorgt die Haut intensiv mit Feuchtigkeit. Das Gel sorgt für ein angenehmes erfrischendes Hautgefühl, reduziert das Spannungsgefühl und mildert Trockenheitsfältchen. Sie ist gut verträglich und hat einen dezenten Duft.",
+          "id": "0_225889_190_3733589090667874780",
+          "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #AntiAging #hautpflege",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733610685780566953",
+          "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Feigenkaktus – wirkt tonisierend, beruhigt Irritationen, unterstützt die Regeneration und gibt der Haut Spannkraft zurück. ",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3733618650067519262",
+          "text": "🇩🇪 Workout für deine Haut – ganz ohne Fitnessstudio ✨Face Yoga ist der Trend, der deine Haut natürlich strafft, entspannt und zum Strahlen bringt. 🌿💆‍♀️Die Vorteile sprechen für sich:💎 Unterstützt die straffende Wirkung unseres Umibudō Serums🌱 Der Jade-Stein wirkt belebend &amp; sorgt für frische Ausstrahlung💆‍♀️ Massage = bessere Durchblutung → prallere Haut &amp; optimale Wirkstoffaufnahme♻️ Det",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        }
+      ],
+      "concern:hyperpigmentation": [
+        {
+          "id": "0_225889_140_7556021024962252054",
+          "text": "Ich habe das neue Age Perfect Anti-Aging Serum von L'Oréal Paris entdeckt und bin absolut begeistert! Die innovative Duo-Formel kombiniert zwei Texturen in einem Serum: eine leichte, hydratisierende Textur und eine konzentrierte, wirkungsvolle Anti-Aging-Formel. 💧 Schon nach der ersten Anwendung fühlt sich meine Haut frischer und glatter an. 🌸 Nach einigen Tagen regelmäßiger Anwendung wirkt mein T",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_26_1654990209224273",
+          "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als starkes Antioxidans vor freien Radikalen schützt. Ein hochwirksamer Anti-Aging-Komplex aus NAD+ und Q10 für einen sichtbaren ",
           "segment": "unknown",
           "mood": "disappointed"
         },
         {
-          "id": "0_219424_9_yt.E3-9oK1BeW0",
-          "text": "Hände Behandlung mit Hyaluronsäure #skincare #hände #hand Unsere Hände verraten oft mehr über unser Alter als das Gesicht. Mit einer Hyaluronsäure-Behandlung können Volumenverluste ausgeglichen, feine Fältchen geglättet und die Haut sichtbar frischer und praller wirken.💉 Die Behandlung ist minimal-invasiv, gut verträglich und sorgt für natürlich aussehende Ergebnisse.✨ Ideal bei trockener, dünner ",
-          "segment": "procedure-open",
-          "mood": "seeking"
+          "id": "0_225889_190_3733647324972087042",
+          "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der Haut jetzt gerne etwas mehr Aufmerksamkeit  in intensivere Reset Behandlungen schenken.✨💪Warum gerade jetzt?Im Sommer is",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733655718839767401",
+          "text": "Ich habe das neue Age Perfect Anti-Aging Serum von L'Oréal Paris entdeckt und bin absolut begeistert! Die innovative Duo-Formel kombiniert zwei Texturen in einem Serum: eine leichte, hydratisierende Textur und eine konzentrierte, wirkungsvolle Anti-Aging-Formel.💧 Schon nach der ersten Anwendung fühlt sich meine Haut frischer und glatter an.🌸 Nach einigen Tagen regelmäßiger Anwendung wirkt mein Tei",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733693077631318893",
+          "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vitamin C Serum – Power gegen Pigmentflecken &amp; für mehr Glow💧 Hyaluron Creme – intensive Feuchtigkeit &amp; glatte Hau",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733720916267213444",
+          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Уменьшает следы постакне и пигментацию•Повышает упругость и плотность кожи🔹 Почему им",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733742512730069065",
+          "text": "Microneedling ist eine meiner absoluten Lieblingsbehandlungen, wenn es um Hautverbesserung geht.Beim Microneedling wird die Haut mit feinsten, sterilen Nadeln behandelt.Dadurch entstehen winzige Mikrokanäle in der obersten Hautschicht.Deine Haut startet sofort ihren Selbstheilungsprozess.Es wird vermehrt Kollagen, Elastin und Hyaluronsäure gebildet.Wirkstoffe können tiefer eindringen und die Haut ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733704926095533173",
+          "text": "PRP – das Liquid Gold für deine Haut ✨In diesem Video siehst du den kompletten Prozess: PRP kombiniert mit Microneedling – Schritt für Schritt.Was ist PRP?Aus deinem eigenen Blut wird Plasma gewonnen, reich an Wachstumsfaktoren. Es wirkt wie ein natürlicher Turbo für Regeneration und Hauterneuerung.Die Vorteile:•Verfeinerte Poren &amp; ebenmäßiger Teint•Reduktion von Akne-Narben &amp; Pigmentfleck",
+          "segment": "procedure-curious",
+          "mood": "enthusiastic"
         }
       ],
       "concern:sagging-contour": [
         {
-          "id": "0_219424_126_t1_nx2bsli",
-          "text": "Schlafsituation mit 3-monatigem Baby Matratze austauschen. Man kommt ja immer irgendwie zum gemeinsamen Schlaf und sei es der Mittagsschlaf. Mama ohne Baby schlafen lassen immer wenn es geht. Kind zum Papa oder Papa nimmt morgens Kind mit und Mama kann sich ausbreiten oder tagsüber/früher Abend ungestört schlafen. Was immer auch klappt.Anderes, festes Kissen (Seitenschläferkissen) ist gut.Beim Weg",
+          "id": "0_225889_190_3733394547247031516",
+          "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeersamen-Öle für Schutz &amp; Glow🍃 Ginkgo-Extrakt zur Stärkung der Haut🧬 Peptide für straffere, elastischere Haut💫 Vegan | ",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_26_1654990209224273",
+          "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als starkes Antioxidans vor freien Radikalen schützt. Ein hochwirksamer Anti-Aging-Komplex aus NAD+ und Q10 für einen sichtbaren ",
           "segment": "unknown",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_26_1222551499890255",
+          "text": "🌹 Neues Anti-Aging-Serum mit Bio-Rosenöl – Rose Elixir von InaEssentialsJetzt auf unserer Website erhältlichRose Elixir wurde entwickelt, um Ihre Hautpflege mit seiner außergewöhnlichen Qualität zu bereichern.Was es so besonders macht:🌹 Sofortige glättende Wirkung – verbessert und hellt die Haut unmittelbar nach dem Auftragen sichtbar auf.🌹 Langfristige Anti-Aging-Pflege – reduziert das Erscheinun",
+          "segment": "skincare-first",
           "mood": "satisfied"
         },
         {
-          "id": "0_219424_126_t1_ny8xepv",
-          "text": "4D Fotona laser - has anyone tried? What are your thoughts? Ich (50) hatte Dezember 2022 und Februar 2023 jeweils eine Behandlung für insgesamt 1500€! Leider hatte es Null Wirkung! Danach sieht man aus wie verbrannt, die Haut schält sich paar Tage. Schmerzen hatte ich keine, ich bin da auch recht unempfindlich. Ich habe auch gar keine Hautfalten, nur Mimikfalten, es ging um die Hängebäckchen. Ich ",
-          "segment": "procedure-open",
-          "mood": "disappointed"
+          "id": "0_225889_190_3733752898598208048",
+          "text": "... Straffere Haut an den Knien? Sculptra macht's möglich! 💉💉💉✨ Sculptra auch für die Knie ✨Viele kennen Sculptra als Biostimulator für Gesicht, Hals, Arme oder Po – aber auch die Kniepartie kann wunderbar damit behandelt werden.Gerade bei alternder, knittriger Haut zeigt Sculptra seine Stärke: Es regt die eigene Kollagenproduktion an und verbessert so nach und nach die Hautstruktur.Das Ergebnis: ",
+          "segment": "unknown",
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_nyk5rmc",
-          "text": "The truth about Endolift: my experience Achtung vor Endolifting! Das Ganze ist schlicht eine weitere \"sehr teure\" Verarsche der kosmetischen Chirurgie! Habe in Zürich ein Endolift machen lassen (ich, männlich, 50 J.). Dann wurde mir noch eine Lanluma-Unterspritzung vorgeschlagen, da dies die Haut noch zusätzlich straffen würde (da Kollagenaufbau angeregt werden würde). Kosten: CHF 5'050.-- !!Fazit",
+          "id": "0_225889_190_3733765311347461665",
+          "text": "✨ Exklusives Oktober Discovery Special ✨Straffere Haut ohne OP? Mit Ultherapy®️ ist das möglich!💥 Im Oktober: -50 % auf die Behandlung der mittleren Gesichtshälfte👉 Nur CHF 1'375.– statt CHF 2'750.–Ultherapy®️ regt mit mikrofokussiertem Ultraschall die Kollagenproduktion in den tiefen Hautschichten an, für straffere Haut, definierte Konturen und einen jugendlichen Glow, ganz ohne Ausfallzeit.💎 Ink",
+          "segment": "procedure-open",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3733828610005176397",
+          "text": "PROFHILO® Profhilo® BehandlungEine innovative Behandlung, die die Haut von innen stärkt. Sie verbessert die Elastizität, sorgt für mehr Spannkraft und verleiht eine frische, jugendliche Ausstrahlung, ganz ohne die Mimik zu verändern oder künstliches Volumen zu erzeugen.Ein echter Frischekick für jede Altersgruppe und jedes Geschlecht. #profhilo #profhilo® #skin #antiaging #skinbooster #mesotherapi",
           "segment": "procedure-curious",
-          "mood": "seeking"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t3_1q9x8cr",
-          "text": "Hat jemand Erfahrung mit Mounjaro + GHK-Cu? Hey zusammen,ich wollte mal in die Runde fragen, ob jemand hier Erfahrungen mit Mounjaro in Kombination mit GHK-Cu gemacht hat.Ich sehe diese Kombination in letzter Zeit immer häufiger auf Social Media, vor allem im Zusammenhang mit starkem Gewichtsverlust und dem Thema Hautelastizität bzw. Kollagen. Mir ist absolut bewusst, dass Sport und Krafttraining ",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o0a6nio",
-          "text": "Mein Hals / Doppelkinn ist faltig geworden Denke das einzige was da nachweislich hilft ist microneedling. Vllt bringt Kollagen Peptide nehmen und astaxanthin noch was. Ansonsten einfach weiter Sport machen und Sonnenschutz. Viel Erfolg weiterhin 👍",
+          "id": "0_225889_140_7556257839212203295",
+          "text": "Bekämpfen Sie Falten und schlaffe Haut: Meine exklusive minimalinvasive Facelift-Technik – erstaunliche Ergebnisse ohne große Operation oder Nähte! Kleine Schnitte für ein natürlich jüngeres Aussehen. Was sind Ihre Anti-Aging-Geheimnisse? Folgen Sie mir und senden Sie mir eine private Nachricht! #Anti-Aging #straffendeHaut #minimalinvasiv #Schönheit #Facelift #Hautpflege #Schönheit #Facelift #Anti",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_o0balu3",
-          "text": "Mein Hals / Doppelkinn ist faltig geworden Ich benutze seit ca. 4–5 Monaten jeden Tag die Clinique 100H Moisture Surge Creme, die Neutrogena Hydro Boost Creme, NO Hyaluron Serum, die Neutrogena Kollagencreme, eine Eigenmarken Sonnencreme von Bipa und ein Nivea Vitamin-C-Serum.Zusätzlich habe ich 7 Monate lang Glow25 Kollagenpulver genommen, das habe ich aber wieder abgesetzt, weil es keinerlei Wir",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o0bhnyd",
-          "text": "Mein Hals / Doppelkinn ist faltig geworden Danke dir. Ich mache das tatsächlich schon seit etwa 4–5 Monaten sehr konsequent, ich benutze täglich die Clinique 100H Moisture Surge, Neutrogena Hydro Boost, NO Hyaluron-Serum, Neutrogena Kollagencreme, Sonnencreme sowie ein Vitamin-C-Serum. Zusätzlich nehme ich regelmäßig Vitamine und Mineralstoffe Vitamin C, Omega-3, Hyaluronsäure, Biotin, Kieselerde.",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.HdLZ_9X0fYw",
-          "text": "Danach wirst du definitiv besser aussehen ✨ Wer jung aussehen will, muss tiefer gehen | Profhilo H+LStraffere Haut. Mehr Spannkraft. Ein frischer, jugendlicher Look – ohne Volumen, ohne Maskeneffekt.In diesem Video erfährst du, warum Profhilo H+L zu den modernsten und wirkungsvollsten Anti-Aging-Behandlungen unserer Zeit zählt.Profhilo gilt seit seiner bahnbrechenden Einführung im Jahr 2019 als ec",
-          "segment": "procedure-open",
-          "mood": "enthusiastic"
+          "id": "0_225889_190_3733928655069169062",
+          "text": "Was ist die Green Peel® Kräuterschälkur?•Die Green Peel® Kräuterschälkur ist eine von Dr. med. Christine Schrammek entwickelte natürliche Schälbehandlung, basierend auf einer Kräutermischung – ohne chemische Säuren oder Schleifpartikel. ￼•Ziel: Hautregeneration, Zellneubildung anregen, Durchblutung stärken, die Hauterneuerungszeit verkürzen. ￼•Die Methode wurde über Jahrzehnte weiterentwickelt und",
+          "segment": "procedure-curious",
+          "mood": "satisfied"
         }
       ],
-      "need:glow-radiance": [
+      "concern:structural-wrinkling": [
         {
-          "id": "0_219424_126_t3_1q1rdgw",
-          "text": "Tipps zur Hautpflege: welche Produkte brauche ich wirklich? Hallo zusammen und happy new year :) Für das neue Jahr habe ich mir vorgenommen, mich etwas besser um meine Haut zu kümmern und sie zu pflegen. Ich liebe alles rund um Makeup, Haarstyling und auch Pflege - bin aber selbst total untalentiert :( Mir ist es wichtig, meine Haut (v.a Gesicht) einfach gut und ausreichend zu pflegen. Bisher verw",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_15_48926846939900165",
-          "text": "81-jährige Dermatologen-Mutter : Das Geheimnis hinter ihrem strahlenden Aussehen Wow! Als Dermatologin Dr. Lela Ahlemann ihre Mutter Nahid auf Instagram zeigt, kann BRIGITTE-Redakteurin Melanie kaum glauben, dass diese wirklich 81 Jahre alt ist. Das Geheimnis hinter ihrem jugendlichen Aussehen verrät die Haut-Expertin jetzt im Interview mit BRIGITTE.de.  Stress reduzieren, Sonnenschutz, viel Schla",
-          "segment": "procedure-open",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_9_yt.m_bYK-cijF8",
-          "text": "Schön gepflegt ab 50 - meine Pflege-Routine & was unsere Haut jetzt wirklich braucht * Kirsty Coco Eine strahlende Haut Ü50 ist keine Hexenwerk, sondern das Ergebnis einer guten Hautpflege, die zu einem passt. Meine Tipps für eine natürlich schöne Haut. HEUTE ⬇️Q10 Regeneration - Vegane Q10-Kapseln mit ausgewählten B-Vitaminenhttps://serv.linkster.co/r/ape7dIEdgAHyaluronic Glow - Vegane Glow-Hyalu",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_15_4743395526750803",
-          "text": "Skincare-Abendroutine: Diese 82-jährige Oma verwendet dafür nur ein Produkt Was machen wir nicht alles, um jung auszusehen. Ob sich all die Well-Aging-Routinen auch tatsächlich auszahlen, können wir in den meisten Fällen erst im hohen Alter feststellen. Genau deshalb holen wir uns Tipps bei dieser 80-jährigen Oma, deren Haut ohne Botox und Filler nahezu faltenfrei ist. Ihr Geheimnis: Eine Abendrou",
+          "id": "0_225889_190_3733394547247031516",
+          "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeersamen-Öle für Schutz &amp; Glow🍃 Ginkgo-Extrakt zur Stärkung der Haut🧬 Peptide für straffere, elastischere Haut💫 Vegan | ",
           "segment": "skincare-first",
           "mood": "disappointed"
         },
         {
-          "id": "0_219424_126_t1_nzrxohi",
-          "text": "Microneedling Ich mache es zu Hause mit 1,5mm (mit Dermaroller) und verschiedenen Seren, bin super glücklich, meine Haut ist viel strahlender und ebenmäßiger geworden. Wenn du in eine Praxis gehst dann ist es tiefer und teurer natürlich, ich kann mir das nicht leisten deshalb mache ich selber. Auf r/microneedling findest du alle Infos was man brauchen kann. Das was Botox kann wirst du damit aber n",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t1_o1i137h",
-          "text": "Hässlich sein ist anstrengend. Neulich beim letzten Wahlkrampf zu Berlin, bin ich im Bus gestiegen, und habe einen Mann mit so zwei richtig prächtigen und schönen Hunden gesehen die ich auch dicke streicheln durfte. Diese Hunde waren wirklich von naturaus wunderbare, weiße Tiere mit strahlenden blauen Augen, die auch von den Anderen Gästen sehr viel Aufmerksamkeit bekommen haben. Nachdem ich späte",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_6063725955123063",
-          "text": "sie wirkt älter. Wegen ihres Verhaltens und wegen ihrer Ausstrahlung. Ich bin 35, sehe äußerlich auch wie 35 aus (ich nutze keinen Botox und sowas) aber mir wird oft gesagt ich wirke viel jünger. Mein Freundeskreis ist im Durchschnitt ca. 7 Jahre jünger als ich weil mich ältere/gleichaltrige immer für jünger halten und deshalb nichts von mir wollen und ich auch nicht von denen :D",
+          "id": "0_225889_140_7556050662585388318",
+          "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Falten #selbstentwickelteTechnik #Hautpflege #Jugend #Anti-Aging #Gesichtsbehandlung #Hautpflegetipps #GermanBeauty #Hautve",
           "segment": "skincare-first",
-          "mood": "conflicted"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_9_yt.xEmqhrU3L10",
-          "text": "8 berühmte deutsche Sängerinnen mit durch Wangenfettentfernung deformierten Gesichtern Extreme Wangenknochen, hohle Gesichter und eine Ästhetik ohne Rückweg: In diesem Video analysieren wir 8 berühmte deutsche Sängerinnen, deren Gesichter durch Wangenfettentfernung (Bichektomie) sichtbar verändert wurden. Von maskenhafter Starre bis zur vorzeitigen Alterung zeigen wir schonungslos, wie der Trend z",
+          "id": "0_225889_190_3733536423874952158",
+          "text": "Stresshaut,  du bist nicht alleinFühlst du dich manchmal auch so? Voller Termine, Job, Familie und plötzlich zeigt deine Haut dir den ganzen Stress 😓.Müde, kleine Unreinheiten oder die ersten Fältchen… ich kenne das! 💖Die gute Nachricht: Du musst nicht alles alleine herausfinden.Ich helfe dir dabei, die richtige Pflege zu finden.  Abgestimmt nur auf dich 🌸.👉 Schreib mir eine Nachricht, und wir fin",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733589603371876032",
+          "text": "emmi-skin H - Hyaluron-Cremegel 30 mlemmi-skin H – Ultraschall Hyaluron-CremegelExklusiv nur bei Emmi Ultrasonic!Neue verbesserte Rezeptur!Eigenschaften: - aufhellend - Antiaging - regenerierend - polstert Falten auf - versorgt die Haut mit FeuchtigkeitHauttyp: - reife Haut  - trockene Haut  - normale Hautemmi-skin H – Für eine schöne und gesunde Haut!#AntiAgingEffekt #emmiskinH #emmi®skinHUltrasc",
+          "segment": "unknown",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733593947705086154",
+          "text": "Die Kirmes ist geschafft, die Sonne scheint und ich bin gleich für Euch am Start ☀️#haan #hilden #düsseldorf #wuppertal #solingen #kosmetik #comfortzone #novarom_beauty #janeiredale #binellamedicalbeauty  #neovita #augenmanufaktur #beautyhillscosmetic #haan_insight #mettmann_insight #schlossburg #wupper #hautnaherleben #antiaging  #teolysal #faltenunterspritzung #hyaluronsäure #hyaluron #permanent",
           "segment": "procedure-curious",
-          "mood": "cautioning"
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733607129212004577",
+          "text": "Sanft, aber stark im Anti-Aging.💛Age Limit mit 0,05% Retinal, Panthenol, Bisabolol und Allantoin wirkt gegen Falten und Flecken; die wasserbasierte Textur zieht blitzschnell ein.#elynslab.de #agelimit #retinal #antiaging #panthenol #serum",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_26_1654990209224273",
+          "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als starkes Antioxidans vor freien Radikalen schützt. Ein hochwirksamer Anti-Aging-Komplex aus NAD+ und Q10 für einen sichtbaren ",
+          "segment": "unknown",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733610685780566953",
+          "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Feigenkaktus – wirkt tonisierend, beruhigt Irritationen, unterstützt die Regeneration und gibt der Haut Spannkraft zurück. ",
+          "segment": "skincare-first",
+          "mood": "satisfied"
         }
       ],
       "concern:barrier-dryness": [
         {
-          "id": "0_219424_126_t1_nx8q1my",
-          "text": "Botox bei Migräne Ich habe viele Berichte von Menschen gelesen, die Botox gegen chronische Migräne ausprobiert haben, nachdem andere Behandlungen kaum geholfen haben. Bei vielen wirkt es nicht sofort, aber in den Wochen danach merken sie, dass sie weniger Migränetage haben oder dass die Schmerzen weniger stark sind. Einige berichten auch, dass der Effekt erst nach der zweiten oder dritten Behandlu",
-          "segment": "procedure-open",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t1_nxl2diy",
-          "text": "Erfahrung Zornesfalte Botox Klar 😊Ich habe Botox gegen die Zornesfalte machen lassen und kann ein bisschen aus eigener Erfahrung berichten. Die Behandlung selbst war viel weniger schlimm als gedacht, die Nadel ist sehr fein und der Schmerz eher ein kurzes Pieksen. Es dauert nur ein paar Minuten. Bei mir hält das Ergebnis etwa 4 bis 6 Monate, danach lässt die Wirkung langsam nach. Preislich kommt e",
-          "segment": "procedure-open",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_126_t1_nxl9fln",
-          "text": "Fettknubbel / Lymphknoten Man konnte die bei mir auch nicht von außen sehen, außer wenn ich mich breitbeinig hingehockt habe (also so, als würde man draußen im Freien sein großes Geschäft erledigen wollen). Nur dann hat die Haut ausreichend drüber gespannt. So kleine Knubbel kannst Du Dir aber ganz leicht entfernen lassen beim Hautarzt. Gerade, wenn die weh tun, würde ich das machen lassen.",
-          "segment": "procedure-curious",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_126_t1_ny6sqka",
-          "text": "Ich bin auf die Sankeys Ende 2026 gespannt 💸 Ja da würde ich zustimmen. Körperpflege, Kosmetik etc.. mal die Augenbrauen machen lassen und Hautpflege etc.",
-          "segment": "procedure-open",
+          "id": "0_225889_190_3733589603371876032",
+          "text": "emmi-skin H - Hyaluron-Cremegel 30 mlemmi-skin H – Ultraschall Hyaluron-CremegelExklusiv nur bei Emmi Ultrasonic!Neue verbesserte Rezeptur!Eigenschaften: - aufhellend - Antiaging - regenerierend - polstert Falten auf - versorgt die Haut mit FeuchtigkeitHauttyp: - reife Haut  - trockene Haut  - normale Hautemmi-skin H – Für eine schöne und gesunde Haut!#AntiAgingEffekt #emmiskinH #emmi®skinHUltrasc",
+          "segment": "unknown",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_nz6jwzp",
-          "text": "Welchen Studiengang hat die höchste Gehälter heutzutage? Wobei man halt sagen muss, dass man auch mit einem Kassensitz wirklich gut verdienen kann und so gut wie kein wirtschaftliches Risiko besitzt.All in all hat man es als Arzt also ziemlich entspannt, wenn man mal seinen Platz hat. Von Botox halte ich nichts persönlich, da geht es meist wirklich einzig und alleine ums Geld scheffeln.",
-          "segment": "skincare-first",
-          "mood": "seeking"
+          "id": "0_225889_190_3733592734201078303",
+          "text": "✨ Gummy Smile BioBOTOX ✨Ein „Gummy Smile\" entsteht, wenn beim Lächeln zu viel Zahnfleisch sichtbar wird – etwas, das viele Betroffene als störend empfinden.Mit einer BTX-Behandlung lässt sich dies sanft und effektiv korrigieren:💉 gezielte Mikroinjektionen😊 entspannte Oberlippe🌸 natürliches, harmonisches LächelnDas Ergebnis: kein sichtbares Zahnfleisch, mehr Selbstbewusstsein – bei voller Ausdrucks",
+          "segment": "procedure-curious",
+          "mood": "satisfied"
         },
         {
-          "id": "0_219424_9_yt.cfoNbtzRa9Y",
-          "text": "IMAGE Skincare Vital C Hydrating Anti-Aging Serum | Marco erklärt | Beautymanufactur Ich erkläre Dir heute das IMAGE Skincare Vital C Hydrating Anti-Aging Serum – ein echtes Lieblingsprodukt, wenn Deine Haut trocken, gestresst oder müde wirkt.Dieses Vitamin-C-Serum wurde entwickelt, um die Haut intensiv mit Feuchtigkeit zu versorgen, sie zu beruhigen und ihr wieder mehr Frische und Strahlkraft zu ",
+          "id": "0_225889_190_3733608589408340521",
+          "text": "Meine Leidenschaft ist es, speziell Frauen mit meinen Händen und meiner Stimme auf einer tieferen Ebene zu Berühren. Ich gebe Dir dass Gefühl dich fallen lassen zu können, in deiner goldenen Mitte ankommen zu können. Nach einer Behandlung bei mir fühlst du dich schöner, entspannter und ausgeglichen. Und genau wegen diesem Gefühl habe ich deine persönliche Oase geschaffen. Den jede Frau sollte so e",
+          "segment": "procedure-curious",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733610685780566953",
+          "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Feigenkaktus – wirkt tonisierend, beruhigt Irritationen, unterstützt die Regeneration und gibt der Haut Spannkraft zurück. ",
           "segment": "skincare-first",
           "mood": "satisfied"
         },
         {
-          "id": "0_219424_126_t1_nzf161g",
-          "text": "Genetische Augenringe-welche Behandlung? Eventuell solltest du Hyaluronsäure nicht per se abtun. Deine Angst mag berechtigt sein, WENN man es Filler benutzen will. Ästhetischen Medizin an sich ist sehr heikel mmn.Würdest du ein simples Hyaluronsäure Serum morgens und abend auftragen ist das physikalisch einfach nicht möglich dass das Hyaluron migrieren. Hyaluron, was übrigens Bestandteil deiner Ha",
-          "segment": "procedure-curious",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_126_t1_nzx08qv",
-          "text": "Microneedling Danke! Ich werde das Microneedling für den Anfang in einer Praxis machen. Bin soooo gespannt auf diesen „Anti-Aging\" Effekt.",
+          "id": "0_225889_190_3733618650067519262",
+          "text": "🇩🇪 Workout für deine Haut – ganz ohne Fitnessstudio ✨Face Yoga ist der Trend, der deine Haut natürlich strafft, entspannt und zum Strahlen bringt. 🌿💆‍♀️Die Vorteile sprechen für sich:💎 Unterstützt die straffende Wirkung unseres Umibudō Serums🌱 Der Jade-Stein wirkt belebend &amp; sorgt für frische Ausstrahlung💆‍♀️ Massage = bessere Durchblutung → prallere Haut &amp; optimale Wirkstoffaufnahme♻️ Det",
           "segment": "skincare-first",
           "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733630882956237309",
+          "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️ Stärkt die Hautschutzbarriere✔️ Reduziert sichtbar Falten✔️ Für alle Hauttypen, auch empfindliche Haut✔️ Ohne Alkohol &",
+          "segment": "unknown",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_26_1225135836296932",
+          "text": "Seit ihr gespannt auf unsere Box ❓❓❓Wieder ein Knaller und ein riesen Lob an LimeLife für das 3x infolge einen so tolle Pflege Box📦*Ihr bekommt sie jeden Monat 1x über euer Kundenkonto für 45€ versandfrei*, egal welcher wert enthalten ist. Im Oktober Wert 85€. https://www.limelifebyalcone.com/sabrinaklassen/home🤎Offline Neck and Décolleté Cream🤎Ultra-Festigende CremeDiese innovative Formel in dies",
+          "segment": "unknown",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3733648718981847066",
+          "text": "Seit ihr gespannt auf unsere Box ❓❓❓Wieder ein Knaller und ein riesen Lob an LimeLife für das 3x infolge einen so tolle Pflege Box📦*Ihr bekommt sie jeden Monat 1x über euer Kundenkonto für 45€ versandfrei*, egal welcher wert enthalten ist. Im Oktober Wert 85€. https://www.limelifebyalcone.com/sabrinaklassen/home🤎Offline Neck and Décolleté Cream🤎Ultra-Festigende CremeDiese innovative Formel in dies",
+          "segment": "unknown",
+          "mood": "seeking"
         }
       ],
-      "need:prevention": [
+      "concern:pores-texture": [
         {
-          "id": "0_219424_126_t1_nxgs55s",
-          "text": "TW: Frauen die in einer missbräuchlichen Ehe/langjährigen Partnerschaft waren: was würdet ihr anders machen um nicht in einer zu landen? Ich denke dadurch, dass du dir dessen bewusst bist, hast du schon mal ein solides Schutzschild in der Hand :) Wenn man dem Thema achtsam begegnet, ist das schon eine gute Prävention. **• Ein paar Red Flags am Anfang:** Extremes Lovebombing, man wird auf ein Podes",
+          "id": "0_225889_190_3733630882956237309",
+          "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️ Stärkt die Hautschutzbarriere✔️ Reduziert sichtbar Falten✔️ Für alle Hauttypen, auch empfindliche Haut✔️ Ohne Alkohol &",
+          "segment": "unknown",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733704926095533173",
+          "text": "PRP – das Liquid Gold für deine Haut ✨In diesem Video siehst du den kompletten Prozess: PRP kombiniert mit Microneedling – Schritt für Schritt.Was ist PRP?Aus deinem eigenen Blut wird Plasma gewonnen, reich an Wachstumsfaktoren. Es wirkt wie ein natürlicher Turbo für Regeneration und Hauterneuerung.Die Vorteile:•Verfeinerte Poren &amp; ebenmäßiger Teint•Reduktion von Akne-Narben &amp; Pigmentfleck",
           "segment": "procedure-curious",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3734472255548972254",
+          "text": "Wenn du eine saubere und mit Feuchtigkeit versorgte Haut haben möchtest, dann gibt es hier zwei Optionen für dich:Die erste Pflegelinie enthält Säuren (Suicine Acid) – sie wirkt peelend und erneuernd.Die zweite Linie enthält Stammzellen aus Orchideen – sie wirkt beruhigend und regenerierend.Du hast also zwei Möglichkeiten:Wenn du eine unreine Haut, vergrößerte Poren, Pigmentflecken oder Akne hast,",
+          "segment": "unknown",
           "mood": "cautioning"
         },
         {
-          "id": "0_219424_15_57475788878495813",
-          "text": "Grünkohl: 8 Gründe, warum das Wintergemüse auf den Teller sollte Grünkohl enthält unter anderem Vitamin A, C und K, Folsäure, Kalzium, Kalium, Magnesium, Eisen, Omega-3-Fettsäuren, Ballaststoffe, sekundäre Pflanzenstoffe und den Pflanzenfarbstoff Chlorophyll. Und das in rauen Mengen: So zählt Grünkohl mit rund 120 Milligramm Vitamin C pro 100 Gramm beispielsweise zu den Vitamin-C-reichsten Nahrung",
-          "segment": "unknown",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_9_yt.unqHOz_Ahto",
-          "text": "Spermidin, Quercetin & Co: Was bringt wirklich etwas gegen das Altern? | Naturmedizin | QS24 Ihre Meinung zählt!Hat Ihnen diese Sendung gefallen? Dann freuen wir uns über Ihre Bewertung:👉 https://qs24.run/bewertungenIn dieser Folge geht es um eine der spannendsten Fragen der Longevity-Forschung: Gibt es Stoffe, die den Alterungsprozess aufhalten oder sogar umkehren können? Unser Gast Prof. Dr. med",
+          "id": "0_225889_190_3734632463499809090",
+          "text": "✨ NEU BEI UNS: die #cerave Skin Renewing Serie!✨Vier Produkte, die deine Haut erneuern, Feuchtigkeit spenden und für ein strahlendes Hautbild sorgen 💜 - entwickelt mit Dermatologen für deine tägliche Anti-Aging-Routine.🌙 Peptid Creme: Reichhaltige #nachtpflege mit Ceramiden, Hyaluronsäure &amp; Peptiden - polstert die Haut auf, versorgt sie 48h mit Feuchtigkeit und lässt sie erholt aussehen. 👀 Aug",
           "segment": "skincare-first",
           "mood": "seeking"
         },
         {
-          "id": "0_219424_9_yt.smaVLAfs0uE",
-          "text": "Meistgehört: Mega-Trend Kollagen – Was wirkt wirklich? Dr. Bettina Rümmelein & Nina Ruge In dieser Folge spreche ich mit Dr. med. Bettina Rümmelein, Dermatologin und ärztliche Direktorin der Hautwerk Spezialklinik für Dermatologie und Lasermedizin in Zürich, über einen der größten Trends der letzten Jahre: Kollagen. Kaum ein Wirkstoff wird so intensiv beworben – für Haut, Haare, Gelenke und Health",
+          "id": "0_225889_190_3735031323632006430",
+          "text": "✨Skin Icing ✨ Der Frischekick für deine Haut. 😍 Skin Icing bedeutet, dein Gesicht nach der Reinigung mit Kälte zu behandeln z.B. mit einer Eis-Kugel. Ich verlinke dir meine in der Story. 🧊Der Effekt? Die Kälte verengt die Blutgefäße. Danach wird die Haut stärker durchblutet. Ergebnis: mehr Glow, weniger Schwellungen, verfeinerte Poren, Anti-Aging Pflege gegen Falten. ✨So kombinierst du Skin Icing ",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_o0e8qh0",
-          "text": "Wer leidet auch unter einer unfreiwilligen Beschneidung? Wissenschaftlich betrachtet hat die Vorhaut mehrere natürliche Schutz‑ und Abwehrfunktionen: Sie umhüllt die Eichel, hält ihre Oberfläche feucht, schützt sie vor mechanischer Reibung und hilft, das Gleichgewicht der Haut zu regulieren. Die Vorhaut enthält zudem Schleimhautbereiche mit immunologischen Zellen, die Teil der lokalen Abwehr sind.",
-          "segment": "unknown",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o0jzvmw",
-          "text": "Wer leidet auch unter einer unfreiwilligen Beschneidung? Die Rechtfertigung religiöser Beschneidung bei Kindern beruht weiterhin auf einem argumentativen Dreiklang aus angeblicher Prävention, kultureller Tradition und vermeintlich geringem Risiko. Keine dieser Säulen ist stabil.Zunächst zur Rechtslage in Deutschland, die oft selbst von Befürwortern nur halb verstanden wird:§ 1631d BGB erlaubt die ",
+          "id": "0_225889_190_3735043659583492257",
+          "text": "✨ Technologie trifft Hautgesundheit ✨Für Deine strahlende, feinporige und reine Haut – mit den hochmodernen Reviderm Technologien bei Ästhetica Vienna 💎💨 Mikrodermabrasion – entfernt sanft abgestorbene Hautzellen &amp; verbessert die Aufnahme von Wirkstoffen.🌊 Ultraschall – schleust hochwirksame Inhaltsstoffe tief in die Haut ein für maximale Regeneration.🩶 Micro-Needling – aktiviert gezielt die K",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_15_50390177330480972",
-          "text": "Hirnforschung: Wie ein unterschätztes Hobby dein Gehirn langsamer altern lässt Warum altern manche Menschen schneller als andere? Und wie kann man den Prozess beeinflussen? Ein Faktor könnte ein neues Hobby sein: Wissenschaftler:innen fanden einen Zusammenhang zwischen Mehrsprachigkeit und langsamerem Altern heraus. Bonjour! Du kannst auf diese Begrüßung antworten? Wunderbar, dann hast du heute be",
-          "segment": "unknown",
+          "id": "0_225889_190_3735121412710205566",
+          "text": "Du leidest unter starker Akne?Deine Haut ist sehr ölig?Vergrößerte Poren, Hautalterung?Pigmentflecken?Dann ist diese Behandlung genau das Richtige für Dich.🌸 Minderung des Talgflusses🌸 Tiefenpeeling🌸 Verfärbungen werden aufgehellt 🌸 Mindert Pickel und Mitesser🌸 Auch in der aktiven Phase von Akne vulgarisEinelbehandlung 99€3 Behandlungen im Abstand von 3 WochenAnstatt 297€ nur 265€☎️ 01525-100 1569",
+          "segment": "procedure-curious",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_26_1423925613071101",
+          "text": "Du leidest unter starker Akne?Deine Haut ist sehr ölig?Vergrößerte Poren, Hautalterung?Pigmentflecken?Dann ist diese Behandlung genau das Richtige für Dich.🌸 Minderung des Talgflusses🌸 Tiefenpeeling🌸 Verfärbungen werden aufgehellt 🌸 Mindert Pickel und Mitesser🌸 Auch in der aktiven Phase von Akne vulgarisEinelbehandlung 99€3 Behandlungen im Abstand von 3 WochenAnstatt 297€ nur 265€☎️ 01525-100 1569",
+          "segment": "procedure-curious",
           "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o2kpya0",
-          "text": "Ist Botox okay? Ehrliche Antwort? Gönn dir. Erste Idee bei der Frage und deinem Alter: Oh nein, sie will bestimmt \"Baby-Botox\" zur Faltenprävention! Don't do it girl, böse Idee!Aber das?Du schreibst nicht, dass du glaubst damit sozial kompetenter zu werden oder auf einmal total beliebt sein. ADHS Coaching und Co sind schön und gut und definitiv empfehlenswert, aber den unwillkürlichen Gesichtsausd",
-          "segment": "skincare-first",
-          "mood": "conflicted"
         }
       ],
       "concern:dark-circles": [
         {
-          "id": "0_219424_126_t1_nxpow7p",
-          "text": "Ich bin wohl hässlich. 95kg - 178cm - Glatze - Wampe - Augenringe des Todes und komisches Seitenprofil. Was muss ich tun um lächerlich sexy auszusehen, dass ich modeln könnte? Wo fange ich an? Helft mir bei der Projektplanungsphase. Danke dir!Ja, konnte sie. Habe im Bauchbereich ein Kupferpeptid Serum und Microneedling angewendet. Und immer ordentlich eincremen.Anfangs hängt es etwas, weil die Hau",
+          "id": "0_225889_190_3733665301541027555",
+          "text": "Strahlender Blick in jedem Moment – sag müden Augen den Kampf an! Mit der L'Oréal Paris Anti-Aging-Augenpflege mit Dreifachpower erlebst du neue Frische und Vitalität, die nicht nur deine Haut, sondern auch dein Selbstbewusstsein strahlen lässt. - ✨ Mildert sichtbar Fältchen - 💧 Spendet intensive Feuchtigkeit - 🌟 Reduziert Augenringe und Schwellungen 👉 Jetzt zuschlagen: [https://amzn.to/3INKbMd] T",
           "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t1_nxpr8li",
-          "text": "Ich bin wohl hässlich. 95kg - 178cm - Glatze - Wampe - Augenringe des Todes und komisches Seitenprofil. Was muss ich tun um lächerlich sexy auszusehen, dass ich modeln könnte? Wo fange ich an? Helft mir bei der Projektplanungsphase. Und wie hast du es mit microneedling gemacht? Selber angewandt oder machen lassen?",
-          "segment": "procedure-curious",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_nxsz2wq",
-          "text": "Ich bin wohl hässlich. 95kg - 178cm - Glatze - Wampe - Augenringe des Todes und komisches Seitenprofil. Was muss ich tun um lächerlich sexy auszusehen, dass ich modeln könnte? Wo fange ich an? Helft mir bei der Projektplanungsphase. Das mit den Augenringen so nicht. Wenn diese genetisch bedingt sind, dann kannst du tun und lassen was du willst. Diese kriegst du nur durch Unterspritzung eine gewiss",
-          "segment": "procedure-curious",
+          "id": "0_225889_190_3733769572499775614",
+          "text": "✨ Strahlende Augen – gepflegte Hände ✨⁣⁣Unsere Shiseido Vital Perfection Linie wirkt sichtbar gegen Falten, Schwellungen und Augenringe – für eine wache, jugendlich-frische Ausstrahlung!⁣⁣Und das Beste: Beim Kauf eines Vital Perfection Produkts schenken wir dir die luxuriöse SHISEIDO Ultimune Handcreme (30ml) dazu.⁣⁣Weil gepflegte Hände genauso wichtig sind wie ein frischer Blick 💛⁣⁣Nur solange de",
+          "segment": "unknown",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_nz58p76",
-          "text": "Mein Programm gegen Augenringe und Talgfilamente Also meine Augenringe sind definitiv sichtbarer. Habe jetzt seit ein paar Monaten mit Derma rolling angefangen  und das ist das einzige was bei mir wirklich einen sichtbaren Unterschied gemacht hat. Hyaluron, Sonnencreme, Koffein etc. hat nicht viel gebracht (mache es trotzdem weiter), weil das Problem ein kleines bisschen weiter unter der Haut war.",
-          "segment": "procedure-curious",
+          "id": "0_225889_190_3733857834036137867",
+          "text": "Unsere Augenpartie ist die empfindlichste Hautzone im Gesicht – dünn, zart und ständig in Bewegung. Genau hier zeigen sich erste Fältchen, Müdigkeit und Trockenheit.Die ZEITGARD Nano Gold 2in1 Augencreme &amp; Maske ist die perfekte Pflege für diese sensible Region:💛 2 in 1 Wirkung•Als tägliche Augencreme spendet sie intensive Feuchtigkeit, mildert Trockenheitsfältchen und pflegt sanft.•Als Maske ",
+          "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_nz5nhsd",
-          "text": "Mein Programm gegen Augenringe und Talgfilamente Bruder..welche Augenringe? 😅Auch der Rest ist eigentlich völlig normal. Aber wenn deine Haut es zulässt kannst du Tretinoin oder Tazaroten probieren. Letzteres wirkt bei mir wie IRL Photoshop aber man muss vorsichtig damit umgehen. Ich mache außerdem einmal im Monat microneedling mit 1,5mm und einem Serum, das hat meine Haut krass verändert.",
+          "id": "0_225889_190_3733875022143283470",
+          "text": "Sag müden Augen den Kampf an! ✨Unser faltenkorrigierendes Augenserum polstert Linien sichtbar auf, mildert Schwellungen und reduziert Augenringe, für eine glattere und erholtere Augenpartie. 💧Mit maritimem Pro-Collagen, 3 Hyaluronsäuren, Rosskastanien- &amp; Ingwerextrakt sowie stärkendem Luzerne-Extrakt.Einfach morgens &amp; abends sanft einklopfen – und die Augenpartie wirkt Tag für Tag entspann",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_nz7rgj0",
-          "text": "Mein Programm gegen Augenringe und Talgfilamente Also dir Haut unter den Augen ist sehr dünn und oft ist was man dort an Problemstellen kennt genetisch veranlagt. Aber ohne dir das abzusprechen, welche Augenringe? Also no joke, die Haut die ich da unter deinen Augen sehe, sieht total nach dem aus was dort sein sollte und nicht mehr und nicht weniger - da hängt ja auch nichts tiefer als es sollte o",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t3_1qbm83b",
-          "text": "Genetische Augenringe-welche Behandlung? Hallo ihr Lieben,ich habe seit meine Kindheit starke Augenringe, die genetisch bedingt sind. Da ich trotz 8-9 Stunden Schlaf und guten Eisen/ hoher Ferritinwert immer abgeschlagen aussehe, denke ich über eine Behandlung nach die die Augenringe verschwinden lassen sollen.Da ich Hyaluron ablehne auf Grund der potenziellen Gefahr des migrierens, stellt sich mi",
+          "id": "0_225889_190_3734305313709922163",
+          "text": "Eine PRP-Gesichtsbehandlung ist eine Anti-Aging-Methode, bei der körpereigenes, plättchenreiches Plasma (PRP) in die Haut injiziert wird, um die natürliche Zellerneuerung, Kollagenproduktion und Geweberegeneration anzuregen. Diese Behandlung, auch bekannt als Vampir-Lifting oder Vampir-Lifting, verbessert die Hautstruktur, reduziert Falten und Augenringe, strafft die Haut und kann auch bei Narben ",
           "segment": "procedure-curious",
           "mood": "seeking"
         },
         {
-          "id": "0_219424_126_t1_nzbqgs8",
-          "text": "Genetische Augenringe-welche Behandlung? Ich habe leider die selbe Art von Augenringe/ extra dünner haut der Augenpartie wo Verfärbungen sichtbar sind und mich nervt es auch, da man stets fertig oder unausgeschlafen und einfach nicht frisch aussieht. Es soll dafür bestimmte peptide geben, die anstatt Hyaluron untergespritzt werden für die Fülle und Laser um die Verfärbungen aufzuhellen",
+          "id": "0_225889_190_3734337879494387801",
+          "text": "Eine Augenlidstraffung ohne Skalpellwird immer beliebter, da sie eine nicht-invasive Alternative zur herkömmlichen Operation bietet. Hier sind drei Gründe, warum sich immer mehr Menschen für diese Methode entscheiden:1.  Keine Narbenbildung: Im Gegensatz zur operativen Lidstraffung entstehen bei der nicht-chirurgischen Variante keine sichtbaren Narben, da keine Schnitte gesetzt werden.2.  Schnelle",
+          "segment": "procedure-curious",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3734615022928800915",
+          "text": "Augenringe, ein müder Blick und Schatten unter den Augen. Ein weitverbreitetes Problem, das durch Genetik, schlechten Schlaf oder Stress verursacht werden kann. Genauso vielfältig wie die Ursachen sind auch die Ausprägungen und damit die Behandlungsmöglichkeiten. Zu den minimalinvasiven Möglichkeiten bei Augenringen zählen Hyaluronsäure-Filler (Tränenfurche) oder Biostimulatoren. Unsere Anti-Aging",
+          "segment": "procedure-open",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3734632463499809090",
+          "text": "✨ NEU BEI UNS: die #cerave Skin Renewing Serie!✨Vier Produkte, die deine Haut erneuern, Feuchtigkeit spenden und für ein strahlendes Hautbild sorgen 💜 - entwickelt mit Dermatologen für deine tägliche Anti-Aging-Routine.🌙 Peptid Creme: Reichhaltige #nachtpflege mit Ceramiden, Hyaluronsäure &amp; Peptiden - polstert die Haut auf, versorgt sie 48h mit Feuchtigkeit und lässt sie erholt aussehen. 👀 Aug",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        }
+      ],
+      "concern:neck-decollete-hands": [
+        {
+          "id": "0_225889_190_3733688807788098271",
+          "text": "Dein Anti-Aging-Ritual in 3 Schritten:✨Starte mit dem Super Serum [10], das die Jugendlichkeitsmechanismen deiner Haut aktiviert – morgens und abends.✨Folge mit dem Augenserum für einen frischen, geglätteten Blick.✨Beende dein Ritual mit der Merveillance Lift Pflege – für straffe, strahlende Haut vom Gesicht bis zum Dekolleté.Bereit für deine neue Routine?#nuxegermany #Nuxe #MerveillanceLift #DayA",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_26_1438781807598330",
+          "text": "Face-Lift ohne OP❓Das geht mit Micro Needling PRO❗Micro Needling PRO ist ein erfolgreiches Verfahren im Bereich Anti-Aging und Problemhaut-Behandlung. Die nicht-ablative Hautverjüngungs-Technik ermöglicht es, die Haut an Gesicht, Augen, Lippen, Hals, Dekolleté zu verbessern und zu festigen.Micro Needling PRO ist Hautregeneration durch Stimulation und dabei präzise, effektiv und hautschonend.Diese ",
+          "segment": "procedure-open",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3733896980867884329",
+          "text": "Viele Frauen pflegen ihr Gesicht bis ins Detail doch vergessen den Hals.Das Problem:Die Haut am Hals ist dünner, trockener und viel stärker belastet.Darum entstehen dort schneller Falten, Knitterfältchen und ein müder Gesamteindruck.Wahre Hautverjüngung bedeutet:👉 Gesicht UND Hals gemeinsam zu betrachten👉 Ursachen zu lösen – nicht nur oberflächlich zu cremen👉 Strukturen zu stärken, die dich wirkli",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_26_1289891709814682",
+          "text": "🍏✨ Die belebende Kraft des Apfels – Live-Showmassage am 03.10.2025 ✨🍏Entdecke unsere exklusive Apfel-Anwendung im Oktober – eine süße Verführung mit der Eden-Frucht! Mit frischen Äpfeln, besonderen Massage-Techniken und wertvollen Wirkstoffen.🌿 Deine Vorteile:• Reich an Vitaminen und Mineralstoffen• Feuchtigkeitsspendend, antioxidativ, entzündungshemmend• Hautglättend mit Anti-Aging-Effekt• Detox",
+          "segment": "unknown",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3734234642925646470",
+          "text": "Herbst ist die ideale Zeit zur Entfernung von Pigmentflecken und Reduzierung von Hautverfärbungen,  da die Haut nach MICRONEEDLING -Behandlungen weniger stark der Sonne ausgesetzt ist, was eine bessere Regeneration und ein sicheres Ergebnis ermöglicht, ohne die Gefahr neuer Hyperpigmentierungen durch UV-Strahlung. Da Pigmentflecken oft durch Sonneneinstrahlung entstehen, ist der Rückgang der Inten",
+          "segment": "procedure-curious",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3734362881052698226",
+          "text": "✨ JALUPRO HMW – Die Revolution für strahlende Haut ✨JALUPRO HMW ist ein hochwirksames Bio-Revitalisierungspräparat mit Hyaluronsäure mit hohem Molekulargewicht und einer einzigartigen Kombination aus Aminosäuren.🌟 Ihre Vorteile:•Intensive Hydration &amp; Glow•Stimulation von Kollagen &amp; Elastin für straffe Haut•Reduktion feiner Linien &amp; Fältchen•Regeneration nach Sonne, Stress oder Hautalte",
+          "segment": "unknown",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3734365889148834343",
+          "text": "✨ JALUPRO SUPER HYDRO – Intensiv-Hydration &amp; Anti-Aging ✨Mit 3,2 % Hyaluronsäure (hoch- &amp; niedermolekular), 7 Aminosäuren und 3 Peptiden ist JALUPRO Super Hydro die neue Generation der Hautverjüngung.🌟 Vorteile für Ihre Haut:•Tiefe &amp; langanhaltende Hydration•Stimuliert Kollagen &amp; Elastin•Reduziert feine Linien &amp; Falten•Strahlender, frischer Glow•Reparatur &amp; Schutz vor Hauta",
+          "segment": "unknown",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3734368702302071975",
+          "text": "🔹 Was ist PROFHILO?PROFHILO ist eine bahnbrechende Anti-Aging-Behandlung auf Basis von hochreiner Hyaluronsäure.Dank der exklusiven NAHYCO® Hybrid-Technologie kombiniert es hoch- (H-HA) und niedermolekulare Hyaluronsäure (L-HA), um die Haut gleichzeitig intensiv zu hydratisieren und die Kollagen- &amp; Elastinproduktion anzuregen.⸻🔹 Vorteile &amp; Ergebnisse✅ Tiefe &amp; langanhaltende Hydration –",
           "segment": "procedure-curious",
           "mood": "enthusiastic"
         }
       ],
       "concern:collagen-volume": [
         {
-          "id": "0_219424_9_yt.E3-9oK1BeW0",
-          "text": "Hände Behandlung mit Hyaluronsäure #skincare #hände #hand Unsere Hände verraten oft mehr über unser Alter als das Gesicht. Mit einer Hyaluronsäure-Behandlung können Volumenverluste ausgeglichen, feine Fältchen geglättet und die Haut sichtbar frischer und praller wirken.💉 Die Behandlung ist minimal-invasiv, gut verträglich und sorgt für natürlich aussehende Ergebnisse.✨ Ideal bei trockener, dünner ",
-          "segment": "procedure-open",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_nzc7oix",
-          "text": "Genetische Augenringe-welche Behandlung? Hey!Habe das gleiche Problem wie du und möchte dieses  oder nächstes Jahr meine Augenringe angehen.Was ich bis jetzt in meiner Recherche gefunden habe:Klassisch Hyaluron, was ich auf keinen Fall empfehlen würde weil es im Gesicht migrieren kann, besonders in den Augenringen, wo die Haut besonders dünn ist, ist Wulstgefahr!Fatgrafting: Ein operatives und zie",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_nzgoqeu",
-          "text": "Genetische Augenringe-welche Behandlung? Huhu, schon mal was von ULTRACOL gehört? Guck dir dazu mal auf Instagram die Beiträge von zB royalbeautyberlin an. Ich habe für meine, die deutlich schwerwiegender waren als deine, Eigenfett unterspritzen lassen 2022. Und das auch, weil ich stärkere Augenrinnen hatte (also einen Volumenverlust), der ist bei dir ja eher minimal. Hat auch mit der Verfärbung, ",
-          "segment": "procedure-curious",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_9_yt.-Z_p45FwpZI",
-          "text": "8 deutsche Stars mit deformierten Gesichtern durch Wangenfett-Entfernung | Vorher & Nachher 2025 Extrem hohe Wangenknochen, eingefallene Wangen und Gesichter, die kaum wiederzuerkennen sind – die Entfernung von Wangenfett, medizinisch Bichektomie oder Buccal Fat Removal, gilt als einer der umstrittensten Beauty-Trends unserer Zeit. In diesem Video analysieren wir schonungslos 8 deutsche Stars, der",
-          "segment": "unknown",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_9_yt.tXY1_ulhsXE",
-          "text": "95 ALTERUNG DES KÖRPERS, AUSWIRKUNGEN AUF ORGANE UND FUNKTIONEN #50LAM_ANATOMIE_DE Alterung beeinflusst nahezu alle Körpersysteme und führt zu Veränderungen an Haut, Knochen, Muskeln, Organen und der allgemeinen Funktionalität. Die Haut wird dünner, bekommt Falten und verliert durch vermindertes Kollagen an Elastizität. Haare ergrauen und dünnen aus, da Pigmentzellen absterben und das Wachstum ver",
-          "segment": "unknown",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_9_yt.smaVLAfs0uE",
-          "text": "Meistgehört: Mega-Trend Kollagen – Was wirkt wirklich? Dr. Bettina Rümmelein & Nina Ruge In dieser Folge spreche ich mit Dr. med. Bettina Rümmelein, Dermatologin und ärztliche Direktorin der Hautwerk Spezialklinik für Dermatologie und Lasermedizin in Zürich, über einen der größten Trends der letzten Jahre: Kollagen. Kaum ein Wirkstoff wird so intensiv beworben – für Haut, Haare, Gelenke und Health",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o25ec21",
-          "text": "Eigenfettunterspritzung im Gesicht als Filler – Erfahrungen? Ich finde, man merkt sehr deutlich, dass du dir darüber viele Gedanken machst und das Thema nicht leichtfertig angehst. Eigenfett im Gesicht kann bei genau solchen Fällen tatsächlich Sinn machen, vor allem wenn Volumenverlust genetisch oder gewichtsbedingt ist und nicht einfach nur altersbedingt. Viele berichten, dass das Ergebnis sehr n",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_9_yt.6aIlUnWRT1g",
-          "text": "Was du über Sculptra wissen solltest! Sculptra ist kein klassischer Filler.Während herkömmliche Hyaluronsäure-Filler durch das injizierte Material direkt Volumen erzeugen, basiert Sculptra auf Poly-L-Milchsäure (PLLA) – einem bewährten, biokompatiblen Kollagen-Stimulator.Der Volumeneffekt entsteht nicht durch das Produkt selbst, sondern durch die gezielte Aktivierung der körpereigenen Kollagenprod",
-          "segment": "unknown",
-          "mood": "cautioning"
-        }
-      ],
-      "concern:hyperpigmentation": [
-        {
-          "id": "0_219424_9_yt.jTTAnt7WVFs",
-          "text": "Altersflecken entfernen: Der Vaseline-Trick vom Hautarzt (Billig & Effektiv) Müssen Sie wirklich Tausende Euro für Laserbehandlungen ausgeben, um Altersflecken loszuwerden? Die Antwort wird Sie überraschen! 😲Hallo zusammen, ich bin Dr. Schmidt. In meiner über 20-jährigen Tätigkeit als Dermatologe sehe ich oft Patienten, die verzweifelt nach Lösungen für Pigmentflecken und seborrhoische Keratose su",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_15_4743395526750803",
-          "text": "Skincare-Abendroutine: Diese 82-jährige Oma verwendet dafür nur ein Produkt Was machen wir nicht alles, um jung auszusehen. Ob sich all die Well-Aging-Routinen auch tatsächlich auszahlen, können wir in den meisten Fällen erst im hohen Alter feststellen. Genau deshalb holen wir uns Tipps bei dieser 80-jährigen Oma, deren Haut ohne Botox und Filler nahezu faltenfrei ist. Ihr Geheimnis: Eine Abendrou",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_126_t3_1qghv2l",
-          "text": "60ml Bio Hyaluron Serum mit Vitamin C, E. Hochkonzentriert Anti-Falten, Anti-Aging & Dunkle-Flecken. Hyaluronsäure-Gesichtsserum, Ideal als Augenkontu... -32 % 11,94 € ✅ JÜNGERES UND FRISCHERES HAUTBILD FÜR GESICHT, HALS &amp; AUGENKONTUR: das Hyaluronsäure, Vitamin C Serum BIO und 20 organischen Inhaltsstoffen von Florence kosmetiks erhöht die Spannkraft der Haut. Diese Elemente helfen gegen Falt",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t3_1qlko7k",
-          "text": "Neutrogena Retinol Boost+ Intensives Serum 30 ml, Anti-Aging Serum mit Retinol und Hyaluron, unparfümiert, gegen Falten und Pigmentflecken, für straff... -24 % 12,99 € Pflegt intensiv – Das hochkonzentrierte und schnell einziehende Neutrogena Retinol Boost+ Intensives Nacht Serum pflegt das Gesicht intensiv und erneuert das Hautbild über NachtBekämpft sichtbare Zeichen der Hautalterung – Das beson",
+          "id": "0_225889_190_3735172039553330742",
+          "text": "📣 Kollagen – dein Körper verdient Support von innen!Wusstest du, dass Kollagen das häufigste Protein im Körper ist?Es sorgt für feste Haut, starke Gelenke und gesunde Knochen – und spielt eine Schlüsselrolle für dein gesamtes Wohlbefinden. 🧬✨💡 Warum ist Kollagen so wichtig? ✅ Hält Haut straff &amp; elastisch✅ Unterstützt Gelenke &amp; Muskulatur✅ Stärkt Haare, Nägel &amp; Bindegewebe✅ Fördert Rege",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_o2m72u9",
-          "text": "Was könnte das sein ? bin alles andere als ein hautarzt, würde aber auf sonnenflecken tippen.Sonnenflecken im Gesicht (Lentigo solaris) sind harmlose, bräunliche Pigmentflecken, die durch UV-Strahlung und Hautalterung entstehen. Sie treten oft auf Stirn, Nase und Wangen auf. Vorbeugung durch hohen Sonnenschutz (LSF 50+) ist entscheidend. Behandlungen umfassen hautaufhellende Cremes, chemische Peel",
+          "id": "0_225889_190_3735175300465187528",
+          "text": "📣 Kollagen – dein Körper verdient Support von innen!Wusstest du, dass Kollagen das häufigste Protein im Körper ist?Es sorgt für feste Haut, starke Gelenke und gesunde Knochen – und spielt eine Schlüsselrolle für dein gesamtes Wohlbefinden. 🧬✨💡 Warum ist Kollagen so wichtig? ✅ Hält Haut straff &amp; elastisch✅ Unterstützt Gelenke &amp; Muskulatur✅ Stärkt Haare, Nägel &amp; Bindegewebe✅ Fördert Rege",
           "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t1_o3497x0",
-          "text": "Pigmentflecken Laser! Habe mein gesamtes Dekolleté damit machen lassen und bin gut zufrieden damit.",
-          "segment": "procedure-curious",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_9_yt.XppDidGL62Y",
-          "text": "Nicht jede Haut ist bereit für Microneedling! 💉✨ Oft braucht die Haut erstmal Ruhe und Pflege, Nicht jede Haut ist bereit für Microneedling! 💉✨ Oft braucht die Haut erstmal Ruhe und Pflege, bevor es intensiver werden kann – und genau da kommt Biorepeel ins Spiel. 🧖‍♀️Diese sanfte, aber effektive Methode verzichtet auf Nadeln und bietet dir:✔️ Tiefgehende Hauterneuerung ohne Downtime✔️ Strahlenden ",
-          "segment": "procedure-curious",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t1_o3chkg2",
-          "text": "Skincare Routine verbessern Deine aktuelle Skincare-Routine ist insgesamt solide, günstig und sehr gut auf sensible, reaktive, leicht unreine oder feuchtigkeitsarme Haut abgestimmt. Der mit Abstand größte Schwachpunkt ist, dass dir ein täglicher Sonnenschutz fehlt. Retinal und das starke Peeling machen die Haut extrem lichtempfindlich und ohne SPF 30–50 jeden Morgen (auch im Winter und drinnen) ri",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "need:even-complexion": [
-        {
-          "id": "0_219424_9_39714593034323109",
-          "text": "Saniel😊,weißt du...die Leute mit Lifting sehen nicht jünger aus.....guck mal hin...regelmäßige Gesichtsmassagen, Gesichtsgymnastik(das Gegenteil von Botox) und Gute Produkte regelmäßig gemacht.....führen zu mehr Ebenmäßigkeit im Gesicht u.besserem Aussehen später.......die Gelifteten u.Gespritzten sehen ja alle mit den Jahren uneben,dellig!!!!,und dadurch älter aus.",
-          "segment": "unknown",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_126_t1_nzrxohi",
-          "text": "Microneedling Ich mache es zu Hause mit 1,5mm (mit Dermaroller) und verschiedenen Seren, bin super glücklich, meine Haut ist viel strahlender und ebenmäßiger geworden. Wenn du in eine Praxis gehst dann ist es tiefer und teurer natürlich, ich kann mir das nicht leisten deshalb mache ich selber. Auf r/microneedling findest du alle Infos was man brauchen kann. Das was Botox kann wirst du damit aber n",
-          "segment": "procedure-curious",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_23_17330019814727164",
-          "text": "Die Serum-Innovation für jugendliche Haut [Diese Bewertung wurde im Rahmen einer Werbeaktion gesammelt.] Nach einer mehrwöchigen Anwendung des Serums konnte ich deutliche Veränderungen meiner Haut feststellen. Die Textur ist angenehm leicht und zieht schnell ein, ohne einen Fettfilm oder ein klebriges Gefühl zu hinterlassen. Der dezente Duft sorgt zusätzlich für ein angenehmes Pflegeerlebnis.Berei",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t1_o3eon98",
-          "text": "Was sind gute Produkte? Ich habe ebenfalls trockene und empfindliche Haut und kann dir sagen was ich persönlich seit Jahren gerne benutze:Abendroutine- nach dem Zähneputzen abschminken mit 2 Wattepads und garnier Mizellenwasser (hellrosa Kappe), nicht abtrocknen - für anti-aging (zellerneuerung, Minimierung von Unreinheiten und Fältchen) das retinoid 2% von the ordinary - als feuchtigkeitscreme la",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.CzYtYSw_ZUY",
-          "text": "✨ Deine Haut ist ein Spiegel deiner Gesundheit – und ich helfe dir, sie wieder strahlen zu lassen! ✨ Deine Haut ist ein Spiegel deiner Gesundheit – und ich helfe dir, sie wieder strahlen zu lassen! ✨Du bist unzufrieden mit deiner Haut? Egal ob:✅ Hautalterung – Du willst frischer und jünger aussehen✅ Pigmentstörungen – Für einen ebenmäßigen Teint✅ Fahle, müde Haut – Mehr Glow und Ausstrahlung✅ Haut",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_15_34829541058124714",
-          "text": "Anti-Aging und Glow: Deine Haut im besten Licht – mit Rivoli Mit dem neuen Verständnis für Anti-Aging wird Glow zur Frage der richtigen Pflege und nicht des Make-ups. Anti-Aging und Glow stehen längst nicht mehr für Gegensätze. Während früher eine straffende Pflege vor allem die Falten reduzieren sollte und Glow-Produkte sofortige Leuchtkraft versprachen, verschmelzen heute beide Benefits miteinan",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_126_t1_o8lbt1q",
-          "text": "Hi Reddit! Ich bin Vlora, Skin Expert bei Kiehl's (DACH) – Ask Me Anything zu Wirkstoffen, Routine-Aufbau & sensibler/gestresster Haut | Live am 04.03. um 14 Uhr CET Sehr gute Frage. Wenn man die Routine simpel halten möchte, geht es nicht um möglichst viele Wirkstoffe, sondern um die richtigen.Mit 34 würde ich priorisieren:Erstens Feuchtigkeit. Eine gut hydratisierte Haut wirkt praller, ausgeglic",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o8ld3oq",
-          "text": "Hi Reddit! Ich bin Vlora, Skin Expert bei Kiehl's (DACH) – Ask Me Anything zu Wirkstoffen, Routine-Aufbau & sensibler/gestresster Haut | Live am 04.03. um 14 Uhr CET Spannendes Thema.Ein Microneedling-Pen ist eine apparative Behandlung, bei der durch feine Nadeln kontrollierte Mikroverletzungen in Form von Mikrokanälen in der Haut entstehen. Diese regen die natürlichen Regenerationsprozesse an. Ei",
-          "segment": "procedure-open",
-          "mood": "seeking"
-        }
-      ],
-      "concern:pores-texture": [
-        {
-          "id": "0_219424_126_t3_1qc66ee",
-          "text": "Dr. pen Ultima M7S Microneedling Pen 2025 NEUSTE MODELL Drahtlose Dr pen Microneedling Anti-Falten mit 27 Ersatzkartuschen - 9 Typen Cartridges(M7S-Sc... -46 % 75,98 € 2025 Neuester Beauty-Pen-Modell von Dr. pen: Dr. pen Ultima M7S ist das neueste Modell von Dr. pen im Jahr 2025. Es nutzt die neueste Mikroneedling-Technologie und löst effektiv eine breite Palette von Hautproblemen wie Akne Narben,",
-          "segment": "unknown",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o3eon98",
-          "text": "Was sind gute Produkte? Ich habe ebenfalls trockene und empfindliche Haut und kann dir sagen was ich persönlich seit Jahren gerne benutze:Abendroutine- nach dem Zähneputzen abschminken mit 2 Wattepads und garnier Mizellenwasser (hellrosa Kappe), nicht abtrocknen - für anti-aging (zellerneuerung, Minimierung von Unreinheiten und Fältchen) das retinoid 2% von the ordinary - als feuchtigkeitscreme la",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o3jch0r",
-          "text": "Kann man mich retten? Cordes BPO hilft gegen große Poren, ist aber ziemlich stark also mit der geringsten Konzentration anfangen und tagsüber unbedingt Sonnenschutz nutzen und für die Nacht eine feuchtigkeitscreme, ich nutze seit Jahren Happier Barrier von Geek&amp;Gorgeus. Ich mache außerdem alle 4 Wochen microneedling. Meine Poren sind so gut wie unsichtbar.",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o4bwtua",
-          "text": "Kann man mich retten? Du klingst als ob du dich auskennst. Habe äh lich große Poren und trockene Haut. Glycerin und Hyaluron brennen bei mir auf die Haut, gibt es eine Alternative?",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.rprJ-zLQJSw",
-          "text": "Große Poren nerven? Ich weiß, es ist ein häufiges Hautproblem – aber mit der richtigen Routine Große Poren nerven? Ich weiß, es ist ein häufiges Hautproblem – aber mit der richtigen Routine kannst du das Erscheinungsbild deutlich verbessern. 🧖‍♀️✨👉 Meine Top-Tipps:1️⃣ Reinigen – Mit Salicylsäure tief in die Poren.2️⃣ Peelen – AHA oder BHA für eine glattere Haut.3️⃣ Feuchtigkeit – Leichte Pflege mi",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_23_22107946679821408",
-          "text": "Tolles Produkt [Diese Bewertung wurde im Rahmen einer Werbeaktion gesammelt.] Der Anti-Aging-Concealer lässt Schatten und kleine Fältchen rund um die Augenpartie verschwinden.Auch Pickel oder und andere Unebenheiten lassen sich einfach abdecken. Mit dem integrierten Applikator lässt sich der Concealer leicht auftragen. Man erhält eine strahlende Augenpartie.",
-          "segment": "unknown",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_9_yt.PHGSmfEV0L8",
-          "text": "Welche Behandlung bei Akne, Pigmentflecken oder Poren Hautquiz mit Agnes und Karo In diesem Reel haben Agnes und Karo ein kleines Haut Quiz gemacht. Welche Behandlung passt zu welchem Hautproblem?Aknenarben behandeln wir häufig mit einem TCA Peeling.Aktive Akne sprechen wir gezielt mit Lichttherapie an.Vergrößerte Poren und grobe Hautstruktur lassen sich gut mit RF Microneedling verbessern.Pigment",
-          "segment": "procedure-open",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o94ybuc",
-          "text": "Kann man dagegen etwas tun? Ja, es gibt einige Möglichkeiten, das Hautbild zu verbessern. Behandlungen wie Microneedling, Laser oder chemische Peelings, die man z. B. über Injectablesbooking buchen kann, helfen oft, Narben und große Poren zu reduzieren. Auch eine gute Hautpflege mit Retinol oder AHA/BHA-Säuren kann die Hautstruktur langfristig verbessern.",
-          "segment": "unknown",
-          "mood": "seeking"
-        }
-      ],
-      "need:firmness-lifting": [
-        {
-          "id": "0_219424_15_50544787581626761",
-          "text": "Warum Fachleute in diesem Wirkstoff aus Schweden den Beginn einer neuen (Beauty)Ära sehen Alt zu werden, das wissen wir alle, ist ein Privileg und sollte auch als solches geschätzt werden. Es ist darum vermutlich nicht ganz zufällig, dass in Interviews plötzlich ein neues Lieblingswort auftaucht, sobald bei der befragten Person die Vier vorne auf der Geburtstagstorte Platz genommen hat: Würde. Hol",
-          "segment": "procedure-curious",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t1_o18jire",
-          "text": "Wie steht ihr zu überschüssiger Haut oder Hautstraffung nach hohem Gewichtsverlust? Behalte das, was Dir im Alltag nicht im Weg ist, als Schild gegen oberflächliche Typen. Im erweiterten Familienkreis habe ich ein Beispiel, wie blöd das wird, wenn die gut gestraffte Haut sich wieder ausdehnen muss, weil das Gewicht teilweise zurück kommt. Das willst Du nicht haben.",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_9_yt.HdLZ_9X0fYw",
-          "text": "Danach wirst du definitiv besser aussehen ✨ Wer jung aussehen will, muss tiefer gehen | Profhilo H+LStraffere Haut. Mehr Spannkraft. Ein frischer, jugendlicher Look – ohne Volumen, ohne Maskeneffekt.In diesem Video erfährst du, warum Profhilo H+L zu den modernsten und wirkungsvollsten Anti-Aging-Behandlungen unserer Zeit zählt.Profhilo gilt seit seiner bahnbrechenden Einführung im Jahr 2019 als ec",
-          "segment": "procedure-open",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t3_1qzt1ol",
-          "text": "Fadenlifting bei Hängebäckchen – Kosten, Vorteile und wichtige Informationen Das [Fadenlifting Hängebäckchen Kosten](https://kmadri.com/fadenlifting-hangebackchen-kosten/) ist ein häufig gesuchtes Thema bei Menschen, die eine effektive und schonende Methode zur Gesichtsstraffung suchen. Besonders in der [Ästhetische Klinik von Dr. Kerstin Medri in Deutschland](https://kmadri.com/) gewinnt diese mi",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_15_59444919077242352",
-          "text": "Kollagen-Pulver-Test: Straffere Haut dank Nahrungsergänzung? Kollagen-Pulver soll Hautalterung entgegenwirken. Im Kollagen-Pulver-Test verraten wir, ob und welche Kollagenpräparate sich lohnen. Mit fortschreitendem Alter produziert der Körper weniger Kollagen. Da das Protein unter anderem für die Gesundheit unserer Knochen und Gelenke und auch für die Spannkraft unserer Haut mitverantwortlich ist,",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_33000973653265762",
-          "text": "Also ich finde das hier schon vieles übereinstimmt, aber operiert ist bestimmt genug an ihm mittlerweile. Liedstraffung, Botox sowieso und vieles mehr. An den Ohren kann man Personen auch gut vergleichen, da dort meist nichts gemacht wird. Ne andere möglichkeit wäre Kortison, sieht dann aus wie gestrafft ist aber nur aufgequollen.",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t1_o9yngmw",
-          "text": "ich_iel Da wurde auch noch gestrafft, also oberhalb der Wange Haut entfernt (um die Narben zu verstecken meist am Ohr neben dem Haaransatz). Der Wangenknochen sieht auch noch mit Filler verstärkt aus. Ich raff den ganzen Scheiß langsam nicht mehr, das ist echt nur noch Verunstaltung.",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_126_t1_oj46kqr",
-          "text": "Mein Körper ist schrecklich Mir ging es nach der ersten Schwangerschaft auch sehr schlecht damit, einfach die schlaffe Haut, die vielen Streifen, ich war echt sehr unsicher lange Zeit. 5 Jahre später sieht man die Streifen wirklich nur noch bei nahem hinsehen, und die Haut hat sich auch gestrafft. Ich bin jetzt mit Baby 2 schwanger, und hab daher auch wieder damit zu kämpfen, weil man durch den gr",
-          "segment": "procedure-curious",
-          "mood": "conflicted"
-        }
-      ],
-      "need:plump-hydrated": [
-        {
-          "id": "0_219424_15_8874466032549482",
-          "text": "Star-Visagistin Serena Goldenbaum : Wie du deine Haut perfekt auf Make-up vorbereitest Die richtige Pflege ist das A und O. Nicht nur, um Hautalterung vorzubeugen, sondern auch für Make-up, das sitzt. Doch ist es gar nicht so leicht, die passende Routine für sich zu finden. Star-Visagistin Serena Goldenbaum verrät, welche Pflegeschritte für perfekt sitzendes Make-up essenziell sind.  Serena Golden",
+          "id": "0_225889_26_1378653567599829",
+          "text": "Leider Fakt 📚... und zwar gleich in vielerlei Hinsicht:Epidermis:In der äußeren Hautschicht verlangsamt sich die Zellerneuerung, die Lipidproduktion sinkt. Die Haut trocknet aus, wirkt rau, bildet erste Falten und reagiert empfindlicher auf UV-Strahlung. Heilungsprozesse dauern länger.Dermis:Der Abbau von Kollagen- und Elastinfasern mindert Spannkraft und Elastizität, es entstehen immer mehr Falte",
           "segment": "skincare-first",
           "mood": "conflicted"
         },
         {
-          "id": "0_219424_9_yt.VUdIdireV5c",
-          "text": "Dr. Spiller SENSICURA Regenerationscreme | Marco erklärt | Beautymanufactur einfach erklärt Ich erkläre Dir heute die SENSICURA Regenerationscreme von Dr. Spiller – eine Pflege für empfindliche, trockene und hypersensible Haut, die schnell reagiert und besondere Aufmerksamkeit braucht.Diese Creme wurde speziell dafür entwickelt, die Haut zu beruhigen, intensiv zu pflegen und sie im Alltag zu unter",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_23_29229096094563524",
-          "text": "Anti-Aging-Power [Diese Bewertung wurde im Rahmen einer Werbeaktion gesammelt.] Sag Falten den Kampf anMehr Elastizität, mehr Feuchtigkeit, mehrJugendlichkeit.Mit dem Cellular Epigenetics Serum von NIVEA.",
-          "segment": "skincare-first",
+          "id": "0_225889_190_3736928425299797443",
+          "text": "Skinbooster vs. Hyaluronsäure-Filler – was ist der Unterschied?Viele verwechseln Skinbooster mit klassischen Hyaluronsäure-Fillern – dabei haben beide ganz unterschiedliche Ziele:Skinbooster  – unvernetzte/ geringgradig vernetzte Hyaluronsäure  – Spendet Feuchtigkeit in tieferen Hautschichten  – Haut wirkt praller, glatter &amp; elastischer  – Kein VolumenaufbauIdeal bei: feuchtigkeitsarmer, fahle",
+          "segment": "procedure-curious",
           "mood": "cautioning"
         },
         {
-          "id": "0_219424_9_yt.yBVppnpQE6s",
-          "text": "CNC moments of pearl keep calm & relax Crememaske | Marco erklärt | Beautymanufactur Hallo, ich bin Marco. Auch hier erkläre ich Dir heute die CNC moments of pearl keep calm &amp; relax Crememaske – eine luxuriöse Crememaske für anspruchsvolle Haut, die mehr Feuchtigkeit, Pflege und Entspannung braucht.Diese Maske eignet sich besonders gut für trockene, müde oder regenerationsbedürftige Haut. Sie ",
-          "segment": "procedure-open",
+          "id": "0_225889_190_3737911849204365287",
+          "text": "FRESH IT UP – Für den Sofort-Glow in MinutenDeine Haut braucht neuen Frischekick?Unser Anti-Aging Serum mit Soforteffekt lässt deine Haut schon nach 30 Minuten sichtbar glatter, straffer und praller wirken.Sofortwirkung:Feine Linien wirken gemildert, dein Teint erscheint ebenmässig und frisch.Schlüsselwirkstoffe:Eiswein &amp; Vitamin C schützen vor Kollagenabbau und spenden tiefenwirksame Feuchtig",
+          "segment": "skincare-first",
           "mood": "seeking"
         },
         {
-          "id": "0_219424_23_26924394381050435",
-          "text": "Tolles Produkt Benutze diese Creme für mich als Tages - und Nacht creme.Hab mich von allen Anti Aging Produkten verabschiedet.Meine Haut fühlt sich gut durchfeuchtet an und das Hautbild hat sich insgesamt verbessert.War bisher ziemlich trocken.Die Verpackung könnte verbessert werden, weil sie schwierig auf und zu zuschrauben ist.",
+          "id": "0_225889_190_3738120490486341099",
+          "text": "✨ Wusstest du, dass deine Haut schon ab 25 zu altern beginnt?Das liegt vor allem am Kollagenabbau – dem Gerüst, das deiner Haut Festigkeit, Elastizität und Jugendlichkeit schenkt.🚫 UV-Strahlen, freie Radikale, Stress und ein ungesunder Lifestyle beschleunigen diesen Prozess.Aber die gute Nachricht: 👉 du kannst etwas dagegen tun!Mit Microneedling, täglichem SPF &amp; Antioxidantien und einem gesund",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_15_43147310503676332",
-          "text": "Beauty-News im Februar 2026: Diese Lancierungen setzen jetzt den Standard Quasi im Minuten-Takt verspricht die Beauty-Industrie das nächste grosse Ding, als wäre Innovation ein Dauerzustand. Da es aber zwischen Marketing-Lautstärke und echtem Fortschritt manchmal grosse Unterschiede gibt, findest Du in den sonrisa-Beauty-News des Monats jeweils eine konzentrierte Auswahl jener Lancierungen, die au",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t3_1rg2rmh",
-          "text": "Gute Augencremes Habt ihr Tipp für gute Augencremes um Feuchtigkeit zu spenden? Habe die Yonelle Night Cream aber laut ChatGPT (🥸) ist die zu aggressiv.. ich bin 25 und ich brauche scheinbar etwas mit mehr Feuchtigkeits Fokus um die Barriere aufzubauen bevor ich Anti-Aging nutze.Gerne Empfehlungen für Tagüber und/oder Abends 🫶🏽",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_23_38237858079076890",
-          "text": "[Ich habe dieses Produkt im Austausch für meine ehrliche Bewertung erhalten] Die intensive Tagespflege von Skjur enthält vier wichtige Inhaltsstoffe, die gegen Hautalterung ankämpfen. Wie Hyaluronsäure, die der Haut viel Feuchtigkeit gibt und sie somit elastischer macht. Das Ectoin schützt die Haut vor Hitze, Kälte und Feinstaub. Und natürlich auch die Lipide und Glycoine, die eine geschädigte Hau",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "need:wrinkle-reduction": [
-        {
-          "id": "0_219424_126_t3_1qhv2qd",
-          "text": "Eigenfett für das Gesicht: Volumenaufbau & Hauterneuerung Was bewirkt eine Eigenfett-Behandlung im Gesicht? Mehr Volumen, weniger Falten und natürliche Ergebnisse ohne künstliche Filler – erklärt im neuen Blogartikel. Mehr dazu 👉 [https://www.schoenheit2go.at/eigenfett-gesicht/](https://www.schoenheit2go.at/eigenfett-gesicht/)",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.rprJ-zLQJSw",
-          "text": "Große Poren nerven? Ich weiß, es ist ein häufiges Hautproblem – aber mit der richtigen Routine Große Poren nerven? Ich weiß, es ist ein häufiges Hautproblem – aber mit der richtigen Routine kannst du das Erscheinungsbild deutlich verbessern. 🧖‍♀️✨👉 Meine Top-Tipps:1️⃣ Reinigen – Mit Salicylsäure tief in die Poren.2️⃣ Peelen – AHA oder BHA für eine glattere Haut.3️⃣ Feuchtigkeit – Leichte Pflege mi",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.TnOsX6xXki8",
-          "text": "\"Es ist mir SO PEINLICH...\" - Achselbotox gegen starkes Schwitzen | Dr. Rick & Dr. Nick | ProSieben Mit \"Aesthetify\" wurden unsere beiden Schönheits Docs Dr. Rick und Dr. Nick berühmt. Mittlerweile boomt ihr Unternehmen und ist nicht nur in mehreren Städten in Deutschland zu finden, sondern auch schon international vertreten. Heute ist die Influencerin Krizzl zu Gast, die mit einer Botoxinjektion ",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.WMbO17T-Tdw",
-          "text": "Djamila Rowe: \"Ich will diesen SCHNABEL nicht mehr haben\" | Dr. Rick & Dr. Nick | ProSieben Djamila Rowe, Dschungelkönigin aus dem Jahr 2023, ist heute zu Gast bei unseren Beauty Docs, denn sie leidet sehr unter Hasskommentaren, die sie für ihre Lippen bekommt. Unter Tränen erzählt sie Dr. Rick und Dr. Nick, wie sehr sie ihr \"Schnabel\" belastet und dass sie ihre Filler deshalb nun auflösen möchte.",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.FHzvk9k4fnc",
-          "text": "Date Night: \"Noch nie hat mich jemand so umgehauen wie du!\" | Dr. Rick & Dr. Nick | ProSieben Neben ihrem Job haben unsere Beauty Docs natürlich auch noch ein Privatleben, das, wie sollte es anders sein, natürlich auch vollgepackt ist. Rick macht zum Beispiel gerade seinen Flugschein, für den er vor und nach der Arbeit fleissig lernt. Nick und seine Partnerin Katharina genießen eine private Date N",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.hO8x8hC0luE",
-          "text": "Weg mit dem Doppelkinn - Matthias Mangiapane will schlank werden | Dr. Rick & Dr. Nick | ProSieben Rosenmontag steht vor der Tür und natürlich sind unsere zwei Beauty Docs heute in Köln, um Karneval zu feiern. Deswegen suchen sich die beiden nun Karnevalskostüme aus, um aus der breiten Masse herauszustechen. Die beiden sind jetzt noch auf der Suche nach einem guten Masskenbildner, der die beiden f",
+          "id": "0_225889_190_3738229721965267257",
+          "text": "✨ Keine Filter. Kein Fake. Nur Medizin &amp; Präzision.Vorher: eingefallene Wangen, müde Gesichtszüge, leichte Hauterschlaffung.Nachher: definierte Konturen, gestraffte Kinnlinie, lebendiger Glow.Das Geheimnis?💉 Der hybride Filler HArmoniCa™ – eine Kombination aus Hyaluronsäure und Calciumhydroxylapatit – stimuliert Kollagen und gibt dem Gesicht Struktur zurück.🪡 Die APTOS Light Lift Hammock-Techn",
           "segment": "procedure-open",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_9_yt.A-CV1_EqHsI",
-          "text": "\"Ich LEIDE SO SEHR darunter\" - mehr Symmetrie trotz Gaumenspalte | Dr. Rick & Dr. Nick | ProSieben Patient Marcel ist heute zu Gast in der Praxis von Dr. Rick und Dr. Nick und möchte sich wegen einem Problem behandeln lassen, unter dem er stark leidet. Er hat seit seiner Geburt eine Gaumenspalte und möchte nun, dass sein Gesicht etwas symmetrischer wirkt. Die Geschichte von Patient Marcel berührt ",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.5n0f4kUdxr0",
-          "text": "\"Ich fühl mich ganz SCHRECKLICH!\" - Lippenaufbau bei Djamila Rowe | Dr. Rick & Dr. Nick | ProSieben In der letzten Folge entfernte Dr. Rick der Ex Dschungelkönigin Djamila Rowe ihr komplettes Hyaluron aus den Lippen, da das Endergebnis sehr unnatürlich ausgesehen hat. Heute ist sie wieder da für einen Neuaufbau, damit sie nicht gänzlich auf ihre vollen Lippen verzichten muss. *********************",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        }
-      ],
-      "concern:dullness": [
-        {
-          "id": "0_219424_126_t3_1qjovdz",
-          "text": "Exosomen in der Hautpflege – Durchbruch oder Hype? In der ästhetischen Medizin sind Exosomen längst ein Thema: Sie gelten als *zelluläre Botenstoffe*, die in der Hautregeneration eine zentrale Rolle spielen. Bisher waren sie vor allem im professionellen Kontext (z. B. nach Microneedling oder Laserbehandlungen) im Einsatz – doch jetzt tauchen sie zunehmend auch in Pflegeprodukten für zu Hause auf.*",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.CzYtYSw_ZUY",
-          "text": "✨ Deine Haut ist ein Spiegel deiner Gesundheit – und ich helfe dir, sie wieder strahlen zu lassen! ✨ Deine Haut ist ein Spiegel deiner Gesundheit – und ich helfe dir, sie wieder strahlen zu lassen! ✨Du bist unzufrieden mit deiner Haut? Egal ob:✅ Hautalterung – Du willst frischer und jünger aussehen✅ Pigmentstörungen – Für einen ebenmäßigen Teint✅ Fahle, müde Haut – Mehr Glow und Ausstrahlung✅ Haut",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.S-1q-aYcr1I",
-          "text": "Exuviance - Wrinkle Smooth Topical Peptide Strahlende Haut und sichtbare Gesundheit? Ja, bitte! ✨Entdecken Sie das Exuviance - Wrinkle Smooth Topical Peptide für nur CHF 89.24! Dieses luxuriöse Serum, empfohlen von der zertifizierten Fachkosmetikerin Tanja Botti, ist Ihr ultimativer Retter gegen Trockenheit und fahle Haut. 🌿 Mit Squalan als Hauptbestandteil repariert es die Hautbarriere und minimi",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_9_yt.3Cci60nGclQ",
-          "text": "Sesderma - RETIAGE - Anti-Aging Serum (30ml) Schönheit ist nicht nur Haut tief, sie ist ein Gefühl. ✨  Entdecken Sie das luxuriöse Sesderma RETIAGE Anti-Aging Serum (30ml) für CHF 49.95 – Ihre Geheimwaffe gegen Trockenheit und fahle Haut. 🌺 Angereichert mit Squalan, einem ultimativen Feuchtigkeitsspender und Hautbarriere-Stärker, wirkt es wahre Wunder: sichtbare Hautgesundheit ohne verstopfte Pore",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_9_yt.f8CXGh4g2jc",
-          "text": "Sesderma - FACTOR G RENEW - Anti-Aging Creme für die Augenpartie (15ml) Wahre Schönheit bleibt nie unentdeckt. ✨Entdecken Sie die transformative Kraft von Sesderma - FACTOR G RENEW, der luxuriösen Anti-Aging Creme für die empfindliche Augenpartie. 💖 Mit Squalan, einem ultimativen Feuchtigkeitsspender, repariert diese Creme Ihre Hautbarriere und reduziert den Wasserverlust, sodass trockene und fahl",
-          "segment": "unknown",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_9_yt.q3dr901Voeo",
-          "text": "IMAGE Skincare - AGELESS - Total Anti-Aging Serum ✨ Glückliche Haut beginnt hier! ✨ Entdecken Sie das AGELESS - Total Anti-Aging Serum von IMAGE Skincare für nur CHF 92.15. Mit Squalan als starigem Feuchtigkeitsspender repariert es Ihre Hautbarriere und reduziert den Wasserverlust für eine sichtbar strahlendere Haut. 🤩 Keine verstopften Poren, nur pure Eleganz! Lassen Sie die Expertise der zertifi",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_190_3930063165719495221",
-          "text": "🔥 Seit Tagen über 35 °C – und deine Haut kämpft jeden Tag dagegen.Viele denken:Mehr Schwitzen = mehr Feuchtigkeit.❌ Leider stimmt das nicht.Hitze, UV-Strahlung und ständiges Schwitzen können deine Hautbarriere schwächen. Die Folgen zeigen sich oft schneller, als dir bewusst ist:💧 Spannungsgefühl✨ fahler Teint🔥 Rötungen &amp; Empfindlichkeit🦠 Unreinheiten💦 Trockenheitsfältchen durch Feuchtigkeitsve",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_190_3930144475581885662",
-          "text": "Mave 2828 Anti-Aging Wirkstoffe für glatte &amp; straffe Haut- Synergetische Kombination aus Peptiden, Probiotika, pflanzlichen Extrakten und Feuchtigkeitsspendern – ideal als Anti-Aging Creme, Faltencreme und straffende Gesichtspflege für reife und müde Haut.Innovativer Massage-Roller für bessere Absorption- Der integrierte Massage-Applikator fördert Mikrozirkulation, verbessert die Aufnahme der ",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "need:youthful-fresh": [
-        {
-          "id": "0_219424_126_t1_o128g5k",
-          "text": "Gesunde Haare, Haut und ein gutes Körpergefühl ohne Massenkonsum Wichtig ist vor allem, seine Haut kennen zu lernen. Ich habe in meinen 50 Jahren mit meiner Problemhaut (extrem trocken dank gestörter Hautbarriere durch Neurodermitis, aber seit Jahren keine Entzündungen/aktiven Ekzeme) etliches probiert, weiß, was sie mag und braucht. Trotzdem habe ich immer mal wieder Trends ausgetestet, aber mich",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_9_10515120326442786",
-          "text": "Sie hat ihn gekapert und ist genau da wo sie hin wollte. Was soll ihr passieren? Irgendwann ist sie eine reiche Witwe. Botox und Filler werden sie zwar künstlich, aber immer jünger aussehen lassen. Aber egal, in den USA werden in dieser Sippe Frauen ohne Botox, Filler oder Wangenaufbau eh nicht ernst genommen. Wenn Sie dann aussieht wie Mrs. Marple, weil der ganze Filler sich ungünstig verteilt un",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_9_yt.FxRjbt2Wc_s",
-          "text": "GENIUS | IMC NAD + Elastin - Live Shopping Erleben Sie mit NAD+ Elastin die nächste Generation der Anti-Aging-Pflege – eine bahnbrechende Innovation, die Wissenschaft und Luxus auf höchstem Niveau vereint. Entwickelt mit modernster Enzymforschung und biochemischer Tiefenwirkung. Denn NAD+ Elastin ist mehr als klassisches Anti-Aging – es ist Age-Reversal-Skincare. Die innovative Formulierung dreht ",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_26843979148464001",
-          "text": "Medizinisch-wissenschaftlicher StandEs gibt keinen einzigen belastbaren Beweis, dass Adrenochrom ,verjüngt, das Leben verlängert, Zellen regeneriertIn höheren Dosen wirkt es eher:instabilpotenziell toxischpsychisch belastend.  Kein Anti Aging",
-          "segment": "unknown",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_9_yt.CzYtYSw_ZUY",
-          "text": "✨ Deine Haut ist ein Spiegel deiner Gesundheit – und ich helfe dir, sie wieder strahlen zu lassen! ✨ Deine Haut ist ein Spiegel deiner Gesundheit – und ich helfe dir, sie wieder strahlen zu lassen! ✨Du bist unzufrieden mit deiner Haut? Egal ob:✅ Hautalterung – Du willst frischer und jünger aussehen✅ Pigmentstörungen – Für einen ebenmäßigen Teint✅ Fahle, müde Haut – Mehr Glow und Ausstrahlung✅ Haut",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.85821DtxQ-E",
-          "text": "Sanft, effektiv und ohne Nadeln – BioRePeel für deine Haut! ✨🍃\" Du willst strahlende, frische Sanft, effektiv und ohne Nadeln – BioRePeel für deine Haut! ✨🍃\"Du willst strahlende, frische Haut, aber hast keine Lust auf Nadeln? Dann ist BioRePeel genau das Richtige für dich!🌿 So wirkt BioRePeel:Entfernt sanft alte Hautschüppchen und regt die Zellerneuerung an.Boostet die Kollagenbildung für eine str",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_9_yt.C6p0H7_Abqc",
-          "text": "Sculptra vs. Filler – Welche Methode funktioniert wirklich? Du fragst dich, ob man jünger aussehen kann, ohne Volumen aufzuspritzen? Wenn normale Pflege nicht mehr ausreicht und deine Haut dünner wirkt, kann eine gezielte falten behandlung die Lösung sein. Erfahre mehr über \"sculptra\" und wie es zu einem \"lifting ohne op\" und einer sichtbaren \"hautstraffung\" beitragen kann für ein frisches, \"anti ",
-          "segment": "procedure-open",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_9_yt.4-pXDVh1sNw",
-          "text": "Über 50? Dieses Gemüse strafft hängende Brüste und sorgt für festere Brüste! | Gesundheitsarzt @Gesundheitsarzt 💪 Über 50? Entdecke, wie ein einfaches Gemüse deine Brust straffen kann! Gesundheitstipps speziell für Senioren – natürlich und effektiv! 🥦✨#Seniorengesundheit 🧓👵 #Bruststraffung 🍆 #HängendeBrüsteFixen 👙 #NatürlichFit 🌿 #GesundAltern 🥗 #Fitness50Plus 💪 #Gesundheitstipps 🩺 #AntiAging 🌸 #N",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        }
-      ],
-      "need:refined-pores": [
-        {
-          "id": "0_219424_190_3930012432273890612",
-          "text": "Weniger ist manchmal mehr! ✨Micro- oder Baby-Botox® wird genutzt um einen strahlenden Teint und verfeinerte Poren mittels stark verdünntem Botox zu erzielen, ohne dabei die natürliche Mimik zu beeinflussen. Ob im Gesicht gegen ölige Haut und feine Linien oder am Hals für ein sanftes Lifting (Nefertiti Lift), die Einsatzmöglichkeiten sind sehr vielseitig.Hast du Fragen zu dieser Behandlung? Schreib",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_190_3930332068378575004",
-          "text": "☀️ Microneedling im Sommer? Ja!Viele glauben, dass Microneedling nur im Herbst oder Winter möglich ist. Doch das ist ein Mythos. 👇Wird die Behandlung von einem Arzt mit dem originalen Dermapen 4 durchgeführt und die Pflegeempfehlungen werden eingehalten, ist Microneedling auch im Sommer sicher.Wichtig nach der Behandlung:✔️ Täglich SPF 50 verwenden.✔️ Die Haut gut mit Feuchtigkeit versorgen.✔️ In ",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_26_1721602116356058",
-          "text": "Warum eine Behandlung manchmal nicht genug istDie besten Ergebnisse entstehen oft durch die richtige Kombination.Bei Isarderma setzen wir häufig auf die Kombination aus Mikrodermabrasion und Microneedling.Warum?🔹 Mikrodermabrasion entfernt abgestorbene Hautzellen und bereitet die Haut optimal vor.🔹 Microneedling stimuliert die Kollagenbildung in tieferen Hautschichten.🔹 Pflegewirkstoffe können ans",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_190_3931727571589359515",
-          "text": "✨ So einfach kann sich dein Hautbild verändern.Glattere Haut, verfeinerte Poren, weniger Unreinheiten und ein ebenmäßigerer Teint – ganz bequem von zu Hause aus. 💛Der Maliq Nua Microinjector regt die natürliche Hauterneuerung an und unterstützt die Kollagenbildung. In Kombination mit den passenden Wirkstoffen kann sich dein Hautbild bereits nach wenigen Anwendungen sichtbar verbessern. Viele Anwen",
+          "id": "0_225889_190_3738300717011064803",
+          "text": "🌸 ULTRACOL – der beste Kollagensimulator aller Zeiten! 🌸💎 Sag Hallo zu straffer, glatter und jugendlicher Haut – ganz natürlich!Mit ULTRACOL aktivierst du die eigene Kollagenproduktion deiner Haut – für langanhaltende Ergebnisse, die du sehen und fühlen kannst. ✨🌿 Klinisch bewährt, CE- &amp; KFDA-zertifiziert und entwickelt für höchste Sicherheit in der ästhetischen Medizin.💠 Ideal bei:• Falten• W",
           "segment": "skincare-first",
           "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_140_7659341090365000993",
-          "text": "24-Stunden-Support: Bietet intensive Rund-um-die-Uhr-Pflege für alternde Haut Anti-Aging-Eigenschaften: Hilft, das Auftreten von feinen Linien zu reduzieren und verbessert die Festigkeit der Haut Glatte Textur: Cremige Formel, die die Haut nährt und weich macht, ohne sie zu beschweren Ideal für: Perfekt für Benutzer, die unter abnehmender Hautelastizität, Trockenheit oder feinen Linien leiden Pept",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_190_3935428532240402808",
-          "text": "🌟 Express-Facelift &amp; Immun-Booster für deine Haut! 🌟Du willst maximale Straffung, verfeinerte Poren und einen sofortigen Frischekick in nur 15 Minuten?Die Daily Expert Firming Mask ist dein absoluter Gamechanger!Warum diese cleanen Inhaltsstoffe so genial wirken: Der Kombucha-Komplex: Dieses fermentierte Tee-Elixier ist ein echtes Schutzschild! Er stärkt das Haut-Immunsystem, bekämpft Bakterie",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_190_3935826316433597169",
-          "text": "Stratum Corneum im Sommerstress? Physiologische Sommerpflege: 3 Schritte zur Reduktion des transepidermalen Wasserverlusts (TEWL) 💧Mehr Schweiß, Sonnenschutz-Reste und Hitze – im Sommer verlangen wir unserer Haut einiges ab. Wer jetzt zu aggressiv reinigt oder die falsche Pflege wählt, riskiert eine geschwächte Hautbarriere, Rötungen und Austrocknung.Hier ist dein wissenschaftlich fundierter 3-Sch",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_140_7659832158168698134",
-          "text": "Wenn es um sichtbare, langanhaltende Ergebnisse beim Skin-Tightening geht, führen diese drei Power-Treatments aktuell die Spitze an. Aber wie genau funktionieren sie und warum sind sie so effektiv? 1️⃣ Morpheus8: Das Deep-Skin-Remodeling Morpheus8 kombiniert zwei der effektivsten Anti-Aging-Methoden: Microneedling und Radiofrequenz-Energie. Das Ergebnis: Eine tiefenwirksame Straffung, konturierte ",
-          "segment": "procedure-curious",
-          "mood": "satisfied"
         }
       ]
     },
     "by_segment": {
       "concerns": {
         "skincare-first": {
-          "structural-wrinkling": 4415,
-          "dark-circles": 750,
-          "hyperpigmentation": 1280,
-          "sagging-contour": 290,
-          "barrier-dryness": 1609,
-          "collagen-volume": 104,
-          "dullness": 324,
-          "pores-texture": 168
+          "dullness": 30852,
+          "hyperpigmentation": 14001,
+          "sagging-contour": 3062,
+          "structural-wrinkling": 19179,
+          "barrier-dryness": 20525,
+          "dark-circles": 2992,
+          "neck-decollete-hands": 1430,
+          "pores-texture": 1933,
+          "collagen-volume": 600
         },
         "unknown": {
-          "sagging-contour": 195,
-          "structural-wrinkling": 1791,
-          "pores-texture": 52,
-          "collagen-volume": 63,
-          "barrier-dryness": 304,
-          "dark-circles": 1077,
-          "hyperpigmentation": 290,
-          "dullness": 111
-        },
-        "procedure-open": {
-          "barrier-dryness": 170,
-          "structural-wrinkling": 436,
-          "collagen-volume": 15,
-          "sagging-contour": 47,
-          "dark-circles": 110,
-          "pores-texture": 30,
-          "hyperpigmentation": 88,
-          "dullness": 30
+          "barrier-dryness": 9213,
+          "structural-wrinkling": 15041,
+          "hyperpigmentation": 6223,
+          "sagging-contour": 3546,
+          "pores-texture": 1248,
+          "dullness": 16456,
+          "dark-circles": 5651,
+          "neck-decollete-hands": 1065,
+          "collagen-volume": 586
         },
         "procedure-curious": {
-          "barrier-dryness": 383,
-          "dark-circles": 1252,
-          "sagging-contour": 197,
-          "structural-wrinkling": 1350,
-          "collagen-volume": 85,
-          "hyperpigmentation": 327,
-          "pores-texture": 83,
-          "dullness": 83
+          "barrier-dryness": 4817,
+          "structural-wrinkling": 11135,
+          "dullness": 12171,
+          "pores-texture": 1217,
+          "hyperpigmentation": 5580,
+          "sagging-contour": 3013,
+          "neck-decollete-hands": 975,
+          "dark-circles": 4297,
+          "collagen-volume": 541
+        },
+        "procedure-open": {
+          "sagging-contour": 1365,
+          "structural-wrinkling": 4056,
+          "neck-decollete-hands": 377,
+          "hyperpigmentation": 2499,
+          "dullness": 4355,
+          "barrier-dryness": 2137,
+          "dark-circles": 720,
+          "pores-texture": 624,
+          "collagen-volume": 161
         }
       },
-      "needs": {
-        "skincare-first": {
-          "glow-radiance": 2810,
-          "prevention": 160,
-          "plump-hydrated": 409,
-          "youthful-fresh": 144,
-          "firmness-lifting": 261,
-          "even-complexion": 1422,
-          "wrinkle-reduction": 500,
-          "refined-pores": 61
-        },
-        "procedure-curious": {
-          "prevention": 55,
-          "firmness-lifting": 173,
-          "glow-radiance": 796,
-          "even-complexion": 368,
-          "wrinkle-reduction": 105,
-          "youthful-fresh": 56,
-          "refined-pores": 16,
-          "plump-hydrated": 63
-        },
-        "procedure-open": {
-          "glow-radiance": 304,
-          "firmness-lifting": 70,
-          "plump-hydrated": 32,
-          "wrinkle-reduction": 53,
-          "youthful-fresh": 29,
-          "prevention": 27,
-          "even-complexion": 148,
-          "refined-pores": 12
-        },
-        "unknown": {
-          "prevention": 105,
-          "even-complexion": 283,
-          "glow-radiance": 935,
-          "youthful-fresh": 74,
-          "wrinkle-reduction": 116,
-          "plump-hydrated": 103,
-          "firmness-lifting": 133,
-          "refined-pores": 17
-        }
-      }
+      "needs": {}
     }
   },
   "retinolDeepDive": {
     "eyebrow": "7. Retinol Deep-Dive",
     "title": "Retinol: The Fears and the Hopes",
     "note": "Mehrfachnennungen möglich, ein Kommentar kann beidseitig zählen",
-    "n_retinol": 3523,
-    "n_classified": 1461,
-    "unclassified_share_pct": 58.5,
-    "fear_mentions": 691,
-    "hope_mentions": 1277,
-    "fear_share_pct": 35.1,
-    "hope_share_pct": 64.9,
-    "fear_only": 383,
-    "hope_only": 870,
-    "both": 208,
-    "neither": 2062,
-    "persistence_n": 41,
-    "dropout_n": 25,
+    "n_retinol": 9621,
+    "n_classified": 3438,
+    "unclassified_share_pct": 64.3,
+    "fear_mentions": 1876,
+    "hope_mentions": 2788,
+    "fear_share_pct": 40.2,
+    "hope_share_pct": 59.8,
+    "fear_only": 1066,
+    "hope_only": 1876,
+    "both": 496,
+    "neither": 6183,
+    "persistence_n": 117,
+    "dropout_n": 57,
     "dropout_reasons": [
       {
-        "reason": "Irritation / Rötung",
-        "count": 11
+        "reason": "Sonstige / Unverträglichkeit",
+        "count": 30
       },
       {
-        "reason": "Sonstige / Unverträglichkeit",
-        "count": 10
+        "reason": "Irritation / Rötung",
+        "count": 22
       },
       {
         "reason": "Austrocknung",
-        "count": 4
+        "count": 5
       }
     ],
     "fears": [
       {
         "id": "irritation",
         "label": "Irritation & Redness",
-        "count": 317,
+        "count": 888,
         "side": "fear"
       },
       {
         "id": "over-drying",
         "label": "Over-Drying",
-        "count": 191,
-        "side": "fear"
-      },
-      {
-        "id": "photosensitivity",
-        "label": "Photosensitivity / Sun Sensitivity",
-        "count": 89,
+        "count": 436,
         "side": "fear"
       },
       {
         "id": "health",
         "label": "Health Concerns",
-        "count": 41,
+        "count": 187,
+        "side": "fear"
+      },
+      {
+        "id": "photosensitivity",
+        "label": "Photosensitivity / Sun Sensitivity",
+        "count": 185,
         "side": "fear"
       },
       {
         "id": "overuse",
         "label": "Fear of Overuse & Wrong Application",
-        "count": 22,
+        "count": 96,
         "side": "fear"
       },
       {
         "id": "slow-results",
         "label": "Slow, Invisible Results",
-        "count": 15,
+        "count": 42,
         "side": "fear"
       },
       {
         "id": "purging",
         "label": "Purging & Initial Breakouts",
-        "count": 13,
+        "count": 30,
         "side": "fear"
       },
       {
         "id": "interplay",
         "label": "Ingredient Interplay",
-        "count": 3,
+        "count": 12,
         "side": "fear"
       }
     ],
@@ -5047,853 +4302,2132 @@ window.DashboardData = {
       {
         "id": "collagen",
         "label": "Collagen Stimulation",
-        "count": 802,
+        "count": 1752,
         "side": "hope"
       },
       {
         "id": "wrinkle-reduction",
         "label": "Wrinkle & Fine Line Reduction",
-        "count": 203,
+        "count": 361,
         "side": "hope"
       },
       {
         "id": "gold-standard",
         "label": "Gold Standard Credibility",
-        "count": 110,
+        "count": 293,
         "side": "hope"
       },
       {
         "id": "confidence",
         "label": "Confidence from Visible Change",
-        "count": 58,
-        "side": "hope"
-      },
-      {
-        "id": "acne",
-        "label": "Acne & Blemish Control",
-        "count": 38,
+        "count": 128,
         "side": "hope"
       },
       {
         "id": "texture",
         "label": "Texture & Pore Refinement",
-        "count": 35,
+        "count": 100,
+        "side": "hope"
+      },
+      {
+        "id": "acne",
+        "label": "Acne & Blemish Control",
+        "count": 99,
         "side": "hope"
       },
       {
         "id": "pigmentation",
         "label": "Reduction of Pigmentation",
-        "count": 31,
+        "count": 54,
         "side": "hope"
       },
       {
         "id": "payoff",
         "label": "Payoff After Persistence",
-        "count": 0,
+        "count": 1,
         "side": "hope"
       }
     ],
     "quotes": {
-      "fear:photosensitivity": [
-        {
-          "id": "0_219424_126_t1_nyzonkh",
-          "text": "30 geworden. Was an Skin Care bringt wirklich was um langsamer alt auszusehen? Ja, Sonnenschutz ist das Wichtigste gegen Hautalterung. Vor allem halt wenn Sonne scheint. Es gibt sicher auch Cremes mit Retinol und Sonnenschutz gleichzeitig.",
-          "segment": "unknown",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o128g5k",
-          "text": "Gesunde Haare, Haut und ein gutes Körpergefühl ohne Massenkonsum Wichtig ist vor allem, seine Haut kennen zu lernen. Ich habe in meinen 50 Jahren mit meiner Problemhaut (extrem trocken dank gestörter Hautbarriere durch Neurodermitis, aber seit Jahren keine Entzündungen/aktiven Ekzeme) etliches probiert, weiß, was sie mag und braucht. Trotzdem habe ich immer mal wieder Trends ausgetestet, aber mich",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t1_o3b8nik",
-          "text": "Was hilft wirklich gegen  Falten? Hi, ich schmeiß hier einfach mal ein paar Tipps rein^^ Hoffe es hilft ein bisschen^^'Das wichtigste: Sonnencreme täglich. Mindestens Spf30, zwei Fingerlängen auftragen. UV Strahlungen sind 80% der sichtbaren, frühen Hautalterung. Es gibt spezielle Sonnencremes fürs Gesicht, finde die mattierende oder die sensitive Sonnencreme von Nivea ganz gut. Desweiteren ist Re",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o3chkg2",
-          "text": "Skincare Routine verbessern Deine aktuelle Skincare-Routine ist insgesamt solide, günstig und sehr gut auf sensible, reaktive, leicht unreine oder feuchtigkeitsarme Haut abgestimmt. Der mit Abstand größte Schwachpunkt ist, dass dir ein täglicher Sonnenschutz fehlt. Retinal und das starke Peeling machen die Haut extrem lichtempfindlich und ohne SPF 30–50 jeden Morgen (auch im Winter und drinnen) ri",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o5owmr6",
-          "text": "Kann man dagegen etwas tun? Ich kann retinol und microneedling empfehlen.Retinol wird wahrscheinlich abermehr als genug sein um dein jetziges Hautbild nach deinen Wünschen zu verbessern.Bei Retinol hast du ne Riesenauswahl auf dem Markt. Ich kann zb das von the ordinary empfehlen, benutze ich selbst.Du solltest da mit der niedrigsten Dosierung anfangen so 3 mal wöchentlich um erstmal zu sehen wie ",
-          "segment": "procedure-curious",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_126_t1_od3kucx",
-          "text": "Anfangende Zornesfalten mit 23 Man darf aber auch nicht vergessen, dass Botox präventiv wirkt. Wird es zu spät verwendet kann es sein, dass die Falte sich durch Botox nicht mehr glättet, denn sie glättet sich ja nicht wirklich, sondern nur, weil der Muskel entspannt. Aber: Ich hab auch erst mit 31 damit begonnen und meine war deutlich tiefer und im Ruhezustand ganz klar zu sehen (genau wie meine S",
-          "segment": "procedure-open",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t1_ohs2f40",
-          "text": "Haut- und Haarpflege basics? Willkommen im undurchdringlichen Dschungel der Pflegeprodukte! Was ich für deine Haut raten würde, wegen der Aknenarben: versuche es mit Retinal-Serum. Das gibt es von Geek and Gorgeous und du solltest es nur abends nach der Gesichtsreinigung auftragen. Dann brauchst du Feuchtigkeit und Pflege danach. Ich nehme das Hyaluron Serum und dann die Screen Hydration Station v",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_om24pdg",
-          "text": "Starthilfe Skincare + Anti-aging (M/34) Jeden Tag Salicylsäure ist vielleicht n bisschen viel, das Zeug verträgt sich evtl auch nicht mit deinem Plan bezüglich Retinol/Retinoid, aber das ist hier alles NebensacheDie Hauptsache ist, dass du dir bitte auf gar keinen Fall zum Einstieg jetzt jeden Tag 2% Retinoid irgendwo hin tust. Das Zeug ist zwar gegen Hautalterung das mir einzig bekannte frei erhä",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "fear:irritation": [
-        {
-          "id": "0_219424_126_t1_nyzz0ea",
-          "text": "30 geworden. Was an Skin Care bringt wirklich was um langsamer alt auszusehen? Die heilige drei Faltigkeit Cleanser, Feuchtigkeitscreme und Sonneschutz. Alles andere ist \"Spielerei\" bzw. zweckbedingt eingesetzt. Also wenn du zum Beispiel aktiv gegen Akne vorgehen möchtest oder Unreinheiten, Rötungen etc. Die bewährtesten und aus der Studienlage effizientesten Mittel gegen Hautalterung, neben Sonne",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t3_1qfgb4s",
-          "text": "Hilfe: Rosacea Hautpflegeroutine Hi, ich bin auf der Suche nach einer guten Pflegeroutine für meine Haut mit Rosacea. Mein halbes Leben lang habe ich lediglich mein Gesicht mit Wasser gewaschen, bis meine Rosacea irgendwann stärker geworden ist und ich auf den Trichter gekommen bin, dass ein bisschen Hautpflege vielleicht doch eine ganz gute Idee wäre. Aktuell nutze ich die Dermasence Rosamin Tage",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t3_1qkurys",
-          "text": "Erfahrungen mit Medik8?#antiaging Hi zusammen, ich wollte mal eure Meinung hören:Ich habe zu Weihnachten Medik8 Crystal Retinal 3 bekommen. meine Haut schon Retinol-erprobt ist (ich benutze das 2 % Serum von The Ordinary seit Jahren täglich ohne Probleme), Dieses Mal ist aber etwas passiert, das ich vorher noch nie hatte: ich hatte wirklich GAR KEINE Reaktion oder leichte Rötung und nach ein paar ",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t1_o3b8nik",
-          "text": "Was hilft wirklich gegen  Falten? Hi, ich schmeiß hier einfach mal ein paar Tipps rein^^ Hoffe es hilft ein bisschen^^'Das wichtigste: Sonnencreme täglich. Mindestens Spf30, zwei Fingerlängen auftragen. UV Strahlungen sind 80% der sichtbaren, frühen Hautalterung. Es gibt spezielle Sonnencremes fürs Gesicht, finde die mattierende oder die sensitive Sonnencreme von Nivea ganz gut. Desweiteren ist Re",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t3_1qutj84",
-          "text": "m37 – Starte mit Gesichtspflege: Sind diese Produkte sinnvoll? + Tipps für Maniküre & Pediküre für Anfänger Hey zusammen,ich bin m37 und will jetzt zum ersten Mal ernsthaft mit Gesichtspflege anfangen.  Bisher: Wasser, fertig 😅Ich habe mir folgende Produkte bestellt bzw. in den Warenkorb gelegt:* The Ordinary Squalane Cleanser* The INKEY List Retinol Serum (0,2 %)* La Roche-Posay Anthelios UVmune ",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t1_o3g6ulc",
-          "text": "m37 – Starte mit Gesichtspflege: Sind diese Produkte sinnvoll? + Tipps für Maniküre & Pediküre für Anfänger Also, ganz ehrlich? Find es way too much. (Sowohl an Mittelchen als auch preislich)Gesündere Haut? Ausreichend trinken, Feuchtigkeitscreme.Anti Aging? Nichts schlägt Sonnenschutz. Retinal soll sonst auch gut sein, da es die Zellerneuerung anregt (die vor allem im Alter nachlässt)Weniger Rötu",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_15_43959923067962773",
-          "text": "Bye-Bye Schlupflider: So wird man sie am besten los Clevere Make-up-Tricks, die richtige Pflege, eine Oberlidstraffung: Es gibt zum Glück viele Wege, die Augen wieder strahlender und wacher aussehen zu lassen. Vielleicht ist Ihnen das auch schon aufgefallen: Das Gesicht altert nicht überall gleich schnell. Während die Nase vielleicht noch aussieht wie mit Anfang 20, verrät die Augenpartie häufig s",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o5owmr6",
-          "text": "Kann man dagegen etwas tun? Ich kann retinol und microneedling empfehlen.Retinol wird wahrscheinlich abermehr als genug sein um dein jetziges Hautbild nach deinen Wünschen zu verbessern.Bei Retinol hast du ne Riesenauswahl auf dem Markt. Ich kann zb das von the ordinary empfehlen, benutze ich selbst.Du solltest da mit der niedrigsten Dosierung anfangen so 3 mal wöchentlich um erstmal zu sehen wie ",
-          "segment": "procedure-curious",
-          "mood": "disappointed"
-        }
-      ],
-      "hope:gold-standard": [
-        {
-          "id": "0_219424_126_t1_nyzz0ea",
-          "text": "30 geworden. Was an Skin Care bringt wirklich was um langsamer alt auszusehen? Die heilige drei Faltigkeit Cleanser, Feuchtigkeitscreme und Sonneschutz. Alles andere ist \"Spielerei\" bzw. zweckbedingt eingesetzt. Also wenn du zum Beispiel aktiv gegen Akne vorgehen möchtest oder Unreinheiten, Rötungen etc. Die bewährtesten und aus der Studienlage effizientesten Mittel gegen Hautalterung, neben Sonne",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o0vgwrp",
-          "text": "Hautpflegeprodukte – wie entscheidet ihr euch?? Oh my. Da gibt's so viel zu zu sagen. Was soll die Hautpflege eigentlich für dich tun? Anti aging? Sonnenschutz? Feuchtigkeit? Dann weiter. Wie kompliziert soll deine Routine sein. Willst du science backed, oder einfach etwas populäres? Sagen wir, du willst anti aging. Gibt's verschiedensten Zeug, Retinol/retinal ist Grad der Goldstandard, es gibt ab",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_15_34523741210606714",
-          "text": "Green Beauty mit Upgrade: Warum Weleda jetzt auf Zellenergie und NAD⁺ setzt Seit ich mich erinnern kann, war Weleda für mich der Naturkosmetik-Pionier mit dem Heilpflanzencharme und dezentem Reformhaus-Image: In sich absolut stimmig, sympathisch, ein bisschen retro, sehr solide und 100 Prozent vertrauenswürdig. Aber eben auch eher traditionell und damit mit relativ tiefem Glamour-Faktor. Die neue ",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_9_yt.uaBj9jV8bWo",
-          "text": "Die Kraft der Dermokosmetik entdecken Die Expertin für Naturkosmetik, Katerina, entführt uns tief in die wissenschaftliche Welt der modernen Dermokosmetik.  Wir erklären den wesentlichen Unterschied zwischen klassischer Hautpflege und dermatologischen Lösungen, die gezielt die Gesundheit der Hautbarriere unterstützen. Wir konzentrieren uns auf hochkonzentrierte Wirkstoffe wie Hyaluronsäure, Retino",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_219424_126_t1_ohb1u1q",
-          "text": "Ü30 was hilft der Haut? Das wichtigste ist Sonnenschutz. Sonnenschutz bedingt Reinigung am Abend, das Zeug muss runter. Das zweitwichtigste ist ein retinoid - retinol, retinal, tretinoin, your choice. Retinoide machen Sonnenschutz noch wichtiger, damit ist es endgültig verpflichtend. Und dann brauchst du noch ne Feuchtigkeitscreme. Wenn du willst kannst du noch allerhand Seren dazwischen packen, H",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_190_3932507590286422982",
-          "text": "Bakuchiol vs. Retinol: Welcher Wirkstoff passt wirklich zu deiner Haut? 🤔✨Wer sich mit Anti-Aging beschäftigt, kommt an diesen beiden nicht vorbei. Aber wo liegt eigentlich der Unterschied? Hier ist der schnelle Check! 👇🌱 BAKUCHIOL (Die sanfte Pflanzen-Alternative)Was ist es? Ein 100 % pflanzliches Antioxidans (aus der Babchi-Pflanze).Die Vorteile: Kurbelt die Kollagenproduktion an und mildert Pig",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_190_3933339263837423656",
-          "text": "Wirkstoff-Fokus: Anti-Aging auf medizinischem Niveau 🔬✨​In der apparativen Kosmetik reicht es nicht, die Haut nur oberflächlich zu pflegen. Um echte, sichtbare Strukturverbesserungen zu erzielen, brauchen wir hochwirksame Komplexe, die in der Tiefe arbeiten.​🧬 Retinol-Komplex: Der Goldstandard für die Zellerneuerung.🛡️ Ceramid-Netzwerk: Stärkt die Hautbarriere, damit Feuchtigkeit nicht entweicht.✨",
-          "segment": "procedure-curious",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_190_3935403071739820171",
-          "text": "Welche Wirkstoffe haben wirklich Studienlage und welche sind Marketing?Eine ehrliche Hautpflege-Routine für langfristige Hautgesundheit.Der stärkste Schutz vor lichtbedingter Hautalterung ist nicht teuer: Es ist täglicher Sonnenschutz. Alles andere baut darauf auf.Morgens geht es um die antioxidative Schicht mit Vitamin C und LSF 50. Abends werden Wirkstoffe alterniert, Retinoide an den einen, Säu",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "hope:acne": [
-        {
-          "id": "0_219424_126_t1_nyzz0ea",
-          "text": "30 geworden. Was an Skin Care bringt wirklich was um langsamer alt auszusehen? Die heilige drei Faltigkeit Cleanser, Feuchtigkeitscreme und Sonneschutz. Alles andere ist \"Spielerei\" bzw. zweckbedingt eingesetzt. Also wenn du zum Beispiel aktiv gegen Akne vorgehen möchtest oder Unreinheiten, Rötungen etc. Die bewährtesten und aus der Studienlage effizientesten Mittel gegen Hautalterung, neben Sonne",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_nz4zdo7",
-          "text": "Tretinoin oder nicht? als klär es definitiv mal mit deinem Hautarzt ab aber ich bezweifle eigentlich das Tretinoin da helfen würde - also ja, es hilft bei der Bekämpfung von Hautalterung und auch gegen Akne aber ob es in diesem Falle hilft bleibt fraglich. Denn wenn es so regelmäßig auftritt und sich ankündigt klingt es ja definitiv danach, als würde es eine Ursache geben und auch wenn ihr Hormone",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t1_o3krmly",
-          "text": "Was hilft gegen Pickel Narben? Retinol als selbst daheim TreatmentOderMicroneedling, CO2 laser",
-          "segment": "unknown",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_140_7665390643526585632",
-          "text": "💸 Dinge, die ihr Geld wert sind: * Botox: Für mich jeden Cent wert – natürlich dosiert sieht man einfach frischer aus. * Laser-Haarentfernung: Nie wieder rasieren und auf Dauer sogar günstiger. * Korean Skincare: Meine Haut hat sich seitdem deutlich verbessert. * Dolce &amp; Gabbana Concealer: Der beste Concealer, den ich je benutzt habe. * Tretinoin-Creme: Für mich das Effektivste gegen Pickel un",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_218673_126_t1_nc0axz2",
-          "text": "Probleme mit Hautunreinheiten/ Akne seit regelmäßigem Joggen Creme mit Tretinoin verwenden. Beispielsweise die rezeptpflichtige Cordes VAS Creme aus der Apotheke. Das ist eines der wenigen Kosmetika, welches in Studien nachgewiesenermaßen gegen Akne und Hautalterung wirkt. Benutze es alle zwei Tage und habe seither gar keine Hautunreinheiten mehr. Man muss aber täglich Sonnenschutz verwenden und l",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_218673_15_33375537604287122",
-          "text": "Bestes Retinol-Serum: Wundermittel Vitamin A – diese 7 Produkte helfen wirklich Vitamin A ist ein Mittel gegen Falten, Pigmentflecken und Akne. Wir klären, was das beste Retinol-Serum ist und wie du es effektiv anwendest, damit es dir bei Hautproblemen hilft. Retinol-Seren sind der heimliche Superstar in der Hautpflege. Sie helfen gegen Falten und Akne und sorgen für strahlende Haut. Doch welches ",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_218673_126_t1_nr7sevv",
-          "text": "Wodurch habt ihr eure Haut am stärksten verbessert – eine einzige Sache? 🌿 Weniger ist mehr. Außerdem Isotretinoin vor vielen Jahren gegen Akne und jetzt Tretinoin zur Vorbeugung von Falten.",
-          "segment": "unknown",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_218673_126_t1_nvivsjj",
-          "text": "Braucht man wirklich so viel Produkte für die Haut? Was Hautärzte auf Social Media empfehlen: morgens Vitamin c, Feuchtigkeitscreme und spf. Abends Retinal. Guck zb mal dr. Emi. Retinal soll auch gegen Pickel helfen und Falten vorbeugen . Wenn es aber doch mehr als ein paar Pickel  sind, also wirklich Akne, guck mal bei Formel Skin. Das sind Hautärzte, die online anhand von Fotos eine Creme für di",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
       "hope:collagen": [
         {
-          "id": "0_219424_126_t1_o0xc9f3",
-          "text": "Dehnungsstreifen im Intimbereich Gegen Dehnungsstreifen kannst du pro forma wenig machen. Was hilft, die Kollagenproduktion anzuregen, sind gesunde Ernährung, zB Zupfmassagen mit Ölen, wenn du nicht stillst auch mit einem niedrig dosierten Tretinoin und zB Microneedling. Auch das ist ohne Garantie auf Erfolg, bei mir sind sie jetzt etwas weniger geworden dadurch.",
+          "id": "0_225889_190_3733478883803689483",
+          "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht die Hautdichte und wird dadurch widerstandsfähiger – damit du morgens mit einem frischen, strahlenden Teint aufwachst. ",
           "segment": "skincare-first",
           "mood": "satisfied"
         },
         {
-          "id": "0_219424_126_t1_o2znguj",
-          "text": "Pfegemittel gegen Hautfalten/Cellulite gibt es nicht. 90% genetik. geduld. minimal können die üblichen sachen helfen, die kollagen-produktion/ elastizität ankurbeln. microneedling, niacinamide, hyaluron, retinoid,metc.",
-          "segment": "unknown",
+          "id": "0_225889_190_3733720916267213444",
+          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Уменьшает следы постакне и пигментацию•Повышает упругость и плотность кожи🔹 Почему им",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733788557925081038",
+          "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – stärken das Hautgerüst &amp; verbessern die Hautfestigkeit.🛡️ Niacinamid – stärkt",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733800131880661698",
+          "text": "Deine neue Skincare-Routine, die es wirklich drauf hat!✨ Mit Protinol™ – dem Wirkstoff, der Kollagen Typ I &amp; III aktiviert⏱ Schon nach 7 Tagen kann deine Haut straffer, elastischer und strahlender wirken💧 Sanft zur Haut, stark im EffektFinde jetzt deine Protinol™-Pflege auf avon.de oder bei deiner Avon-Beraterin!#GlowUp #SkincareRoutine #Protinol #CollagenBoost #StrahlendeHaut #AvonBeauty #ret",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3733918002006763458",
+          "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde Wirkung auf die Hautstruktur zugeschrieben: es kann die Kollagenproduktion anre",
+          "segment": "skincare-first",
           "mood": "satisfied"
         },
         {
-          "id": "0_219424_126_t1_o3g6ulc",
-          "text": "m37 – Starte mit Gesichtspflege: Sind diese Produkte sinnvoll? + Tipps für Maniküre & Pediküre für Anfänger Also, ganz ehrlich? Find es way too much. (Sowohl an Mittelchen als auch preislich)Gesündere Haut? Ausreichend trinken, Feuchtigkeitscreme.Anti Aging? Nichts schlägt Sonnenschutz. Retinal soll sonst auch gut sein, da es die Zellerneuerung anregt (die vor allem im Alter nachlässt)Weniger Rötu",
+          "id": "0_225889_190_3733946374619444264",
+          "text": "✨ Retinol – dein Haut-Booster! ✨Wann lohnt es sich?•Ideal ab Ende 20 / Anfang 30 für die ersten Anti-Aging-Erfolge•Perfekt bei unreiner Haut, vergrößerten Poren oder fahlem Teint•Auch super, wenn du feine Linien glätten oder dein Hautbild ebenmäßiger machen möchtestFür wen geeignet?•Für normale, Misch- und ölige Haut•Sensible Haut bitte langsam einsteigen &amp; niedrigere Konzentration wählen•Nich",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "disappointed"
         },
         {
-          "id": "0_219424_15_43959923067962773",
-          "text": "Bye-Bye Schlupflider: So wird man sie am besten los Clevere Make-up-Tricks, die richtige Pflege, eine Oberlidstraffung: Es gibt zum Glück viele Wege, die Augen wieder strahlender und wacher aussehen zu lassen. Vielleicht ist Ihnen das auch schon aufgefallen: Das Gesicht altert nicht überall gleich schnell. Während die Nase vielleicht noch aussieht wie mit Anfang 20, verrät die Augenpartie häufig s",
+          "id": "0_225889_190_3735085312125700740",
+          "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fältchen– Säuren : entfernen abgestorbene Hautzellen, verfeinern das Hautbild– Niacinamid: stärkt die Hautbarriere, reduzie",
           "segment": "procedure-curious",
-          "mood": "seeking"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_126_t1_o80mybr",
-          "text": "Wie effektiv ist Gesichtsmassage und Tapping? Massagen machen Sinn wenn du ein geschwollenes Gesicht hast durch Wassereinlagerungen zB. Für die Hautalterung kann das ja gar nix bringen, weil die Haut kein Muskel ist. Wenn deine Falten daher kommen dass du immer die Stirn runzelst oder dich anders verkrampft, dann vielleicht, aber ansonsten zerrst du an deiner empfindlichen haut Rum und machst es e",
+          "id": "0_225889_190_3735093642248385668",
+          "text": "✨ Dein Haut-Upgrade mit Fruchtsäuren ✨Unsere Wirkstoff-Power sorgt für den ultimativen Glow:🍋 Salicyl- &amp; Glykolsäure → klären tief die Poren, glätten &amp; bringen deine Haut zum Strahlen🌸 Tranexamsäure &amp; Phytinsäure → lassen Pigmentflecken nach und nach verblassen🥛 Azelainsäure &amp; Milchsäure → beruhigen sensible Haut &amp; spenden wohltuende Feuchtigkeit🌟 Resorcinol &amp; Retinol → wir",
           "segment": "skincare-first",
           "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t1_o8lbl9b",
-          "text": "Hi Reddit! Ich bin Vlora, Skin Expert bei Kiehl's (DACH) – Ask Me Anything zu Wirkstoffen, Routine-Aufbau & sensibler/gestresster Haut | Live am 04.03. um 14 Uhr CET Hallo :)Wenn du komplett bei null startest, brauchst du tatsächlich gar nicht viel. Die absoluten Essentials sind:1. Eine passende GesichtsreinigungKein Duschgel – das ist meist zu stark für die Gesichtshaut. Ein milder Cleanser reini",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t1_o8lbt1q",
-          "text": "Hi Reddit! Ich bin Vlora, Skin Expert bei Kiehl's (DACH) – Ask Me Anything zu Wirkstoffen, Routine-Aufbau & sensibler/gestresster Haut | Live am 04.03. um 14 Uhr CET Sehr gute Frage. Wenn man die Routine simpel halten möchte, geht es nicht um möglichst viele Wirkstoffe, sondern um die richtigen.Mit 34 würde ich priorisieren:Erstens Feuchtigkeit. Eine gut hydratisierte Haut wirkt praller, ausgeglic",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_o8ld3oq",
-          "text": "Hi Reddit! Ich bin Vlora, Skin Expert bei Kiehl's (DACH) – Ask Me Anything zu Wirkstoffen, Routine-Aufbau & sensibler/gestresster Haut | Live am 04.03. um 14 Uhr CET Spannendes Thema.Ein Microneedling-Pen ist eine apparative Behandlung, bei der durch feine Nadeln kontrollierte Mikroverletzungen in Form von Mikrokanälen in der Haut entstehen. Diese regen die natürlichen Regenerationsprozesse an. Ei",
-          "segment": "procedure-open",
-          "mood": "seeking"
-        }
-      ],
-      "fear:over-drying": [
-        {
-          "id": "0_219424_126_t1_o128g5k",
-          "text": "Gesunde Haare, Haut und ein gutes Körpergefühl ohne Massenkonsum Wichtig ist vor allem, seine Haut kennen zu lernen. Ich habe in meinen 50 Jahren mit meiner Problemhaut (extrem trocken dank gestörter Hautbarriere durch Neurodermitis, aber seit Jahren keine Entzündungen/aktiven Ekzeme) etliches probiert, weiß, was sie mag und braucht. Trotzdem habe ich immer mal wieder Trends ausgetestet, aber mich",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t1_o2r5uhx",
-          "text": "Grobe Poren im Gesicht verkleinern Nun, da hast du damals instinktiv das richtige gemacht. Und gut gegen Hautalterung vorgebeugt. Denn auch im Winter kriegt deine Haut Strahlung ab. Sehr gut gemacht. Unreinheiten können von vielem kommen. Wochenlang auf dem gleichen Kopfkissen schlafen, Hände ins Gesicht, Austrocknung (dadurch produziert die Haut manchmal mehr Talg, dann verstopfen Poren und entzü",
-          "segment": "unknown",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_126_t3_1szw6n8",
-          "text": "Nur wenig Haut-Verbesserung durch Tretinoin (?) Ich benutze seit etwa 1 1/2 Jahren regelmäßig tretinoin (Ketrel 0,5mg/g). Anfangs hatte ich das fast jeden Tag aufgetragen, was definitiv die Haut etwas austrocknete bzw. gereizt hatte, mittlerweile aber eher so 3 mal die Woche mit Retinol zwischendurch was mein Gesicht sehr gut verträgt.   Ich habe auf jeden Fall seltener Pickel bzw. Ausbrüche als v",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t1_om24pdg",
-          "text": "Starthilfe Skincare + Anti-aging (M/34) Jeden Tag Salicylsäure ist vielleicht n bisschen viel, das Zeug verträgt sich evtl auch nicht mit deinem Plan bezüglich Retinol/Retinoid, aber das ist hier alles NebensacheDie Hauptsache ist, dass du dir bitte auf gar keinen Fall zum Einstieg jetzt jeden Tag 2% Retinoid irgendwo hin tust. Das Zeug ist zwar gegen Hautalterung das mir einzig bekannte frei erhä",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t3_1u26twf",
-          "text": "Tretinoin - 2 Fragen Hey zusammen,ich nutze seit 10 monaten Tretinoin (Cordes Vas 0.05), und meine Haut hat sich sehr gut dran gewöhnt, brauche mittlerweile nur einen Tag Pause pro Woche. Achja, ich habe keine Akne, mir geht es nur um den Anti Aging-Vorteil.1. Meine obere Wangenpartie neigt zu Rosazea, wird es einen negativen Effekt auf das Erscheinungsbild haben, wenn ich diese einfach weg lasse?",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_126_t1_osxdhn0",
-          "text": "Tretinoin in Deutschland bekommen Ich hab Fungalakne also sieht meine Akne eher aus wie Unterlagerungen auf der Stirn, plus verstopfte Poren, schuppende Kopfhaut etc. Ich hab nicht diese blühenden Ausbrüche an den Wangen, was für viele Leute ja die einzige legitime Form von Akne ist. Ich bin aber inzwischen 30, habe das seit ich 11/12 bin und habe die meisten nicht-verschreibungspflichtigen Wirkst",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_190_3930187803522873639",
-          "text": "Dieser K-Beauty-Trend geht gerade viral. 🔥Eine Maske, die auf der Haut unsichtbar wird und während du schläfst arbeitet.Mehr Feuchtigkeit.Mehr Glow.Mehr Wow-Effekt am Morgen.MAVE Invisible Mask – jetzt auf topkosmetika.de 🤍••Hautpflege Anti-Aging Feuchtigkeit Retinol Peptide Vitamin C Glow empfindliche Haut unreine Haut trockene Haut fettige Haut Pigmentflecken Akne Couperose Sonnenschutz SPF Haar",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_140_7656817022382214432",
-          "text": "Wenn deine Haut an Oberarmen, Oberschenkeln oder am Dekolleté plötzlich dünn, trocken und „knitterig\" aussieht, bist du nicht allein. Diese sogenannte **kreppige Haut** entsteht häufig durch den natürlichen Kollagenverlust im Alter – verstärkt durch UV-Strahlung, trockene Haut und den natürlichen Alterungsprozess. Die gute Nachricht: Du kannst deine Hautqualität langfristig unterstützen. 👇 ✔️ Reti",
-          "segment": "skincare-first",
-          "mood": "cautioning"
         }
       ],
       "hope:wrinkle-reduction": [
         {
-          "id": "0_219424_126_t3_1qlko7k",
-          "text": "Neutrogena Retinol Boost+ Intensives Serum 30 ml, Anti-Aging Serum mit Retinol und Hyaluron, unparfümiert, gegen Falten und Pigmentflecken, für straff... -24 % 12,99 € Pflegt intensiv – Das hochkonzentrierte und schnell einziehende Neutrogena Retinol Boost+ Intensives Nacht Serum pflegt das Gesicht intensiv und erneuert das Hautbild über NachtBekämpft sichtbare Zeichen der Hautalterung – Das beson",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t3_1r6bcyd",
-          "text": "Neutrogena Retinol Boost Nachtcreme 50 ml, Anti-Aging Pflege mit Retinol, Hyaluronsäure und Antioxidans, unparfümierte Gesichtscreme gegen Falten und ... -26 % 11,09 € Anti-Age Gesichtspflege – Die Retinol Creme setzt reines Retinol in der Hautoberfläche frei, um das Erscheinungsbild der Haut zu verbessern und sichtbare Zeichen der Hautalterung wirksam zu bekämpfenFeuchtigkeitsspendende Nachtcreme",
+          "id": "0_225889_190_3733607129212004577",
+          "text": "Sanft, aber stark im Anti-Aging.💛Age Limit mit 0,05% Retinal, Panthenol, Bisabolol und Allantoin wirkt gegen Falten und Flecken; die wasserbasierte Textur zieht blitzschnell ein.#elynslab.de #agelimit #retinal #antiaging #panthenol #serum",
           "segment": "skincare-first",
           "mood": "disappointed"
         },
         {
-          "id": "0_219424_9_yt.zJtUWFfF6dM",
-          "text": "7 Retinol-Cremes, die du unbedingt meiden solltest! (Und 3, die wirklich sicher sind!) 🔔 Abonniere jetzt den Kanal und verpasse keine ehrlichen Produkttests, Gesundheitswarnungen und hilfreichen Beauty-Tipps rund um Hautpflege! 💖https://www.youtube.com/@EssEnthüllt?sub_confirmation=1Welche Retinol-Cremes solltest du besser vermeiden – und welche sind wirklich sicher? In diesem spannenden Video zei",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_219424_126_t3_1tcy3dd",
-          "text": "Neu bei uns: Beauty of Joseon Ginseng Retinol Firming Cream – Sanftes Retinol für empfindliche Haut 🌿 Ihr wolltet schon immer Retinol ausprobieren, hattet aber Angst vor Reizungen? Dann könnte das hier genau das Richtige sein.Die **Beauty of Joseon Revive Firming Moisturizer** setzt auf *fermentiertes* Retinol – das bedeutet: bessere Hautverträglichkeit, weniger Rötungen, weniger Peeling. Gleiche ",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_126_t1_oq3pv70",
-          "text": "Epiduo forte hat mich gerettet Ich glaube ich beschäftige mich nun schon 12 Jahre intensiv mit Hautpflege und Inhaltsstoffen &amp; hab trotzdem tausende Euros in falsche Produkte geblasen, bevor ich jetzt mal zufrieden bin 😅 Da bin ich froh dass das Tretinoin jetzt so gut wirkt vor allem weil ich inzwischen auch Ü30 bin und die Anti-Aging-Wirkung echt auch nochmal top ist.Aber auch toll, dass du e",
+          "id": "0_225889_26_1393616066107029",
+          "text": "Deine Haut erinnert sich an jede Sonnenstunde. ☀️ Unser Duo ist die perfekte Lösung gegen Photoaging und erweckt deine jugendliche Ausstrahlung neu!🌙 Retinal Intense: Intensives Anti-Falten-Nachtserum mit Retinal - 3x wirksamer als Retinol!*. Unterstützt die nächtliche Hautregeneration für 43% weniger Falten in 4 Wochen.*☀️FusionWater MAGIC Repair: Dein täglicher, ultraleichter Sonnenschutz, der d",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_15_70299050873564291",
-          "text": "Natürliche Schönheit mit der richtigen Kosmetik unterstreichen – wie wirkt eigentlich Faltencreme? In jungen Jahren wird über das Thema Faltencremes noch gewitzelt, doch spätestens ab einem Alter von 30 denken Sie ernsthaft darüber nach. Die eigentliche Bezeichnung lautet nicht Faltencreme, sondern Anti-Faltencreme, denn die Produkte wurden dazu entwickelt, der natürlichen Hautalterung vorzubeugen",
+          "id": "0_225889_190_3734584884112216301",
+          "text": "Deine Haut erinnert sich an jede Sonnenstunde. ☀️ Unser Duo ist die perfekte Lösung gegen Photoaging und erweckt deine jugendliche Ausstrahlung neu!🌙 Retinal Intense: Intensives Anti-Falten-Nachtserum mit Retinal - 3x wirksamer als Retinol!*. Unterstützt die nächtliche Hautregeneration für 43% weniger Falten in 4 Wochen.*☀️FusionWater MAGIC Repair: Dein täglicher, ultraleichter Sonnenschutz, der d",
           "segment": "skincare-first",
-          "mood": "conflicted"
+          "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_190_3930318408344820811",
-          "text": "* Straffere Konturen. Glattere Haut. Mehr Ausstrahlung.Wirksame Anti-Aging-Pflege braucht mehr als einen einzelnen Wirkstoff. Sie braucht eine Strategie.Deshalb haben wir zwei hochwirksame Pflegekonzepte kombiniert, die sich perfekt ergänzen:* OXYJET PERFECTIONS ULTRA FIRM: Ein hochkonzentriertes Serum zur Unterstützung von Spannkraft, Elastizität und definierten Gesichtskonturen. Die Haut wirkt g",
+          "id": "0_225889_190_3735276983757334931",
+          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduzieren Beziehungsweise ihnen vorbeugen. Somit helfe ich dir, die klassischen Zeichen ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3735857152763204085",
+          "text": "Schaut euch dieses Ergebnis an 😍 Die Haut wirkt glatter, straffer und viel frischer ✨.Mit dem Mary Kay Retinol 0,3 wird Anti-Aging sichtbar! 💖👉 Schreib mir, wenn du auch deine Haut verwandeln möchtest!#Retinol #Retinol03 #MaryKay #MaryKayConsultant #MaryKaySkincare #AntiAging #SkinTransformation #VorherNachher #GlowSkin #BeautyRoutine #SkinCareLover #StrahlendeHaut #Faltenreduzieren #BeautyBeratun",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3736145623880837882",
+          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es wirkt ganzheitlich gegen Falten, Müdigkeit und ungleichmäßigen Hautton – für ei",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3736855084429795496",
+          "text": "✨ CHRONO REPAIR®️ – 4-Wochen Retinoat Programm ✨Kraftvolle Inhaltsstoffe wirken im Herzen des Zellzyklus – für sichtbar jüngere, straffere und glattere Haut. 💫Die innovative Kombination aus verkapseltem Retinyl-Retinoat und Niacinamid unterstützt aktiv die Zellerneuerung und Kollagensynthese, um die Hautstruktur zu verfeinern und die Zeichen der Hautalterung effektiv zu korrigieren.Ergebnis: eine ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3737217012767504715",
+          "text": "Like moonlight on your skin – regenerative, silent, radiant. Sleeping Beauty nourishes what you release in your sleep. 💫Hast du gewusst, das SLEEPING BEAUTY NIGHT OIL @yageorganics den Mondstein beinhaltet ?! Bei einem nächtlichen Ritual bist du wie von dem Mond geküsst 🥹 #liebenwir !  • Es handelt sich um ein luxuriöses Nachtöl-Serum, das vor allem gegen Fältchen und Pigmentflecken wirken soll. ￼",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        }
+      ],
+      "fear:irritation": [
+        {
+          "id": "0_225889_190_3733720916267213444",
+          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Уменьшает следы постакне и пигментацию•Повышает упругость и плотность кожи🔹 Почему им",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3733912017548613840",
+          "text": "✨ Erfolgsgeschichte: 6 Monate vs. 3 Jahre ✨Drei Jahre lang hat Melissa versucht, ihr Hautbild zu verbessern – ohne den gewünschten Erfolg. Die Challenge? Niemand hat ihr gesagt, welcher Hauttyp sie ist, welche Wirkstoffe für sie wirklich wichtig sind und wie sie ihre Hautpflege richtig aufbauen kann.Nach nur 6 Monaten können wir jetzt folgendes sehen:✅ Ein gesundes, strahlendes, ebenmäßiges Hautbi",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3733918002006763458",
+          "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde Wirkung auf die Hautstruktur zugeschrieben: es kann die Kollagenproduktion anre",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3733946374619444264",
+          "text": "✨ Retinol – dein Haut-Booster! ✨Wann lohnt es sich?•Ideal ab Ende 20 / Anfang 30 für die ersten Anti-Aging-Erfolge•Perfekt bei unreiner Haut, vergrößerten Poren oder fahlem Teint•Auch super, wenn du feine Linien glätten oder dein Hautbild ebenmäßiger machen möchtestFür wen geeignet?•Für normale, Misch- und ölige Haut•Sensible Haut bitte langsam einsteigen &amp; niedrigere Konzentration wählen•Nich",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3736145623880837882",
+          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es wirkt ganzheitlich gegen Falten, Müdigkeit und ungleichmäßigen Hautton – für ei",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3738090000958160714",
+          "text": "Protinol vs. Retinol – was ist der Unterschied?Beide klingen ähnlich, aber sie wirken ganz unterschiedlich auf deine Haut 💛➡️ Retinol ist bekannt für seine Anti-Aging-Wirkung – es regt die Zellerneuerung an, verfeinert das Hautbild und reduziert Fältchen. Allerdings kann es bei empfindlicher Haut manchmal zu Reizungen kommen.💧 Protinol hingegen ist ein innovativer Wirkstoff, der das Kollagen in de",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3740314873902185239",
+          "text": "✨ BEAUTY BENEFITS – sichtbar schöne Haut, spürbar gepflegt! ✨Ob intensive Feuchtigkeitsversorgung, effektives Anti-Aging, ein ebenmäßiger Hautton, zuverlässiger UV-Schutz oder das Mildern von Rötungen – bei uns findest du alles, was deine Haut liebt. 💛Entdecke jetzt unsere Highlights wie:💧 Hyaluronsäure Serum🌙 Retinol Serum🌞 Anti-Aging Sonnenlotion🌿 Niacinamide🍃 Anti Red Pflegelinie👉 Alles erhältl",
           "segment": "skincare-first",
           "mood": "seeking"
         },
         {
-          "id": "0_219424_190_3930427704591788728",
-          "text": "✨ Das Schönheits-Vitamin, das JEDER kennen sollte! ✨Hast du dich jemals gefragt, warum Vitamin E (Tocopherol) in fast jedem High-End-Hautpflegeprodukt steckt? Es ist nicht nur ein Trend – es ist ein echter Gamechanger für deine Haut und deine Gesundheit! 👇🧬 Der INCI-Check: Was steht auf deiner Creme?Tocopherol: Reines Vitamin E. Ein kraftvolles Antioxidans, das deine Haut vor UV-Schäden schützt un",
+          "id": "0_225889_26_1418201236817109",
+          "text": "✨ BEAUTY BENEFITS – sichtbar schöne Haut, spürbar gepflegt! ✨Ob intensive Feuchtigkeitsversorgung, effektives Anti-Aging, ein ebenmäßiger Hautton, zuverlässiger UV-Schutz oder das Mildern von Rötungen – bei uns findest du alles, was deine Haut liebt. 💛Entdecke jetzt unsere Highlights wie:💧 Hyaluronsäure Serum🌙 Retinol Serum🌞 Anti-Aging Sonnenlotion🌿 Niacinamide🍃 Anti Red Pflegelinie👉 Alles erhältl",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        }
+      ],
+      "hope:gold-standard": [
+        {
+          "id": "0_225889_190_3733788557925081038",
+          "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – stärken das Hautgerüst &amp; verbessern die Hautfestigkeit.🛡️ Niacinamid – stärkt",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3735276983757334931",
+          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduzieren Beziehungsweise ihnen vorbeugen. Somit helfe ich dir, die klassischen Zeichen ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3736576059203407654",
+          "text": "✨ MK-Kundin, 72 Jahre jung – ein strahlendes Beispiel dafür, dass Hautpflege keine Frage des Alters ist!Bereits nach nur 6 Tagen täglicher, abendlicher Anwendung von Retinol 0.3 zeigt sich ein beeindruckendes Zwischenergebnis: die Haut wirkt sichtbar geglättet, vitaler und erfrischt. 🌸Retinol ist ein wahrer Goldstandard in der Anti-Aging-Pflege – es unterstützt die Zellerneuerung, verfeinert das H",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3739768490174847690",
+          "text": "Wusstest du, dass die Hautalterung schon ab Mitte 20 beginnt? 🧬 Ab dann verlangsamt sich die Zellregeneration und kleine Fältchen oder erste Veränderungen können sichtbar werden.Ich durfte für @lorealparis nach Paris:Es ging für mich auf den EADV - dem größten Dermatologie-Kongress Europas - und die neuesten wissenschaftlichen Insights rund um Hautgesundheit mitnehmen. 💡Mein zusätzliches Highlight",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_26_1107365484712254",
+          "text": "Retinol gilt als Goldstandard in der modernen Wirkstoffkosmetik – aber nur die richtige Anwendung macht den Unterschied.Wann, wie oft und womit kombinieren? 💭In unserem Karussell erfährst du, worauf es wirklich ankommt:✅ beste Tageszeit,📏 richtige Dosierung,⚖️ sinnvolle Kombinationen,🧴 und was du lieber vermeiden solltest.Gerade jetzt – wenn die Sonne schwächer wird – ist der ideale Zeitpunkt, um ",
+          "segment": "procedure-curious",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_26_1405613754904743",
+          "text": "LES ACTIFS STARS DE L'ANTI-ÂGE ✨Dans cette vidéo, notre experte internationale Léa vous dévoile les secrets des actifs incontournables en cosmétique :💧 Acide hyaluronique : hydrate intensément, repulpe et lisse les rides. 🌿 Pro-collagène : aide à renforcer la fermeté et la densité cutanée. 🍊 Vitamine C : illumine, uniformise le teint et ravive l'éclat. ⭐ Rétinol : référence scientifique pour lisse",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3747389392617796490",
+          "text": "✨ Retinol – das Power-Vitamin für deine HautBei The Skin Aesthetic setzen wir auf hochwirksame, dermatologisch entwickelte Wirkstoffe – und Retinol ist einer unserer Favoriten.Das Vitamin-A-Derivat gilt als Goldstandard der Anti-Aging-Pflege und sorgt für eine sichtbar glattere, ebenmäßigere und strahlendere Haut.💛 Wirkung von Retinol:•Unterstützt die Zellerneuerung und verfeinert die Poren•Reduzi",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3747656852629001912",
+          "text": "Ich habe mich schon vor vielen Jahren entschieden: bewusst zu altern – das heißt, natürlich, gesund und mit Energie durchs Leben zu gehen. Hier sind meine 5 Tipps, die mich jung halten – von innen und außen:1️⃣ Ernährung:Ich lebe nach der 80/20-Regel – 80 % ausgewogen, 20 % das, was einfach guttut (ja, auch mal was „Ungesundes\" 😉).2️⃣ Bewegung &amp; Krafttraining (inkl. Mobility):Spätestens ab 40 ",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         }
       ],
-      "fear:overuse": [
+      "fear:photosensitivity": [
         {
-          "id": "0_219424_126_t1_o1srju7",
-          "text": "SkinCare mit 40 - Tipps gesucht Diese schaebens-kapseln würde ich als erstes lassen, unnötig teuer, unnötiger müll, enthält eigentlich nichts wertvolles.Stattdessen ein serum benutzen. Wenn die Trockenheit dein Haupt-Thema ist, Hyaluronsäure oder Glycerin, gibt es beides auch von isana. Auf feuchte Haut auftragen. Wenn du anti-aging anfangen willst, ein sanftes Retinol, da kenn ich mich nicht aus,",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_140_7664532312444374274",
-          "text": "Retinol im Sommer – darf man das? ☀️ Ja – wenn deine Haut bereits an Retinol gewöhnt ist und du es richtig anwendest. Ein weit verbreiteter Mythos ist, dass Retinol im Sommer grundsätzlich verboten sei. Das stimmt nicht. Wichtig ist aber:  👉 Retinol ist lichtinstabil und wird durch UV-Strahlung abgebaut. Deshalb gehört es in die Abendroutine.  👉Verwende tagsüber konsequent einen Sonnenschutz mit S",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_218673_8_2049898605087965488",
-          "text": "Guck laut gpt: Ich nehme Geek &amp; Gorgeous A-Game 10 statt direkt Tretinoin, weil ich keine Akne habe, sondern nur erste leichte Falten behandeln will.Tretinoin ist zwar stärker und wissenschaftlich sehr gut belegt, aber auch deutlich aggressiver: Es kann schneller zu Trockenheit, Brennen, Rötung und Schuppung führen und ist rezeptpflichtig. Für meinen Fall wäre das als erster Schritt wahrschein",
+          "id": "0_225889_190_3735276983757334931",
+          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduzieren Beziehungsweise ihnen vorbeugen. Somit helfe ich dir, die klassischen Zeichen ",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_221687_140_7553318916336913666",
-          "text": "Antwort auf @story_of_mercedes  Wirkstoffe gegen Pickelmale: Fast alle diese Wirkstoffe machen die Haut, Lichtempfindlich. Daher müsst ihr bei der Verwendung Sonnenschutz auftragen! 👉 Niacinamid 💧 reduziert Rötungen 🌸 reguliert Pigmentbildung 🛡️ stärkt die Hautbarriere ✅ mild, fast täglich nutzbar 👉 Vitamin C ⚡ Antioxidant 🌞 bringt Glow &amp; hellt auf ⚠️ bei sensibler Haut langsam testen 🔥 Stärke",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_190_3747604977930993099",
-          "text": "We proudly present...! Der absolute Herbst-Star in deiner Hautpflege! 🌟Retinol und Herbst - eine Liebesgeschichte:💕 Weniger Sonne = weniger Photosensitivität💕 Mehr Zeit indoor = kontrollierte Regenerationsumgebung💕 Die perfekte Vorbereitungszeit für strahlende Weihnachtshaut!Unsere Baltic Balance Retinol Cream ist dabei wie ein guter Trainer - fordernd, aber fair! Ein Abend ohne Retinol ist im Her",
-          "segment": "unknown",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_126_t1_nptgxs1",
-          "text": "Kompletter Neuling in Gesichtspflege, ist der Plan so gut? Ist das dein Plan für jeden Tag? Dann würde ich den Plan reduzieren. Retinolhaltige Produkte erstmal 1x pro Woche verwenden und entweder das einführen oder das Serum. Wenn du mir beiden aktiven Wirkstoffen startest und es deine Haut reizt, weißt du nicht an welchem Stoff es liegt. Als ich gestartet habe, habe ich angefangen mit Sonnenschut",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_221687_190_3785258900917089478",
-          "text": "📌 Die 3 wichtigsten Pflegeprodukte für eine starke, gesunde HautbarriereMorgens:✨ Antioxidatives SerumSchützt Ihre Haut vor freien Radikalen, Umweltstress &amp; frühzeitiger Hautalterung.👉Ideal als erster Schritt nach der Reinigung.💧Feuchtigkeitspflege + SonnenschutzHydratisiert, stärkt die Hautbarriere und schützt vor UV-bedingten Schäden.👉Sonnenschutz ist jeden Tag unverzichtbar – auch im Winter",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_190_3803898465278031040",
-          "text": "✨ 6 Schritte für sichtbar schönere HautSchöne Haut passiert nicht über Nacht, aber mit einer sinnvollen Routine kannst du viel bewegen. Weniger Chaos, mehr Struktur, bessere Ergebnisse.1️⃣ Sanfte ReinigungZweimal täglich, ohne aggressive Tenside. Ziel: Hautbarriere schützen, nicht „quietschsauber\" machen.2️⃣ Täglicher SonnenschutzSPF 30+ jeden Morgen. Vorbeugung gegen Pigmentflecken, vorzeitige Fa",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "fear:interplay": [
-        {
-          "id": "0_219424_126_t3_1rycvqe",
-          "text": "Welcher Toner, welche Seren und was ist mit Kapseln? Tipps und Empfehlungen Hallo,ich benutze aktuell gar keine Toner und habe auch gar keine Ahnung, welchen Toner ich benutzen sollte.Gibt es Inhaltsstoffe auf die man achten sollte? Sollte man den Toner auf seinen Hauttyp anpassen?Meine Haut ist sehr empfindlich und sensibel und an der T-Zone trocken und porig mit ab und zukleinen Pickelchen um di",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_221687_190_3767228093325677042",
-          "text": "Retinol – der Gamechanger für deine Haut ✨Kaum ein Wirkstoff ist so gut erforscht und so wirksam wie Retinol. Aber warum lieben es alle?🔬 Was macht Retinol?Retinol ist eine Form von Vitamin A und unterstützt die Haut dabei, sich schneller zu erneuern.• reduziert feine Linien &amp; Falten• glättet die Hautstruktur• mildert Pigmentflecken &amp; Aknenarben• beugt Unreinheiten vor• stärkt die Kollagen",
+          "id": "0_225889_15_20711964581321120",
+          "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpflege, Feuchtigkeitscreme, Retinol Serum oder Anti-Aging im Herbst sind jetzt abs",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_221687_8_2044267470555402681",
-          "text": "Ich habe tatsächlich ChatGBT gefragt, ob es mir erklären kann, in welcher Reihenfolge ich meine ganzen Beautyprodukte nutzen soll, WEIL ICH EINFACH KEINEN PLAN HABE!!!Und... Ja irgendwie habe ich heute Morgen alles so gemacht wie gesagt &amp; werde es heute Abend auch ausprobieren - stay tuned!!Und für jeden, der wissen möchte, was genau ich da tu - take a look!🧴 Grundprinzip: „Von leicht zu schwe",
+          "id": "0_225889_190_3747079873484081866",
+          "text": "#hyaluronsäure #skincaretips #hautpflegetipps #hydratedskin #skincareroutine #dewyskin #hautpflege #glowroutine #feuchterhaut #skincareeducation #hyaluronserum #skinbarrier #beautyroutine #skincaredeutsch #glowingskinNIACINAMID – HYALURONSÄURE – RETINOLDrei Powerwirkstoffe, drei Aufgaben 👇Niacinamid: stärkt die Hautbarriere, gleicht Teint &amp; Talg aus, beruhigt – sanft &amp; vielseitig. Hyaluron",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3751271837297605554",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3752755174465638299",
+          "text": "Retinol ist einer der am besten erforschten Wirkstoffe in der Dermatologie und ich lieeeeebe es!👩🏽‍⚕️🧠Retinol (Vitamin A Derivat) gehört zu den Retinoiden und wirkt auf zellulärer Ebene: Es bindet an nukleäre Rezeptoren in der Haut, stimuliert die Kollagenproduktion, beschleunigt die Zellerneuerung und reduziert feine Linien, Hyperpigmentierung &amp; Unreinheiten.In Studien zeigte sich: Retinol ve",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3756313600051684529",
+          "text": "Top Anti-Aging Wirkstoffe und ihre WirkungRetinol (Vitamin A-Derivat)Fördert die Zellerneuerung und Kollagenproduktion.Glättet feine Linien und Falten.Ideal für abends, da es lichtempfindlich ist.Vitamin CStarkes Antioxidans, schützt vor freien Radikalen.Hellt Pigmentflecken auf und sorgt für strahlende Haut.Perfekt für die Morgenroutine.HyaluronsäureBindet Wasser in der Haut und sorgt für intensi",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3763020076979632888",
+          "text": "Mein 2-Wochen-Geheimnis: Dermalogica Dynamic Skin Retinol Serum! ✨Dieses Power-Serum reduziert die 4 Zeichen der Hautalterung (Falten, Textur, Poren, Hautton) dank seines 3,5% Retinoid-Komplexes.Die Vorteile: Glattere Haut, minimierte Poren und ein super gleichmäßiger Teint – und das, ohne die Hautbarriere zu stressen!✨✨⚠️ Wichtigster Tipp: Nur ABENDS auftragen und tagsüber unbedingt LSF verwenden",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3771633530275799426",
+          "text": "✨ Ich zeige euch, wie ihr die Wunderwaffe Retinol mit einer 30-Tages-Kur effektiv nutzen könnt! 🌙💖 Abends verwende ich das Double Serum von @lubex_anti_age – ein zweiphasiges Serum aus Retinol und Antioxidantien, das seine volle Wirkung entfaltet, wenn die beiden Phasen sich vermischen.Für den Tag ist ein guter Sonnenschutz unerlässlich!☀️ Denkt daran, immer ein Produkt mit mindestens SPF 30 zu ve",
           "segment": "skincare-first",
           "mood": "seeking"
         }
       ],
       "hope:pigmentation": [
         {
-          "id": "0_219424_190_3930983128783420096",
-          "text": "✨ Welches Serum passt eigentlich zu deiner Haut? ✨Nicht jedes Serum ist für jede Haut geeignet. Genau deshalb ist eine professionelle Hautanalyse so wichtig. Denn nur wenn wir die Bedürfnisse deiner Haut kennen, können wir die passenden Wirkstoffe gezielt einsetzen.💛 Vitamin C✔️ Für müde, fahle Haut✔️ Gegen Pigmentflecken✔️ Für einen strahlenden Teint💧 Hyaluron✔️ Intensive Feuchtigkeit✔️ Polstert ",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_140_7662419787858922784",
-          "text": "Hier die Caption zum 300-€-Reel: Du hättest 300 € für deine Haut übrig? Ich sag dir ehrlich, wo ich sie ausgeben würde. 💸 Was ich streichen würde: ▪️ Das Luxus-Serum für 200 €. Der Preis sagt nichts über die Wirkung – du zahlst vor allem die Verpackung. ▪️ Trinkkollagen. Dass es die Hautalterung messbar bremst, ist nicht gut belegt. ▪️ Alles, was gerade als Wundermittel verkauft wird – Exosomen, S",
-          "segment": "procedure-curious",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_219424_190_3941187764113930308",
-          "text": "Hier die Caption zum 300-€-Reel:Du hättest 300 € für deine Haut übrig? Ich sag dir ehrlich, wo ich sie ausgeben würde. 💸Was ich streichen würde:▪️ Das Luxus-Serum für 200 €. Der Preis sagt nichts über die Wirkung – du zahlst vor allem die Verpackung.▪️ Trinkkollagen. Dass es die Hautalterung messbar bremst, ist nicht gut belegt.▪️ Alles, was gerade als Wundermittel verkauft wird – Exosomen, Stammz",
-          "segment": "procedure-curious",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_218673_9_31827365244264880",
-          "text": "Danke für das interessante und unterhaltsame Video.Ich habe gegen Pigmentflecken Tretinoin genommen , das auch super gegen Falten wirkt.Die Flecken sind weg, die Falten reduziert.Ich nehme es ein Mal bis zwei Mal die Woche .Ich hoffe Du bist nicht krank geworden",
+          "id": "0_225889_190_3735843353535852606",
+          "text": "𝕦𝕟𝕓𝕖𝕫𝕒𝕙𝕝𝕥𝕖 𝕎𝕖𝕣𝕓𝕦𝕟𝕘 - ℙ𝕣𝕠𝕕𝕦𝕜𝕥𝕥𝕖𝕤𝕥Dank @Influenster und @Lancaster durften wir diese Creme testen 🙏Die Golden Lift Overnight Age-Defying Cream von Lancaster basiert auf einer bahnbrechenden Technologie und enthält eine verstärkte Mischung aus Retinol &amp; Retinal mit einer 2-mal höheren Konzentration an kationischem liposomalen Retinol und 25 % mehr Retinal (1) sowie TranexamolTM, einen exklusiven ",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_218673_126_t1_oj5vtze",
-          "text": "Thiamidol gegen Pigmentflecken / Hyperpigmentierung Ich habe es ausprobiert und auch meine Hautärztin hat es mir empfohlen. Ich habe es zuerst so verstanden, dass Thiamidol davon schützt neue Flecken durch Pickel zu bekommen. Und nicht, dass es schon vorhandene alte Flecken weg macht.Hab es dann leider nicht so sehr konsequent benutzt. Die Flasche war zwar leer, aber ich muss gestehen, dass ich ke",
+          "id": "0_225889_26_1370833521075326",
+          "text": "Ob junge Haut mit ersten Linien oder reife Haut – beide Seren bieten hochwirksame Anti-Age Benefits:👉🏼 REGENERIERENDES BAKUCHIOL SERUM- Natürliche Retinol-Alternative- Anti Age &amp; Glättung- Wirkt gegen Pigmentflecken, unterstützt Kollagenaufbau👉🏼 ANTI-FALTEN ARGAN INTENSIV SERUM- Mit Bio-Arganöl, Hyaluronsäure, Parakresse &amp; Feige- Anti Age &amp; Glättung- Spürbare Strafffung und intensive P",
           "segment": "skincare-first",
           "mood": "disappointed"
         },
         {
-          "id": "0_218673_126_t1_oj66uo9",
-          "text": "Thiamidol gegen Pigmentflecken / Hyperpigmentierung danke für deine rückmeldung! Tretinoin und Retinol waren bei mri leider zu aggressiv, auch in der niedrigsten Konzentration und mit Sandwhich usw.Eventuell ergänz ich noch um eine Creme mit Thiamidol",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_218673_126_t1_ooqebow",
-          "text": "Wir behandeln Pigmentflecken zu viel… und verhindern sie zu wenig? Für mich persönlich eher Antioxidantien (z. B. Vitamin C), Niacinamid oder Peptide. Sie gelten allgemein als deutlich milder als Retinol. Gegen Pigmentflecken finde ich außerdem Wirkstoffe wie Viniferine interessant. Natürlich hängt es immer davon ab, welches Hautproblem man behandeln möchte.",
+          "id": "0_225889_190_3751271837297605554",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
           "segment": "skincare-first",
           "mood": "cautioning"
         },
         {
-          "id": "0_218673_126_t1_os4s5l4",
-          "text": "Hat jemand Caudalie Vinoperfect Serum ausprobiert? Interessant 😊 SPF ist für mich sowieso die Basis. Beim Retinol bin ich persönlich eher vorsichtig, weil meine Haut empfindlich reagiert. Deshalb interessieren mich auch andere Wirkstoffe gegen Pigmentflecken. Hast du mit Retinol sichtbare Ergebnisse bei Hyperpigmentierung erzielt?",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        }
-      ],
-      "hope:confidence": [
-        {
-          "id": "0_219424_26_1624173009713186",
-          "text": "Neu: Craith Lab Retinol-BehandlungStrahlende, glatte Haut mit der Kraft einer modernen Retinoid-Technologie! 💛✔️ Verfeinert das Hautbild✔️ Mildert Fältchen &amp; Pigmentflecken✔️ Fördert die Kollagenbildung✔️ Unterstützt die Hauterneuerung💚 Das Besondere: Die innovative HPR-Formel ist im Vergleich zu klassischem Retinol oft besser verträglich und kann weniger Hautreizungen verursachen.Auf unseren ",
-          "segment": "procedure-open",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_190_3938730346054593712",
-          "text": "Retinol oder Retinal? Die meisten scheitern nicht am Wirkstoff – sondern am Einstieg. 👇Wer seine Hautstruktur verbessern, feine Linien reduzieren oder erste Anzeichen der Hautalterung behandeln möchte, stößt früher oder später auf Retinol oder Retinal.Dann beginnt das Gedankenkarussell:❓Welches Produkt ist das richtige?❓Wie oft sollte ich es anwenden?❓Wie vermeide ich Hautreizungen?Genau deshalb l",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_219424_190_3945951419221184281",
-          "text": "Chemical Peeling Schulung mit Arkana – ZusatzterminDie Nachfrage nach professionellen Chemical Peelings wächst stetig. Kund:innen wünschen sich sichtbare Ergebnisse, individuelle Behandlungskonzepte und nachhaltige Hautverbesserungen. Genau dieses Wissen vermittelt dir unsere intensive Chemical Peeling Schulung mit Arkana.Lerne, Hautbilder wie Akne, Rosazea, Pigmentverschiebungen, Melasma, Narben ",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_218673_9_yt.k1mE68nEe98",
-          "text": "BEWERTUNG (2025): Elizabeth Arden Retinol Serum Kapseln. WESENTLICHE Einzelheiten Hier ist ein kurzer Überblick über die wichtigsten Highlights für Elizabeth Arden Retinol Serum Kapseln.👉 Auf Amazon ansehen: https://www.amazon.de/dp/B0D5B6FGXF/?tag=16w9h-20 (Affiliate-Link)Entdecken Sie die innovative Hautpflege mit den Elizabeth Arden Retinol Serum Kapseln, die eine effektive Kombination aus Reti",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_218673_126_t1_os4s5l4",
-          "text": "Hat jemand Caudalie Vinoperfect Serum ausprobiert? Interessant 😊 SPF ist für mich sowieso die Basis. Beim Retinol bin ich persönlich eher vorsichtig, weil meine Haut empfindlich reagiert. Deshalb interessieren mich auch andere Wirkstoffe gegen Pigmentflecken. Hast du mit Retinol sichtbare Ergebnisse bei Hyperpigmentierung erzielt?",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_221687_190_3712995273304994899",
-          "text": "Coming soon!Neu bei Mary Kay! Entdecke eine neue Dimension der Hautpflege:✨ Vorhandene Spuren der Vergangenheit verblassen und für heute, morgen und die Zukunft beginnt jugendlich strahlende Haut genau hier.Mit #MaryKay Clinical Solutions Retinol 0,3 erlebst du die Kraft des Goldstandards in der Anti-Aging-Pflege. Sanft genug für die tägliche Anwendung.✔ Erste sichtbare Ergebnisse schon nach einer",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_190_3718475925194378583",
-          "text": "✨ Sanfte Retinol-Power für sichtbar verfeinerte Haut ✨Das AGELESS+ Retinol Pure Liquid Retinol 0.3% von IMAGE Skincare ist der perfekte Einstieg in die Welt hochwirksamer Anti-Aging-Pflege – sanft genug für empfindliche Haut, stark genug für sichtbare Ergebnisse. 🌿💎Mit 0.3 % purem Retinol, der innovativen XOSM®️ Technology und pflegenden Pflanzenwirkstoffen reduziert dieses Serum feine Linien, Fal",
+          "id": "0_225889_190_3756313600051684529",
+          "text": "Top Anti-Aging Wirkstoffe und ihre WirkungRetinol (Vitamin A-Derivat)Fördert die Zellerneuerung und Kollagenproduktion.Glättet feine Linien und Falten.Ideal für abends, da es lichtempfindlich ist.Vitamin CStarkes Antioxidans, schützt vor freien Radikalen.Hellt Pigmentflecken auf und sorgt für strahlende Haut.Perfekt für die Morgenroutine.HyaluronsäureBindet Wasser in der Haut und sorgt für intensi",
           "segment": "skincare-first",
           "mood": "satisfied"
         },
         {
-          "id": "0_221687_190_3719225108738085074",
-          "text": "💎 Die Revolution für deine Haut – Skinretin Xpert Pack! 💎 🌟 Warum Skinretin Xpert Pack? 🌟 Die revolutionäre 360° Anti-Aging-Behandlung kombiniert modernste Technologien und Wirkstoffe für sichtbare Ergebnisse ab der ersten Sitzung: ✅ Reduktion von Falten &amp; Linien: Dank der Kombination aus Retinol &amp; Retinal wird die Kollagenproduktion angeregt. ✅ Maximale Regeneration &amp; Straffung: Die E",
-          "segment": "procedure-curious",
-          "mood": "enthusiastic"
-        }
-      ],
-      "fear:health": [
-        {
-          "id": "0_219424_190_3932507590286422982",
-          "text": "Bakuchiol vs. Retinol: Welcher Wirkstoff passt wirklich zu deiner Haut? 🤔✨Wer sich mit Anti-Aging beschäftigt, kommt an diesen beiden nicht vorbei. Aber wo liegt eigentlich der Unterschied? Hier ist der schnelle Check! 👇🌱 BAKUCHIOL (Die sanfte Pflanzen-Alternative)Was ist es? Ein 100 % pflanzliches Antioxidans (aus der Babchi-Pflanze).Die Vorteile: Kurbelt die Kollagenproduktion an und mildert Pig",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_219424_190_3938186780044571214",
-          "text": "Schwangerschaft &amp; Stillzeit – welche Produkte sind geeignet? 👀Während der Schwangerschaft und Stillzeit verändert sich die Haut häufig. Umso wichtiger ist es, bei der Hautpflege auf geeignete Inhaltsstoffe zu achten.Auf Produkte mit Retinoiden sowie hohen Konzentrationen an Salicylsäure solltest Du während der Schwangerschaft und Stillzeit vorsichtshalber verzichten.✅ Diese Produkte kannst Du ",
+          "id": "0_225889_190_3766513112057717194",
+          "text": "✨ Nocturnal Repair für sichtbar jüngere Hände – über Nacht. ✨Die 𝐑𝐞𝐭𝐢𝐧𝐨𝐥 𝐓𝐡𝐞𝐫𝐚𝐩𝐲 𝐑𝐞𝐧𝐞𝐰𝐢𝐧𝐠 𝐇𝐚𝐧𝐝 𝐂𝐫𝐞𝐚𝐦 𝐯𝐨𝐧 𝐎𝐝𝐚𝐜𝐢𝐭𝐞́ ist die luxuriöse Nachtpflege für trockene, beanspruchte und reife Hände. Mit Retinol, Retinoid, PHA, Peptiden &amp; Niacinamid unterstützt sie intensiv die nächtliche Regeneration, glättet feine Linien, reduziert Pigmentflecken, stärkt die Hautbarriere und sorgt für ein ebenmäßigeres,",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_219424_190_3941829928599401781",
-          "text": "Deine Haut verträgt kein Retinol? Es gibt genau eine belegte Alternative. 🌿Fast alles, was als „sanftes Retinol\" verkauft wird, wurde nie wirklich gegen Retinol getestet. Für einen Wirkstoff gibt es aber eine echte Vergleichsstudie – und die hat es in sich.Die Studie: randomisiert, doppelblind, 12 Wochen. 44 Personen, die eine Hälfte Retinol, die andere den Alternativ-Wirkstoff – gleiche Konzentra",
+          "id": "0_225889_190_3774382599574393619",
+          "text": "Wusstest du, dass eine konsequente Pflegeroutine deine Haut um bis zu 70 % sichtbar verbessern kann und gleichzeitig die Hautalterung verlangsamt?Die meisten unterschätzen, wie stark die Haut auf tägliche Pflege reagiert.Hier sind die 5 Schritte, die deine Haut wirklich verändern können:1️⃣ Reinigung – +20–40 % klarere, glattere HautEine sanfte Reinigung entfernt Schweiß, Schmutz und Talg, ohne di",
           "segment": "skincare-first",
           "mood": "seeking"
         },
         {
-          "id": "0_219424_190_3945585406069081740",
-          "text": "Schwanger? Dann kann ausgerechnet dein Anti-Aging-Liebling jetzt Pause brauchen. ⚠️Retinol, Retinal, Tretinoin und andere Retinoide beeinflussen Zellteilung und Entwicklung. Deshalb werden sie in der Schwangerschaft vorsorglich nicht empfohlen. Auch Hydrochinon solltest du besser meiden, da es vergleichsweise stark über die Haut aufgenommen wird und nur wenige Daten zur Anwendung in der Schwangers",
+          "id": "0_225889_190_3783852225886733577",
+          "text": "✨ Top Produkte für fettige Haut – von KU2 Cosmetics ✨Glänzende Haut, Unreinheiten oder erste Linien? Das muss kein Dauerzustand sein.💛 Vitamin-C-Serum für ein ebenmäßigeres Hautbild, weniger dunkle Flecken &amp; einen frischen Glow – ideal als leichte Tagespflege.🤍 Retinol Serum für Anti-Aging, verfeinerte Poren &amp; Unterstützung bei Unreinheiten wie Akne &amp; Pigmentflecken.Zwei Power-Seren. E",
           "segment": "skincare-first",
           "mood": "disappointed"
         },
         {
-          "id": "0_219424_26_1650889583704174",
-          "text": "Der Herbst ist die beste Zeit für Behandlungen, die die Hautqualität nachhaltig verbessern.Deshalb haben wir ein praxisorientiertes Seminar von GIGI Laboratories vorbereitet, das sich einem der gefragtesten Themen der Saison widmet:Microneedling + Retinol: Wie lassen sich beide sicher kombinieren und optimale Ergebnisse erzielen?Dieses Seminar richtet sich an Kosmetikerinnen und Kosmetiker, die ni",
+          "id": "0_225889_26_1470935364877029",
+          "text": "✨ Top Produkte für fettige Haut – von KU2 Cosmetics ✨Glänzende Haut, Unreinheiten oder erste Linien? Das muss kein Dauerzustand sein.💛 Vitamin-C-Serum für ein ebenmäßigeres Hautbild, weniger dunkle Flecken &amp; einen frischen Glow – ideal als leichte Tagespflege.🤍 Retinol Serum für Anti-Aging, verfeinerte Poren &amp; Unterstützung bei Unreinheiten wie Akne &amp; Pigmentflecken.Zwei Power-Seren. E",
           "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_218685_126_t1_oox30rn",
-          "text": "Kleine Pickel auf der Stirn Auf jeden Fall keine Salicylsäure (BHA) oder Fruchtsäure (AHA) oder Retinol in der Schwangerschaft verwenden. Milde Reinigung und Pflege ohne Parfüm ist gut. Serum mit Niacinamid. Feuchtigkeitsspendende Cremes. Toner. Kann da die Sachen von No Cosmetics empfehlen. Reinigungsöl (Balea zum Beispiel), um Makeup und Sonnencreme abends runterzubekommen. Ansonsten Peeling mit",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_218685_8_2073418288634232858",
-          "text": "@facettenchen Mein Gesicht ist so aufgepolstert wie vor den Schwangerschaften und Ende meiner 20er Jahre In Kurzfassung: Toner, morgens Vitamin C pur Serum und Hyaluron abends noch Retinol aus Korea care",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_190_3720066855915573057",
-          "text": "Du leidest an Pigmentflecken ? Woher kommen sie eigentlich? ➡️Sie entstehen oft durch eine Überproduktion von Melanin (das ist der Farbstoff der Haut). Typische Ursachen sind:➡️UV-Strahlung (häufigster Grund, auch bei Bewölkung)➡️Hormonschwankungen (z.B Schwangerschaft, Pille)➡️Hautalterung➡️Entzündungen oder Pickel (Post-Inflammation Hyperpigmentation)Aber: Du kannst etwas dagegen tun! 👇Hier sind",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "disappointed"
         }
       ],
-      "hope:texture": [
+      "fear:over-drying": [
         {
-          "id": "0_219424_190_3940942343360039860",
-          "text": "Daily Skin Lifting Essentials ✨ Wusstest du, dass die Kollagenproduktion mit Mitte 20 abnimmt? Daher ist es auch in den 20ern schon sinnvoll, Skin Lifting Skincare in deine Routine einzubauen ✨ @nina_ens zeigt dir ihre Skin Lifting Essentials: ✨ Hyalove Serum: Hydration Boost &amp; Anti-Aging-Peptide für straffe, glatte Haut ✨ Luxury Lift Eye Cream: Vitamin C &amp; Botox-ähnliche Wirkstoffe, um Fa",
-          "segment": "unknown",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_219424_140_7662362373419765025",
-          "text": "Daily Skin Lifting Essentials ✨   Wusstest du, dass die Kollagenproduktion mit Mitte 20 abnimmt? Daher ist es auch in den 20ern schon sinnvoll, Skin Lifting Skincare in deine Routine einzubauen ✨  @niiiiinoschka 🪐 zeigt dir ihre Skin Lifting Essentials:  ✨ Hyalove Serum: Hydration Boost &amp; Anti-Aging-Peptide für straffe, glatte Haut  ✨ Luxury Lift Eye Cream: Vitamin C &amp; Botox-ähnliche Wirks",
-          "segment": "unknown",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_140_7561133555146067222",
-          "text": "Wirkstoffe, die deine Hautstruktur wirklich verändern⬇️ Wenn es um glattere Haut, weniger Verhornung und feinere Poren geht, zählen diese Wirkstoffe zu den best untersuchten überhaupt 🔬 👩🏻‍⚕️1. Verschreibungspflichtige Retinoide (z. B. Tretinoin, Adapalen, Trifaroten) → Der Goldstandard. Regulieren die Verhornung, glätten die Haut und helfen bei Komedonen &amp; Akne. Sie greifen direkt in die Zell",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_190_3767228093325677042",
-          "text": "Retinol – der Gamechanger für deine Haut ✨Kaum ein Wirkstoff ist so gut erforscht und so wirksam wie Retinol. Aber warum lieben es alle?🔬 Was macht Retinol?Retinol ist eine Form von Vitamin A und unterstützt die Haut dabei, sich schneller zu erneuern.• reduziert feine Linien &amp; Falten• glättet die Hautstruktur• mildert Pigmentflecken &amp; Aknenarben• beugt Unreinheiten vor• stärkt die Kollagen",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_190_3774311455840757551",
-          "text": "The Future of Skincare at the LakeEin neues Kapitel für Haut &amp; Wohlbefinden.Im Wellbeing &amp; Spa Bereich des RIVA erhält Hautpflege eine neue Dimension: Gemeinsam mit DOCTOR Mi! medical skincare bieten wir ab sofort Treatments an, die modernste Dermatologie, innovative Technologie und tiefgehende Entspannung miteinander verbinden.Die von Dr. Miriam Rehbein entwickelte Pflegelinie arbeitet mi",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_140_7578515072566168834",
-          "text": "Diese Kombination aus Retinol in Squalane von The Ordinary und dem Hyaluronic Acid + Vitamin C Serum von Olivia Care kann deine Hautpflegeroutine ideal ergänzen Während Retinol die Zellerneuerung fördert und ein glatteres Hautbild unterstützt spendet Hyaluronsäure intensiv Feuchtigkeit und Vitamin C sorgt für einen strahlenderen Teint Gemeinsam können sie für sichtbar frischere ebenmäßigere Haut s",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_26_1553158286287593",
-          "text": "Retinal trifft auf pflanzliche Power – und genau das macht den TAO Retinal Boost zu einem meiner liebsten Wirkstoff-Highlights für glattere, straffere und ebenmäßigere Haut.Mit einer intelligenten Kombination aus Retinylpalmitat &amp; Bakuchiol unterstützt dieses Serum die Hauterneuerung, reduziert Linien und sorgt für eine deutlich frischere Ausstrahlung – selbst bei empfindlicher Haut hervorrage",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_26_1431293105665480",
-          "text": "Deine Haut hat ein Problem?Wir haben die Lösung – professionell, wirksam und sofort spürbar.Diese drei Skeyndor-Seren gehören zu unseren absoluten Bestsellern in den Studios, weil sie sichtbare Ergebnisse liefern:✨ Mehr Glow✨ Feinere Poren &amp; glattere Linien✨ Tiefen-Feuchtigkeit &amp; BeruhigungWenn du wissen willst, welches Serum zu dir passt oder du mehr Hautpflege-Tipps möchtest:➡️ Folge uns",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        }
-      ],
-      "fear:purging": [
-        {
-          "id": "0_221687_190_3753563030811102936",
-          "text": "Bleib konsequent, aber sanft in deiner Routine.Verwende beruhigende, feuchtigkeitsspendende Produkte, verzichte auf zusätzliche Peelings und schütze deine Haut mit SPF.Nach ein paar Wochen beruhigt sich die Haut meist von selbst. 💆‍♀️#skin#skincare#skinroutine#hautproblemebekämpfen#akne#purging#biodrogaofficial#skintreatment#kosmetikrostock#aknebootcamp#bha#aha#retinol#biodrogamd#acne#sensiblehaut",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_221687_9_yt.w30NwbAS6eM",
-          "text": "Retinol oder Retinal? Der komplette Guide 2025 – Wirkung, Anwendung & wichtige EU-Änderung Retinol, Retinal, Vitamin A – was wirkt wirklich?In diesem Video erkläre ich Dir leicht verständlich, was der Unterschied zwischen Retinol und Retinal ist, warum so viele Hersteller ihre Produkte 2023/2024 anpassen mussten, wie Du Vitamin-A richtig anwendest und welche Fehler Du unbedingt vermeiden solltest.",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_221687_140_7578528501238664470",
-          "text": "Der wichtigste Faktor ist natürlich Geduld und consistency 🤍 Im gym seht ihr auch nicht sofort nach 1 Woche krasse Ergebnisse. Ich verwende gute Skincare seit Jahren täglich🤓 Außerdem verträgt nicht jeder Vitamin A!❌  Obwohl Erstverschlimmerungen (Purging) der Haut normal ist, gibt es auch Menschen, die trotz intakter Hautbarriere schlecht auf Vitamin A (Retinol/Retinal) negativ reagierenℹ️  #Skin",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_221687_126_t1_nyuf9wa",
-          "text": "Frage zu Skincare - direkt neue Pickel nach einmaliger Anwendung Korrelation ist nicht Kausalität - es kann durchaus sein dass du den Pickel auch gekriegt hättest wenn du kein neues Produkt genommen hättest.Skin Purging ist ein bissi umstritten, aber wenn kommt das hauptsächlich von aggressiveren Pflegeprodukten. Glykolsäure, Retinol, Niacinamid, höher dosiertes Vitamin C. Das sind auch alles Sach",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_221687_126_t1_o3k4ufd",
-          "text": "Zerstörte Hautbarriere? Wieso benutzt du Differin überhaupt? Das ist keine Skincare das ist ein Medikament für akne- und ich sehe keine akne bei dir. Zur anderen Frage: Ein purging (so nennt man es wenn ein Wirkstoff anfänglich die haut schlechter macht) ist bei differin normal.Was du machen solltest: du siehst ziemlich jung aus und hast eine super haut, also keine wirkstoffe verwenden die du nich",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_221687_126_t1_o94u2mk",
-          "text": "Tagesroutine und Produkte Geek & Gorgeous Retinal? heyy, auf den ersten Blick würde ich dir vielleicht noch einen Toner/Liquid empfehlen, den du zwischen 1 und 2 auftragen kannst (ich liebe den hydrating toner von Nø, wenn du ein feineres Hautbild möchtest kann ich auch den liquid refiner empfehlen, den aber nicht jeden Tag benutzen). Niacinamide sind eine gute Option hier, ich liebe das Zeug haha",
+          "id": "0_225889_190_3736142448549486915",
+          "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet! Viele hören genau dann auf, weil sie denken, sie „vertragen\" es nicht – und ver",
           "segment": "skincare-first",
           "mood": "conflicted"
         },
         {
-          "id": "0_221687_190_3849130136956627528",
+          "id": "0_225889_190_3736145623880837882",
+          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es wirkt ganzheitlich gegen Falten, Müdigkeit und ungleichmäßigen Hautton – für ei",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_15_20711964581321120",
+          "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpflege, Feuchtigkeitscreme, Retinol Serum oder Anti-Aging im Herbst sind jetzt abs",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3738039820531636833",
+          "text": "🍂 Herbst &amp; Winter – die wahre Skincare-Zeit für deine Haut 🌸Während der Sommer oft mit Sonne, Strand und Outdoor-Aktivitäten verbunden ist, bedeutet er für deine Haut vor allem eins: Belastung. UV-Strahlung, Hitze, Schweiß und Salz- oder Chlorwasser können Spuren hinterlassen – von Hyperpigmentierungen bis zu kleinen Sonnenschäden.Jetzt, wenn die Tage kürzer werden und die Temperaturen sinken,",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3743390247326344751",
+          "text": "1. Jeden Abend Panthenolcreme oder Aquaphor vor dem Schlafengehen auftragen!! 😌Das hilft, die Lippen über Nacht intensiv zu pflegen und Austrocknung zu verhindern.2. Trockene Lippen können auch von deinem Retinol-Serum kommen! Deshalb am besten vor der Anwendung etwas Panthenolcreme oder Aquaphor auf die Lippen geben, um sie zu schützen 🥳#skincare #hautpflege #skincareroutine #beauty #gesichtspfle",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3748813754406707868",
+          "text": "1. Reinigung (Cleanser)– Sanftes Waschgel oder Schaum, um überschüssigen Talg und Schweiß zu entfernen.– Achte auf milde Inhaltsstoffe (z. B. ohne Alkohol oder Sulfate).2. Toner (Gesichtswasser)– Hilft, den pH-Wert der Haut auszugleichen und bereitet sie auf die Pflege vor.– Ideal: beruhigende Inhaltsstoffe wie Rosenwasser, Aloe Vera oder Centella Asiatica.   3.Serum– Morgens ideal: Vitamin C, Nia",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3748870633808240134",
+          "text": "PERSONALISIERTES TREATMENT | MIXOLOGY - CIRCADIA Masken!🍇Australian Super-Berry Antioxidant Mask•Hauttypen: Trockene Haut, Hyperpigmentierung, Anti-Aging. ￼•Kernwirkung: Kombination aus exotischen Beeren + Milchsäure/Mandel­säure; hellt auf, versorgt mit Nährstoffen, antioxidativ und entzündungshemmend.🍋‍🟩Caviar Lime &amp; Passionfruit Enzyme Mask•Hauttypen: Alle Hauttypen. ￼•Kernwirkung: Sanftes ",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3748949648372196175",
+          "text": "✨ Was hilft wirklich gegen Falten?Meine Kundin gab genau das bei Google ein:„Was hilft wirklich gegen Falten?\"Über 1.000 Antworten bekam sie und trotzdem war ihre Haut danach empfindlicher, gereizter und gespannter als je zuvor. 😔Sie meinte es gut.Neue Seren, Vitamin C, Retinol, Fruchtsäuren, Hyaluron alles ausprobiert.Doch statt strahlender Haut bekam sie:🔸 Rötungen🔸 Brennen🔸 Spannungsgefühl🔸 und",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        }
+      ],
+      "fear:overuse": [
+        {
+          "id": "0_225889_190_3736142448549486915",
+          "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet! Viele hören genau dann auf, weil sie denken, sie „vertragen\" es nicht – und ver",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_190_3741890389222413576",
+          "text": "Mit fast 50 Jahren ist es absolut möglich, die Haut jugendlich, strahlend und gesund zu erhalten – es erfordert nur eine konsequente, auf deinen Hauttyp abgestimmte Pflege und einen ganzheitlichen Ansatz. Hier sind die wichtigsten Strategien:---1. Die richtige Hautpflege-RoutineFür mIch, Morgens:Keine Reinigung!TONIK (am besten mit AloeVera) zur intensiven Befeuchtung der Haut.Feuchtigkeitspflege-",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3743413247060828398",
+          "text": "✨Was macht ein gutes Retinol aus – und wie startet man richtig?✨Retinol ist eines der effektivsten Anti-Aging-Wirkstoffe, aber nur, wenn man es richtig anwendet.Langsam einschleichen lautet das Zauberwort:👉 Starte mit 1x pro Woche, beobachte, wie deine Haut reagiert – und steigere dann Schritt für Schritt.Am Anfang darf die Haut leicht reagieren – das ist ganz normal. Sie lernt, sich an den Wirkst",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3751271837297605554",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3752755174465638299",
+          "text": "Retinol ist einer der am besten erforschten Wirkstoffe in der Dermatologie und ich lieeeeebe es!👩🏽‍⚕️🧠Retinol (Vitamin A Derivat) gehört zu den Retinoiden und wirkt auf zellulärer Ebene: Es bindet an nukleäre Rezeptoren in der Haut, stimuliert die Kollagenproduktion, beschleunigt die Zellerneuerung und reduziert feine Linien, Hyperpigmentierung &amp; Unreinheiten.In Studien zeigte sich: Retinol ve",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3778088488818712548",
+          "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trockenheit, Spannungsgefühl oder noch mehr Ölproduktion.2️⃣ Kein Sonnenschutz im Allta",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3785258900917089478",
+          "text": "📌 Die 3 wichtigsten Pflegeprodukte für eine starke, gesunde HautbarriereMorgens:✨ Antioxidatives SerumSchützt Ihre Haut vor freien Radikalen, Umweltstress &amp; frühzeitiger Hautalterung.👉Ideal als erster Schritt nach der Reinigung.💧Feuchtigkeitspflege + SonnenschutzHydratisiert, stärkt die Hautbarriere und schützt vor UV-bedingten Schäden.👉Sonnenschutz ist jeden Tag unverzichtbar – auch im Winter",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3801040078139631905",
+          "text": "Wusstest du, dass insbesondere chronische UV-Exposition zu den stärksten Treibern sichtbarer Hautalterung zählt – deutlich stärker als genetische Faktoren?Deshalb gilt: das konsequente Auftragen einer Sonnenschutzcreme mit hohem LSF ist der beste \"Skincare Hack\" überhaupt.Retinoide wiederum gehören zu den wenigen Wirkstoffen, die tatsächlich strukturelle Veränderungen in der Haut bewirken können –",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        }
+      ],
+      "fear:health": [
+        {
+          "id": "0_225889_190_3738206831928549215",
+          "text": "Swipe ➡️➡️➡️ Die 5 wirksamsten Dinge, die du mMn in der Hautpflege tun kannst. Was hat dir bisher am meisten gebracht?Das alles ist außerdem mit einer Prise Geduld zu genießen 😏Achtung: Retinoide werden während einer Schwangerschaft nicht empfohlen. Und sie sind nur ratsam, wenn dein Sonnenschutz-Fundament steht!#hauttyp #hautpflege #retinol #antiaging #fruchtsäurepeeling #skincare101",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3743291890629127548",
+          "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch.🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. In der Zeit produziert unsere Haut einfach viel Talg, hormonbedingt. Die Poren ver",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_140_7561098063918468374",
+          "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch. 🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. In der Zeit produziert unsere Haut einfach viel Talg, hormonbedingt. Die Poren ve",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_190_3748211058071604749",
+          "text": "Nach der Schwangerschaft verändert sich deine Haut durch Hormone, Stress und schlaflose Nächte. Dunkle Augenringe, feine Linien und Trockenheit sind normal – aber sie müssen nicht bleiben!NORIX bietet 100 % natürliche, schwangerschaftssichere Hautpflege:•Hydration Boost Gel – Hyaluronsäure HA™ 💧•Retinol-Alternative Öl – Bakuchiol Smooth Renewal™ 🌿•Ceramide Night Cream – Barrier Repair &amp; Smooth",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3748891191250035604",
+          "text": "Unreine Haut, feine Linien oder unebene Textur?Stell dir vor, deine Haut wird glatter, ebenmässiger und sichtbar verjüngt✨Genau das kann Retinol für dich tun, der Power-Wirkstoff für eine regenerierte, strahlende Haut💛So verwendest du es:🌙Abends nach der Reinigung 1–2Tropfen auf Gesicht &amp; Hals auftragen💧Danach eine feuchtigkeitsspendende Pflege verwenden⚡2–3 Mal pro Woche starten und langsam s",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3753326294747374305",
+          "text": "Heute möchten wir euch unsere neue Behandlung vorstellen: NEOSTRATA® Retinol Peeling – sichtbare Hautverjüngung! ✨💫 Warum so einzigartig?Die Kombination aus 3 % Retinol, NeoCitrate™ &amp; Aminofil® – zwei bewährte Anti-Aging-Booster – sorgt für glattere, straffere Haut.⏱️ Einwirkzeit:•Empfindliche Haut: 3–4 Stunden•Unempfindliche Haut: 8 Stunden oder über Nacht🚫 Nicht empfohlen während Schwangersc",
+          "segment": "procedure-curious",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3753347658870966700",
+          "text": "✨ Bakuchiol &amp; Hagebuttenöl (Rosehip Oil)→ Glätten feine Linien sichtbar und fördern die Zellerneuerung – die sanfte Retinol-Alternative für empfindliche Haut.🌿 Jojobaöl, Heidelbeer- &amp; Himbeeröl→ Stärken die Hautstruktur, fördern Regeneration und schützen vor Feuchtigkeitsverlust.💛 Nachtkerzenöl (Evening Primrose Oil) &amp; Vitamin E (Tocopherol)→ Unterstützen Elastizität und schenken einen",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_140_7571130739970952470",
+          "text": "Sanfte Anti-Aging-Pflege, entwickelt für Mamas. Unsere Retinol-Alternative mit Bakuchiol glättet feine Linien, stärkt die Hautstruktur und fördert einen natürlichen Glow – ohne Reizungen. Dermatologisch getestet, 100 % natürlich und sicher während Schwangerschaft und Stillzeit.",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        }
+      ],
+      "fear:purging": [
+        {
+          "id": "0_225889_190_3739673311400476330",
+          "text": "Skin Purging – wenn sich die Haut erst verschlechtert, bevor sie besser wird 💫Vielleicht hast du es schon erlebt:Nach einer neuen Behandlung oder beim Start eines neuen Pflegeprodukts zeigt sich deine Haut plötzlich unruhig – mit mehr kleinen Unreinheiten, als du es gewohnt bist.Das sorgt oft für Verunsicherung – doch keine Sorge:Oft handelt es sich hierbei um das sogenannte „Skin Purging\", also e",
+          "segment": "procedure-curious",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3849130136956627528",
           "text": "So wendest du Retinol / Retinal richtig an:1️⃣ Anfänger:• Starte mit niedriger Konzentration (siehe Video)• Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert• Trage es auf trockene Haut auf• Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest • Immer danach reichlich Feuchtigkeit verwenden• Am nächsten Morgen unbedingt Sonnens",
           "segment": "skincare-first",
           "mood": "seeking"
         },
         {
-          "id": "0_221687_140_7617838156641094944",
+          "id": "0_225889_140_7617838156641094944",
           "text": "1️⃣ Anfänger: • Starte mit niedriger Konzentration (siehe Video) • Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert • Trage es auf trockene Haut auf • Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest  • Immer danach reichlich Feuchtigkeit verwenden • Am nächsten Morgen unbedingt Sonnenschutz auftragen (SPF 30+) 2️⃣ Fortges",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3909768266715933057",
+          "text": "Retinol bzw. Retinal gehört zu den wirksamsten Wirkstoffen in der modernen Hautpflege ✨Es handelt sich um einen Vitamin-A-Abkömmling mit sehr gut belegten positiven Effekten auf die Haut. Retinol kann die Kollagenbildung anregen, die Aktivität der Fibroblasten unterstützen und so langfristig zu einem glatteren, ebenmäßigeren Hautbild beitragen.Gleichzeitig gibt es auch wichtige Hinweise zur Anwend",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_140_7646333488127429920",
+          "text": "Retinol bzw. Retinal gehört zu den wirksamsten Wirkstoffen in der modernen Hautpflege ✨ Es handelt sich um einen Vitamin-A-Abkömmling mit sehr gut belegten positiven Effekten auf die Haut. Retinol kann die Kollagenbildung anregen, die Aktivität der Fibroblasten unterstützen und so langfristig zu einem glatteren, ebenmäßigeren Hautbild beitragen. Gleichzeitig gibt es auch wichtige Hinweise zur Anwe",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3926000988460283631",
+          "text": "Retinol vs. Bakuchiol – was ist wirklich besser? Retinol gilt als DER Anti-Aging-Wirkstoff… aber: viele vertragen ihn nicht.⚠️ Nebenwirkungen:▪️ Trockenheit▪️ Rötungen▪️ Purging (vorübergehende Verschlechterung der Haut)▪️ NICHT für schwangere Frauen / stillende Mütter geeignetUnd genau deshalb wird Bakuchiol gerade so gehyped. Was Bakuchiol kann:▪️ unterstützt Kollagen▪️ glättet die Haut▪️ wirkt ",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3930395272908779807",
+          "text": "Retinol oder Peptide – was ist besser für Anti-Aging? 🔬Diese Frage stellen sich viele, und die Antwort ist komplexer als du denkst.Retinol ist eines der am besten erforschten Anti-Aging-Wirkstoffe überhaupt. Es beschleunigt die Zellerneuerung, stimuliert die Kollagenproduktion und reduziert Falten nachweislich. Der Haken: Es kann reizen, austrocknen und macht die Haut lichtempfindlicher. Besonders",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225890_190_3743400630123767212",
+          "text": "Retinol – Wundermittel oder Reizstoff? 🤔Fast jeder hat davon gehört, aber kaum jemand weiß, wie man es richtig anwendet. 🩵 Dr. Tischler klärt auf:Retinol gehört zu den wirksamsten Inhaltsstoffen in der Dermatologie – wenn du weißt, wie du es nutzt.Es regt die Zellerneuerung und Kollagenbildung an, mildert Falten, lässt Pigmentflecken verblassen und sorgt für ein ebenmäßigeres Hautbild.Aber Achtung",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        }
+      ],
+      "hope:texture": [
+        {
+          "id": "0_225889_190_3741679009957193570",
+          "text": "🌿𝗥𝗜𝗡𝗚𝗔𝗡𝗔 𝗙𝗥𝗘𝗦𝗛 𝗢𝗩𝗘𝗥𝗡𝗜𝗚𝗛𝗧 𝗕𝗢𝗗𝗬 𝗧𝗥𝗘𝗔𝗧𝗠𝗘𝗡𝗧🌿Intensive Better-Aging-Creme für den Körper.Schönheit schläft – und deine Haut nutzt die Nacht, um zu regenerieren. Das FRESH overnight body treatment ist deine luxuriöse Nachtpflege für glattere, straffere und sichtbar ebenmäßigere Haut. Die kraftvolle Formel wurde entwickelt, um die Hautstruktur zu verfeinern, den Kollagenaufbau zu stimulieren und Zeichen ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3751271837297605554",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225889_190_3751891556962446699",
+          "text": "Warum Retinol jetzt Saison hat 🍁Wenn die Tage kürzer werden und die Sonne an Kraft verliert, beginnt die beste Zeit für einen echten Hautpflegeklassiker: Retinol.✨Im Sommer ist der Wirkstoff oft zu stark – er macht die Haut empfindlicher gegenüber UV-Strahlung. Doch jetzt kann sie sich in Ruhe an die Wirkung gewöhnen: Zellerneuerung, feinere Poren, glattere Struktur, strahlender Teint. 🌙Gerade der",
+          "segment": "procedure-curious",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3751936717402713662",
+          "text": "💎 Allgemeiner Beschreibung Calu Kosmetik ist eine hochwertige deutsche Pflegemarke, die auf wirksame Anti-Aging-Formeln ohne Parabene, Silikone oder Mineralöle setzt.Jedes Produkt enthält hochkonzentrierte Wirkstoffe, die sich perfekt miteinander kombinieren lassen.Das Ziel: eine sichtbar glattere, strahlendere und ebenmäßigere Haut – natürlich schön gepflegt. ✨🧴 N°3a Hydro Intensiv LiftgelEin lei",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3768079079858573366",
+          "text": "Retinol = Vitamin A für deine Haut – eines der bestuntersuchten Wirkstoffe in der Hautpflege.So wirkt es: Es beschleunigt die Zellerneuerung (glattere Textur &amp; mehr Glow), unterstützt die Kollagenbildung (mehr Festigkeit, weniger feine Linien), reguliert Talg (weniger Unreinheiten) und hilft, Pigmentflecken/uneinheitlichen Hautton zu mildern. ✨So startest du richtig: 2–3 Abende pro Woche, eine",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3770076767202315292",
+          "text": "Retinol – das Power-Vitamin für glatte Haut ✨Retinol (Vitamin A) ist einer der wirksamsten Wirkstoffe in der Hautpflege. Es fördert die Zellerneuerung, glättet feine Linien, verfeinert Poren und kann sogar Unreinheiten reduzieren.Für beste Ergebnisse langsam starten: 2–3× pro Woche, abends anwenden und tagsüber immer Sonnenschutz tragen.Ergebnis: Strahlendere, glattere und ebenmäßigere Haut 💛#haut",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3774515735004218861",
+          "text": "Hautalterung ist ein natürlicher Prozess – aber kein Schicksal.Kollagen, Elastin &amp; Zellneubildung lassen sich wissenschaftlich belegbar unterstützen.Mit Wirkstoffen wie Retinol, Vitamin C &amp; Peptiden, einer stabilen Barriere und regelmäßigen SPF machst du bereits 80% aus.Diese Produkte empfehle ich für Anti-Aging:🏅Mesoestetic Hydra Cream Fusion - reinigt effektiv🏅Mesoestetic Skin Retin- das",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_26_1553158286287593",
+          "text": "Retinal trifft auf pflanzliche Power – und genau das macht den TAO Retinal Boost zu einem meiner liebsten Wirkstoff-Highlights für glattere, straffere und ebenmäßigere Haut.Mit einer intelligenten Kombination aus Retinylpalmitat &amp; Bakuchiol unterstützt dieses Serum die Hauterneuerung, reduziert Linien und sorgt für eine deutlich frischere Ausstrahlung – selbst bei empfindlicher Haut hervorrage",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        }
+      ],
+      "hope:acne": [
+        {
+          "id": "0_225889_26_1443689927764061",
+          "text": "SkinPure – Natürliche Klärung für unreine Haut 🌿Ein pflanzlicher Bioflavonoid-Extrakt aus den Blättern des Maulbeerbaums, der auf mehreren Ebenen gegen Unreinheiten wirkt.✔ Reguliert die Sebumproduktion und reduziert Glanz✔ Antibakteriell gegen Akne-verursachende Bakterien✔ Entzündungshemmend, beruhigt Rötungen und Irritationen✔ Retinol-ähnlich – verfeinert Poren, unterstützt Anti-Aging✔ Auch als ",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_190_3742578254709039472",
+          "text": "#Exosome Needling ist die modernste Form der #Hautverjüngung: Reparatur von innen, sichtbare Ergebnisse, echte Hautheilung.✅ Zellregeneration – statt nur PflegeExosomen sind biologische Botenstoffe, die deine Hautzellen \"neu programmieren\" – sie starten Reparaturprozesse tief in der Dermis.✅ Kollagen-Boost wie keine andere BehandlungDie Haut gewinnt verloren gegangenes Kollagen zurück – bis zu 1 J",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_190_3768079079858573366",
+          "text": "Retinol = Vitamin A für deine Haut – eines der bestuntersuchten Wirkstoffe in der Hautpflege.So wirkt es: Es beschleunigt die Zellerneuerung (glattere Textur &amp; mehr Glow), unterstützt die Kollagenbildung (mehr Festigkeit, weniger feine Linien), reguliert Talg (weniger Unreinheiten) und hilft, Pigmentflecken/uneinheitlichen Hautton zu mildern. ✨So startest du richtig: 2–3 Abende pro Woche, eine",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_15_33375537604287122",
+          "text": "Bestes Retinol-Serum: Wundermittel Vitamin A – diese 7 Produkte helfen wirklich Vitamin A ist ein Mittel gegen Falten, Pigmentflecken und Akne. Wir klären, was das beste Retinol-Serum ist und wie du es effektiv anwendest, damit es dir bei Hautproblemen hilft. Retinol-Seren sind der heimliche Superstar in der Hautpflege. Sie helfen gegen Falten und Akne und sorgen für strahlende Haut. Doch welches ",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_190_3798448624611373508",
+          "text": "Wundermittel Retinol 😍 Hast du gewusst was Retinol alles kann? ........1. Hautberuhigend gegen Irritationen 2. Talgregulierend 3. Entzündungshemmend4. Zellanregend 5. Anti Hyperpigmentierung 6. Anti Aging 7. gegen Akne8. Feuchtigkeitsspendend9. Ausgleichend 10. Lieben und wollen es nicht mehr vermissen #retinolserum #naturkosmetik #skincare #beauty #inlovewithretinol",
+          "segment": "skincare-first",
+          "mood": "disappointed"
+        },
+        {
+          "id": "0_225889_126_t1_nyzz0ea",
+          "text": "30 geworden. Was an Skin Care bringt wirklich was um langsamer alt auszusehen? Die heilige drei Faltigkeit Cleanser, Feuchtigkeitscreme und Sonneschutz. Alles andere ist \"Spielerei\" bzw. zweckbedingt eingesetzt. Also wenn du zum Beispiel aktiv gegen Akne vorgehen möchtest oder Unreinheiten, Rötungen etc. Die bewährtesten und aus der Studienlage effizientesten Mittel gegen Hautalterung, neben Sonne",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_126_t1_nz4zdo7",
+          "text": "Tretinoin oder nicht? als klär es definitiv mal mit deinem Hautarzt ab aber ich bezweifle eigentlich das Tretinoin da helfen würde - also ja, es hilft bei der Bekämpfung von Hautalterung und auch gegen Akne aber ob es in diesem Falle hilft bleibt fraglich. Denn wenn es so regelmäßig auftritt und sich ankündigt klingt es ja definitiv danach, als würde es eine Ursache geben und auch wenn ihr Hormone",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_140_7610090434995555617",
+          "text": "1. Täglicher Sonnenschutz (LSF 50). Der beste Anti-Aging-Schutz. Auch im Winter. 2. Sanfte Reinigung statt „Quietsch-sauber\".aggressives Überreinigen zerstört die Hautbarriere. 3. Retinol abends. Goldstandard gegen Akne, Falten und Pigmentflecken. (Langsam rantasten) 4. Vitamin C morgens. Antioxidativer Schutz + Glow. 5. Weniger Produkte, mehr Wirkung. Überpflege macht Haut oft schlechter. 6. Feuc",
+          "segment": "unknown",
+          "mood": "satisfied"
+        }
+      ],
+      "hope:confidence": [
+        {
+          "id": "0_225889_190_3742578254709039472",
+          "text": "#Exosome Needling ist die modernste Form der #Hautverjüngung: Reparatur von innen, sichtbare Ergebnisse, echte Hautheilung.✅ Zellregeneration – statt nur PflegeExosomen sind biologische Botenstoffe, die deine Hautzellen \"neu programmieren\" – sie starten Reparaturprozesse tief in der Dermis.✅ Kollagen-Boost wie keine andere BehandlungDie Haut gewinnt verloren gegangenes Kollagen zurück – bis zu 1 J",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_190_3744259067326778791",
+          "text": "✨ Skinretin Xpert Treatment ✨Erlebe die Kraft von Retinol – für glatte, strahlende und verjüngte Haut! 💆‍♀️Diese 2-Phasen-Behandlung regeneriert, strafft und revitalisiert deine Haut von innen heraus. 💫Perfekt bei müder, fahler oder reifer Haut – sichtbare Ergebnisse schon nach der ersten Anwendung! ✨📍 Jetzt Termin sichern – deine Haut wird es lieben 💖#mesoestetic #skinretin #antiaging #retinol #b",
+          "segment": "procedure-open",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_140_7566191113963343126",
+          "text": "Für alle, die sichtbare Ergebnisse lieben.😍 #Retinal #AntiAging #HautpflegeRoutine #GlowSkin #BeautyTok",
+          "segment": "unknown",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3755629444401608330",
+          "text": "Echte Erfahrungen. Sichtbare Ergebnisse.Ein sanftes, aber wirkungsvolles Retinal, das die Haut über Nacht regeneriert und für spürbar mehr Glow sorgt ✨#nimaberlin #moonlightretinal #nightcare #retinalcream #cleanbeauty #naturkosmetik #berlinbeauty #glowskin #antiaging #skincareroutine #beautysleep #skincarelover #skinrenewal #skincaregoals #healthyglow",
+          "segment": "unknown",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_26_1163196679331707",
+          "text": "Kennst du schon unser neuestes YouTube-Video?💛 Die beste Anti-Aging-Skincare-Routine Ü50 – einfach, wirksam &amp; ohne 9-Step-Zirkus!MIRI zeigt dir ihre minimalistische Morgen- und Abendroutine für reife Haut – inspiriert von Dermatologin Dr. Sam Ellis. Mit Vitamin C, Retinal &amp; Ceramiden für sichtbare Ergebnisse statt Produktchaos. Wissenschaftlich fundiert, anfängerfreundlich &amp; mit ganz v",
+          "segment": "skincare-first",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225889_190_3765948758891473819",
+          "text": "🤔 Dein Badezimmerregal ist voll mit Pflegeprodukten, aber keines von ihnen bringt sichtbare Ergebnisse?🤗 Höchstwahrscheinlich fehlen ihnen die richtigen Wirkstoffe.Diese vier kraftvollen aktiven Inhaltsstoffe können - richtig angewendet - den Zustand der Haut auf zellulärer Ebene wirklich verändern.🔹 Salicylsäure (BHA) - löst überschüssigen Talg und reinigt die Poren.Sie reduziert effektiv Mitesse",
+          "segment": "skincare-first",
+          "mood": "conflicted"
+        },
+        {
+          "id": "0_225889_190_3768079079858573366",
+          "text": "Retinol = Vitamin A für deine Haut – eines der bestuntersuchten Wirkstoffe in der Hautpflege.So wirkt es: Es beschleunigt die Zellerneuerung (glattere Textur &amp; mehr Glow), unterstützt die Kollagenbildung (mehr Festigkeit, weniger feine Linien), reguliert Talg (weniger Unreinheiten) und hilft, Pigmentflecken/uneinheitlichen Hautton zu mildern. ✨So startest du richtig: 2–3 Abende pro Woche, eine",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_26_1421278673333590",
+          "text": "Professionelle Ergebnisse beginnen mit professionellen Behandlungen.Mit den SKEYNDOR Power-Programmen holst du dir High-End-Expertise, sichtbare Resultate und maximale Kundenzufriedenheit in dein Studio.Von Luxury Anti-Aging über intensives Lifting, Glow, Feuchtigkeit, Regeneration, Hauterneuerung bis zur Stärkung sensibler Haut –jedes Programm ist ein Power-Tool, das deine Behandlungen auf das nä",
           "segment": "skincare-first",
           "mood": "seeking"
         }
       ],
       "fear:slow-results": [
         {
-          "id": "0_221687_26_1394216789371539",
+          "id": "0_225889_26_1394216789371539",
           "text": "Ich schwöre auf Retinol – aber mit Geduld! 🧖🏽‍♀️Die Haut braucht Zeit, sich an den Wirkstoff zu gewöhnen.Start langsam, 1–2x pro Woche, und du wirst den Unterschied sehen. ✨#antiaging #retinol #skincare",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_221687_26_1434412774963108",
+          "id": "0_225889_26_1434412774963108",
           "text": "Fang jetzt an, etwas zu verändern! 💫✅ Erst speichern, dann weiterlesen!Warum natürliche Anti-Aging-Pflege so wichtig ist:Je mehr wir unsere Haut mit milden und natürlichen Inhaltsstoffen pflegen, desto besser kann sie sich regenerieren und strahlen – ganz ohne aggressive Chemie. So verhindern wir langfristig das Austrocknen und vorzeitige Faltenbildung und schenken unserer Haut, was sie wirklich b",
           "segment": "skincare-first",
           "mood": "disappointed"
         },
         {
-          "id": "0_221687_190_3824940238040598304",
-          "text": "Ich bin nicht hier, um dir zu sagen,welches Produkt XY deine Haut verjüngt.Und ich bin ganz sicher nicht die, die behauptet:„Je mehr Wirkstoffe, desto besser.\"Denn vielleicht hast du selbst schon gemerkt:Das funktioniert nicht.Sonst hätten alle Frauen mit 12-Step-Routinen, Retinol, Säuren und High-End-Seren automatisch straffe, ruhige Haut.Ist das so?Nein.Was ich dir jetzt sage, gilt nicht für jed",
+          "id": "0_225889_190_3778088488818712548",
+          "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trockenheit, Spannungsgefühl oder noch mehr Ölproduktion.2️⃣ Kein Sonnenschutz im Allta",
           "segment": "skincare-first",
-          "mood": "conflicted"
+          "mood": "disappointed"
         },
         {
-          "id": "0_221687_190_3851460757841517566",
-          "text": "Retinol ist einfach kein SprintDamit ist im Grunde schon alles gesagt. Mit Retinol erzielst Du keine Ergebnisse über Nacht! PunktDennoch ist Retinol einfach ein absoluter Herowirkstoff.  Du brauchst eben nur Geduld 3 Fakten über Retinol 👑 Retinol braucht Zeit, um die volle  Wirkung zu zeigen. Retinol wirkt  nicht oberflächlich, es geht in die  Tiefe und regt dort die Kollagensyn   these an  erste ",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_140_7616730687898438944",
-          "text": "Retinol ist was wunderbares für die Hautpflege , aber es braucht Zeit 🩷 Mag die Cream von Judith Williams ganz gern 🥰 #retinolskincare #judithwilliams #frühlingsglowup #frühjahrsdeals #hautpflege",
-          "segment": "unknown",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_221687_190_3871262691952202666",
+          "id": "0_225889_190_3871262691952202666",
           "text": "Beauty-ABC Teil 5✨ Retinol – Dein Haut-Gamechanger ✨Retinol (Retinol) gehört zu den effektivsten Wirkstoffen in der Hautpflege – und das aus gutem Grund 👇💡 Was kann Retinol?✔️ Glättet feine Linien &amp; Falten✔️ Fördert die Zellerneuerung✔️ Verfeinert Poren✔️ Hilft bei Unreinheiten✔️ Sorgt für ein ebenmäßiges Hautbild⚠️ Wichtig für die Anwendung:🌙 Nur abends verwenden🌱 Langsam starten (2–3x/Woche)",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_221687_190_3894513879334036814",
+          "id": "0_225889_190_3894513879334036814",
           "text": "Du benutzt seit zwei Wochen Retinol und siehst keine Veränderung?Willkommen in der Realität.Retinol ist kein Zauberstab für über Nacht.Es arbeitet tief in deiner Haut und verändert dort die Zellerneuerung.Das braucht Zeit.Wirkliche Ergebnisse bei Fältchen, Hautstruktur und vergrößerten Poren siehst du oft erst nach 12 bis 24 Wochen konsequenter Anwendung.Und genau hier machen die meisten den Fehle",
           "segment": "skincare-first",
           "mood": "enthusiastic"
         },
         {
-          "id": "0_221687_140_7638726993130835233",
+          "id": "0_225889_140_7638726993130835233",
           "text": "Du benutzt seit zwei Wochen Retinol und siehst keine Veränderung? Willkommen in der Realität. Retinol ist kein Zauberstab für über Nacht. Es arbeitet tief in deiner Haut und verändert dort die Zellerneuerung. Das braucht Zeit. Wirkliche Ergebnisse bei Fältchen, Hautstruktur und vergrößerten Poren siehst du oft erst nach 12 bis 24 Wochen konsequenter Anwendung. Und genau hier machen die meisten den",
           "segment": "skincare-first",
           "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3906915849495801569",
+          "text": "Retinol ist ein echter Goldstandard in der Dermatologie – und das aus gutem Grund. ✨Als Vitamin-A unterstützt es die Zellerneuerung, regt die Kollagenbildung an und kann dadurch feine Linien, Pigmentverschiebungen und Unreinheiten sichtbar verbessern. 💛Gleichzeitig sorgt es langfristig für ein ebenmäßigeres, glatteres Hautbild. 🤩Aber: Retinol ist kein Sprint, sondern ein Marathon. Die Haut braucht",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225889_190_3909029109849018058",
+          "text": "„Sephora Kids\" – wenn Kinderhaut zum Experimentierfeld wird Neun-, zehn- oder zwölfjährige Kinder mit teuren Seren, Anti-Aging-Cremes und aufwendigen Skincare-Routinen? Was auf TikTok und Instagram als harmloser Trend erscheint, kann für junge Haut problematisch sein.Immer mehr Kinder und Tweens greifen zu Hautpflege- und Kosmetikprodukten, die eigentlich für Erwachsene entwickelt wurden. Dabei is",
+          "segment": "procedure-curious",
+          "mood": "conflicted"
+        }
+      ],
+      "fear:interplay": [
+        {
+          "id": "0_225889_190_3779419198410951913",
+          "text": "Hautpflege-Mythen im Faktencheck!💡Was ist dran an Aussagen wie „Retinol macht die Haut dünn\" oder „Vitamin C und Retinol darf man nicht kombinieren\"? 🔍Kennt ihr weitere Hautpflege-Mythen, die wir uns mal anschauen sollten? Schreibt sie uns gern in die Kommentare. 🩵#mythen #hautpflege #naturkosmetik #antiagingskincare #antiaging #cleanbeauty #veganskincare #beyerundsoehne",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3812971842713973019",
+          "text": "Double Retinol Ritual.💞For visible glow and refined skin.In ruhigen Abendmomenten entfaltet dieses Duo seine Stärke.Die Retinol Maske bereitet die Haut vor.Die Retinol Creme ergänzt gezielt und schließt die Pflege ab.Ein durchdachtes Ritual für das Gesicht.Reduziert. Effektiv. Professionell.Retinal richtig integrieren:– Abends starten– 1–2 Anwendungen pro Woche– Nur auf intakter, ruhiger Haut– Lan",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225889_190_3862140824796561727",
+          "text": "Retinoide – was steckt dahinter?Retinoide sind Vitamin-A-Derivate und gehören zu den wirksamsten Wirkstoffen in der Hautpflege. Sie fördern die Zellerneuerung, unterstützen die Kollagenbildung, verfeinern das Hautbild und helfen bei Unreinheiten, Fältchen und Pigmentflecken.Retinal ist eine moderne Form der Retinoide. In der Haut wird es direkt in die aktive Form (Retinsäure) umgewandelt, wodurch ",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225890_190_3767228093325677042",
+          "text": "Retinol – der Gamechanger für deine Haut ✨Kaum ein Wirkstoff ist so gut erforscht und so wirksam wie Retinol. Aber warum lieben es alle?🔬 Was macht Retinol?Retinol ist eine Form von Vitamin A und unterstützt die Haut dabei, sich schneller zu erneuern.• reduziert feine Linien &amp; Falten• glättet die Hautstruktur• mildert Pigmentflecken &amp; Aknenarben• beugt Unreinheiten vor• stärkt die Kollagen",
+          "segment": "skincare-first",
+          "mood": "enthusiastic"
+        },
+        {
+          "id": "0_225895_190_3776428274386208061",
+          "text": "Tag und Nacht entscheiden darüber, wie gut ein Wirkstoff wirkt.Am Tag schützen Antioxidantien wie Vitamin C oder Niacinamid deine Haut vor freien Radikalen und Umweltstress. Feuchtigkeitsspeicher wie Hyaluron halten die Barriere stabil.In der Nacht arbeitet die Haut intensiver, sie repariert Schäden, baut Kollagen auf und verliert mehr Wasser. Daher wirken Retinol, Säuren oder Azelainsäure in dies",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        },
+        {
+          "id": "0_225895_26_1253007566851983",
+          "text": "Hautpflege-Mythen im Faktencheck!💡Was ist dran an Aussagen wie „Retinol macht die Haut dünn\" oder „Vitamin C und Retinol darf man nicht kombinieren\"? 🔍Kennt ihr weitere Hautpflege-Mythen, die wir uns mal anschauen sollten? Schreibt sie uns gern in die Kommentare. 🩵",
+          "segment": "skincare-first",
+          "mood": "cautioning"
+        },
+        {
+          "id": "0_225895_126_t3_1rycvqe",
+          "text": "Welcher Toner, welche Seren und was ist mit Kapseln? Tipps und Empfehlungen Hallo,ich benutze aktuell gar keine Toner und habe auch gar keine Ahnung, welchen Toner ich benutzen sollte.Gibt es Inhaltsstoffe auf die man achten sollte? Sollte man den Toner auf seinen Hauttyp anpassen?Meine Haut ist sehr empfindlich und sensibel und an der T-Zone trocken und porig mit ab und zukleinen Pickelchen um di",
+          "segment": "procedure-curious",
+          "mood": "seeking"
+        },
+        {
+          "id": "0_225895_190_3865690655105999559",
+          "text": "80% Frauen benutzen Retinol falsch.Ich habe diesen Fehler auch gemacht.Retinol gehört zu den effektivsten Wirkstoffen —aber auch zu den am meisten falsch verwendeten.Retinol ist kein \"Glow-Produkt\".Es ist ein Wirkstoff, der die Haut zwingt, schneller zu arbeiten.Das bedeutet:• beschleunigte Zellerneuerung• feinere Poren• glattere HautstrukturAber:Falsche Anwendung zerstört die Hautbarriere.Meine R",
+          "segment": "skincare-first",
+          "mood": "satisfied"
+        }
+      ],
+      "hope:payoff": [
+        {
+          "id": "0_225895_26_1569395691555832",
+          "text": "Poren gehören zu einer gesunden Haut und lassen sich nicht dauerhaft verkleinern. Ihr Erscheinungsbild kann jedoch sichtbar verbessert werden.🥰Mit dieser Behandlung werden die Poren mithilfe eines Vakuums intensiv gereinigt. Talg, abgestorbene Hautzellen und Ablagerungen werden sanft entfernt. Die Haut wirkt frischer, ebenmäßiger und ist optimal auf die nachfolgende Pflege vorbereitet.Für eine lan",
+          "segment": "procedure-open",
+          "mood": "satisfied"
         }
       ]
     },
     "by_segment": {
       "skincare-first": {
-        "n": 2833,
+        "n": 6957,
         "fears": {
-          "irritation": 264,
-          "photosensitivity": 76,
-          "over-drying": 178,
-          "overuse": 19,
-          "health": 36,
-          "slow-results": 9,
-          "interplay": 2,
-          "purging": 12
+          "irritation": 715,
+          "photosensitivity": 159,
+          "over-drying": 386,
+          "overuse": 68,
+          "health": 119,
+          "slow-results": 35,
+          "interplay": 11,
+          "purging": 23
         },
         "hopes": {
-          "gold-standard": 87,
-          "acne": 33,
-          "collagen": 658,
-          "wrinkle-reduction": 179,
-          "confidence": 46,
-          "pigmentation": 26,
-          "texture": 29
+          "collagen": 1423,
+          "wrinkle-reduction": 318,
+          "gold-standard": 229,
+          "pigmentation": 47,
+          "texture": 86,
+          "acne": 73,
+          "confidence": 97
         }
       },
       "unknown": {
-        "n": 459,
+        "n": 1801,
         "fears": {
-          "photosensitivity": 5,
-          "over-drying": 5,
-          "irritation": 8,
-          "overuse": 1,
-          "slow-results": 2,
-          "health": 2
+          "irritation": 47,
+          "health": 40,
+          "over-drying": 13,
+          "photosensitivity": 10,
+          "overuse": 21,
+          "purging": 2,
+          "slow-results": 2
         },
         "hopes": {
-          "collagen": 81,
-          "acne": 4,
-          "texture": 4,
-          "gold-standard": 12,
-          "wrinkle-reduction": 5,
-          "confidence": 1,
-          "pigmentation": 1
+          "gold-standard": 32,
+          "confidence": 8,
+          "collagen": 181,
+          "wrinkle-reduction": 17,
+          "acne": 20,
+          "pigmentation": 1,
+          "texture": 7
         }
       },
       "procedure-curious": {
-        "n": 181,
+        "n": 671,
         "fears": {
-          "irritation": 33,
-          "photosensitivity": 3,
-          "interplay": 1,
-          "over-drying": 4,
-          "health": 3,
-          "purging": 1,
+          "purging": 3,
+          "irritation": 97,
+          "health": 22,
+          "photosensitivity": 10,
+          "over-drying": 30,
           "slow-results": 4,
-          "overuse": 2
+          "overuse": 7,
+          "interplay": 1
         },
         "hopes": {
-          "collagen": 47,
-          "wrinkle-reduction": 15,
-          "pigmentation": 4,
-          "gold-standard": 7,
-          "confidence": 7,
-          "texture": 2
+          "collagen": 119,
+          "wrinkle-reduction": 21,
+          "gold-standard": 24,
+          "texture": 5,
+          "confidence": 12,
+          "pigmentation": 6,
+          "acne": 4
         }
       },
       "procedure-open": {
-        "n": 50,
+        "n": 192,
         "fears": {
-          "photosensitivity": 5,
-          "irritation": 12,
-          "over-drying": 4
+          "over-drying": 7,
+          "photosensitivity": 6,
+          "irritation": 29,
+          "health": 6,
+          "slow-results": 1,
+          "purging": 2
         },
         "hopes": {
-          "collagen": 16,
-          "confidence": 4,
-          "gold-standard": 4,
-          "wrinkle-reduction": 4,
-          "acne": 1
+          "confidence": 11,
+          "collagen": 29,
+          "wrinkle-reduction": 5,
+          "gold-standard": 8,
+          "texture": 2,
+          "acne": 2,
+          "payoff": 1
         }
       }
     }
+  },
+  "conversationLandscape": {
+    "eyebrow": "9. Conversation Landscape",
+    "title": "How anti-aging conversations cluster together",
+    "axis_note": "Knoten = Thema · Größe = Häufigkeit · Linie = gemeinsame Erwähnung im selben Kommentar (nur stärkste Paare) · Farbe = Community",
+    "note": "Klick Thema oder Linie → Quotes · Hover → Nachbarn · Cluster unüberwacht (greedy modularity) · Fruchtnamen = Lesbarkeit",
+    "how_to": [
+      "Kreis = Thema (größer = öfter genannt)",
+      "Linie = Themen fallen oft im selben Kommentar zusammen",
+      "Farbe = Community (Themen, die untereinander stärker vernetzt sind)",
+      "Klick auf Kreis oder Linie öffnet passende Kommentare rechts"
+    ],
+    "n_total": 331195,
+    "n_comments_with_topics": 213266,
+    "method": "topic co-occurrence + greedy_modularity_communities · sparse top edges",
+    "clusters": [
+      {
+        "id": "c0",
+        "fruit": "Pomegranate",
+        "label": "Pomegranate",
+        "subtitle": "Hautalterungs-Zeichen · Peeling & Microneedling · Sonnenschutz & Prävention",
+        "color": "#e07098",
+        "share_pct": 82.7,
+        "n_nodes": 7,
+        "weight": 255655,
+        "top_topics": [
+          "aging-signs",
+          "peel",
+          "spf",
+          "vitamin-c",
+          "retinol"
+        ]
+      },
+      {
+        "id": "c1",
+        "fruit": "Orange",
+        "label": "Orange",
+        "subtitle": "Kosten & Preis-Leistung · Botox / Neuromodulatoren · Laser-Therapien",
+        "color": "#e08a4a",
+        "share_pct": 17.3,
+        "n_nodes": 10,
+        "weight": 53491,
+        "top_topics": [
+          "price",
+          "botox",
+          "laser",
+          "fillers",
+          "facelift"
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "threads",
+        "label": "Fadenlifting & Ultraschall-Lifting",
+        "weight": 2625,
+        "r": 8.48,
+        "x": 0.2683,
+        "y": -0.2848,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_140_7556050662585388318",
+            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3734381648364997599",
+            "text": "✨Face Contouring! ✨Mit Hyaluronsäure an den Hebepunkten des Gesichts – direkt auf den Knochen injiziert – für ein besonders langanhaltendes Ergebnis- mit neuem Präparat. 🔥🚀 Effekt: Natürliches Lifting, definierte Konturen &amp; frische Ausstrahlung.Das innovative Präparat sorgt f",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734483816837559453",
+            "text": "✨ Aptos Full Face Fadenlifting mit Excellence Visage ✨Stellen Sie sich vor: ein jugendliches, strahlendes Gesicht – ohne OP, ohne lange Ausfallzeit.Unsere speziellen Excellence Visage Aptos-Fäden sind nicht nur Lifting-Fäden, sondern wirken zusätzlich wie ein Skinbooster.🔹 Wie fu",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "hyaluronic-acid",
+        "label": "Hyaluronsäure (topisch)",
+        "weight": 14701,
+        "r": 11.87,
+        "x": -0.0088,
+        "y": 0.0827,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733630882956237309",
+            "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733635691390559679",
+            "text": "#Aufgebraucht 🗑 💖☺️💖 *ANZEIGE - selbst gekauft! 💎 ♻️ #Elaimei Eye Mask aus der \"Marine Collagen\" Reihe auf #Amazon bestellt - \"Deep Sea Love\" ♥️ + \"Sparkling Pearl\" ♥️ - beide mit 5 wichtigen Anti-Aging Inhaltsstoffen: Meeres-Kollagen, Perlen-Extrakt, Hyaluronsäure, Rote Alge &am",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "laser",
+        "label": "Laser-Therapien",
+        "weight": 8110,
+        "r": 10.36,
+        "x": -0.0881,
+        "y": -0.228,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733788131255505289",
+            "text": "📍Monaco | 26.–28. MärzWeltweit führender Kongress für Ästhetische und Anti-Aging-Medizin💉✨ Innovation. Austausch. Exzellenz.Ich freue mich, beim international renommierten Kongress im Grimaldi Forum in Monaco dabei zu sein – ein Hotspot für die neuesten Entwicklungen, spannende I",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733871191602527717",
+            "text": "Der Thulium-Laser ist ein modernes Gerät, das ermöglicht: ▫️𝙃𝙖𝙪𝙩𝙫𝙚𝙧𝙟𝙪̈𝙣𝙜𝙪𝙣𝙜 – stimuliert die Kollagenproduktion und verbessert die Spannkraft ▫️ 𝙍𝙚𝙙𝙪𝙠𝙩𝙞𝙤𝙣 𝙫𝙤𝙣 𝙋𝙞𝙜𝙢𝙚𝙣𝙩𝙛𝙡𝙚𝙘𝙠𝙚𝙣 – gleicht den Hautton aus und hellt dunkle Stellen auf ▫️ 𝙑𝙚𝙧𝙗𝙚𝙨𝙨𝙚𝙧𝙪𝙣𝙜 𝙙𝙚𝙧 𝙃𝙖𝙪𝙩𝙨𝙩𝙧𝙪𝙠𝙩𝙪𝙧 – verfeinert Poren",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733937497182144423",
+            "text": "Stören dich hartnäckige Pigmentflecken oder ein unruhiger Teint? ✨Dann zeigt dir @doc.katharina heute ihre Top 6 Behandlungen für einen ebenmäßigen, strahlenden Hautton – wissenschaftlich fundiert, modern und wirksam.📌 CO₂-LaserTrägt die obersten Hautschichten präzise ab und erne",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "niacinamide-peptides",
+        "label": "Niacinamid & Peptide",
+        "weight": 14916,
+        "r": 11.91,
+        "x": -0.095,
+        "y": 0.0699,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733607129212004577",
+            "text": "Sanft, aber stark im Anti-Aging.💛Age Limit mit 0,05% Retinal, Panthenol, Bisabolol und Allantoin wirkt gegen Falten und Flecken; die wasserbasierte Textur zieht blitzschnell ein.#elynslab.de #agelimit #retinal #antiaging #panthenol #serum",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733626724086019705",
+            "text": "Ich habe die Vichy @vichylaboratoires NEOVADIOL Longevity Pro-Volumen Creme kostenlos zum Testen vom @hometesterclubde erhalten. Mir gefällt die zarte Textur, der leichte blumige Duft und dass sie schnell einzieht – meine Haut mit über 50 braucht besondere Pflege, und die Creme s",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "botox",
+        "label": "Botox / Neuromodulatoren",
+        "weight": 8296,
+        "r": 10.41,
+        "x": 0.2058,
+        "y": 0.0909,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_140_7555907735510895894",
+            "text": "Nur dass unser „Menü\" ein bisschen länger hält!😉 __________________________ ⚠️Wir sind spezialisiert auf ästhetische Eingriffe der gesamten Kopf- und Halsregion sowie auf körperformende Operationen. Gesicht &amp; Hals: funktionelle und ästhetische Nasenkorrekturen, Korrekturen vo",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3733542934969625638",
+            "text": "Nur dass unser „Menü\" ein bisschen länger hält!😉__________________________⚠️Wir sind spezialisiert auf ästhetische Eingriffe der gesamten Kopf- und Halsregion sowie auf körperformende Operationen.Gesicht &amp; Hals: funktionelle und ästhetische Nasenkorrekturen, Korrekturen von v",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733675137149977565",
+            "text": "✨ Nach 14 Tagen – das Ergebnis kann sich sehen lassen!Botox entfaltet seine volle Wirkung innerhalb von zwei Wochen: Falten wirken glatter, der Ausdruck entspannter und das Gesicht frischer – ganz ohne starr oder unnatürlich auszusehen. 💉✨📌 Hinweis: Jede Behandlung ist individuel",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "safety",
+        "label": "Sicherheit & Vertrauen",
+        "weight": 2576,
+        "r": 8.46,
+        "x": -0.2416,
+        "y": 0.2093,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_15_29652566885882260",
+            "text": "Vorsicht, wenn der Ring vom Finger rutscht Prof. Dr. Dorothee Volkert bedauert, dass in der Ärzteausbildung Ernährung nur eine untergeordnete Rolle spielt. Viele ältere Menschen essen zu wenig oder zu einseitig – mit oft gravierenden Folgen: höheres Risiko für Infektionen, schlec",
+            "source": "Blogs"
+          },
+          {
+            "id": "0_225889_190_3734337879494387801",
+            "text": "Eine Augenlidstraffung ohne Skalpellwird immer beliebter, da sie eine nicht-invasive Alternative zur herkömmlichen Operation bietet. Hier sind drei Gründe, warum sich immer mehr Menschen für diese Methode entscheiden:1.  Keine Narbenbildung: Im Gegensatz zur operativen Lidstraffu",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_140_7557699826125655318",
+            "text": "مرزه (Savory): فواید معجزه‌گر مرزه برای گوارش، ایمنی و آرامش، آنتی بیوتیکی طبیعی برای بدن در این ویدیو، خواص شگفت‌انگیز مرزه (Savory / مرزه تابستانی) را دقیق و کامل بررسی می‌کنیم؛ از ترکیبات فعال آن (کارواکرول، تیمول، پاراسیمن و ترپنین‌ها) گرفته تا تأثیرشان روی گوارش، سیستم ایمنی",
+            "source": "TikTok"
+          }
+        ]
+      },
+      {
+        "id": "natural",
+        "label": "Natürlichkeit & Authentizität",
+        "weight": 1576,
+        "r": 7.92,
+        "x": 0.4895,
+        "y": -0.0105,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_190_3736512065901745709",
+            "text": "𝗠𝗢𝗡𝗔𝗧 – 𝗺𝗲𝗵𝗿 𝗮𝗹𝘀 𝗻𝘂𝗿 𝗛𝗮𝗮𝗿𝗽𝗳𝗹𝗲𝗴𝗲. 𝗘𝗶𝗻𝗲 𝗕𝗲𝘄𝗲𝗴𝘂𝗻𝗴. 𝗘𝗶𝗻 𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲. 𝗘𝗶𝗻𝗲 𝗖𝗵𝗮𝗻𝗰𝗲𝐖𝐚𝐬, 𝐰𝐞𝐧𝐧 𝐝𝐮 𝐏𝐫𝐨𝐝𝐮𝐤𝐭𝐞 𝐡ä𝐭𝐭𝐞𝐬𝐭, 𝐝𝐢𝐞 𝐧𝐢𝐜𝐡𝐭 𝐧𝐮𝐫 𝐬𝐜𝐡ö𝐧 𝐦𝐚𝐜𝐡𝐞𝐧 – 𝐬𝐨𝐧𝐝𝐞𝐫𝐧 𝐰𝐢𝐫𝐤𝐥𝐢𝐜𝐡 𝐰𝐢𝐫𝐤𝐞𝐧?🌿 vegan, tierversuchsfrei &amp; clean💧 mit patentiertem Rejuveniqe™-Öl🌸 für Haut, Haar &amp; ganzheitliches Wohlbefinden𝘔𝘖",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3736711933245309187",
+            "text": "Faltenfrei ist kein Zustand – es ist eine Entscheidung.Wer nur Hyaluron will, aber nicht an sich arbeitet, sucht eine Illusion.Ästhetik beginnt da, wo Verantwortung und Ergebnis sich treffen.#faltenfrei #beautydoc #aesthetic #medicalbeauty #hyaluron #threads #mintpdo #skinbooster",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3736725366099436563",
+            "text": "✨ 14 Tage Lymph-Reset ✨Dein natürlicher Anti-Aging-Kick für mehr Leichtigkeit, frische Ausstrahlung &amp; sichtbar definierte Konturen 💧🌿Fühlst du dich manchmal aufgedunsen, geschwollen oder einfach nicht mehr so strahlend wie früher?Dann ist unser 14-Tage-Lymph-Reset dein Beauty",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "spf",
+        "label": "Sonnenschutz & Prävention",
+        "weight": 20891,
+        "r": 13.0,
+        "x": -0.1342,
+        "y": -0.098,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733630882956237309",
+            "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733657271394942067",
+            "text": "Das Besondere an dieser Foundation?Sie pflegt deine Haut wie eine Creme - wahrend sie dein Make-up perfektioniert.💛 Präbiotisches Serum - stärkt die Hautbarriere💛 Vitamin E - schützt vor Hautalterung💛 Anti-Aging-Wirkung - kaschiert Linien sofort💛 SPF 12 - schützt vor Sonnenschäde",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "facelift",
+        "label": "Chirurgische Eingriffe",
+        "weight": 5779,
+        "r": 9.68,
+        "x": 0.0885,
+        "y": -0.2925,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_140_7556050662585388318",
+            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_140_7555907735510895894",
+            "text": "Nur dass unser „Menü\" ein bisschen länger hält!😉 __________________________ ⚠️Wir sind spezialisiert auf ästhetische Eingriffe der gesamten Kopf- und Halsregion sowie auf körperformende Operationen. Gesicht &amp; Hals: funktionelle und ästhetische Nasenkorrekturen, Korrekturen vo",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3733542934969625638",
+            "text": "Nur dass unser „Menü\" ein bisschen länger hält!😉__________________________⚠️Wir sind spezialisiert auf ästhetische Eingriffe der gesamten Kopf- und Halsregion sowie auf körperformende Operationen.Gesicht &amp; Hals: funktionelle und ästhetische Nasenkorrekturen, Korrekturen von v",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "retinol",
+        "label": "Retinoide",
+        "weight": 15637,
+        "r": 12.05,
+        "x": -0.1562,
+        "y": 0.041,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733478883803689483",
+            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1208689084607808",
+            "text": "✨ Entdecke die exklusive BEAUTY JUNGLE XMAS-Kollektion 2025 – Luxuspflege, die dich strahlend schön durch die Festtage begleitet! 🎄Sichere dir jetzt deine Favoriten – die Kollektion ist limitiert:✨ Beauty Jungle Special – Adventskalender der besonderen Art mit 6 Pflege-Highlights",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733581845637159057",
+            "text": "🌿 Goji-Beeren – kleine Powerfrüchte für deinen Mama-Alltag 🌿Die roten Beeren sind nicht nur lecker, sondern auch wahre Nährstoffbomben:🍒 Vitamine – reich an Vitamin A, C &amp; B-Vitaminen → unterstützen Immunsystem &amp; Energie.💪 Mineralien – Eisen, Zink, Selen → gut für Blutbil",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "fillers",
+        "label": "Hyaluron-Filler",
+        "weight": 7070,
+        "r": 10.07,
+        "x": 0.1679,
+        "y": -0.0766,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733593947705086154",
+            "text": "Die Kirmes ist geschafft, die Sonne scheint und ich bin gleich für Euch am Start ☀️#haan #hilden #düsseldorf #wuppertal #solingen #kosmetik #comfortzone #novarom_beauty #janeiredale #binellamedicalbeauty  #neovita #augenmanufaktur #beautyhillscosmetic #haan_insight #mettmann_insi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1128490679431437",
+            "text": "✨ Die Vorteile des Vital Injector 2 auf einen Blick: ✨✅ Minimiert feine Linien &amp; Falten✅ Verbessert Aknenarben✅ Verkleinert Poren✅ Verfeinert Hautstruktur &amp; TeintDer Vital Injector 2 ist Ihr All-in-One Beauty-Tool – für sichtbare Ergebnisse in kürzester Zeit, mit weniger ",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733721803454725222",
+            "text": "Hydrafacial – das Glow-Geheimnis für Deine Haut Mit nur einer Behandlung erreichst Du sichtbar bessere Haut:✅ Entfernt 100 % der Hautunreinheiten und abgestorbenen Zellen✅ Reduziert bis zu 90 % feine Linien &amp; Fältchen✅ Verfeinert Hautton &amp; verbessert die Hauttextur spürba",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "celebrity",
+        "label": "Prominente & Influencer-Diskurs",
+        "weight": 1534,
+        "r": 7.9,
+        "x": -0.3549,
+        "y": -0.3177,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733977440628815268",
+            "text": "✨ Strahlende Haut ist kein Zufall – sie ist Pflege ✨Viele von uns kennen die Herausforderungen:👉 Rosacea, die Hautrötungen sichtbar macht👉 Akne &amp; unreine Haut, die oft das Selbstbewusstsein belasten👉 Fältchen &amp; Linien, die sich mit der Zeit einschleichenMit der Health Not",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735180263878845867",
+            "text": "Du zahlst für Kollagen – aber schluckst du wirklich das, was dein Körper braucht… oder nur teures Wasser?\" 💧💸Es gibt unzählige Kollagen-Produkte… doch die Frage ist: Bleibt davon überhaupt etwas in deinem Körper? Oder flutscht es einfach durch und landet als teures Wasser im Abfl",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3739054744514916805",
+            "text": "✨ Celebrity Check: J.Lo ✨Mit über 50 sieht Jennifer Lopez frischer und jugendlicher aus als je zuvor – aber was steckt dahinter? 💉💫Dr. Grittern schaut genauer hin: Von clever eingesetzten Treatments über modernste Skin-Tools bis hin zu kleinen Beauty-Secrets – J.Lo zeigt, wie man",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "price",
+        "label": "Kosten & Preis-Leistung",
+        "weight": 15655,
+        "r": 12.06,
+        "x": 0.0778,
+        "y": 0.0109,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_26_1225135836296932",
+            "text": "Seit ihr gespannt auf unsere Box ❓❓❓Wieder ein Knaller und ein riesen Lob an LimeLife für das 3x infolge einen so tolle Pflege Box📦*Ihr bekommt sie jeden Monat 1x über euer Kundenkonto für 45€ versandfrei*, egal welcher wert enthalten ist. Im Oktober Wert 85€. https://www.limelif",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733648718981847066",
+            "text": "Seit ihr gespannt auf unsere Box ❓❓❓Wieder ein Knaller und ein riesen Lob an LimeLife für das 3x infolge einen so tolle Pflege Box📦*Ihr bekommt sie jeden Monat 1x über euer Kundenkonto für 45€ versandfrei*, egal welcher wert enthalten ist. Im Oktober Wert 85€. https://www.limelif",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_789195373711446",
+            "text": "Mehr Jugendlichkeit im Gesicht durch NaturBrows 1000€ Sanfte Anpassung mit sichtbarem Anti-Aging-Effekt.„Wer hätte gedacht, dass Augenbrauen Jahre von deinem Gesicht nehmen können? Mit NaturBrows 1000€ haben wir die Form leicht angehoben, um den Blick zu öffnen, und eine sanfte, ",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "id": "vitamin-c",
+        "label": "Vitamin C",
+        "weight": 18615,
+        "r": 12.6,
+        "x": -0.2131,
+        "y": -0.021,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733610685780566953",
+            "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Fei",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "peel",
+        "label": "Peeling & Microneedling",
+        "weight": 32609,
+        "r": 14.74,
+        "x": -0.0068,
+        "y": -0.1153,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733478883803689483",
+            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733589090667874780",
+            "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733608589408340521",
+            "text": "Meine Leidenschaft ist es, speziell Frauen mit meinen Händen und meiner Stimme auf einer tieferen Ebene zu Berühren. Ich gebe Dir dass Gefühl dich fallen lassen zu können, in deiner goldenen Mitte ankommen zu können. Nach einer Behandlung bei mir fühlst du dich schöner, entspannt",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "aging-signs",
+        "label": "Hautalterungs-Zeichen",
+        "weight": 138286,
+        "r": 24.0,
+        "x": -0.0224,
+        "y": -0.0602,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_140_7556050662585388318",
+            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3733478883803689483",
+            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "pressure",
+        "label": "Gesellschaftlicher Druck",
+        "weight": 270,
+        "r": 6.8,
+        "x": 0.0234,
+        "y": 1.0,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_26_1398367725625033",
+            "text": "👶✨️ Packungsbeilage beachten! Gezeichnet beim diesjährigen \"Inselwitz\" auf Baltrum zum Thema \"Cartoons für alte Leute\"#schönheitswahn #antiaging #skinscare #humor",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_9_yt.Wrr_hEvOj4A",
+            "text": "Schönheitsideale werden immer wilder Überall wird geliftet, gespritzt, getaped und „Baby-Botoxed\". Promis altern rückwärts, 30-Jährige bekommen Panik vor ihren ersten Falten und Schönheitschirurg*innen analysieren auf TikTok, wer welches Gesicht wo verändert hat. Anti-Aging-Produ",
+            "source": "Youtube"
+          },
+          {
+            "id": "0_225889_15_38522496369994195",
+            "text": "Kate Winslet äußert Bedenken über Schönheitsoperationen und Diät-Injektionen Kate Winslet äußert ihre Sorgen über den ansteigenden Trend von Schönheitsoperationen und Abnehmspritzen. Die talentierte britische Schauspielerin ist ein Fan der natürlichen Schönheit und findet es „beä",
+            "source": "Blogs"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "peel",
+        "target": "aging-signs",
+        "weight": 19670,
+        "width": 3.9,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733478883803689483",
+            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733589090667874780",
+            "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "spf",
+        "target": "aging-signs",
+        "weight": 11984,
+        "width": 2.65,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733657271394942067",
+            "text": "Das Besondere an dieser Foundation?Sie pflegt deine Haut wie eine Creme - wahrend sie dein Make-up perfektioniert.💛 Präbiotisches Serum - stärkt die Hautbarriere💛 Vitamin E - schützt vor Hautalterung💛 Anti-Aging-Wirkung - kaschiert Linien sofort💛 SPF 12 - schützt vor Sonnenschäde",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733671040086766936",
+            "text": "✨ Straffere, glattere Haut in nur 4 Wochen – klinisch bewiesen! ✨Die Eucerin Hyaluron-Filler 3x Effect Pflege mit hochkonzentriertem 5% B5 und 2 Arten von Hyaluronsäure mildert sichtbar Falten und stärkt die Hautbarriere.Dank LSF 30 wird die Haut zusätzlich vor UV-bedingter Hauta",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "niacinamide-peptides",
+        "target": "aging-signs",
+        "weight": 8090,
+        "width": 2.02,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733626724086019705",
+            "text": "Ich habe die Vichy @vichylaboratoires NEOVADIOL Longevity Pro-Volumen Creme kostenlos zum Testen vom @hometesterclubde erhalten. Mir gefällt die zarte Textur, der leichte blumige Duft und dass sie schnell einzieht – meine Haut mit über 50 braucht besondere Pflege, und die Creme s",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "hyaluronic-acid",
+        "target": "aging-signs",
+        "weight": 7465,
+        "width": 1.91,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "retinol",
+        "target": "aging-signs",
+        "weight": 6091,
+        "width": 1.69,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733478883803689483",
+            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733720916267213444",
+            "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелки",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "vitamin-c",
+        "target": "aging-signs",
+        "weight": 5816,
+        "width": 1.65,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733610685780566953",
+            "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Fei",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "price",
+        "target": "aging-signs",
+        "weight": 5104,
+        "width": 1.53,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_789195373711446",
+            "text": "Mehr Jugendlichkeit im Gesicht durch NaturBrows 1000€ Sanfte Anpassung mit sichtbarem Anti-Aging-Effekt.„Wer hätte gedacht, dass Augenbrauen Jahre von deinem Gesicht nehmen können? Mit NaturBrows 1000€ haben wir die Form leicht angehoben, um den Blick zu öffnen, und eine sanfte, ",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_26_1438781807598330",
+            "text": "Face-Lift ohne OP❓Das geht mit Micro Needling PRO❗Micro Needling PRO ist ein erfolgreiches Verfahren im Bereich Anti-Aging und Problemhaut-Behandlung. Die nicht-ablative Hautverjüngungs-Technik ermöglicht es, die Haut an Gesicht, Augen, Lippen, Hals, Dekolleté zu verbessern und z",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733959938646220549",
+            "text": "🍂 Microneedling im Herbst – die perfekte Zeit für strahlende Haut! 🍂Weniger Sonne, mehr Regeneration – genau jetzt ist der beste Moment, deiner Haut etwas Gutes zu tun.✨ Unser Herbst-Special:Microneedling inkl. Mikrodermabrasion &amp; Wirkstoffmaske – für nur 165 € (statt 179 €).",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "laser",
+        "target": "aging-signs",
+        "weight": 3799,
+        "width": 1.32,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733871191602527717",
+            "text": "Der Thulium-Laser ist ein modernes Gerät, das ermöglicht: ▫️𝙃𝙖𝙪𝙩𝙫𝙚𝙧𝙟𝙪̈𝙣𝙜𝙪𝙣𝙜 – stimuliert die Kollagenproduktion und verbessert die Spannkraft ▫️ 𝙍𝙚𝙙𝙪𝙠𝙩𝙞𝙤𝙣 𝙫𝙤𝙣 𝙋𝙞𝙜𝙢𝙚𝙣𝙩𝙛𝙡𝙚𝙘𝙠𝙚𝙣 – gleicht den Hautton aus und hellt dunkle Stellen auf ▫️ 𝙑𝙚𝙧𝙗𝙚𝙨𝙨𝙚𝙧𝙪𝙣𝙜 𝙙𝙚𝙧 𝙃𝙖𝙪𝙩𝙨𝙩𝙧𝙪𝙠𝙩𝙪𝙧 – verfeinert Poren",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733937497182144423",
+            "text": "Stören dich hartnäckige Pigmentflecken oder ein unruhiger Teint? ✨Dann zeigt dir @doc.katharina heute ihre Top 6 Behandlungen für einen ebenmäßigen, strahlenden Hautton – wissenschaftlich fundiert, modern und wirksam.📌 CO₂-LaserTrägt die obersten Hautschichten präzise ab und erne",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734455757673363862",
+            "text": "✨ CO₂-Laserbehandlung – das Geheimnis für straffere Haut ✨Mit dem CO₂-Laser kann ich die Haut sichtbar glätten und ihre Elastizität verbessern. Durch die Anregung der Kollagenbildung wirkt die Haut frischer, straffer und ebenmäßiger.👩‍⚕️ Besonders geeignet ist die Behandlung bei ",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "retinol",
+        "target": "vitamin-c",
+        "weight": 3423,
+        "width": 1.26,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_15_17451107528918889",
+            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
+            "source": "Blogs"
+          }
+        ]
+      },
+      {
+        "source": "fillers",
+        "target": "aging-signs",
+        "weight": 3036,
+        "width": 1.19,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733721803454725222",
+            "text": "Hydrafacial – das Glow-Geheimnis für Deine Haut Mit nur einer Behandlung erreichst Du sichtbar bessere Haut:✅ Entfernt 100 % der Hautunreinheiten und abgestorbenen Zellen✅ Reduziert bis zu 90 % feine Linien &amp; Fältchen✅ Verfeinert Hautton &amp; verbessert die Hauttextur spürba",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733743565055728339",
+            "text": "🔹 Unsere Signature Therapie✨ Radiesse® + Skinbooster+PRP 👉 Mehr Fibroblasten-Stimulation👉 Aufbau von Kollagen &amp; Elastin👉 Sichtbar mehr Glow 🌟 Sofort frischer Teint🌟 Straffung + Lifting-Effekt🌟 Natürlich &amp; minimal-invasiv 💎 Glow von innen heraus💎 Langzeitwirkung für deine ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733799857665142305",
+            "text": "Microneedling – jetzt ist die perfekte Zeit dafür! ✨Microneedling gehört zu den effektivsten Methoden, um die Haut sichtbar zu verschönern – und die Ergebnisse sind einfach mega! 💎Durch die feinen Mikrokanäle wird die Haut angeregt, neues Kollagen und Elastin zu bilden. Das sorgt",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "hyaluronic-acid",
+        "target": "niacinamide-peptides",
+        "weight": 2680,
+        "width": 1.14,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733692099141862993",
+            "text": "✨Feuchtigkeit in 7 Tagen ✨✨ Die Intensiv-Feuchtigkeitskur von Doctor Babor ist eine innovative Dreifach-Formel, die die Haut vollständig von Trockenheit und Dehydrierung befreit. Aktive Tripeptide stimulieren die Produktion der körpereigenen Hyaluronsäure, Polyglutaminsäure binde",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "niacinamide-peptides",
+        "target": "vitamin-c",
+        "weight": 2521,
+        "width": 1.11,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_15_17451107528918889",
+            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
+            "source": "Blogs"
+          },
+          {
+            "id": "0_225889_190_3734632463499809090",
+            "text": "✨ NEU BEI UNS: die #cerave Skin Renewing Serie!✨Vier Produkte, die deine Haut erneuern, Feuchtigkeit spenden und für ein strahlendes Hautbild sorgen 💜 - entwickelt mit Dermatologen für deine tägliche Anti-Aging-Routine.🌙 Peptid Creme: Reichhaltige #nachtpflege mit Ceramiden, Hyal",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "spf",
+        "target": "retinol",
+        "weight": 2163,
+        "width": 1.05,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733720916267213444",
+            "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелки",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_15_17451107528918889",
+            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
+            "source": "Blogs"
+          }
+        ]
+      },
+      {
+        "source": "spf",
+        "target": "vitamin-c",
+        "weight": 2100,
+        "width": 1.04,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_15_17451107528918889",
+            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
+            "source": "Blogs"
+          },
+          {
+            "id": "0_225889_190_3734578837972625757",
+            "text": "Sonnencreme ist wichtig, weil sie deine Haut vor UV-Strahlen schützt, aber dieser Schutz allein reicht nicht aus. Umweltverschmutzung, blaues Licht und Infrarotstrahlen verursachen freie Radikale, die die Haut schädigen und die Hautalterung beschleunigen. Hier kommen Antioxidanti",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "price",
+        "target": "peel",
+        "weight": 1991,
+        "width": 1.02,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_1438781807598330",
+            "text": "Face-Lift ohne OP❓Das geht mit Micro Needling PRO❗Micro Needling PRO ist ein erfolgreiches Verfahren im Bereich Anti-Aging und Problemhaut-Behandlung. Die nicht-ablative Hautverjüngungs-Technik ermöglicht es, die Haut an Gesicht, Augen, Lippen, Hals, Dekolleté zu verbessern und z",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733959938646220549",
+            "text": "🍂 Microneedling im Herbst – die perfekte Zeit für strahlende Haut! 🍂Weniger Sonne, mehr Regeneration – genau jetzt ist der beste Moment, deiner Haut etwas Gutes zu tun.✨ Unser Herbst-Special:Microneedling inkl. Mikrodermabrasion &amp; Wirkstoffmaske – für nur 165 € (statt 179 €).",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1350002366911206",
+            "text": "🍂 Herbstzeit = Hauterneuerungszeit 🍂Der Sommer hat unsere Haut stark beansprucht – Sonne, Chlor &amp; Salzwasser hinterlassen oft Spuren wie trockene Stellen, Pigmentflecken oder kleine Unreinheiten. Genau jetzt ist die perfekte Zeit für eine Fruchtsäure-Behandlung als Kur! ✨Waru",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "source": "spf",
+        "target": "peel",
+        "weight": 1886,
+        "width": 1.01,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1658033418956470",
+            "text": "✨ Teil 2:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (2/2)🌿 Bakuchiol – sanfte, pflanzliche Retinol-Alternative.🛡️ Ceramide – schützen die Hautbarriere &amp; verhindern Feuchtigkeitsverlust.🔄 Coenzym Q10 – Energiebooster für die Zellen, schützt vor oxidativem Stre",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3735098963134114324",
+            "text": "✨ Teil 2:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (2/2)🌿 Bakuchiol – sanfte, pflanzliche Retinol-Alternative.🛡️ Ceramide – schützen die Hautbarriere &amp; verhindern Feuchtigkeitsverlust.🔄 Coenzym Q10 – Energiebooster für die Zellen, schützt vor oxidativem Stre",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "facelift",
+        "target": "aging-signs",
+        "weight": 1695,
+        "width": 0.98,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_140_7556050662585388318",
+            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_140_7556119489209928991",
+            "text": "Keine Lust mehr auf schlaffe Haut? Testen Sie meine minimalinvasive Facelift-Methode – ganz ohne große OP oder Nähte für ein umwerfendes Ergebnis! Kleine Schnitte für ein natürlich jugendliches Aussehen. Was ist Ihr Schönheitsgeheimnis? Folgen Sie mir und schreiben Sie mir eine p",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_140_7556257839212203295",
+            "text": "Bekämpfen Sie Falten und schlaffe Haut: Meine exklusive minimalinvasive Facelift-Technik – erstaunliche Ergebnisse ohne große Operation oder Nähte! Kleine Schnitte für ein natürlich jüngeres Aussehen. Was sind Ihre Anti-Aging-Geheimnisse? Folgen Sie mir und senden Sie mir eine pr",
+            "source": "TikTok"
+          }
+        ]
+      },
+      {
+        "source": "hyaluronic-acid",
+        "target": "spf",
+        "weight": 1569,
+        "width": 0.96,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733630882956237309",
+            "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733693077631318893",
+            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_15_17451107528918889",
+            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
+            "source": "Blogs"
+          }
+        ]
+      },
+      {
+        "source": "botox",
+        "target": "aging-signs",
+        "weight": 1369,
+        "width": 0.92,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733675137149977565",
+            "text": "✨ Nach 14 Tagen – das Ergebnis kann sich sehen lassen!Botox entfaltet seine volle Wirkung innerhalb von zwei Wochen: Falten wirken glatter, der Ausdruck entspannter und das Gesicht frischer – ganz ohne starr oder unnatürlich auszusehen. 💉✨📌 Hinweis: Jede Behandlung ist individuel",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735368997970692804",
+            "text": "🌸 Wo sollte man diese Behandlungen am besten durchführen lassen? Natürlich bei NOVAJU! 🙂Warum? Weil jede Behandlung bei uns individuell auf die Bedürfnisse deiner Haut abgestimmt wird – keine Standardschemata, sondern Zuhören und gezielte Beratung. 🍀Bei NOVAJU setzen wir auf natü",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3736073808747692609",
+            "text": "Unsere liebe Jasmin Hoppe war heute wieder bei uns zu Besuch ✨Diesmal haben wir im Bereich der Augen und der Mundwinkel mit Polynukleotiden gearbeitet.Polynukleotide sind Bausteine, die die Hautzellen regenerieren, Feuchtigkeit spenden und die Kollagenbildung anregen für eine str",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "spf",
+        "target": "price",
+        "weight": 894,
+        "width": 0.85,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3735249397550759331",
+            "text": "Süß kann teuer werden – zumindest für unsere Haut. 🍭✨ Hast du schon mal von Glykation gehört? Dabei bindet sich Zucker an unser Kollagen und Elastin – die beiden sorgen eigentlich für Spannkraft und jugendliche Haut. Das Ergebnis: Das Haut-Trampolin verliert langsam seine Sprungk",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3742516033937401101",
+            "text": "✨ RETINOL POWER 0.5% – das kleine Hautwunder für große Ergebnisse! ✨ jetzt für 69,90€ statt 98,90€ 😍Unser aktivierendes Retinol Serum 0.5% wirkt wie ein sanftes Lifting über Zeit 💫 – für glattere, ebenmäßigere und sichtbar verjüngte Haut.Dank reinem Phosphatidylcholin als „Taxi\" ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3742601841486862791",
+            "text": "Reine Haut ist kein Zufall.Sie ist Disziplin, Stil und Teil deiner Identität als High-Value-Mann.Wenn du gepflegt aussiehst, wirkst du automatisch teurer, präsenter und souveräner.Hier ist deine 4-Schritte Skincare Routine, die jeder Mann mit Klasse kennen sollte:1️⃣ Reinigen (Cl",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "threads",
+        "target": "aging-signs",
+        "weight": 828,
+        "width": 0.83,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_140_7556050662585388318",
+            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3734483816837559453",
+            "text": "✨ Aptos Full Face Fadenlifting mit Excellence Visage ✨Stellen Sie sich vor: ein jugendliches, strahlendes Gesicht – ohne OP, ohne lange Ausfallzeit.Unsere speziellen Excellence Visage Aptos-Fäden sind nicht nur Lifting-Fäden, sondern wirken zusätzlich wie ein Skinbooster.🔹 Wie fu",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_171_3734487114953042279",
+            "text": "💎 Das Resultat: straffe Haut, weniger Falten, frische Ausstrahlung – ganz ohne unnatürlichen Effekt.👉 Sehen Sie selbst: bereits nach 2 Wochen wirkt das Gesicht deutlich erholter, frisch und jugendlich!⸻Hashtags#Fadenlifting #Aptos #FullFaceLifting #ExcellenceVisage #CollagenStimu",
+            "source": "Threads"
+          }
+        ]
+      },
+      {
+        "source": "botox",
+        "target": "fillers",
+        "weight": 768,
+        "width": 0.82,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733900499184553064",
+            "text": "Hier seht ihr eine Behandlung der sogenannten Krähenfüße mit Botox ✨Botox sorgt für ein glattes, frisches Aussehen – ganz ohne die natürliche Mimik zu verlieren. Das Ergebnis: jünger, entspannter &amp; sofort sichtbar. #Botox#Hyaluron#Skinbooster#JawlineContouring#Lippenaufspritz",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735838699242581848",
+            "text": "💡wusstest du das??!😱: Botox wirkt nur bei mimischen Falten (z. B. Stirn, Zornesfalte, Lachfalten).Bei Schlaf-Falten braucht die Haut andere Lösungen wie Hyaluron oder Skinbooster – Botox kann hier nicht helfen.😵‍💫#botoxbayreuth#botox #aesthetic ##botulinumtoxin #plastischechirurg",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735977362337585859",
+            "text": "💉✨ Hyaluron &amp; Botox Event im Permanent Beauty School✨💉Am 12.10.25 von 13.00-16.00 habt ihr die exklusive Möglichkeit, in unserem Kosmetikstudio professionelle Unterspritzungen mit Hyaluron und Botox durchführen zu lassen.👨‍⚕️ Ein erfahrener Arzt wird vor Ort sein, euch indivi",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "celebrity",
+        "target": "aging-signs",
+        "weight": 699,
+        "width": 0.81,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733977440628815268",
+            "text": "✨ Strahlende Haut ist kein Zufall – sie ist Pflege ✨Viele von uns kennen die Herausforderungen:👉 Rosacea, die Hautrötungen sichtbar macht👉 Akne &amp; unreine Haut, die oft das Selbstbewusstsein belasten👉 Fältchen &amp; Linien, die sich mit der Zeit einschleichenMit der Health Not",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3739054744514916805",
+            "text": "✨ Celebrity Check: J.Lo ✨Mit über 50 sieht Jennifer Lopez frischer und jugendlicher aus als je zuvor – aber was steckt dahinter? 💉💫Dr. Grittern schaut genauer hin: Von clever eingesetzten Treatments über modernste Skin-Tools bis hin zu kleinen Beauty-Secrets – J.Lo zeigt, wie man",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1741383830133887",
+            "text": "Sag Falten, Pigmentflecken &amp; Schlupflidern bye-bye – ganz ohne Skalpell! ⚡️Der Plasma Pen ist unser kleiner \"Zauberstab\" für straffere, glattere und ebenmäßigere Haut 💫Ob Lidstraffung, Narben, Pigmentflecken, Seitenlift, Dehnungsstreifen uvm...Auf unserem Profil und unserer H",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "source": "laser",
+        "target": "peel",
+        "weight": 685,
+        "width": 0.81,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733937497182144423",
+            "text": "Stören dich hartnäckige Pigmentflecken oder ein unruhiger Teint? ✨Dann zeigt dir @doc.katharina heute ihre Top 6 Behandlungen für einen ebenmäßigen, strahlenden Hautton – wissenschaftlich fundiert, modern und wirksam.📌 CO₂-LaserTrägt die obersten Hautschichten präzise ab und erne",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735946748028446718",
+            "text": "🌿✨ Strahlende Haut beginnt mit reiner Pflege! ✨🌿Sagen Sie Milien den Kampf an – für einen ebenmäßigen, glatten Teint.Dank unserer professionellen Hautreinigung gehören störende weiße Pünktchen der Vergangenheit an.🔹 Sanfte Entfernung von Milien🔹 Porentiefe Reinigung🔹 Sichtbar fri",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735951126663674132",
+            "text": "Gesichtsreinigung 🌿✨ Strahlende Haut beginnt mit reiner Pflege! ✨🌿Sagen Sie Milien den Kampf an – für einen ebenmäßigen, glatten Teint.Dank unserer professionellen Hautreinigung gehören störende weiße Pünktchen der Vergangenheit an.🔹 Sanfte Entfernung von Milien🔹 Porentiefe Reini",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "fillers",
+        "target": "peel",
+        "weight": 662,
+        "width": 0.81,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733799857665142305",
+            "text": "Microneedling – jetzt ist die perfekte Zeit dafür! ✨Microneedling gehört zu den effektivsten Methoden, um die Haut sichtbar zu verschönern – und die Ergebnisse sind einfach mega! 💎Durch die feinen Mikrokanäle wird die Haut angeregt, neues Kollagen und Elastin zu bilden. Das sorgt",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733964367621570820",
+            "text": "Direkt nach dem Radiofrequenz-Needling ist die Haut wie ein offenes Tor – die feinen Mikrokanäle sind perfekt, um Wirkstoffe tief einzuschleusen.👉 Hyaluronsäure, Polynukleotide, Exosomen oder PRP – genau jetzt können sie ihre volle Wirkung entfalten.Das Ergebnis: maximale Regener",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734705392958751909",
+            "text": "✨ RF Microneedling kombiniert feine Mikro-Nadeln mit Radiofrequenzenergie, um die Haut von innen heraus zu straffen und zu regenerieren. 💫 Kollagen und Elastinproduktion werden angeregt, für ein glatteres, strahlenderes Hautbild. 🌸 Ideal bei feinen Linien, Narben oder erweiterten",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "safety",
+        "target": "aging-signs",
+        "weight": 551,
+        "width": 0.79,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_1378061917658287",
+            "text": "Hast Du schon vom neuen Biostimulator Profhilo structura gehört ? Auf komplett natürliche Weise wird durch die Injektion dieses  hochreinen HA-Produktes dem Gesicht wieder Spannkraft verliehen und die Hautstruktur verbessert. ▶️Wie das geht ? Durch Regeneration der stützenden Unt",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3742587814996233028",
+            "text": "🧴 Profhilo Structura – Die Revolution für straffe, jugendliche Haut!✨ Innovative Kollagen-Booster mit hochkonzentrierter Hyaluronsäure (90 mg/2ml) für intensive Hydratation und sichtbaren Lifting-Effekt – ganz ohne OP.Was macht Profhilo Structura einzigartig?- Volumenaufbau &amp;",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3743154208967817375",
+            "text": "Polynucleotide – Absolute Highlights1.Fördert Hautregeneration•Unterstützt Zellwachstum und Reparatur.•Verbessert die Hautstruktur und Festigkeit.2.Steigert Kollagen- und Elastinbildung•Sichtbare Straffung und Glättung der Haut.•Reduziert Falten und feine Linien.3.Verbessert Feuc",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "laser",
+        "target": "price",
+        "weight": 468,
+        "width": 0.78,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3741630664606008313",
+            "text": "Byonik® Biolifting – das Beauty-Upgrade für Deine Haut!Diese Hightech-Behandlung verbindet modernste Lasertechnologie mit hochkonzentrierter Hyaluronsäure und Antioxidantien. Der Laser passt sich Deinem Puls an und schleust Wirkstoffe genau dann ein, wenn Deine Zellen am aufnahme",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1245124470982821",
+            "text": "Farb- und Typberatung in der KleingruppeFarben sind das beste Anti-Aging-Programm. Die richtigen Farben lassen uns erstrahlen und rücken uns ins beste Licht. Durch die Farbanalyse werden Sie erleben, welcher Farbtyp Sie sind und in welchen Farben Sie sich am wohlsten fühlen. Es i",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3760496061996425484",
+            "text": "💫 Was kostet die Laser-Oberarmstraffung? 💶✨Der Preis richtet sich nach der Laserkombination und dem gewünschten Ergebnis – jede Haut reagiert individuell 🌸.Eine Behandlungssitzung kostet ab 800 Euro und sorgt für eine sichtbar straffere, glattere Haut an den Oberarmen 💪.Sanft, ef",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "threads",
+        "target": "facelift",
+        "weight": 435,
+        "width": 0.77,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_140_7556050662585388318",
+            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3734381648364997599",
+            "text": "✨Face Contouring! ✨Mit Hyaluronsäure an den Hebepunkten des Gesichts – direkt auf den Knochen injiziert – für ein besonders langanhaltendes Ergebnis- mit neuem Präparat. 🔥🚀 Effekt: Natürliches Lifting, definierte Konturen &amp; frische Ausstrahlung.Das innovative Präparat sorgt f",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734483816837559453",
+            "text": "✨ Aptos Full Face Fadenlifting mit Excellence Visage ✨Stellen Sie sich vor: ein jugendliches, strahlendes Gesicht – ohne OP, ohne lange Ausfallzeit.Unsere speziellen Excellence Visage Aptos-Fäden sind nicht nur Lifting-Fäden, sondern wirken zusätzlich wie ein Skinbooster.🔹 Wie fu",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "aging-signs",
+        "target": "natural",
+        "weight": 349,
+        "width": 0.76,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3736725366099436563",
+            "text": "✨ 14 Tage Lymph-Reset ✨Dein natürlicher Anti-Aging-Kick für mehr Leichtigkeit, frische Ausstrahlung &amp; sichtbar definierte Konturen 💧🌿Fühlst du dich manchmal aufgedunsen, geschwollen oder einfach nicht mehr so strahlend wie früher?Dann ist unser 14-Tage-Lymph-Reset dein Beauty",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3737191026839410241",
+            "text": "🌿 Ab wann sollte man mit Gesichtspflege &amp; Gesichtsmassage beginnen?🧴 Bereits ab 14 Jahren beginnt die Haut, sich zu verändern.In dieser Phase ist regelmäßige Gesichtspflege besonders wichtig, um die Hautbarriere zu stärken, Unreinheiten vorzubeugen und ein gesundes Hautbild z",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3741883888386765997",
+            "text": "Mein Gesicht hat Rötungen, Augenringe, kleine Unebenheiten, Lachlinien, Falten – und es werden sicher noch mehr.Wir müssen keinem Ideal entsprechen.Wir dürfen altern.Wir dürfen zeigen, dass wir leben.Wir müssen nicht ewig jung bleiben – nur weil wir Frauen sind.Ich sehe Eingriffe",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "aging-signs",
+        "target": "pressure",
+        "weight": 51,
+        "width": 0.71,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_1398367725625033",
+            "text": "👶✨️ Packungsbeilage beachten! Gezeichnet beim diesjährigen \"Inselwitz\" auf Baltrum zum Thema \"Cartoons für alte Leute\"#schönheitswahn #antiaging #skinscare #humor",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_9_yt.Wrr_hEvOj4A",
+            "text": "Schönheitsideale werden immer wilder Überall wird geliftet, gespritzt, getaped und „Baby-Botoxed\". Promis altern rückwärts, 30-Jährige bekommen Panik vor ihren ersten Falten und Schönheitschirurg*innen analysieren auf TikTok, wer welches Gesicht wo verändert hat. Anti-Aging-Produ",
+            "source": "Youtube"
+          },
+          {
+            "id": "0_225889_15_38522496369994195",
+            "text": "Kate Winslet äußert Bedenken über Schönheitsoperationen und Diät-Injektionen Kate Winslet äußert ihre Sorgen über den ansteigenden Trend von Schönheitsoperationen und Abnehmspritzen. Die talentierte britische Schauspielerin ist ein Fan der natürlichen Schönheit und findet es „beä",
+            "source": "Blogs"
+          }
+        ]
+      }
+    ]
   }
 };
