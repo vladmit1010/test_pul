@@ -249,6 +249,14 @@ window.PulsarConversationLandscape = {
     }
 
     function selectNode(n) {
+      if (selection?.kind === 'node' && selection.id === n.id && n.el.classList.contains('is-active')) {
+        selection = null;
+        activeCluster = null;
+        clearFocus();
+        renderDetailDefault();
+        if (typeof onSelect === 'function') onSelect(null);
+        return;
+      }
       selection = { kind: 'node', id: n.id };
       activeCluster = null;
       clearFocus();
@@ -279,6 +287,18 @@ window.PulsarConversationLandscape = {
     }
 
     function selectEdge(e) {
+      const sameEdge =
+        selection?.kind === 'edge' &&
+        ((selection.source === e.s.id && selection.target === e.t.id) ||
+          (selection.source === e.t.id && selection.target === e.s.id));
+      if (sameEdge && e.el.classList.contains('is-active')) {
+        selection = null;
+        activeCluster = null;
+        clearFocus();
+        renderDetailDefault();
+        if (typeof onSelect === 'function') onSelect(null);
+        return;
+      }
       selection = { kind: 'edge', source: e.s.id, target: e.t.id };
       activeCluster = null;
       clearFocus();
@@ -307,11 +327,15 @@ window.PulsarConversationLandscape = {
     }
 
     function selectCluster(cid) {
-      if (activeCluster === cid) {
+      const legActive = legendEl?.querySelector(
+        `.landscape-legend__item.is-active[data-cluster="${cid}"]`,
+      );
+      if (activeCluster === cid && legActive) {
         activeCluster = null;
         selection = null;
         clearFocus();
         renderDetailDefault();
+        if (typeof onSelect === 'function') onSelect(null);
         return;
       }
       activeCluster = cid;
@@ -413,10 +437,13 @@ window.PulsarConversationLandscape = {
         !e.target.closest('.landscape-edge') &&
         !e.target.closest('.landscape-edge-hit')
       ) {
-        selection = null;
-        activeCluster = null;
-        clearFocus();
-        renderDetailDefault();
+        if (selection || activeCluster) {
+          selection = null;
+          activeCluster = null;
+          clearFocus();
+          renderDetailDefault();
+          if (typeof onSelect === 'function') onSelect(null);
+        }
       }
       if (didPan) {
         // Swallow the click that browsers fire after a drag

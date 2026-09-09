@@ -1,0 +1,178 @@
+{
+  "title": "Retinol: The Fears and the Hopes Behind the Gold Standard",
+  "eyebrow": "7. Retinol Deep-Dive",
+  "min_mentions": 15,
+  "families": {
+    "efficacy": {
+      "id": "efficacy",
+      "label": "Wirkung & Ergebnis",
+      "color": "#7eb8d4"
+    },
+    "tolerability": {
+      "id": "tolerability",
+      "label": "Anwendung & Verträglichkeit",
+      "color": "#e08a4a"
+    }
+  },
+  "themes": [
+    {
+      "id": "tolerability-irritation",
+      "label": "Tolerability & Irritation",
+      "family": "tolerability",
+      "fear": [
+        "brennt", "brennen", "rötungen", "rötung", "gereizte haut", "gereizt", "reizung",
+        "peeling-effekt", "pellt sich", "haut pellt", "zu trocken", "schuppt", "schuppen",
+        "übertrocknet", "spannungsgefühl", "raubt feuchtigkeit", "retinoid-dermatitis",
+        "hautbrennen", "irritiert", "rot geworden"
+      ],
+      "hope": [
+        "verträgt sich gut", "haut hat sich daran gewöhnt", "keinerlei reizung",
+        "kommt gut damit klar", "auch bei empfindlicher haut", "gut verträglich",
+        "keine reizung", "keine reizungen", "vertraegt sich gut"
+      ]
+    },
+    {
+      "id": "purging-bad-phase",
+      "label": "Purging & The Bad Phase",
+      "family": "tolerability",
+      "fear": [
+        "purging", "erst schlimmer geworden", "pickel am anfang", "eingewöhnungsphase",
+        "umstellungsphase", "traue mich nicht wegen purging", "purge-phase", "purge phase"
+      ],
+      "hope": [
+        "purging ging vorbei", "nach sechs wochen war es weg", "die schlimme phase war kurz",
+        "hatte gar kein purging", "kein purging", "ohne purging", "purging vorbei"
+      ]
+    },
+    {
+      "id": "time-patience",
+      "label": "Time to Results & Patience",
+      "family": "efficacy",
+      "fear": [
+        "dauert ewig", "sehe noch nichts", "keine schnelle wirkung",
+        "nach monaten immer noch nichts", "geduld erforderlich", "braucht zeit",
+        "sehe keine wirkung", "immer noch nichts"
+      ],
+      "hope": [
+        "nach drei monaten kam die wende", "hat sich gelohnt durchzuhalten",
+        "nicht aufgegeben", "langfristige verbesserung", "erst schlimm, dann super",
+        "erst schlimm dann super", "durchgehalten", "hat sich gelohnt"
+      ]
+    },
+    {
+      "id": "wrinkle-texture",
+      "label": "Wrinkle & Texture Efficacy",
+      "family": "efficacy",
+      "fear": [
+        "bringt bei mir nichts", "kein sichtbarer unterschied", "überbewertet", "uberbewertet",
+        "hat meine falten nicht verändert", "falten nicht verändert", "wirkt nicht gegen falten"
+      ],
+      "hope": [
+        "glättet falten", "glaettet falten", "weniger feine linien", "sichtbare faltenreduktion",
+        "feinere poren", "glattere textur", "samtiges hautgefühl", "samtiges hautgefuehl",
+        "gegen falten", "faltenreduzier", "glattere haut"
+      ]
+    },
+    {
+      "id": "pigmentation-evenness",
+      "label": "Pigmentation & Evenness",
+      "family": "efficacy",
+      "fear": [
+        "pigmentflecken sind geblieben", "gegen melasma nutzlos", "teint nicht verbessert",
+        "melasma nutzlos", "pigmentflecken geblieben"
+      ],
+      "hope": [
+        "weniger pigmentflecken", "flecken sind blasser", "ebenmäßigerer teint", "ebenmaessigerer teint",
+        "weniger dunkle flecken", "weniger pigmentierung", "gegen pigmentflecken"
+      ]
+    },
+    {
+      "id": "collagen-deep",
+      "label": "Collagen & Deep Action",
+      "family": "efficacy",
+      "fear": [
+        "wirkt nur oberflächlich", "wirkt nur oberflaechlich", "kollagenaufbau ist marketing",
+        "dringt gar nicht so tief", "nur oberflächlich"
+      ],
+      "hope": [
+        "regt kollagen an", "kollagenaufbau", "arbeitet in der tiefe", "wirkt in der dermis",
+        "zellerneuerung", "kollagenproduktion", "zell-erneuerung"
+      ]
+    },
+    {
+      "id": "scientific-credibility",
+      "label": "Scientific Credibility",
+      "family": "efficacy",
+      "fear": [
+        "studien nur in vitro", "studienlage ist dünner", "studienlage ist duenner",
+        "wird überverkauft", "wird ueberverkauft", "goldstandard ist ein marketingbegriff",
+        "marketingbegriff"
+      ],
+      "hope": [
+        "goldstandard", "gold standard", "wissenschaftlich am besten belegt",
+        "von dermatologen empfohlen", "einziger wirkstoff mit echter studienlage",
+        "hat als einziges bewiesen", "wissenschaftlich belegt", "studienlage"
+      ]
+    },
+    {
+      "id": "sun-seasonality",
+      "label": "Sun Sensitivity & Seasonality",
+      "family": "tolerability",
+      "fear": [
+        "empfindlich gegenüber sonne", "empfindlich gegenueber sonne", "sonnenbrandgefahr",
+        "im sommer pausieren", "nur im winter möglich", "nur im winter moeglich",
+        "nur abends benutzen", "nur abends", "sonnenempfindlich", "lichtempfindlich",
+        "retinol und sonne", "sonne und retinol"
+      ],
+      "hope": [
+        "mit spf überhaupt kein problem", "mit spf uberhaupt kein problem",
+        "benutze es ganzjährig", "benutze es ganzjaehrig", "nie probleme mit der sonne",
+        "ganzjährig", "ganzjaehrig mit retinol"
+      ]
+    },
+    {
+      "id": "dosage-control",
+      "label": "Correct Use & Dosage Control",
+      "family": "tolerability",
+      "fear": [
+        "zu viel benutzt", "retinol-gesicht", "überdosierung", "ueberdosierung",
+        "falsche anwendung", "zu oft angewendet", "falsch eingeschlichen",
+        "angst, etwas falsch zu machen", "etwas falsch zu machen"
+      ],
+      "hope": [
+        "einschleichen hat funktioniert", "zweimal die woche reicht", "sandwich-methode",
+        "sandwich methode", "niedriger konzentration angefangen", "ist einfacher, als ich dachte",
+        "mit niedriger konzentration", "einschleichen"
+      ]
+    },
+    {
+      "id": "ingredient-combo",
+      "label": "Ingredient Combination",
+      "family": "tolerability",
+      "fear": [
+        "wechselwirkung", "nicht kombinieren mit", "darf nicht benutzt werden mit",
+        "zusammen mit vitamin c", "mit säuren kombinieren", "mit saeuren kombinieren",
+        "routine kaputtzumachen", "nicht kombinieren"
+      ],
+      "hope": [
+        "lässt sich gut kombinieren", "laesst sich gut kombinieren",
+        "morgens vitamin c, abends retinol", "morgens vitamin c abends retinol",
+        "funktioniert problemlos in meiner routine", "gut kombinieren"
+      ]
+    },
+    {
+      "id": "health-lifestage",
+      "label": "Health & Life Stage Safety",
+      "family": "tolerability",
+      "fear": [
+        "nicht in der schwangerschaft", "schwangerschaft", "stillzeit", "kontraindikation",
+        "gesundheitliche bedenken", "überhaupt unbedenklich", "uberhaupt unbedenklich"
+      ],
+      "hope": [
+        "für mich unbedenklich", "fuer mich unbedenklich", "bakuchiol als alternative",
+        "ärztin hat es freigegeben", "arztin hat es freigegeben", "arzt hat es freigegeben",
+        "dermatologin hat es freigegeben"
+      ]
+    }
+  ]
+}

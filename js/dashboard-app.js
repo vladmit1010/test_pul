@@ -365,6 +365,34 @@
     });
   }
 
+  function isSelfManagedChartFilter(filter) {
+    return (
+      filter?.type === 'cluster-theme' ||
+      filter?.type === 'cluster-theme-pair' ||
+      filter?.type === 'retinol-fear' ||
+      filter?.type === 'retinol-hope'
+    );
+  }
+
+  /** Chart 2 + 7 keep their own focus; only clear when filter is wiped or another chart owns it */
+  function clearSelfManagedChartHighlights() {
+    document.querySelectorAll('#retinol-chart .retinol-bubble').forEach((el) => {
+      el.classList.remove('is-active', 'is-dim');
+    });
+    document.querySelectorAll('#retinol-chart .retinol-list__item.is-active').forEach((el) => {
+      el.classList.remove('is-active');
+    });
+    document.querySelectorAll('#landscape-chart .landscape-node').forEach((el) => {
+      el.classList.remove('is-dim', 'is-active', 'is-neighbor');
+    });
+    document.querySelectorAll('#landscape-chart .landscape-edge').forEach((el) => {
+      el.classList.remove('is-dim', 'is-active');
+    });
+    document.querySelectorAll('#landscape-legend .landscape-legend__item.is-active').forEach((el) => {
+      el.classList.remove('is-active');
+    });
+  }
+
   function applyHighlights(filter) {
     clearHighlights();
     if (!filter) return;
@@ -420,6 +448,9 @@
     }
     activeFilter = filter;
     quotePage = 0;
+    if (!isSelfManagedChartFilter(filter)) {
+      clearSelfManagedChartHighlights();
+    }
     applyHighlights(filter);
     updateQuoteHeader(filter);
     renderQuotes();
@@ -429,6 +460,7 @@
     activeFilter = null;
     quotePage = 0;
     clearHighlights();
+    clearSelfManagedChartHighlights();
     quoteContext.textContent = 'Click a chart segment to see quotes';
     quoteFilters.innerHTML = '';
     quoteList.innerHTML = `<div class="quote-empty"><div class="quote-empty__icon">❝</div><p>Click a segment — matching sample quotes appear here.</p></div>`;
@@ -934,17 +966,21 @@
   }
 
   function renderRetinolDeepDive() {
-    if (!window.PulsarRetinolTornado || !D.retinolDeepDive) return;
+    if (!window.PulsarRetinolViews || !D.retinolDeepDive) return;
     const block = D.retinolDeepDive;
     document.getElementById('retinol-eyebrow').textContent = block.eyebrow;
     document.getElementById('retinol-title').textContent = block.title;
-    window.PulsarRetinolTornado.render({
+    window.PulsarRetinolViews.render({
       containerEl: document.getElementById('retinol-chart'),
       hintEl: document.getElementById('retinol-hint'),
       data: block,
       showTip,
       hideTip,
       onSelect: (sel) => {
+        if (!sel) {
+          clearFilter();
+          return;
+        }
         setFilter({
           type: sel.side === 'fear' ? 'retinol-fear' : 'retinol-hope',
           id: sel.id,
@@ -958,6 +994,7 @@
         ...corpusFooterBits(),
         `klassifiziert ${(block.n_classified || 0).toLocaleString('de-DE')} / ${(block.n_retinol || 0).toLocaleString('de-DE')}`,
         `nicht klassifiziert ${block.unclassified_share_pct || 0}%`,
+        block.note || 'Mehrfachnennungen möglich',
       ]
         .filter(Boolean)
         .join(' · '),
@@ -1040,7 +1077,10 @@
       showTip,
       hideTip,
       onSelect: (sel) => {
-        if (!sel) return;
+        if (!sel) {
+          clearFilter();
+          return;
+        }
         if (sel.type === 'topic-pair') {
           setFilter({
             type: 'cluster-theme-pair',

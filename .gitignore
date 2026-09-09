@@ -32,6 +32,7 @@ data/*
 !data/dashboard-reference.json
 !data/definite_remove_terms.json
 !data/conversation_themes.json
+!data/retinol_themes.json
 
 # Explicit heavy patterns (if paths move outside data/)
 **/classified_*.jsonl

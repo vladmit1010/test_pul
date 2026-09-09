@@ -1453,14 +1453,14 @@ body.pulsar-page {
   background: transparent !important;
 }
 
-.tornado-seg {
+.retinol-seg {
   margin-top: 1rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--panel-border);
   width: 100%;
 }
 
-.tornado-seg__title {
+.retinol-seg__title {
   margin: 0 0 0.55rem;
   font-size: 0.75rem;
   font-weight: 650;
@@ -1469,7 +1469,7 @@ body.pulsar-page {
   color: var(--text-muted);
 }
 
-.tornado-seg__row {
+.retinol-seg__row {
   display: grid;
   grid-template-columns: 7.5rem 3.5rem 1fr 4.5rem;
   gap: 0.55rem;
@@ -1478,15 +1478,15 @@ body.pulsar-page {
   font-size: 0.75rem;
 }
 
-.tornado-seg__label {
+.retinol-seg__label {
   color: var(--text);
 }
 
-.tornado-seg__n {
+.retinol-seg__n {
   color: var(--text-muted);
 }
 
-.tornado-seg__bar {
+.retinol-seg__bar {
   display: flex;
   height: 8px;
   border-radius: 999px;
@@ -1494,15 +1494,15 @@ body.pulsar-page {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.tornado-seg__fear {
+.retinol-seg__fear {
   background: var(--coral);
 }
 
-.tornado-seg__hope {
+.retinol-seg__hope {
   background: var(--mint);
 }
 
-.tornado-seg__pct {
+.retinol-seg__pct {
   text-align: right;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
@@ -1916,157 +1916,965 @@ body.pulsar-page {
   }
 }
 
-/* Chart 7 — Retinol tornado */
+/* Chart 7 — Retinol bubble chart */
 .chart-panel--retinol {
   gap: 0.85rem;
 }
 
-.tornado-ratio {
+.retinol-ratio {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 0.85rem;
   font-size: 0.85rem;
   font-weight: 650;
 }
 
-.tornado-ratio__fear {
+.retinol-ratio__fear {
   text-align: left;
   color: #e07070;
 }
 
-.tornado-ratio__hope {
+.retinol-ratio__hope {
   text-align: right;
   color: #7ecdb8;
 }
 
-.tornado-ratio__mid {
+.retinol-ratio__mid {
   color: var(--text-muted);
   font-size: 0.75rem;
   font-weight: 600;
 }
 
-.tornado-grid {
-  display: grid;
-  grid-template-columns: 1fr 2px 1fr;
-  gap: 0.85rem;
-  width: 100%;
-}
-
-.tornado-axis {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 2px;
-}
-
-.tornado-col__title {
-  font-size: 0.75rem;
-  font-weight: 650;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.65rem;
-}
-
-.tornado-col__title--fear {
-  color: #e07070;
-  text-align: right;
-}
-
-.tornado-col__title--hope {
-  color: #7ecdb8;
-}
-
-.tornado-item {
-  display: grid;
+.retinol-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.1rem;
   align-items: center;
-  gap: 0.45rem;
-  width: 100%;
-  background: transparent;
-  border: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  padding: 0.28rem 0.2rem;
-  border-radius: 8px;
-  margin-bottom: 0.28rem;
-}
-
-.tornado-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.tornado-item--fear {
-  grid-template-columns: minmax(90px, 1.2fr) auto minmax(60px, 1fr);
-  text-align: right;
-}
-
-.tornado-item--hope {
-  grid-template-columns: minmax(60px, 1fr) auto minmax(90px, 1.2fr);
-  text-align: left;
-}
-
-.tornado-item__label {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
-  line-height: 1.25;
 }
 
-.tornado-item__value {
-  font-size: 0.75rem;
-  font-weight: 650;
-  min-width: 1.6rem;
+.retinol-legend__note {
+  margin-left: auto;
+  font-size: 0.7rem;
+  opacity: 0.85;
 }
 
-.tornado-item__track {
-  display: block;
+.retinol-fam {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.retinol-fam i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c);
+  display: inline-block;
+}
+
+.retinol-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.9fr);
+  gap: 0.85rem 1rem;
+  align-items: stretch;
   width: 100%;
-  height: 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+}
+
+.retinol-plot-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--panel-border, rgba(255, 255, 255, 0.08));
+  background: rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
-.tornado-item--fear .tornado-item__track {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.tornado-item__fill {
+.retinol-svg {
+  width: 100%;
+  height: auto;
   display: block;
-  height: 100%;
-  border-radius: 999px;
-  min-width: 3px;
 }
 
-.tornado-item--fear .tornado-item__fill {
+.retinol-frame {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+}
+
+.retinol-grid {
+  stroke: rgba(255, 255, 255, 0.07);
+  stroke-dasharray: 3 4;
+}
+
+.retinol-zero {
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 1.6;
+}
+
+.retinol-axis-label {
+  fill: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.retinol-tick {
+  fill: rgba(255, 255, 255, 0.48);
+  font-size: 9px;
+}
+
+.retinol-tick--mid {
+  fill: rgba(255, 255, 255, 0.65);
+  font-weight: 650;
+}
+
+.retinol-bubble {
+  cursor: pointer;
+  outline: none;
+}
+
+.retinol-bubble:focus,
+.retinol-bubble:focus-visible {
+  outline: none;
+}
+
+.retinol-leader {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.22);
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.retinol-callout {
+  fill: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.retinol-bubble__n {
+  fill: rgba(10, 12, 18, 0.92);
+  font-size: 11px;
+  font-weight: 750;
+  pointer-events: none;
+}
+
+.retinol-bubble:hover .retinol-bubble__dot {
+  fill-opacity: 0.95;
+  stroke: rgba(255, 255, 255, 0.75);
+}
+
+.retinol-bubble.is-active .retinol-bubble__dot {
+  stroke: #fff;
+  stroke-width: 2.4;
+  fill-opacity: 0.95;
+}
+
+.retinol-bubble.is-dim {
+  opacity: 0.18;
+}
+
+.retinol-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-height: 0;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 0.15rem;
+}
+
+.retinol-list__title {
+  margin: 0 0 0.25rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted, #9aa3b5);
+}
+
+.retinol-list__item {
+  appearance: none;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1.6rem 1fr;
+  gap: 0.45rem;
+  align-items: start;
+  padding: 0.45rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.retinol-list__item:hover,
+.retinol-list__item.is-active {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: color-mix(in srgb, var(--c) 50%, transparent);
+}
+
+.retinol-list__idx {
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 750;
+  color: rgba(10, 12, 18, 0.92);
+  background: var(--c);
+  margin-top: 0.05rem;
+}
+
+.retinol-list__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  min-width: 0;
+}
+
+.retinol-list__name {
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.retinol-list__meta {
+  font-size: 0.7rem;
+  color: var(--muted, #9aa3b5);
+}
+
+.retinol-list__meta em,
+.retinol-list__meta strong {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 650;
+}
+
+.retinol-list__bar {
+  display: flex;
+  height: 5px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  margin-top: 0.1rem;
+}
+
+.retinol-list__fear {
   background: #e07070;
 }
 
-.tornado-item--hope .tornado-item__fill {
+.retinol-list__hope {
   background: #7ecdb8;
 }
 
-.tornado-meta {
-  margin-top: 0.85rem;
+.retinol-guide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.retinol-guide__card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 0.45rem 0.55rem;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: var(--muted, #9aa3b5);
+}
+
+.retinol-guide__card strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.72rem;
+  margin-bottom: 0.15rem;
+}
+
+.retinol-rest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  align-items: baseline;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.retinol-rest__title {
+  font-weight: 650;
+  color: var(--text);
+}
+
+.retinol-rest__item em {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.75);
+  margin-left: 0.2rem;
+}
+
+.retinol-rest__sum {
+  margin-left: auto;
+  font-weight: 650;
+}
+
+.retinol-journey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.retinol-journey__reason {
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.retinol-tip__q {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.retinol-tip__q em {
+  font-style: normal;
+  color: var(--rose, #e8a0bf);
+  margin-right: 0.25rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.retinol-empty {
+  color: var(--text-muted);
+  padding: 1rem;
+}
+
+.retinol-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.retinol-tab {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 650;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.retinol-tab.is-on {
+  color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(232, 160, 191, 0.45);
+  background: rgba(232, 160, 191, 0.1);
+}
+
+.retinol-view-blurb {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* A — Butterfly */
+.rb-butterfly {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.rb-butterfly__head {
+  display: grid;
+  grid-template-columns: 1fr minmax(150px, 1.1fr) 1fr;
+  gap: 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0 0.2rem 0.25rem;
+}
+
+.rb-butterfly__head span:first-child {
+  text-align: right;
+  color: #e07070;
+}
+
+.rb-butterfly__head span:last-child {
+  color: #7ecdb8;
+}
+
+.rb-row {
+  display: grid;
+  grid-template-columns: 1fr minmax(150px, 1.1fr) 1fr;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.rb-row.is-dim {
+  opacity: 0.28;
+}
+
+.rb-mid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  text-align: center;
+}
+
+.rb-mid__name {
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.rb-mid__meta {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.rb-bar {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0.15rem 0;
+  display: flex;
+  align-items: center;
+  min-height: 1.55rem;
+}
+
+.rb-bar--fear {
+  justify-content: flex-end;
+}
+
+.rb-bar--hope {
+  justify-content: flex-start;
+}
+
+.rb-bar::before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: var(--w);
+  border-radius: 999px;
+  max-width: 100%;
+}
+
+.rb-bar--fear::before {
+  background: #e07070;
+  order: 2;
+}
+
+.rb-bar--hope::before {
+  background: #7ecdb8;
+}
+
+.rb-bar__val {
+  font-size: 0.72rem;
+  font-weight: 650;
+  min-width: 2rem;
+  color: var(--text-muted);
+}
+
+.rb-bar--fear .rb-bar__val {
+  order: 1;
+  text-align: right;
+  margin-right: 0.35rem;
+}
+
+.rb-bar--hope .rb-bar__val {
+  margin-left: 0.35rem;
+}
+
+.rb-bar.is-active::before {
+  outline: 2px solid #fff;
+  outline-offset: 1px;
+}
+
+.rb-row.is-active .rb-mid__name {
+  color: #fff;
+}
+
+/* B — Balance */
+.rb-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.rb-bal {
+  appearance: none;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rb-bal:hover,
+.rb-bal.is-active {
+  border-color: color-mix(in srgb, var(--c) 45%, transparent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.rb-bal.is-dim {
+  opacity: 0.28;
+}
+
+.rb-bal__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.rb-bal__name {
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.rb-bal__n {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.rb-bal__track {
+  display: flex;
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.rb-bal__fear {
+  background: #e07070;
+}
+
+.rb-bal__hope {
+  background: #7ecdb8;
+}
+
+.rb-bal__foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+/* C — Priority matrix */
+.rb-matrix {
+  width: 100%;
+}
+
+.rb-matrix__note {
+  margin: 0.45rem 0 0;
   font-size: 0.72rem;
   color: var(--text-muted);
 }
 
+.retinol-howto {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.retinol-howto summary {
+  cursor: pointer;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.retinol-howto ul {
+  margin: 0.45rem 0 0.35rem;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.retinol-howto__base {
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+}
+
+.retinol-howto__base strong {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Story */
+.rb-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rb-story__insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.55rem;
+}
+
+.rb-insight {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.rb-insight:disabled {
+  cursor: default;
+  opacity: 0.95;
+}
+
+.rb-insight:not(:disabled):hover,
+.rb-insight.is-active {
+  border-color: rgba(232, 160, 191, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.rb-insight.is-dim {
+  opacity: 0.3;
+}
+
+.rb-insight__kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--rose, #e8a0bf);
+}
+
+.rb-insight--fear .rb-insight__kicker {
+  color: #e07070;
+}
+
+.rb-insight--hope .rb-insight__kicker {
+  color: #7ecdb8;
+}
+
+.rb-insight__text {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.rb-story__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.rb-story__h {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.rb-mini {
+  appearance: none;
+  width: 100%;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  font: inherit;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.45rem 0.55rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+
+.rb-mini:hover,
+.rb-mini.is-active {
+  border-color: color-mix(in srgb, var(--c) 45%, transparent);
+}
+
+.rb-mini.is-dim {
+  opacity: 0.3;
+}
+
+.rb-mini span {
+  font-size: 0.8rem;
+}
+
+.rb-mini strong {
+  font-size: 0.85rem;
+}
+
+/* Cards */
+.rb-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.65rem;
+}
+
+.rb-card {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  border-radius: 12px;
+  padding: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rb-card:hover,
+.rb-card.is-active {
+  border-color: color-mix(in srgb, var(--c) 50%, transparent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.rb-card.is-dim {
+  opacity: 0.28;
+}
+
+.rb-card__rank {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.rb-card__name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.rb-card__badge {
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+}
+
+.rb-card__badge--fear {
+  background: rgba(224, 112, 112, 0.2);
+  color: #f0a0a0;
+}
+
+.rb-card__badge--hope {
+  background: rgba(126, 205, 184, 0.2);
+  color: #9fe0d0;
+}
+
+.rb-card__badge--mixed {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.rb-card__vol {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.rb-card__bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem;
+  align-items: end;
+  min-height: 28px;
+}
+
+.rb-card__fear,
+.rb-card__hope {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  justify-self: stretch;
+}
+
+.rb-card__fear {
+  background: #e07070;
+  justify-self: end;
+}
+
+.rb-card__hope {
+  background: #7ecdb8;
+  justify-self: start;
+}
+
+.rb-card__foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.rb-card__hint {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Gap / dumbbell */
+.rb-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.rb-gap__row {
+  appearance: none;
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.02);
+  color: inherit;
+  font: inherit;
+  display: grid;
+  grid-template-columns: minmax(120px, 1.1fr) 1.6fr auto;
+  gap: 0.65rem;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.rb-gap__row:hover,
+.rb-gap__row.is-active {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.rb-gap__row.is-dim {
+  opacity: 0.28;
+}
+
+.rb-gap__name {
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.rb-gap__track {
+  position: relative;
+  height: 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.rb-gap__line {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.rb-gap__dot {
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+
+.rb-gap__dot--fear {
+  background: #e07070;
+}
+
+.rb-gap__dot--hope {
+  background: #7ecdb8;
+}
+
+.rb-gap__vals {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.rb-gap__vals em {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 650;
+}
+
+.rb-gap__legend {
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.rb-gap__legend .rb-gap__dot {
+  position: static;
+  transform: none;
+}
+
 @media (max-width: 900px) {
-  .tornado-grid {
+  .rb-butterfly__head,
+  .rb-row {
     grid-template-columns: 1fr;
   }
 
-  .tornado-axis {
+  .rb-butterfly__head span:nth-child(2) {
     display: none;
   }
 
-  .tornado-col__title--fear {
-    text-align: left;
+  .rb-bar--fear {
+    justify-content: flex-start;
   }
 
-  .tornado-item--fear {
-    grid-template-columns: minmax(90px, 1.2fr) auto minmax(60px, 1fr);
+  .rb-mid {
+    text-align: left;
+    order: -1;
+  }
+
+  .rb-bal__foot {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .rb-story__cols,
+  .rb-gap__row {
+    grid-template-columns: 1fr;
   }
 }
 

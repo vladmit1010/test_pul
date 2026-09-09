@@ -51,7 +51,7 @@ window.DashboardData =
     "platforms_label": "Instagram Public 186.258 · TikTok 55.545 · Facebook Pages 45.241 · Reddit 16.476 · X 10.658",
     "wordclouds": "v2 from classified_v10",
     "chart6": "agingPaths v2",
-    "chart7": "retinolDeepDive v1",
+    "chart7": "retinolDeepDive bubble v2",
     "conversationLandscape": "v2 conversation themes"
   },
   "moodMap": {
@@ -4063,982 +4063,2141 @@ window.DashboardData =
   },
   "retinolDeepDive": {
     "eyebrow": "7. Retinol Deep-Dive",
-    "title": "Retinol: The Fears and the Hopes",
-    "note": "Mehrfachnennungen möglich, ein Kommentar kann beidseitig zählen",
+    "title": "Retinol: The Fears and the Hopes Behind the Gold Standard",
+    "viz": "bubble",
+    "note": "Mehrfachnennungen möglich, ein Beitrag kann mehrere Themen betreffen",
+    "axis": {
+      "x": "Netto-Valenz (Hoffnung − Sorge) in Prozentpunkten",
+      "x_unit": "pp",
+      "y": "Erlebt vs. antizipiert (% erlebt)",
+      "y_unit": "% erlebt"
+    },
+    "quadrants": [
+      {
+        "id": "fear-anticipated",
+        "label": "Befürchtet, selten erlebt",
+        "hint": "Barrieren aus Hörensagen — Aufklärung wirkt"
+      },
+      {
+        "id": "fear-experienced",
+        "label": "Negativ & erlebt",
+        "hint": "Reale Probleme — Kommunikation allein löst sie nicht"
+      },
+      {
+        "id": "hope-experienced",
+        "label": "Erlebte Bestätigung",
+        "hint": "Eignet sich als Beleg"
+      }
+    ],
+    "families": [
+      {
+        "id": "efficacy",
+        "label": "Wirkung & Ergebnis",
+        "color": "#7eb8d4"
+      },
+      {
+        "id": "tolerability",
+        "label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a"
+      }
+    ],
     "n_retinol": 9621,
-    "n_classified": 3438,
-    "unclassified_share_pct": 64.3,
-    "fear_mentions": 1876,
-    "hope_mentions": 2788,
-    "fear_share_pct": 40.2,
-    "hope_share_pct": 59.8,
-    "fear_only": 1066,
-    "hope_only": 1876,
-    "both": 496,
-    "neither": 6183,
-    "persistence_n": 117,
-    "dropout_n": 57,
+    "n_classified": 2413,
+    "unclassified_share_pct": 74.9,
+    "fear_mentions": 1434,
+    "hope_mentions": 1642,
+    "fear_share_pct": 46.6,
+    "hope_share_pct": 53.4,
+    "persistence_n": 198,
+    "dropout_n": 8,
+    "persistence_share_pct": 96.1,
+    "dropout_share_pct": 3.9,
     "dropout_reasons": [
       {
-        "reason": "Sonstige / Unverträglichkeit",
-        "count": 30
-      },
-      {
         "reason": "Irritation / Rötung",
-        "count": 22
-      },
-      {
-        "reason": "Austrocknung",
         "count": 5
+      },
+      {
+        "reason": "Sonstige / Unverträglichkeit",
+        "count": 3
       }
     ],
-    "fears": [
+    "min_mentions": 15,
+    "bubbles": [
       {
-        "id": "irritation",
-        "label": "Irritation & Redness",
-        "count": 888,
-        "side": "fear"
+        "id": "tolerability-irritation",
+        "label": "Tolerability & Irritation",
+        "family": "tolerability",
+        "family_label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a",
+        "volume": 1024,
+        "fear": 944,
+        "hope": 80,
+        "net_valence": -84.4,
+        "experienced": 143,
+        "anticipated": 881,
+        "experienced_pct": 14.0,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3733720916267213444",
+            "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Умень",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3733912017548613840",
+            "text": "✨ Erfolgsgeschichte: 6 Monate vs. 3 Jahre ✨Drei Jahre lang hat Melissa versucht, ihr Hautbild zu verbessern – ohne den gewünschten Erfolg. Die Challenge? Niemand hat ihr gesagt, welcher Hauttyp sie ist, welche Wirkstoffe für sie wirklich wichtig sind und wie sie ihre Hautpflege richtig aufbauen kann.Nach nur 6 Monaten ",
+            "segment": "skincare-first",
+            "mood": "cautioning",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3733918002006763458",
+            "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3767688553011366436",
+            "text": "🌙✨ Gib deiner Haut die nächtliche Pflege, die sie verdient!💙🩵 Wir präsentieren Forever Bakuchiol, eine nährende Gesichts-„Milch\" mit seidiger, serumähnlicher Textur – eine pflanzliche Alternative zu Retinol, die die Hautstruktur verbessert und das Erscheinungsbild feiner Linien und Falten reduziert.🌿 Mit 1 % Bakuchiol,",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_9_yt.L8tv_SF_f60",
+            "text": "Jean d'Arcel PERFECTION CORPS Bakuchiol Körpercreme – sanftes Anti-Aging für glattere Haut Sanfte Glättung, mehr Elastizität und dieses wunderbar gepflegte Hautgefühl – genau darum geht's heute.In diesem Video zeige ich Dir die Jean d'Arcel PERFECTION CORPS Crème Corps Bakuchiol und erkläre Dir in einfachen Worten, war",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Youtube",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3789546162747880101",
+            "text": "Heute zeige ich dir meine Dr.Bouhon Lieblinge 2025, wobei mir die Entscheidung echt schwergefallen ist!Los gehts mit dem THE RETINAL NIGHT SERUM, weil es einfach so ein super effektives und dabei sogut verträgliches Anti-Aging-Produkt ist, das die Hautzellerneuerung so richtig ankurbelt und meine Haut strahlen lässt.Ga",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ]
       },
       {
-        "id": "over-drying",
-        "label": "Over-Drying",
-        "count": 436,
-        "side": "fear"
+        "id": "collagen-deep",
+        "label": "Collagen & Deep Action",
+        "family": "efficacy",
+        "family_label": "Wirkung & Ergebnis",
+        "color": "#7eb8d4",
+        "volume": 920,
+        "fear": 7,
+        "hope": 913,
+        "net_valence": 98.5,
+        "experienced": 63,
+        "anticipated": 857,
+        "experienced_pct": 6.8,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3811970279183427278",
+            "text": "Firming Retinal Serum. Das Firming Retinal Serum wurde entwickelt, um die Haut gezielt in ihrer natürlichen Fähigkeit zur Regeneration, Zellerneuerung und Barrierefunktion zu unterstützen. Statt die Hautalterung nur oberflächlich zu kaschieren, stärkt es die biologischen Prozesse, die für ein langfristig gesundes, stra",
+            "segment": "skincare-first",
+            "mood": "cautioning",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_26_122196196172515806",
+            "text": "Die gesamte Beauty-Industrie feiert Retinol gerade als das Nonplusultra für junge Haut. Doch in der Wissenschaft taucht immer öfter ein Stoff auf, der Retinol in Studien in fast jedem Aspekt in den Schatten stellt. Die Rede ist von Methylenblau.Während Retinol zweifellos wirkt, ist es für viele Hauttypen oft aggressiv ",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3880317372859199716",
+            "text": "Wirken Anti-Aging-Cremes wirklich? Die ehrliche Antwort: Jein.Die meisten Cremes verbessern nur kurzfristig das Hautbild (Feuchtigkeit = glattere Haut), aber entfernen keine Falten.Was Studien zeigen:✔️ Retinoide können Falten sichtbar reduzieren (nach Wochen)✔️ Sonnenschutz ist die effektivste Anti-Aging-Maßnahme❌ Hya",
+            "segment": "unknown",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3733478883803689483",
+            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht die Hautdichte und wird dadurch widerst",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3733720916267213444",
+            "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Умень",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – s",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ]
       },
       {
-        "id": "health",
-        "label": "Health Concerns",
-        "count": 187,
-        "side": "fear"
+        "id": "wrinkle-texture",
+        "label": "Wrinkle & Texture Efficacy",
+        "family": "efficacy",
+        "family_label": "Wirkung & Ergebnis",
+        "color": "#7eb8d4",
+        "volume": 347,
+        "fear": 2,
+        "hope": 345,
+        "net_valence": 98.8,
+        "experienced": 31,
+        "anticipated": 316,
+        "experienced_pct": 8.9,
+        "quotes_fear": [
+          {
+            "id": "0_225890_126_t1_nz7rgj0",
+            "text": "Mein Programm gegen Augenringe und Talgfilamente Also dir Haut unter den Augen ist sehr dünn und oft ist was man dort an Problemstellen kennt genetisch veranlagt. Aber ohne dir das abzusprechen, welche Augenringe? Also no joke, die Haut die ich da unter deinen Augen sehe, sieht total nach dem aus was dort sein sollte u",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Reddit",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225897_9_15126649488097392",
+            "text": "Vitamin D beeinflusst bis zu 3000 Gene und ist ausschlaggebend beim Kalziumstoffwechsel. es ist ja schon die Frechheit, dass nur das 25-OH gemessen wird. das ist das VD im Blut und sagt noch gar nichts aus, ob es in die Zellen ankommt. (1,25-OH). zu wenig Vitamin D im Blut und das Kalzium wird AUS dem Knochen geholt. i",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Youtube",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3733607129212004577",
+            "text": "Sanft, aber stark im Anti-Aging.💛Age Limit mit 0,05% Retinal, Panthenol, Bisabolol und Allantoin wirkt gegen Falten und Flecken; die wasserbasierte Textur zieht blitzschnell ein.#elynslab.de #agelimit #retinal #antiaging #panthenol #serum",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3735276983757334931",
+            "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduziere",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "experienced"
+          },
+          {
+            "id": "0_225889_190_3735857152763204085",
+            "text": "Schaut euch dieses Ergebnis an 😍 Die Haut wirkt glatter, straffer und viel frischer ✨.Mit dem Mary Kay Retinol 0,3 wird Anti-Aging sichtbar! 💖👉 Schreib mir, wenn du auch deine Haut verwandeln möchtest!#Retinol #Retinol03 #MaryKay #MaryKayConsultant #MaryKaySkincare #AntiAging #SkinTransformation #VorherNachher #GlowSki",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ]
       },
       {
-        "id": "photosensitivity",
-        "label": "Photosensitivity / Sun Sensitivity",
-        "count": 185,
-        "side": "fear"
+        "id": "sun-seasonality",
+        "label": "Sun Sensitivity & Seasonality",
+        "family": "tolerability",
+        "family_label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a",
+        "volume": 191,
+        "fear": 184,
+        "hope": 7,
+        "net_valence": -92.7,
+        "experienced": 23,
+        "anticipated": 168,
+        "experienced_pct": 12.0,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3735276983757334931",
+            "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduziere",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "experienced"
+          },
+          {
+            "id": "0_225889_15_20711964581321120",
+            "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpf",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Blogs",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3747079873484081866",
+            "text": "#hyaluronsäure #skincaretips #hautpflegetipps #hydratedskin #skincareroutine #dewyskin #hautpflege #glowroutine #feuchterhaut #skincareeducation #hyaluronserum #skinbarrier #beautyroutine #skincaredeutsch #glowingskinNIACINAMID – HYALURONSÄURE – RETINOLDrei Powerwirkstoffe, drei Aufgaben 👇Niacinamid: stärkt die Hautbar",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_126_t1_o9bcnjb",
+            "text": "Tagesroutine und Produkte Geek & Gorgeous Retinal? nur wenn dir falten resp. frühzeitige hautalterung egal ist. dafür ist die uva strahlung zuständig. die hast du immer, so bald du ohne künstliches licht sehen kannst. gerade wenn man actives wie retinol verwendet, ist ganzjähriger sonnenschutz ein muss. sonst bewirkt m",
+            "segment": "skincare-first",
+            "mood": "cautioning",
+            "source": "Reddit",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3893347646538780856",
+            "text": "Kollagenverlust ab 20: ~1 % pro Jahr. Was hilft wirklich gegen Hautalterung — und was ist Geldverschwendung? 👇Ab dem 20. Lebensjahr beginnt der natürliche Kollagenabbau. Etwa 1 % pro Jahr — so fasst die aktuelle Studienlage den Prozess zusammen (Wlaschek et al. 2021). Mit 40 können bereits rund 20 % fehlen.Doch nicht j",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_23_20471070080543995",
+            "text": "Toller Ganzjahres-Sonnenschutz mit Anti-Aging-Bonus! ⭐⭐⭐⭐⭐ [Ich habe dieses Produkt im Austausch für meine ehrliche Bewertung erhalten] Ich durfte die neue Ladival Anti-Aging Ganzjährige Sonnenschutz-Creme für das Gesicht (LSF 50+) testen und bin wirklich sehr angetan. Da ich im Alltag viel Wert auf Sonnenschutz und gl",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Reviews",
+            "axis": "experienced"
+          }
+        ]
       },
       {
-        "id": "overuse",
-        "label": "Fear of Overuse & Wrong Application",
-        "count": 96,
-        "side": "fear"
+        "id": "health-lifestage",
+        "label": "Health & Life Stage Safety",
+        "family": "tolerability",
+        "family_label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a",
+        "volume": 184,
+        "fear": 184,
+        "hope": 0,
+        "net_valence": -100.0,
+        "experienced": 13,
+        "anticipated": 171,
+        "experienced_pct": 7.1,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3738206831928549215",
+            "text": "Swipe ➡️➡️➡️ Die 5 wirksamsten Dinge, die du mMn in der Hautpflege tun kannst. Was hat dir bisher am meisten gebracht?Das alles ist außerdem mit einer Prise Geduld zu genießen 😏Achtung: Retinoide werden während einer Schwangerschaft nicht empfohlen. Und sie sind nur ratsam, wenn dein Sonnenschutz-Fundament steht!#hautt",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3743291890629127548",
+            "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch.🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. In",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Instagram Public",
+            "axis": "experienced"
+          },
+          {
+            "id": "0_225889_140_7561098063918468374",
+            "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch. 🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. I",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "TikTok",
+            "axis": "experienced"
+          }
+        ],
+        "quotes_hope": []
       },
       {
-        "id": "slow-results",
-        "label": "Slow, Invisible Results",
-        "count": 42,
-        "side": "fear"
+        "id": "dosage-control",
+        "label": "Correct Use & Dosage Control",
+        "family": "tolerability",
+        "family_label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a",
+        "volume": 139,
+        "fear": 30,
+        "hope": 109,
+        "net_valence": 56.8,
+        "experienced": 20,
+        "anticipated": 119,
+        "experienced_pct": 14.4,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3778088488818712548",
+            "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trocken",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3948966836955866278",
+            "text": "Retinol ist einer der wirksamsten Anti-Aging-Wirkstoffe überhaupt.Aber auch einer der am häufigsten falsch angewendeten. 🌙Was er wirklich macht: Retinol aktiviert die Kollagenproduktion und beschleunigt die Zellerneuerung. Der Effekt ist gut belegt, aber er kostet Zeit. Sichtbare Ergebnisse brauchen mehrere Wochen bis ",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225895_26_1366269788831591",
+            "text": "Eine ersbensgroße Menge Retinolserum genügt niemals für das ganze Gesicht und du benutzt mindestens 3 mal so viel Produkt?🫣Warum das viel zu viel ist und bei welchen Produkten du wahrscheinlich auch noch zu viel benutzt, was langfristig ganz schön teuer werden kann, erfährst du heute auf unserem Blog💡_____________#kbea",
+            "segment": "unknown",
+            "mood": "seeking",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3736142448549486915",
+            "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet!",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_126_t1_niyl98u",
+            "text": "Wie kann ich jünger aussehen? aber mit Achtung! deine Haut sieht sehr schön aus, daher brauchst du nichts unbedingt. Allerdings kann man trotzdem tretinoin als \"Anti-aging\" nutzen. Ich schätze mal, dass du empfindliche Haut hast, wie ich, weil ich kein Parfüm und keine ätherische Öle vertrage. Daher empfehle ich dir mi",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Reddit",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3741890389222413576",
+            "text": "Mit fast 50 Jahren ist es absolut möglich, die Haut jugendlich, strahlend und gesund zu erhalten – es erfordert nur eine konsequente, auf deinen Hauttyp abgestimmte Pflege und einen ganzheitlichen Ansatz. Hier sind die wichtigsten Strategien:---1. Die richtige Hautpflege-RoutineFür mIch, Morgens:Keine Reinigung!TONIK (",
+            "segment": "skincare-first",
+            "mood": "seeking",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ]
       },
       {
-        "id": "purging",
-        "label": "Purging & Initial Breakouts",
-        "count": 30,
-        "side": "fear"
+        "id": "scientific-credibility",
+        "label": "Scientific Credibility",
+        "family": "efficacy",
+        "family_label": "Wirkung & Ergebnis",
+        "color": "#7eb8d4",
+        "volume": 115,
+        "fear": 2,
+        "hope": 113,
+        "net_valence": 96.5,
+        "experienced": 5,
+        "anticipated": 110,
+        "experienced_pct": 4.3,
+        "quotes_fear": [
+          {
+            "id": "0_225894_190_3752120939766253311",
+            "text": "Besonders Nr. 6, 10, 13, 18 und 20 ⤵️🫶🏽Produktroulette statt Geduld: Routinen werden ständig gewechselt, weil schnelle Ergebnisse erwartet werden. Wirkstoffe brauchen aber acht bis zwölf Wochen, bis sich die Haut stabilisiert.Auf Marketingbegriffe reinfallen: Begriffe wie „non-comedogen\" sind nicht reguliert. Viele Pro",
+            "segment": "skincare-first",
+            "mood": "conflicted",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225895_190_3743867649499783335",
+            "text": "Wir alle haben sie schon unzählige Male auf Verpackungen gelesen…👀diese vermeintlich „vertrauenerweckenden\" Claims.Aber die Wahrheit ist: Viele von ihnen bedeuten nicht das, was wir denken.💭 Und das ist kein Vorwurf ! Marken formulieren solche Begriffe bewusst so, dass sie beruhigend klingen. Also lass uns gemeinsam ei",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3733788557925081038",
+            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – s",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3736576059203407654",
+            "text": "✨ MK-Kundin, 72 Jahre jung – ein strahlendes Beispiel dafür, dass Hautpflege keine Frage des Alters ist!Bereits nach nur 6 Tagen täglicher, abendlicher Anwendung von Retinol 0.3 zeigt sich ein beeindruckendes Zwischenergebnis: die Haut wirkt sichtbar geglättet, vitaler und erfrischt. 🌸Retinol ist ein wahrer Goldstandar",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_26_1107365484712254",
+            "text": "Retinol gilt als Goldstandard in der modernen Wirkstoffkosmetik – aber nur die richtige Anwendung macht den Unterschied.Wann, wie oft und womit kombinieren? 💭In unserem Karussell erfährst du, worauf es wirklich ankommt:✅ beste Tageszeit,📏 richtige Dosierung,⚖️ sinnvolle Kombinationen,🧴 und was du lieber vermeiden sollt",
+            "segment": "procedure-curious",
+            "mood": "satisfied",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          }
+        ]
       },
       {
-        "id": "interplay",
-        "label": "Ingredient Interplay",
-        "count": 12,
-        "side": "fear"
+        "id": "pigmentation-evenness",
+        "label": "Pigmentation & Evenness",
+        "family": "efficacy",
+        "family_label": "Wirkung & Ergebnis",
+        "color": "#7eb8d4",
+        "volume": 62,
+        "fear": 0,
+        "hope": 62,
+        "net_valence": 100.0,
+        "experienced": 6,
+        "anticipated": 56,
+        "experienced_pct": 9.7,
+        "quotes_fear": [],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3735843353535852606",
+            "text": "𝕦𝕟𝕓𝕖𝕫𝕒𝕙𝕝𝕥𝕖 𝕎𝕖𝕣𝕓𝕦𝕟𝕘 - ℙ𝕣𝕠𝕕𝕦𝕜𝕥𝕥𝕖𝕤𝕥Dank @Influenster und @Lancaster durften wir diese Creme testen 🙏Die Golden Lift Overnight Age-Defying Cream von Lancaster basiert auf einer bahnbrechenden Technologie und enthält eine verstärkte Mischung aus Retinol &amp; Retinal mit einer 2-mal höheren Konzentration an kationischem lip",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_26_1370833521075326",
+            "text": "Ob junge Haut mit ersten Linien oder reife Haut – beide Seren bieten hochwirksame Anti-Age Benefits:👉🏼 REGENERIERENDES BAKUCHIOL SERUM- Natürliche Retinol-Alternative- Anti Age &amp; Glättung- Wirkt gegen Pigmentflecken, unterstützt Kollagenaufbau👉🏼 ANTI-FALTEN ARGAN INTENSIV SERUM- Mit Bio-Arganöl, Hyaluronsäure, Para",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3751271837297605554",
+            "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigment",
+            "segment": "skincare-first",
+            "mood": "cautioning",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ]
+      },
+      {
+        "id": "time-patience",
+        "label": "Time to Results & Patience",
+        "family": "efficacy",
+        "family_label": "Wirkung & Ergebnis",
+        "color": "#7eb8d4",
+        "volume": 48,
+        "fear": 41,
+        "hope": 7,
+        "net_valence": -70.8,
+        "experienced": 3,
+        "anticipated": 45,
+        "experienced_pct": 6.2,
+        "quotes_fear": [
+          {
+            "id": "0_225889_26_1394216789371539",
+            "text": "Ich schwöre auf Retinol – aber mit Geduld! 🧖🏽‍♀️Die Haut braucht Zeit, sich an den Wirkstoff zu gewöhnen.Start langsam, 1–2x pro Woche, und du wirst den Unterschied sehen. ✨#antiaging #retinol #skincare",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_26_1434412774963108",
+            "text": "Fang jetzt an, etwas zu verändern! 💫✅ Erst speichern, dann weiterlesen!Warum natürliche Anti-Aging-Pflege so wichtig ist:Je mehr wir unsere Haut mit milden und natürlichen Inhaltsstoffen pflegen, desto besser kann sie sich regenerieren und strahlen – ganz ohne aggressive Chemie. So verhindern wir langfristig das Austro",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3778088488818712548",
+            "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trocken",
+            "segment": "skincare-first",
+            "mood": "disappointed",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3801040078139631905",
+            "text": "Wusstest du, dass insbesondere chronische UV-Exposition zu den stärksten Treibern sichtbarer Hautalterung zählt – deutlich stärker als genetische Faktoren?Deshalb gilt: das konsequente Auftragen einer Sonnenschutzcreme mit hohem LSF ist der beste \"Skincare Hack\" überhaupt.Retinoide wiederum gehören zu den wenigen Wirks",
+            "segment": "skincare-first",
+            "mood": "seeking",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3837719781160329104",
+            "text": "✨ Retinol Cream Renew — eine Nachtpflege mit starkem Anti-Aging-Potenzial.Wenn die Haut an Glätte verliert, erste Fältchen sichtbar werden oder der Teint uneben wirkt, integriere ich Retinol Cream Renew häufig in die Heimpflege. Es handelt sich nicht um ein „Sofort-Effekt-Produkt\", sondern um eine gezielte, langfristig",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3859139748795567564",
+            "text": "Sind Augenpads sinnvoll ? 🤔 Augenpads wirken primär über einen okklusiven Effekt auf der Haut. Durch diese Okklusion wird der transepidermale Wasserverlust (TEWL) reduziert, wodurch die Haut kurzfristig mehr Feuchtigkeit speichern kann. Das führt dazu, dass die Haut direkt nach der Anwendung glatter und praller erschei",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ]
+      },
+      {
+        "id": "purging-bad-phase",
+        "label": "Purging & The Bad Phase",
+        "family": "tolerability",
+        "family_label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a",
+        "volume": 29,
+        "fear": 28,
+        "hope": 1,
+        "net_valence": -93.1,
+        "experienced": 7,
+        "anticipated": 22,
+        "experienced_pct": 24.1,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3739673311400476330",
+            "text": "Skin Purging – wenn sich die Haut erst verschlechtert, bevor sie besser wird 💫Vielleicht hast du es schon erlebt:Nach einer neuen Behandlung oder beim Start eines neuen Pflegeprodukts zeigt sich deine Haut plötzlich unruhig – mit mehr kleinen Unreinheiten, als du es gewohnt bist.Das sorgt oft für Verunsicherung – doch ",
+            "segment": "procedure-curious",
+            "mood": "seeking",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3849130136956627528",
+            "text": "So wendest du Retinol / Retinal richtig an:1️⃣ Anfänger:• Starte mit niedriger Konzentration (siehe Video)• Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert• Trage es auf trockene Haut auf• Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest • Imm",
+            "segment": "skincare-first",
+            "mood": "seeking",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_140_7617838156641094944",
+            "text": "1️⃣ Anfänger: • Starte mit niedriger Konzentration (siehe Video) • Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert • Trage es auf trockene Haut auf • Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest  • Immer danach reichlich Feuchtigkeit verwe",
+            "segment": "skincare-first",
+            "mood": "seeking",
+            "source": "TikTok",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225895_190_3932480068571902013",
+            "text": "Ich dachte immer die Pickel, die ich vom BHA bekomme, sind ein Zeichen, dass alles rauskommt 👇doch es war kein Purging. Purging oder auch eine leichte Erstverschlimmerung kann tatsächlich bei aktiven Wirkstoffen vorkommen. wie bei: 👉 Niacinamiden, Retinol/ Bakuchiol, Säuren, Vitamin C… Bei Feuchtigkeitsspendern passier",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "experienced"
+          }
+        ]
+      },
+      {
+        "id": "ingredient-combo",
+        "label": "Ingredient Combination",
+        "family": "tolerability",
+        "family_label": "Anwendung & Verträglichkeit",
+        "color": "#e08a4a",
+        "volume": 17,
+        "fear": 12,
+        "hope": 5,
+        "net_valence": -41.2,
+        "experienced": 4,
+        "anticipated": 13,
+        "experienced_pct": 23.5,
+        "quotes_fear": [
+          {
+            "id": "0_225889_190_3779419198410951913",
+            "text": "Hautpflege-Mythen im Faktencheck!💡Was ist dran an Aussagen wie „Retinol macht die Haut dünn\" oder „Vitamin C und Retinol darf man nicht kombinieren\"? 🔍Kennt ihr weitere Hautpflege-Mythen, die wir uns mal anschauen sollten? Schreibt sie uns gern in die Kommentare. 🩵#mythen #hautpflege #naturkosmetik #antiagingskincare #",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3812971842713973019",
+            "text": "Double Retinol Ritual.💞For visible glow and refined skin.In ruhigen Abendmomenten entfaltet dieses Duo seine Stärke.Die Retinol Maske bereitet die Haut vor.Die Retinol Creme ergänzt gezielt und schließt die Pflege ab.Ein durchdachtes Ritual für das Gesicht.Reduziert. Effektiv. Professionell.Retinal richtig integrieren:",
+            "segment": "skincare-first",
+            "mood": "satisfied",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_190_3862140824796561727",
+            "text": "Retinoide – was steckt dahinter?Retinoide sind Vitamin-A-Derivate und gehören zu den wirksamsten Wirkstoffen in der Hautpflege. Sie fördern die Zellerneuerung, unterstützen die Kollagenbildung, verfeinern das Hautbild und helfen bei Unreinheiten, Fältchen und Pigmentflecken.Retinal ist eine moderne Form der Retinoide. ",
+            "segment": "skincare-first",
+            "mood": "cautioning",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          }
+        ],
+        "quotes_hope": [
+          {
+            "id": "0_225889_190_3862054732789499653",
+            "text": "Das Kupferpeptid GHK-Cu wird gerade richtig interessant in der Hautpflege 👀Man sieht immer mehr Produkte damit und das nicht ohne Grund. Der Wirkstoff gilt als vielversprechend im Anti-Aging Bereich und könnte in Zukunft noch eine größere Rolle spielen.Spannend ist auch, dass er im Fitnessbereich teilweise schon ganz a",
+            "segment": "skincare-first",
+            "mood": "seeking",
+            "source": "Instagram Public",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_26_1589846529814659",
+            "text": "SEREN – Deine Hautpflege-Helden nach der Reinigung ✨Nach der Gesichtsreinigung ist die Haut besonders aufnahmefähig – der perfekte Zeitpunkt für gezielte Wirkstoffpflege! 💧 Ob Glow, Anti-Aging oder Beruhigung: Mit dem richtigen Serum bringst du deine Haut auf das nächste Level.Hier findest du eine Auswahl an unseren ho",
+            "segment": "skincare-first",
+            "mood": "enthusiastic",
+            "source": "Facebook Pages",
+            "axis": "anticipated"
+          },
+          {
+            "id": "0_225889_140_7653445800772652310",
+            "text": "Womit lässt sich ein Antioxidant Vitamin Serum gut kombinieren?Mit einer Pflegeroutine, die sinnvoll aufgebaut ist.Leichte Feuchtigkeitspflege, sanftes Niacinamid, Hyaluronsäure und SPF passen in der Regel sehr gut dazu.Wichtig ist nicht, mehr zu mischen, sondern je nach Hautzustand besser zu kombinieren. ✨ #biothermsk",
+            "segment": "unknown",
+            "mood": "satisfied",
+            "source": "TikTok",
+            "axis": "anticipated"
+          }
+        ]
       }
     ],
-    "hopes": [
-      {
-        "id": "collagen",
-        "label": "Collagen Stimulation",
-        "count": 1752,
-        "side": "hope"
-      },
-      {
-        "id": "wrinkle-reduction",
-        "label": "Wrinkle & Fine Line Reduction",
-        "count": 361,
-        "side": "hope"
-      },
-      {
-        "id": "gold-standard",
-        "label": "Gold Standard Credibility",
-        "count": 293,
-        "side": "hope"
-      },
-      {
-        "id": "confidence",
-        "label": "Confidence from Visible Change",
-        "count": 128,
-        "side": "hope"
-      },
-      {
-        "id": "texture",
-        "label": "Texture & Pore Refinement",
-        "count": 100,
-        "side": "hope"
-      },
-      {
-        "id": "acne",
-        "label": "Acne & Blemish Control",
-        "count": 99,
-        "side": "hope"
-      },
-      {
-        "id": "pigmentation",
-        "label": "Reduction of Pigmentation",
-        "count": 54,
-        "side": "hope"
-      },
-      {
-        "id": "payoff",
-        "label": "Payoff After Persistence",
-        "count": 1,
-        "side": "hope"
-      }
-    ],
+    "rest": [],
     "quotes": {
-      "hope:collagen": [
+      "hope:collagen-deep": [
         {
           "id": "0_225889_190_3733478883803689483",
-          "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht die Hautdichte und wird dadurch widerstandsfähiger – damit du morgens mit einem frischen, strahlenden Teint aufwachst. ",
+          "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht die Hautdichte und wird dadurch widerst",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733720916267213444",
-          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Уменьшает следы постакне и пигментацию•Повышает упругость и плотность кожи🔹 Почему им",
+          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Умень",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733788557925081038",
-          "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – stärken das Hautgerüst &amp; verbessern die Hautfestigkeit.🛡️ Niacinamid – stärkt",
+          "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – s",
           "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_190_3733800131880661698",
-          "text": "Deine neue Skincare-Routine, die es wirklich drauf hat!✨ Mit Protinol™ – dem Wirkstoff, der Kollagen Typ I &amp; III aktiviert⏱ Schon nach 7 Tagen kann deine Haut straffer, elastischer und strahlender wirken💧 Sanft zur Haut, stark im EffektFinde jetzt deine Protinol™-Pflege auf avon.de oder bei deiner Avon-Beraterin!#GlowUp #SkincareRoutine #Protinol #CollagenBoost #StrahlendeHaut #AvonBeauty #ret",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733918002006763458",
-          "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde Wirkung auf die Hautstruktur zugeschrieben: es kann die Kollagenproduktion anre",
+          "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733946374619444264",
-          "text": "✨ Retinol – dein Haut-Booster! ✨Wann lohnt es sich?•Ideal ab Ende 20 / Anfang 30 für die ersten Anti-Aging-Erfolge•Perfekt bei unreiner Haut, vergrößerten Poren oder fahlem Teint•Auch super, wenn du feine Linien glätten oder dein Hautbild ebenmäßiger machen möchtestFür wen geeignet?•Für normale, Misch- und ölige Haut•Sensible Haut bitte langsam einsteigen &amp; niedrigere Konzentration wählen•Nich",
+          "text": "✨ Retinol – dein Haut-Booster! ✨Wann lohnt es sich?•Ideal ab Ende 20 / Anfang 30 für die ersten Anti-Aging-Erfolge•Perfekt bei unreiner Haut, vergrößerten Poren oder fahlem Teint•Auch super, wenn du feine Linien glätten oder dein Hautbild ebenmäßiger machen möchtestFür wen geeignet?•Für normale, Misch- und ölige Haut•S",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "experienced"
         },
         {
           "id": "0_225889_190_3735085312125700740",
-          "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fältchen– Säuren : entfernen abgestorbene Hautzellen, verfeinern das Hautbild– Niacinamid: stärkt die Hautbarriere, reduzie",
+          "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fältchen– Säuren : entfernen abgestorbene H",
           "segment": "procedure-curious",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
-          "id": "0_225889_190_3735093642248385668",
-          "text": "✨ Dein Haut-Upgrade mit Fruchtsäuren ✨Unsere Wirkstoff-Power sorgt für den ultimativen Glow:🍋 Salicyl- &amp; Glykolsäure → klären tief die Poren, glätten &amp; bringen deine Haut zum Strahlen🌸 Tranexamsäure &amp; Phytinsäure → lassen Pigmentflecken nach und nach verblassen🥛 Azelainsäure &amp; Milchsäure → beruhigen sensible Haut &amp; spenden wohltuende Feuchtigkeit🌟 Resorcinol &amp; Retinol → wir",
+          "id": "0_225889_190_3735098856842349240",
+          "text": "✨ Für Retinol-Profis ✨Entdecke AGELESS Pure Liquid Retinol 0,75 %, das für fortgeschrittene Retinol-Anwender entwickelt wurde. Dieses Serum verfeinert das Hautbild, unterstützt die Zellerneuerung und reduziert das Erscheinungsbild von feinen Linien und Falten.🌿 Perfekt für:✔️ Akneanfällige und fettige Haut – hilft, die",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3736084237255904823",
+          "text": "Das RINGANA Overnight Face Treatment ist echte Beauty-Power im Schlaf! 🌙Das Geheimnis? Retinal – eine der wirksamsten Formen von Vitamin A. 💛👉 Vorteile von Retinal:•🔥 Glättet feine Linien &amp; Fältchen•🌱 Fördert die Zellerneuerung•💧 Unterstützt eine ebenmäßige, strahlende Haut•🛡️ Wirkt antioxidativ und schützt die Hau",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "hope:wrinkle-reduction": [
+      "hope:wrinkle-texture": [
         {
           "id": "0_225889_190_3733607129212004577",
           "text": "Sanft, aber stark im Anti-Aging.💛Age Limit mit 0,05% Retinal, Panthenol, Bisabolol und Allantoin wirkt gegen Falten und Flecken; die wasserbasierte Textur zieht blitzschnell ein.#elynslab.de #agelimit #retinal #antiaging #panthenol #serum",
           "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_26_1393616066107029",
-          "text": "Deine Haut erinnert sich an jede Sonnenstunde. ☀️ Unser Duo ist die perfekte Lösung gegen Photoaging und erweckt deine jugendliche Ausstrahlung neu!🌙 Retinal Intense: Intensives Anti-Falten-Nachtserum mit Retinal - 3x wirksamer als Retinol!*. Unterstützt die nächtliche Hautregeneration für 43% weniger Falten in 4 Wochen.*☀️FusionWater MAGIC Repair: Dein täglicher, ultraleichter Sonnenschutz, der d",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3734584884112216301",
-          "text": "Deine Haut erinnert sich an jede Sonnenstunde. ☀️ Unser Duo ist die perfekte Lösung gegen Photoaging und erweckt deine jugendliche Ausstrahlung neu!🌙 Retinal Intense: Intensives Anti-Falten-Nachtserum mit Retinal - 3x wirksamer als Retinol!*. Unterstützt die nächtliche Hautregeneration für 43% weniger Falten in 4 Wochen.*☀️FusionWater MAGIC Repair: Dein täglicher, ultraleichter Sonnenschutz, der d",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3735276983757334931",
-          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduzieren Beziehungsweise ihnen vorbeugen. Somit helfe ich dir, die klassischen Zeichen ",
+          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduziere",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "experienced"
         },
         {
           "id": "0_225889_190_3735857152763204085",
-          "text": "Schaut euch dieses Ergebnis an 😍 Die Haut wirkt glatter, straffer und viel frischer ✨.Mit dem Mary Kay Retinol 0,3 wird Anti-Aging sichtbar! 💖👉 Schreib mir, wenn du auch deine Haut verwandeln möchtest!#Retinol #Retinol03 #MaryKay #MaryKayConsultant #MaryKaySkincare #AntiAging #SkinTransformation #VorherNachher #GlowSkin #BeautyRoutine #SkinCareLover #StrahlendeHaut #Faltenreduzieren #BeautyBeratun",
+          "text": "Schaut euch dieses Ergebnis an 😍 Die Haut wirkt glatter, straffer und viel frischer ✨.Mit dem Mary Kay Retinol 0,3 wird Anti-Aging sichtbar! 💖👉 Schreib mir, wenn du auch deine Haut verwandeln möchtest!#Retinol #Retinol03 #MaryKay #MaryKayConsultant #MaryKaySkincare #AntiAging #SkinTransformation #VorherNachher #GlowSki",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3736145623880837882",
-          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es wirkt ganzheitlich gegen Falten, Müdigkeit und ungleichmäßigen Hautton – für ei",
+          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3736855084429795496",
-          "text": "✨ CHRONO REPAIR®️ – 4-Wochen Retinoat Programm ✨Kraftvolle Inhaltsstoffe wirken im Herzen des Zellzyklus – für sichtbar jüngere, straffere und glattere Haut. 💫Die innovative Kombination aus verkapseltem Retinyl-Retinoat und Niacinamid unterstützt aktiv die Zellerneuerung und Kollagensynthese, um die Hautstruktur zu verfeinern und die Zeichen der Hautalterung effektiv zu korrigieren.Ergebnis: eine ",
+          "text": "✨ CHRONO REPAIR®️ – 4-Wochen Retinoat Programm ✨Kraftvolle Inhaltsstoffe wirken im Herzen des Zellzyklus – für sichtbar jüngere, straffere und glattere Haut. 💫Die innovative Kombination aus verkapseltem Retinyl-Retinoat und Niacinamid unterstützt aktiv die Zellerneuerung und Kollagensynthese, um die Hautstruktur zu ver",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
-          "id": "0_225889_190_3737217012767504715",
-          "text": "Like moonlight on your skin – regenerative, silent, radiant. Sleeping Beauty nourishes what you release in your sleep. 💫Hast du gewusst, das SLEEPING BEAUTY NIGHT OIL @yageorganics den Mondstein beinhaltet ?! Bei einem nächtlichen Ritual bist du wie von dem Mond geküsst 🥹 #liebenwir !  • Es handelt sich um ein luxuriöses Nachtöl-Serum, das vor allem gegen Fältchen und Pigmentflecken wirken soll. ￼",
+          "id": "0_225889_26_1646097919936880",
+          "text": "👑 1 Problem – 10 Lösungen: Die Falten-Edition 👑Falten? 😏 Kein Grund zur Sorge – wir verraten Ihnen, was wirklich hilft!Unsere Expertin Laura zeigt 10 effektive Strategien, um Falten vorzubeugen und bestehende Linien sichtbar zu reduzieren 💪✨💡 Unsere Top 10 Anti-Aging-Empfehlungen:1️⃣ Sonnenschutz – Ihr täglicher Beglei",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "seeking",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3737600576575091146",
+          "text": "• Herbst &amp; Winter – die perfekte Zeit für ein chemisches Peeling/Mesopeeling🍂Wenn die Sonne sich seltener zeigt, beginnt die ideale Zeit, um deine Haut Regeneration anzukurbeln! In den kühleren Monaten kann die Haut sich optimal regenerieren – und genau hier kommen die chemischen Peelings von Mesoestetic® ins Spiel",
+          "segment": "procedure-curious",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3740252436813185682",
+          "text": "Neu bei uns erhältlich 👉🏽🌙 Glattere Haut über Nacht mit CeraVe 💜Sag unebener Hautstruktur und feinen Linien den Kampf an – mit dem CeraVe Skin Renewing Retinol Serum.✨ Enthält verkapseltes Retinol, das die Hauterneuerung fördert, ohne sie zu reizen. In Kombination mit 3 essenziellen Ceramiden stärkt es die Hautbarriere",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "fear:irritation": [
+      "fear:tolerability-irritation": [
         {
           "id": "0_225889_190_3733720916267213444",
-          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Уменьшает следы постакне и пигментацию•Повышает упругость и плотность кожи🔹 Почему им",
+          "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелкие линии•Выравнивает тон и текстуру•Умень",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733912017548613840",
-          "text": "✨ Erfolgsgeschichte: 6 Monate vs. 3 Jahre ✨Drei Jahre lang hat Melissa versucht, ihr Hautbild zu verbessern – ohne den gewünschten Erfolg. Die Challenge? Niemand hat ihr gesagt, welcher Hauttyp sie ist, welche Wirkstoffe für sie wirklich wichtig sind und wie sie ihre Hautpflege richtig aufbauen kann.Nach nur 6 Monaten können wir jetzt folgendes sehen:✅ Ein gesundes, strahlendes, ebenmäßiges Hautbi",
+          "text": "✨ Erfolgsgeschichte: 6 Monate vs. 3 Jahre ✨Drei Jahre lang hat Melissa versucht, ihr Hautbild zu verbessern – ohne den gewünschten Erfolg. Die Challenge? Niemand hat ihr gesagt, welcher Hauttyp sie ist, welche Wirkstoffe für sie wirklich wichtig sind und wie sie ihre Hautpflege richtig aufbauen kann.Nach nur 6 Monaten ",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733918002006763458",
-          "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde Wirkung auf die Hautstruktur zugeschrieben: es kann die Kollagenproduktion anre",
+          "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 Bakuchiol wird in Studien eine fördernde",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3733946374619444264",
-          "text": "✨ Retinol – dein Haut-Booster! ✨Wann lohnt es sich?•Ideal ab Ende 20 / Anfang 30 für die ersten Anti-Aging-Erfolge•Perfekt bei unreiner Haut, vergrößerten Poren oder fahlem Teint•Auch super, wenn du feine Linien glätten oder dein Hautbild ebenmäßiger machen möchtestFür wen geeignet?•Für normale, Misch- und ölige Haut•Sensible Haut bitte langsam einsteigen &amp; niedrigere Konzentration wählen•Nich",
+          "text": "✨ Retinol – dein Haut-Booster! ✨Wann lohnt es sich?•Ideal ab Ende 20 / Anfang 30 für die ersten Anti-Aging-Erfolge•Perfekt bei unreiner Haut, vergrößerten Poren oder fahlem Teint•Auch super, wenn du feine Linien glätten oder dein Hautbild ebenmäßiger machen möchtestFür wen geeignet?•Für normale, Misch- und ölige Haut•S",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225889_190_3736142448549486915",
+          "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet!",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3736145623880837882",
-          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es wirkt ganzheitlich gegen Falten, Müdigkeit und ungleichmäßigen Hautton – für ei",
+          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_15_20711964581321120",
+          "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpf",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Blogs",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3738090000958160714",
-          "text": "Protinol vs. Retinol – was ist der Unterschied?Beide klingen ähnlich, aber sie wirken ganz unterschiedlich auf deine Haut 💛➡️ Retinol ist bekannt für seine Anti-Aging-Wirkung – es regt die Zellerneuerung an, verfeinert das Hautbild und reduziert Fältchen. Allerdings kann es bei empfindlicher Haut manchmal zu Reizungen kommen.💧 Protinol hingegen ist ein innovativer Wirkstoff, der das Kollagen in de",
+          "text": "Protinol vs. Retinol – was ist der Unterschied?Beide klingen ähnlich, aber sie wirken ganz unterschiedlich auf deine Haut 💛➡️ Retinol ist bekannt für seine Anti-Aging-Wirkung – es regt die Zellerneuerung an, verfeinert das Hautbild und reduziert Fältchen. Allerdings kann es bei empfindlicher Haut manchmal zu Reizungen ",
           "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_190_3740314873902185239",
-          "text": "✨ BEAUTY BENEFITS – sichtbar schöne Haut, spürbar gepflegt! ✨Ob intensive Feuchtigkeitsversorgung, effektives Anti-Aging, ein ebenmäßiger Hautton, zuverlässiger UV-Schutz oder das Mildern von Rötungen – bei uns findest du alles, was deine Haut liebt. 💛Entdecke jetzt unsere Highlights wie:💧 Hyaluronsäure Serum🌙 Retinol Serum🌞 Anti-Aging Sonnenlotion🌿 Niacinamide🍃 Anti Red Pflegelinie👉 Alles erhältl",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_26_1418201236817109",
-          "text": "✨ BEAUTY BENEFITS – sichtbar schöne Haut, spürbar gepflegt! ✨Ob intensive Feuchtigkeitsversorgung, effektives Anti-Aging, ein ebenmäßiger Hautton, zuverlässiger UV-Schutz oder das Mildern von Rötungen – bei uns findest du alles, was deine Haut liebt. 💛Entdecke jetzt unsere Highlights wie:💧 Hyaluronsäure Serum🌙 Retinol Serum🌞 Anti-Aging Sonnenlotion🌿 Niacinamide🍃 Anti Red Pflegelinie👉 Alles erhältl",
-          "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "hope:gold-standard": [
+      "hope:scientific-credibility": [
         {
           "id": "0_225889_190_3733788557925081038",
-          "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – stärken das Hautgerüst &amp; verbessern die Hautfestigkeit.🛡️ Niacinamid – stärkt",
+          "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radikalen &amp; fördert Kollagen.🧬 Peptide – s",
           "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_190_3735276983757334931",
-          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduzieren Beziehungsweise ihnen vorbeugen. Somit helfe ich dir, die klassischen Zeichen ",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3736576059203407654",
-          "text": "✨ MK-Kundin, 72 Jahre jung – ein strahlendes Beispiel dafür, dass Hautpflege keine Frage des Alters ist!Bereits nach nur 6 Tagen täglicher, abendlicher Anwendung von Retinol 0.3 zeigt sich ein beeindruckendes Zwischenergebnis: die Haut wirkt sichtbar geglättet, vitaler und erfrischt. 🌸Retinol ist ein wahrer Goldstandard in der Anti-Aging-Pflege – es unterstützt die Zellerneuerung, verfeinert das H",
+          "text": "✨ MK-Kundin, 72 Jahre jung – ein strahlendes Beispiel dafür, dass Hautpflege keine Frage des Alters ist!Bereits nach nur 6 Tagen täglicher, abendlicher Anwendung von Retinol 0.3 zeigt sich ein beeindruckendes Zwischenergebnis: die Haut wirkt sichtbar geglättet, vitaler und erfrischt. 🌸Retinol ist ein wahrer Goldstandar",
           "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_190_3739768490174847690",
-          "text": "Wusstest du, dass die Hautalterung schon ab Mitte 20 beginnt? 🧬 Ab dann verlangsamt sich die Zellregeneration und kleine Fältchen oder erste Veränderungen können sichtbar werden.Ich durfte für @lorealparis nach Paris:Es ging für mich auf den EADV - dem größten Dermatologie-Kongress Europas - und die neuesten wissenschaftlichen Insights rund um Hautgesundheit mitnehmen. 💡Mein zusätzliches Highlight",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_26_1107365484712254",
-          "text": "Retinol gilt als Goldstandard in der modernen Wirkstoffkosmetik – aber nur die richtige Anwendung macht den Unterschied.Wann, wie oft und womit kombinieren? 💭In unserem Karussell erfährst du, worauf es wirklich ankommt:✅ beste Tageszeit,📏 richtige Dosierung,⚖️ sinnvolle Kombinationen,🧴 und was du lieber vermeiden solltest.Gerade jetzt – wenn die Sonne schwächer wird – ist der ideale Zeitpunkt, um ",
+          "text": "Retinol gilt als Goldstandard in der modernen Wirkstoffkosmetik – aber nur die richtige Anwendung macht den Unterschied.Wann, wie oft und womit kombinieren? 💭In unserem Karussell erfährst du, worauf es wirklich ankommt:✅ beste Tageszeit,📏 richtige Dosierung,⚖️ sinnvolle Kombinationen,🧴 und was du lieber vermeiden sollt",
           "segment": "procedure-curious",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_26_1405613754904743",
-          "text": "LES ACTIFS STARS DE L'ANTI-ÂGE ✨Dans cette vidéo, notre experte internationale Léa vous dévoile les secrets des actifs incontournables en cosmétique :💧 Acide hyaluronique : hydrate intensément, repulpe et lisse les rides. 🌿 Pro-collagène : aide à renforcer la fermeté et la densité cutanée. 🍊 Vitamine C : illumine, uniformise le teint et ravive l'éclat. ⭐ Rétinol : référence scientifique pour lisse",
-          "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "satisfied",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3747389392617796490",
-          "text": "✨ Retinol – das Power-Vitamin für deine HautBei The Skin Aesthetic setzen wir auf hochwirksame, dermatologisch entwickelte Wirkstoffe – und Retinol ist einer unserer Favoriten.Das Vitamin-A-Derivat gilt als Goldstandard der Anti-Aging-Pflege und sorgt für eine sichtbar glattere, ebenmäßigere und strahlendere Haut.💛 Wirkung von Retinol:•Unterstützt die Zellerneuerung und verfeinert die Poren•Reduzi",
+          "text": "✨ Retinol – das Power-Vitamin für deine HautBei The Skin Aesthetic setzen wir auf hochwirksame, dermatologisch entwickelte Wirkstoffe – und Retinol ist einer unserer Favoriten.Das Vitamin-A-Derivat gilt als Goldstandard der Anti-Aging-Pflege und sorgt für eine sichtbar glattere, ebenmäßigere und strahlendere Haut.💛 Wir",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3747656852629001912",
-          "text": "Ich habe mich schon vor vielen Jahren entschieden: bewusst zu altern – das heißt, natürlich, gesund und mit Energie durchs Leben zu gehen. Hier sind meine 5 Tipps, die mich jung halten – von innen und außen:1️⃣ Ernährung:Ich lebe nach der 80/20-Regel – 80 % ausgewogen, 20 % das, was einfach guttut (ja, auch mal was „Ungesundes\" 😉).2️⃣ Bewegung &amp; Krafttraining (inkl. Mobility):Spätestens ab 40 ",
+          "text": "Ich habe mich schon vor vielen Jahren entschieden: bewusst zu altern – das heißt, natürlich, gesund und mit Energie durchs Leben zu gehen. Hier sind meine 5 Tipps, die mich jung halten – von innen und außen:1️⃣ Ernährung:Ich lebe nach der 80/20-Regel – 80 % ausgewogen, 20 % das, was einfach guttut (ja, auch mal was „Un",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3747702802488029902",
+          "text": "Retinol (Vitamin A1) gilt in der medizinischen Kosmetik als Goldstandard unter den Wirkstoffen zur Hautverjüngung.Es fördert die zelluläre Regeneration, stimuliert die Kollagenneubildung und trägt maßgeblich zur Verbesserung der Hautelastizität und Struktur bei.In der Anwendung zeigt Retinol positive Effekte bei:– Phot",
+          "segment": "procedure-curious",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3752746487575786112",
+          "text": "♡ ♡ ♡ EXOSOMEN – HIGHTECH ODER NUR HIGH MARKETING?Gerade überall zu lesen:Exosomen sollen die neue Wunderwaffe für Regeneration und Anti Aging sein.Aber was steckt wirklich dahinter?✨ Was Exosomen sind:Exosomen sind mikroskopisch kleine Vesikel, also winzige, mit Lipiden umhüllte Bläschen, die von Zellen abgegeben werd",
+          "segment": "unknown",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3752840004624976357",
+          "text": "✨ Der beste Weg, um Zeichen der Hautalterung zu bekämpfen | Dr. Valérie Enderlin 👩‍⚕️🇨🇭Altern ist ein natürlicher Prozess – aber die richtige Hautpflege und gezielte Behandlungen können diesen Prozess sichtbar verlangsamen 💆‍♀️💫Die Schweizer Dermatologin Dr. Valérie Enderlin teilt ihre fachkundigen Erkenntnisse darüber",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "fear:photosensitivity": [
+      "fear:sun-seasonality": [
         {
           "id": "0_225889_190_3735276983757334931",
-          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduzieren Beziehungsweise ihnen vorbeugen. Somit helfe ich dir, die klassischen Zeichen ",
+          "text": "Ich bin Retinol, eine Form von Vitamin A, ein bewährter, bestens wissenschaftlich untersuchter Wirkstoff. Für den Aufbau deiner Haut spiele ich eine entscheidende Rolle. Ich bin ein Allrounder. Mein Retinol kann die Kollagensynthese und die Erneuerung der oberen Hautschicht anregen. Auch deine Falten kann ich reduziere",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "experienced"
         },
         {
           "id": "0_225889_15_20711964581321120",
-          "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpflege, Feuchtigkeitscreme, Retinol Serum oder Anti-Aging im Herbst sind jetzt abs",
+          "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpf",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Blogs",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3747079873484081866",
-          "text": "#hyaluronsäure #skincaretips #hautpflegetipps #hydratedskin #skincareroutine #dewyskin #hautpflege #glowroutine #feuchterhaut #skincareeducation #hyaluronserum #skinbarrier #beautyroutine #skincaredeutsch #glowingskinNIACINAMID – HYALURONSÄURE – RETINOLDrei Powerwirkstoffe, drei Aufgaben 👇Niacinamid: stärkt die Hautbarriere, gleicht Teint &amp; Talg aus, beruhigt – sanft &amp; vielseitig. Hyaluron",
+          "text": "#hyaluronsäure #skincaretips #hautpflegetipps #hydratedskin #skincareroutine #dewyskin #hautpflege #glowroutine #feuchterhaut #skincareeducation #hyaluronserum #skinbarrier #beautyroutine #skincaredeutsch #glowingskinNIACINAMID – HYALURONSÄURE – RETINOLDrei Powerwirkstoffe, drei Aufgaben 👇Niacinamid: stärkt die Hautbar",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3751271837297605554",
-          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigment",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3752755174465638299",
-          "text": "Retinol ist einer der am besten erforschten Wirkstoffe in der Dermatologie und ich lieeeeebe es!👩🏽‍⚕️🧠Retinol (Vitamin A Derivat) gehört zu den Retinoiden und wirkt auf zellulärer Ebene: Es bindet an nukleäre Rezeptoren in der Haut, stimuliert die Kollagenproduktion, beschleunigt die Zellerneuerung und reduziert feine Linien, Hyperpigmentierung &amp; Unreinheiten.In Studien zeigte sich: Retinol ve",
+          "text": "Retinol ist einer der am besten erforschten Wirkstoffe in der Dermatologie und ich lieeeeebe es!👩🏽‍⚕️🧠Retinol (Vitamin A Derivat) gehört zu den Retinoiden und wirkt auf zellulärer Ebene: Es bindet an nukleäre Rezeptoren in der Haut, stimuliert die Kollagenproduktion, beschleunigt die Zellerneuerung und reduziert feine ",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3756313600051684529",
-          "text": "Top Anti-Aging Wirkstoffe und ihre WirkungRetinol (Vitamin A-Derivat)Fördert die Zellerneuerung und Kollagenproduktion.Glättet feine Linien und Falten.Ideal für abends, da es lichtempfindlich ist.Vitamin CStarkes Antioxidans, schützt vor freien Radikalen.Hellt Pigmentflecken auf und sorgt für strahlende Haut.Perfekt für die Morgenroutine.HyaluronsäureBindet Wasser in der Haut und sorgt für intensi",
+          "text": "Top Anti-Aging Wirkstoffe und ihre WirkungRetinol (Vitamin A-Derivat)Fördert die Zellerneuerung und Kollagenproduktion.Glättet feine Linien und Falten.Ideal für abends, da es lichtempfindlich ist.Vitamin CStarkes Antioxidans, schützt vor freien Radikalen.Hellt Pigmentflecken auf und sorgt für strahlende Haut.Perfekt fü",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3763020076979632888",
-          "text": "Mein 2-Wochen-Geheimnis: Dermalogica Dynamic Skin Retinol Serum! ✨Dieses Power-Serum reduziert die 4 Zeichen der Hautalterung (Falten, Textur, Poren, Hautton) dank seines 3,5% Retinoid-Komplexes.Die Vorteile: Glattere Haut, minimierte Poren und ein super gleichmäßiger Teint – und das, ohne die Hautbarriere zu stressen!✨✨⚠️ Wichtigster Tipp: Nur ABENDS auftragen und tagsüber unbedingt LSF verwenden",
+          "text": "Mein 2-Wochen-Geheimnis: Dermalogica Dynamic Skin Retinol Serum! ✨Dieses Power-Serum reduziert die 4 Zeichen der Hautalterung (Falten, Textur, Poren, Hautton) dank seines 3,5% Retinoid-Komplexes.Die Vorteile: Glattere Haut, minimierte Poren und ein super gleichmäßiger Teint – und das, ohne die Hautbarriere zu stressen!",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3771633530275799426",
-          "text": "✨ Ich zeige euch, wie ihr die Wunderwaffe Retinol mit einer 30-Tages-Kur effektiv nutzen könnt! 🌙💖 Abends verwende ich das Double Serum von @lubex_anti_age – ein zweiphasiges Serum aus Retinol und Antioxidantien, das seine volle Wirkung entfaltet, wenn die beiden Phasen sich vermischen.Für den Tag ist ein guter Sonnenschutz unerlässlich!☀️ Denkt daran, immer ein Produkt mit mindestens SPF 30 zu ve",
+          "text": "✨ Ich zeige euch, wie ihr die Wunderwaffe Retinol mit einer 30-Tages-Kur effektiv nutzen könnt! 🌙💖 Abends verwende ich das Double Serum von @lubex_anti_age – ein zweiphasiges Serum aus Retinol und Antioxidantien, das seine volle Wirkung entfaltet, wenn die beiden Phasen sich vermischen.Für den Tag ist ein guter Sonnens",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "hope:pigmentation": [
+      "hope:pigmentation-evenness": [
         {
           "id": "0_225889_190_3735843353535852606",
-          "text": "𝕦𝕟𝕓𝕖𝕫𝕒𝕙𝕝𝕥𝕖 𝕎𝕖𝕣𝕓𝕦𝕟𝕘 - ℙ𝕣𝕠𝕕𝕦𝕜𝕥𝕥𝕖𝕤𝕥Dank @Influenster und @Lancaster durften wir diese Creme testen 🙏Die Golden Lift Overnight Age-Defying Cream von Lancaster basiert auf einer bahnbrechenden Technologie und enthält eine verstärkte Mischung aus Retinol &amp; Retinal mit einer 2-mal höheren Konzentration an kationischem liposomalen Retinol und 25 % mehr Retinal (1) sowie TranexamolTM, einen exklusiven ",
+          "text": "𝕦𝕟𝕓𝕖𝕫𝕒𝕙𝕝𝕥𝕖 𝕎𝕖𝕣𝕓𝕦𝕟𝕘 - ℙ𝕣𝕠𝕕𝕦𝕜𝕥𝕥𝕖𝕤𝕥Dank @Influenster und @Lancaster durften wir diese Creme testen 🙏Die Golden Lift Overnight Age-Defying Cream von Lancaster basiert auf einer bahnbrechenden Technologie und enthält eine verstärkte Mischung aus Retinol &amp; Retinal mit einer 2-mal höheren Konzentration an kationischem lip",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_26_1370833521075326",
-          "text": "Ob junge Haut mit ersten Linien oder reife Haut – beide Seren bieten hochwirksame Anti-Age Benefits:👉🏼 REGENERIERENDES BAKUCHIOL SERUM- Natürliche Retinol-Alternative- Anti Age &amp; Glättung- Wirkt gegen Pigmentflecken, unterstützt Kollagenaufbau👉🏼 ANTI-FALTEN ARGAN INTENSIV SERUM- Mit Bio-Arganöl, Hyaluronsäure, Parakresse &amp; Feige- Anti Age &amp; Glättung- Spürbare Strafffung und intensive P",
+          "text": "Ob junge Haut mit ersten Linien oder reife Haut – beide Seren bieten hochwirksame Anti-Age Benefits:👉🏼 REGENERIERENDES BAKUCHIOL SERUM- Natürliche Retinol-Alternative- Anti Age &amp; Glättung- Wirkt gegen Pigmentflecken, unterstützt Kollagenaufbau👉🏼 ANTI-FALTEN ARGAN INTENSIV SERUM- Mit Bio-Arganöl, Hyaluronsäure, Para",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3751271837297605554",
-          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigment",
           "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_225889_190_3756313600051684529",
-          "text": "Top Anti-Aging Wirkstoffe und ihre WirkungRetinol (Vitamin A-Derivat)Fördert die Zellerneuerung und Kollagenproduktion.Glättet feine Linien und Falten.Ideal für abends, da es lichtempfindlich ist.Vitamin CStarkes Antioxidans, schützt vor freien Radikalen.Hellt Pigmentflecken auf und sorgt für strahlende Haut.Perfekt für die Morgenroutine.HyaluronsäureBindet Wasser in der Haut und sorgt für intensi",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_190_3766513112057717194",
-          "text": "✨ Nocturnal Repair für sichtbar jüngere Hände – über Nacht. ✨Die 𝐑𝐞𝐭𝐢𝐧𝐨𝐥 𝐓𝐡𝐞𝐫𝐚𝐩𝐲 𝐑𝐞𝐧𝐞𝐰𝐢𝐧𝐠 𝐇𝐚𝐧𝐝 𝐂𝐫𝐞𝐚𝐦 𝐯𝐨𝐧 𝐎𝐝𝐚𝐜𝐢𝐭𝐞́ ist die luxuriöse Nachtpflege für trockene, beanspruchte und reife Hände. Mit Retinol, Retinoid, PHA, Peptiden &amp; Niacinamid unterstützt sie intensiv die nächtliche Regeneration, glättet feine Linien, reduziert Pigmentflecken, stärkt die Hautbarriere und sorgt für ein ebenmäßigeres,",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3774382599574393619",
-          "text": "Wusstest du, dass eine konsequente Pflegeroutine deine Haut um bis zu 70 % sichtbar verbessern kann und gleichzeitig die Hautalterung verlangsamt?Die meisten unterschätzen, wie stark die Haut auf tägliche Pflege reagiert.Hier sind die 5 Schritte, die deine Haut wirklich verändern können:1️⃣ Reinigung – +20–40 % klarere, glattere HautEine sanfte Reinigung entfernt Schweiß, Schmutz und Talg, ohne di",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_190_3783852225886733577",
-          "text": "✨ Top Produkte für fettige Haut – von KU2 Cosmetics ✨Glänzende Haut, Unreinheiten oder erste Linien? Das muss kein Dauerzustand sein.💛 Vitamin-C-Serum für ein ebenmäßigeres Hautbild, weniger dunkle Flecken &amp; einen frischen Glow – ideal als leichte Tagespflege.🤍 Retinol Serum für Anti-Aging, verfeinerte Poren &amp; Unterstützung bei Unreinheiten wie Akne &amp; Pigmentflecken.Zwei Power-Seren. E",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_26_1470935364877029",
-          "text": "✨ Top Produkte für fettige Haut – von KU2 Cosmetics ✨Glänzende Haut, Unreinheiten oder erste Linien? Das muss kein Dauerzustand sein.💛 Vitamin-C-Serum für ein ebenmäßigeres Hautbild, weniger dunkle Flecken &amp; einen frischen Glow – ideal als leichte Tagespflege.🤍 Retinol Serum für Anti-Aging, verfeinerte Poren &amp; Unterstützung bei Unreinheiten wie Akne &amp; Pigmentflecken.Zwei Power-Seren. E",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        }
-      ],
-      "fear:over-drying": [
-        {
-          "id": "0_225889_190_3736142448549486915",
-          "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet! Viele hören genau dann auf, weil sie denken, sie „vertragen\" es nicht – und ver",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3736145623880837882",
-          "text": "🌱 Peptide 360 SerumDieses Serum ist Dein natürlicher Anti-Aging-Allrounder: Pflanzliche Peptide aus Sacha Inchi fördern die Hautfestigkeit, peruanische Maca kurbelt die Zellerneuerung an, Cacay-Öl liefert eine sanfte, pflanzliche Retinol-Alternative für glattere Haut und Hyaluronsäure spendet intensive Feuchtigkeit. Es wirkt ganzheitlich gegen Falten, Müdigkeit und ungleichmäßigen Hautton – für ei",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_15_20711964581321120",
-          "text": "Herbstpflege für die Haut – jetzt wird's gemütlich Bei diesem Wetter braucht unsere Haut wieder etwas mehr Zuwendung. Der Herbst ist keine Zeit für aggressive Peelings oder ultraleichte Sommerpflege, sondern für sanfte Reinigung, viel Feuchtigkeit und Inhaltsstoffe, die die Hautbarriere stärken. Stichworte wie Herbstpflege, Feuchtigkeitscreme, Retinol Serum oder Anti-Aging im Herbst sind jetzt abs",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3738039820531636833",
-          "text": "🍂 Herbst &amp; Winter – die wahre Skincare-Zeit für deine Haut 🌸Während der Sommer oft mit Sonne, Strand und Outdoor-Aktivitäten verbunden ist, bedeutet er für deine Haut vor allem eins: Belastung. UV-Strahlung, Hitze, Schweiß und Salz- oder Chlorwasser können Spuren hinterlassen – von Hyperpigmentierungen bis zu kleinen Sonnenschäden.Jetzt, wenn die Tage kürzer werden und die Temperaturen sinken,",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3743390247326344751",
-          "text": "1. Jeden Abend Panthenolcreme oder Aquaphor vor dem Schlafengehen auftragen!! 😌Das hilft, die Lippen über Nacht intensiv zu pflegen und Austrocknung zu verhindern.2. Trockene Lippen können auch von deinem Retinol-Serum kommen! Deshalb am besten vor der Anwendung etwas Panthenolcreme oder Aquaphor auf die Lippen geben, um sie zu schützen 🥳#skincare #hautpflege #skincareroutine #beauty #gesichtspfle",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3748813754406707868",
-          "text": "1. Reinigung (Cleanser)– Sanftes Waschgel oder Schaum, um überschüssigen Talg und Schweiß zu entfernen.– Achte auf milde Inhaltsstoffe (z. B. ohne Alkohol oder Sulfate).2. Toner (Gesichtswasser)– Hilft, den pH-Wert der Haut auszugleichen und bereitet sie auf die Pflege vor.– Ideal: beruhigende Inhaltsstoffe wie Rosenwasser, Aloe Vera oder Centella Asiatica.   3.Serum– Morgens ideal: Vitamin C, Nia",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_190_3748870633808240134",
-          "text": "PERSONALISIERTES TREATMENT | MIXOLOGY - CIRCADIA Masken!🍇Australian Super-Berry Antioxidant Mask•Hauttypen: Trockene Haut, Hyperpigmentierung, Anti-Aging. ￼•Kernwirkung: Kombination aus exotischen Beeren + Milchsäure/Mandel­säure; hellt auf, versorgt mit Nährstoffen, antioxidativ und entzündungshemmend.🍋‍🟩Caviar Lime &amp; Passionfruit Enzyme Mask•Hauttypen: Alle Hauttypen. ￼•Kernwirkung: Sanftes ",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_190_3748949648372196175",
-          "text": "✨ Was hilft wirklich gegen Falten?Meine Kundin gab genau das bei Google ein:„Was hilft wirklich gegen Falten?\"Über 1.000 Antworten bekam sie und trotzdem war ihre Haut danach empfindlicher, gereizter und gespannter als je zuvor. 😔Sie meinte es gut.Neue Seren, Vitamin C, Retinol, Fruchtsäuren, Hyaluron alles ausprobiert.Doch statt strahlender Haut bekam sie:🔸 Rötungen🔸 Brennen🔸 Spannungsgefühl🔸 und",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        }
-      ],
-      "fear:overuse": [
-        {
-          "id": "0_225889_190_3736142448549486915",
-          "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet! Viele hören genau dann auf, weil sie denken, sie „vertragen\" es nicht – und ver",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3741890389222413576",
-          "text": "Mit fast 50 Jahren ist es absolut möglich, die Haut jugendlich, strahlend und gesund zu erhalten – es erfordert nur eine konsequente, auf deinen Hauttyp abgestimmte Pflege und einen ganzheitlichen Ansatz. Hier sind die wichtigsten Strategien:---1. Die richtige Hautpflege-RoutineFür mIch, Morgens:Keine Reinigung!TONIK (am besten mit AloeVera) zur intensiven Befeuchtung der Haut.Feuchtigkeitspflege-",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_190_3743413247060828398",
-          "text": "✨Was macht ein gutes Retinol aus – und wie startet man richtig?✨Retinol ist eines der effektivsten Anti-Aging-Wirkstoffe, aber nur, wenn man es richtig anwendet.Langsam einschleichen lautet das Zauberwort:👉 Starte mit 1x pro Woche, beobachte, wie deine Haut reagiert – und steigere dann Schritt für Schritt.Am Anfang darf die Haut leicht reagieren – das ist ganz normal. Sie lernt, sich an den Wirkst",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3751271837297605554",
-          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_225889_190_3752755174465638299",
-          "text": "Retinol ist einer der am besten erforschten Wirkstoffe in der Dermatologie und ich lieeeeebe es!👩🏽‍⚕️🧠Retinol (Vitamin A Derivat) gehört zu den Retinoiden und wirkt auf zellulärer Ebene: Es bindet an nukleäre Rezeptoren in der Haut, stimuliert die Kollagenproduktion, beschleunigt die Zellerneuerung und reduziert feine Linien, Hyperpigmentierung &amp; Unreinheiten.In Studien zeigte sich: Retinol ve",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3778088488818712548",
-          "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trockenheit, Spannungsgefühl oder noch mehr Ölproduktion.2️⃣ Kein Sonnenschutz im Allta",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_190_3785258900917089478",
-          "text": "📌 Die 3 wichtigsten Pflegeprodukte für eine starke, gesunde HautbarriereMorgens:✨ Antioxidatives SerumSchützt Ihre Haut vor freien Radikalen, Umweltstress &amp; frühzeitiger Hautalterung.👉Ideal als erster Schritt nach der Reinigung.💧Feuchtigkeitspflege + SonnenschutzHydratisiert, stärkt die Hautbarriere und schützt vor UV-bedingten Schäden.👉Sonnenschutz ist jeden Tag unverzichtbar – auch im Winter",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_190_3801040078139631905",
-          "text": "Wusstest du, dass insbesondere chronische UV-Exposition zu den stärksten Treibern sichtbarer Hautalterung zählt – deutlich stärker als genetische Faktoren?Deshalb gilt: das konsequente Auftragen einer Sonnenschutzcreme mit hohem LSF ist der beste \"Skincare Hack\" überhaupt.Retinoide wiederum gehören zu den wenigen Wirkstoffen, die tatsächlich strukturelle Veränderungen in der Haut bewirken können –",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "fear:health": [
-        {
-          "id": "0_225889_190_3738206831928549215",
-          "text": "Swipe ➡️➡️➡️ Die 5 wirksamsten Dinge, die du mMn in der Hautpflege tun kannst. Was hat dir bisher am meisten gebracht?Das alles ist außerdem mit einer Prise Geduld zu genießen 😏Achtung: Retinoide werden während einer Schwangerschaft nicht empfohlen. Und sie sind nur ratsam, wenn dein Sonnenschutz-Fundament steht!#hauttyp #hautpflege #retinol #antiaging #fruchtsäurepeeling #skincare101",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3743291890629127548",
-          "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch.🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. In der Zeit produziert unsere Haut einfach viel Talg, hormonbedingt. Die Poren ver",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_140_7561098063918468374",
-          "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch. 🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. In der Zeit produziert unsere Haut einfach viel Talg, hormonbedingt. Die Poren ve",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3748211058071604749",
-          "text": "Nach der Schwangerschaft verändert sich deine Haut durch Hormone, Stress und schlaflose Nächte. Dunkle Augenringe, feine Linien und Trockenheit sind normal – aber sie müssen nicht bleiben!NORIX bietet 100 % natürliche, schwangerschaftssichere Hautpflege:•Hydration Boost Gel – Hyaluronsäure HA™ 💧•Retinol-Alternative Öl – Bakuchiol Smooth Renewal™ 🌿•Ceramide Night Cream – Barrier Repair &amp; Smooth",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3748891191250035604",
-          "text": "Unreine Haut, feine Linien oder unebene Textur?Stell dir vor, deine Haut wird glatter, ebenmässiger und sichtbar verjüngt✨Genau das kann Retinol für dich tun, der Power-Wirkstoff für eine regenerierte, strahlende Haut💛So verwendest du es:🌙Abends nach der Reinigung 1–2Tropfen auf Gesicht &amp; Hals auftragen💧Danach eine feuchtigkeitsspendende Pflege verwenden⚡2–3 Mal pro Woche starten und langsam s",
-          "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3753326294747374305",
-          "text": "Heute möchten wir euch unsere neue Behandlung vorstellen: NEOSTRATA® Retinol Peeling – sichtbare Hautverjüngung! ✨💫 Warum so einzigartig?Die Kombination aus 3 % Retinol, NeoCitrate™ &amp; Aminofil® – zwei bewährte Anti-Aging-Booster – sorgt für glattere, straffere Haut.⏱️ Einwirkzeit:•Empfindliche Haut: 3–4 Stunden•Unempfindliche Haut: 8 Stunden oder über Nacht🚫 Nicht empfohlen während Schwangersc",
+          "text": "Heute möchten wir euch unsere neue Behandlung vorstellen: NEOSTRATA® Retinol Peeling – sichtbare Hautverjüngung! ✨💫 Warum so einzigartig?Die Kombination aus 3 % Retinol, NeoCitrate™ &amp; Aminofil® – zwei bewährte Anti-Aging-Booster – sorgt für glattere, straffere Haut.⏱️ Einwirkzeit:•Empfindliche Haut: 3–4 Stunden•Une",
           "segment": "procedure-curious",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3755525643363208862",
+          "text": "Warum Retinol im Winter ein Must-have ist ❄️✨Wenn die Temperaturen sinken und die Luft trockener wird, braucht unsere Haut extra Pflege 💧. Retinol (Vitamin A) ist dabei ein echter Gamechanger in der Winter-Skincare-Routine! 💫🌙 Was macht Retinol?Es unterstützt die Zellerneuerung, glättet feine Linien und fördert die Kol",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3756313600051684529",
+          "text": "Top Anti-Aging Wirkstoffe und ihre WirkungRetinol (Vitamin A-Derivat)Fördert die Zellerneuerung und Kollagenproduktion.Glättet feine Linien und Falten.Ideal für abends, da es lichtempfindlich ist.Vitamin CStarkes Antioxidans, schützt vor freien Radikalen.Hellt Pigmentflecken auf und sorgt für strahlende Haut.Perfekt fü",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3766513112057717194",
+          "text": "✨ Nocturnal Repair für sichtbar jüngere Hände – über Nacht. ✨Die 𝐑𝐞𝐭𝐢𝐧𝐨𝐥 𝐓𝐡𝐞𝐫𝐚𝐩𝐲 𝐑𝐞𝐧𝐞𝐰𝐢𝐧𝐠 𝐇𝐚𝐧𝐝 𝐂𝐫𝐞𝐚𝐦 𝐯𝐨𝐧 𝐎𝐝𝐚𝐜𝐢𝐭𝐞́ ist die luxuriöse Nachtpflege für trockene, beanspruchte und reife Hände. Mit Retinol, Retinoid, PHA, Peptiden &amp; Niacinamid unterstützt sie intensiv die nächtliche Regeneration, glättet feine Linien, re",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3774382599574393619",
+          "text": "Wusstest du, dass eine konsequente Pflegeroutine deine Haut um bis zu 70 % sichtbar verbessern kann und gleichzeitig die Hautalterung verlangsamt?Die meisten unterschätzen, wie stark die Haut auf tägliche Pflege reagiert.Hier sind die 5 Schritte, die deine Haut wirklich verändern können:1️⃣ Reinigung – +20–40 % klarere",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        }
+      ],
+      "hope:dosage-control": [
+        {
+          "id": "0_225889_190_3736142448549486915",
+          "text": "👇Alles, was Du über Retinol wissen musst:Als Hautexpertin sehe ich es immer wieder: Viele brechen viel zu früh ab. Genau DAS ist der Grund, warum Retinol angeblich „nicht wirkt\".👉 Am Anfang kann es zu Rötungen, Schuppungen oder Spannungsgefühlen kommen. Das ist völlig normal – ein Zeichen dafür, dass die Haut arbeitet!",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_126_t1_niyl98u",
+          "text": "Wie kann ich jünger aussehen? aber mit Achtung! deine Haut sieht sehr schön aus, daher brauchst du nichts unbedingt. Allerdings kann man trotzdem tretinoin als \"Anti-aging\" nutzen. Ich schätze mal, dass du empfindliche Haut hast, wie ich, weil ich kein Parfüm und keine ätherische Öle vertrage. Daher empfehle ich dir mi",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Reddit",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3741890389222413576",
+          "text": "Mit fast 50 Jahren ist es absolut möglich, die Haut jugendlich, strahlend und gesund zu erhalten – es erfordert nur eine konsequente, auf deinen Hauttyp abgestimmte Pflege und einen ganzheitlichen Ansatz. Hier sind die wichtigsten Strategien:---1. Die richtige Hautpflege-RoutineFür mIch, Morgens:Keine Reinigung!TONIK (",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3743413247060828398",
+          "text": "✨Was macht ein gutes Retinol aus – und wie startet man richtig?✨Retinol ist eines der effektivsten Anti-Aging-Wirkstoffe, aber nur, wenn man es richtig anwendet.Langsam einschleichen lautet das Zauberwort:👉 Starte mit 1x pro Woche, beobachte, wie deine Haut reagiert – und steigere dann Schritt für Schritt.Am Anfang dar",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3745261132219974009",
+          "text": "Eine einfache Abendroutine zum Thema Anti-Aging. Ich wollte euch heute mal eine ganz einfache Routine zeigen, die super für den Einstieg mit Wirkstoffen wie Retinol oder Retinal ist. Ich habe mich diesmal ganz bewusst für ein Reinigungsöl entschieden, weil das ist besonders praktisch, wenn man Make-up oder Sonnencreme ",
+          "segment": "skincare-first",
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225889_140_7562106617383243030",
+          "text": "Eine einfache Abendroutine zum Thema Anti-Aging. Ich wollte euch heute mal eine ganz einfache Routine zeigen, die super für den Einstieg mit Wirkstoffen wie Retinol oder Retinal ist. Ich habe mich diesmal ganz bewusst für ein Reinigungsöl entschieden, weil das ist besonders praktisch, wenn man Make-up oder Sonnencreme ",
+          "segment": "skincare-first",
+          "mood": "cautioning",
+          "source": "TikTok",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225889_190_3751271837297605554",
+          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigment",
+          "segment": "skincare-first",
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3752755174465638299",
+          "text": "Retinol ist einer der am besten erforschten Wirkstoffe in der Dermatologie und ich lieeeeebe es!👩🏽‍⚕️🧠Retinol (Vitamin A Derivat) gehört zu den Retinoiden und wirkt auf zellulärer Ebene: Es bindet an nukleäre Rezeptoren in der Haut, stimuliert die Kollagenproduktion, beschleunigt die Zellerneuerung und reduziert feine ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        }
+      ],
+      "fear:health-lifestage": [
+        {
+          "id": "0_225889_190_3738206831928549215",
+          "text": "Swipe ➡️➡️➡️ Die 5 wirksamsten Dinge, die du mMn in der Hautpflege tun kannst. Was hat dir bisher am meisten gebracht?Das alles ist außerdem mit einer Prise Geduld zu genießen 😏Achtung: Retinoide werden während einer Schwangerschaft nicht empfohlen. Und sie sind nur ratsam, wenn dein Sonnenschutz-Fundament steht!#hautt",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3743291890629127548",
+          "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch.🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. In",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225889_140_7561098063918468374",
+          "text": "was meine ich damit ? Unsere Haut verändert sich und mit ihr auch ihre Bedürfnisse. Und eigentlich macht sie in jeder Lebensphase so ihre ganz eigenen Phasen durch. 🧴 Mit 15: Da geht's meistens los mit Pickeln beziehungsweise bei mir ehrlich gesagt schon mit 11. Aber ich hab jetzt mal 15 als so ein Mittelmaß gewählt. I",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "TikTok",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225889_190_3748211058071604749",
+          "text": "Nach der Schwangerschaft verändert sich deine Haut durch Hormone, Stress und schlaflose Nächte. Dunkle Augenringe, feine Linien und Trockenheit sind normal – aber sie müssen nicht bleiben!NORIX bietet 100 % natürliche, schwangerschaftssichere Hautpflege:•Hydration Boost Gel – Hyaluronsäure HA™ 💧•Retinol-Alternative Öl ",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3748891191250035604",
+          "text": "Unreine Haut, feine Linien oder unebene Textur?Stell dir vor, deine Haut wird glatter, ebenmässiger und sichtbar verjüngt✨Genau das kann Retinol für dich tun, der Power-Wirkstoff für eine regenerierte, strahlende Haut💛So verwendest du es:🌙Abends nach der Reinigung 1–2Tropfen auf Gesicht &amp; Hals auftragen💧Danach eine",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3753326294747374305",
+          "text": "Heute möchten wir euch unsere neue Behandlung vorstellen: NEOSTRATA® Retinol Peeling – sichtbare Hautverjüngung! ✨💫 Warum so einzigartig?Die Kombination aus 3 % Retinol, NeoCitrate™ &amp; Aminofil® – zwei bewährte Anti-Aging-Booster – sorgt für glattere, straffere Haut.⏱️ Einwirkzeit:•Empfindliche Haut: 3–4 Stunden•Une",
+          "segment": "procedure-curious",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3753347658870966700",
-          "text": "✨ Bakuchiol &amp; Hagebuttenöl (Rosehip Oil)→ Glätten feine Linien sichtbar und fördern die Zellerneuerung – die sanfte Retinol-Alternative für empfindliche Haut.🌿 Jojobaöl, Heidelbeer- &amp; Himbeeröl→ Stärken die Hautstruktur, fördern Regeneration und schützen vor Feuchtigkeitsverlust.💛 Nachtkerzenöl (Evening Primrose Oil) &amp; Vitamin E (Tocopherol)→ Unterstützen Elastizität und schenken einen",
+          "text": "✨ Bakuchiol &amp; Hagebuttenöl (Rosehip Oil)→ Glätten feine Linien sichtbar und fördern die Zellerneuerung – die sanfte Retinol-Alternative für empfindliche Haut.🌿 Jojobaöl, Heidelbeer- &amp; Himbeeröl→ Stärken die Hautstruktur, fördern Regeneration und schützen vor Feuchtigkeitsverlust.💛 Nachtkerzenöl (Evening Primros",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_140_7571130739970952470",
           "text": "Sanfte Anti-Aging-Pflege, entwickelt für Mamas. Unsere Retinol-Alternative mit Bakuchiol glättet feine Linien, stärkt die Hautstruktur und fördert einen natürlichen Glow – ohne Reizungen. Dermatologisch getestet, 100 % natürlich und sicher während Schwangerschaft und Stillzeit.",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "TikTok",
+          "axis": "anticipated"
         }
       ],
-      "fear:purging": [
+      "fear:purging-bad-phase": [
         {
           "id": "0_225889_190_3739673311400476330",
-          "text": "Skin Purging – wenn sich die Haut erst verschlechtert, bevor sie besser wird 💫Vielleicht hast du es schon erlebt:Nach einer neuen Behandlung oder beim Start eines neuen Pflegeprodukts zeigt sich deine Haut plötzlich unruhig – mit mehr kleinen Unreinheiten, als du es gewohnt bist.Das sorgt oft für Verunsicherung – doch keine Sorge:Oft handelt es sich hierbei um das sogenannte „Skin Purging\", also e",
+          "text": "Skin Purging – wenn sich die Haut erst verschlechtert, bevor sie besser wird 💫Vielleicht hast du es schon erlebt:Nach einer neuen Behandlung oder beim Start eines neuen Pflegeprodukts zeigt sich deine Haut plötzlich unruhig – mit mehr kleinen Unreinheiten, als du es gewohnt bist.Das sorgt oft für Verunsicherung – doch ",
           "segment": "procedure-curious",
-          "mood": "seeking"
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3849130136956627528",
-          "text": "So wendest du Retinol / Retinal richtig an:1️⃣ Anfänger:• Starte mit niedriger Konzentration (siehe Video)• Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert• Trage es auf trockene Haut auf• Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest • Immer danach reichlich Feuchtigkeit verwenden• Am nächsten Morgen unbedingt Sonnens",
+          "text": "So wendest du Retinol / Retinal richtig an:1️⃣ Anfänger:• Starte mit niedriger Konzentration (siehe Video)• Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert• Trage es auf trockene Haut auf• Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest • Imm",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_140_7617838156641094944",
-          "text": "1️⃣ Anfänger: • Starte mit niedriger Konzentration (siehe Video) • Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert • Trage es auf trockene Haut auf • Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest  • Immer danach reichlich Feuchtigkeit verwenden • Am nächsten Morgen unbedingt Sonnenschutz auftragen (SPF 30+) 2️⃣ Fortges",
+          "text": "1️⃣ Anfänger: • Starte mit niedriger Konzentration (siehe Video) • Einmal pro Woche auftragen, später langsam steigern auf 2–3 Mal pro Woche, je nachdem, wie deine Haut reagiert • Trage es auf trockene Haut auf • Lasse es vollständig einziehen, bevor du Feuchtigkeit spendest  • Immer danach reichlich Feuchtigkeit verwe",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "seeking",
+          "source": "TikTok",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3909768266715933057",
-          "text": "Retinol bzw. Retinal gehört zu den wirksamsten Wirkstoffen in der modernen Hautpflege ✨Es handelt sich um einen Vitamin-A-Abkömmling mit sehr gut belegten positiven Effekten auf die Haut. Retinol kann die Kollagenbildung anregen, die Aktivität der Fibroblasten unterstützen und so langfristig zu einem glatteren, ebenmäßigeren Hautbild beitragen.Gleichzeitig gibt es auch wichtige Hinweise zur Anwend",
+          "text": "Retinol bzw. Retinal gehört zu den wirksamsten Wirkstoffen in der modernen Hautpflege ✨Es handelt sich um einen Vitamin-A-Abkömmling mit sehr gut belegten positiven Effekten auf die Haut. Retinol kann die Kollagenbildung anregen, die Aktivität der Fibroblasten unterstützen und so langfristig zu einem glatteren, ebenmäß",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_140_7646333488127429920",
-          "text": "Retinol bzw. Retinal gehört zu den wirksamsten Wirkstoffen in der modernen Hautpflege ✨ Es handelt sich um einen Vitamin-A-Abkömmling mit sehr gut belegten positiven Effekten auf die Haut. Retinol kann die Kollagenbildung anregen, die Aktivität der Fibroblasten unterstützen und so langfristig zu einem glatteren, ebenmäßigeren Hautbild beitragen. Gleichzeitig gibt es auch wichtige Hinweise zur Anwe",
+          "text": "Retinol bzw. Retinal gehört zu den wirksamsten Wirkstoffen in der modernen Hautpflege ✨ Es handelt sich um einen Vitamin-A-Abkömmling mit sehr gut belegten positiven Effekten auf die Haut. Retinol kann die Kollagenbildung anregen, die Aktivität der Fibroblasten unterstützen und so langfristig zu einem glatteren, ebenmä",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "TikTok",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3926000988460283631",
-          "text": "Retinol vs. Bakuchiol – was ist wirklich besser? Retinol gilt als DER Anti-Aging-Wirkstoff… aber: viele vertragen ihn nicht.⚠️ Nebenwirkungen:▪️ Trockenheit▪️ Rötungen▪️ Purging (vorübergehende Verschlechterung der Haut)▪️ NICHT für schwangere Frauen / stillende Mütter geeignetUnd genau deshalb wird Bakuchiol gerade so gehyped. Was Bakuchiol kann:▪️ unterstützt Kollagen▪️ glättet die Haut▪️ wirkt ",
+          "text": "Retinol vs. Bakuchiol – was ist wirklich besser? Retinol gilt als DER Anti-Aging-Wirkstoff… aber: viele vertragen ihn nicht.⚠️ Nebenwirkungen:▪️ Trockenheit▪️ Rötungen▪️ Purging (vorübergehende Verschlechterung der Haut)▪️ NICHT für schwangere Frauen / stillende Mütter geeignetUnd genau deshalb wird Bakuchiol gerade so",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3930395272908779807",
-          "text": "Retinol oder Peptide – was ist besser für Anti-Aging? 🔬Diese Frage stellen sich viele, und die Antwort ist komplexer als du denkst.Retinol ist eines der am besten erforschten Anti-Aging-Wirkstoffe überhaupt. Es beschleunigt die Zellerneuerung, stimuliert die Kollagenproduktion und reduziert Falten nachweislich. Der Haken: Es kann reizen, austrocknen und macht die Haut lichtempfindlicher. Besonders",
+          "text": "Retinol oder Peptide – was ist besser für Anti-Aging? 🔬Diese Frage stellen sich viele, und die Antwort ist komplexer als du denkst.Retinol ist eines der am besten erforschten Anti-Aging-Wirkstoffe überhaupt. Es beschleunigt die Zellerneuerung, stimuliert die Kollagenproduktion und reduziert Falten nachweislich. Der Hak",
           "segment": "skincare-first",
-          "mood": "seeking"
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225890_190_3743400630123767212",
-          "text": "Retinol – Wundermittel oder Reizstoff? 🤔Fast jeder hat davon gehört, aber kaum jemand weiß, wie man es richtig anwendet. 🩵 Dr. Tischler klärt auf:Retinol gehört zu den wirksamsten Inhaltsstoffen in der Dermatologie – wenn du weißt, wie du es nutzt.Es regt die Zellerneuerung und Kollagenbildung an, mildert Falten, lässt Pigmentflecken verblassen und sorgt für ein ebenmäßigeres Hautbild.Aber Achtung",
+          "text": "Retinol – Wundermittel oder Reizstoff? 🤔Fast jeder hat davon gehört, aber kaum jemand weiß, wie man es richtig anwendet. 🩵 Dr. Tischler klärt auf:Retinol gehört zu den wirksamsten Inhaltsstoffen in der Dermatologie – wenn du weißt, wie du es nutzt.Es regt die Zellerneuerung und Kollagenbildung an, mildert Falten, lässt",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "hope:texture": [
-        {
-          "id": "0_225889_190_3741679009957193570",
-          "text": "🌿𝗥𝗜𝗡𝗚𝗔𝗡𝗔 𝗙𝗥𝗘𝗦𝗛 𝗢𝗩𝗘𝗥𝗡𝗜𝗚𝗛𝗧 𝗕𝗢𝗗𝗬 𝗧𝗥𝗘𝗔𝗧𝗠𝗘𝗡𝗧🌿Intensive Better-Aging-Creme für den Körper.Schönheit schläft – und deine Haut nutzt die Nacht, um zu regenerieren. Das FRESH overnight body treatment ist deine luxuriöse Nachtpflege für glattere, straffere und sichtbar ebenmäßigere Haut. Die kraftvolle Formel wurde entwickelt, um die Hautstruktur zu verfeinern, den Kollagenaufbau zu stimulieren und Zeichen ",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3751271837297605554",
-          "text": "Vitamin C (Ascorbinsäure)Wirkung auf die Haut:1.Antioxidativer Schutz:•Vitamin C neutralisiert freie Radikale, die durch UV-Strahlung, Umweltverschmutzung oder Stress entstehen.•Dadurch beugt es Hautalterung und Zellschäden vor.2.Aufhellend &amp; gegen Pigmentflecken:•Hemmt die Melaninproduktion und hilft, Hyperpigmentierungen, Pickelmale und ungleichmäßigen Hautton zu reduzieren.•Der Teint wirkt ",
-          "segment": "skincare-first",
-          "mood": "cautioning"
-        },
-        {
-          "id": "0_225889_190_3751891556962446699",
-          "text": "Warum Retinol jetzt Saison hat 🍁Wenn die Tage kürzer werden und die Sonne an Kraft verliert, beginnt die beste Zeit für einen echten Hautpflegeklassiker: Retinol.✨Im Sommer ist der Wirkstoff oft zu stark – er macht die Haut empfindlicher gegenüber UV-Strahlung. Doch jetzt kann sie sich in Ruhe an die Wirkung gewöhnen: Zellerneuerung, feinere Poren, glattere Struktur, strahlender Teint. 🌙Gerade der",
-          "segment": "procedure-curious",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_190_3751936717402713662",
-          "text": "💎 Allgemeiner Beschreibung Calu Kosmetik ist eine hochwertige deutsche Pflegemarke, die auf wirksame Anti-Aging-Formeln ohne Parabene, Silikone oder Mineralöle setzt.Jedes Produkt enthält hochkonzentrierte Wirkstoffe, die sich perfekt miteinander kombinieren lassen.Das Ziel: eine sichtbar glattere, strahlendere und ebenmäßigere Haut – natürlich schön gepflegt. ✨🧴 N°3a Hydro Intensiv LiftgelEin lei",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_190_3768079079858573366",
-          "text": "Retinol = Vitamin A für deine Haut – eines der bestuntersuchten Wirkstoffe in der Hautpflege.So wirkt es: Es beschleunigt die Zellerneuerung (glattere Textur &amp; mehr Glow), unterstützt die Kollagenbildung (mehr Festigkeit, weniger feine Linien), reguliert Talg (weniger Unreinheiten) und hilft, Pigmentflecken/uneinheitlichen Hautton zu mildern. ✨So startest du richtig: 2–3 Abende pro Woche, eine",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_190_3770076767202315292",
-          "text": "Retinol – das Power-Vitamin für glatte Haut ✨Retinol (Vitamin A) ist einer der wirksamsten Wirkstoffe in der Hautpflege. Es fördert die Zellerneuerung, glättet feine Linien, verfeinert Poren und kann sogar Unreinheiten reduzieren.Für beste Ergebnisse langsam starten: 2–3× pro Woche, abends anwenden und tagsüber immer Sonnenschutz tragen.Ergebnis: Strahlendere, glattere und ebenmäßigere Haut 💛#haut",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_190_3774515735004218861",
-          "text": "Hautalterung ist ein natürlicher Prozess – aber kein Schicksal.Kollagen, Elastin &amp; Zellneubildung lassen sich wissenschaftlich belegbar unterstützen.Mit Wirkstoffen wie Retinol, Vitamin C &amp; Peptiden, einer stabilen Barriere und regelmäßigen SPF machst du bereits 80% aus.Diese Produkte empfehle ich für Anti-Aging:🏅Mesoestetic Hydra Cream Fusion - reinigt effektiv🏅Mesoestetic Skin Retin- das",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_26_1553158286287593",
-          "text": "Retinal trifft auf pflanzliche Power – und genau das macht den TAO Retinal Boost zu einem meiner liebsten Wirkstoff-Highlights für glattere, straffere und ebenmäßigere Haut.Mit einer intelligenten Kombination aus Retinylpalmitat &amp; Bakuchiol unterstützt dieses Serum die Hauterneuerung, reduziert Linien und sorgt für eine deutlich frischere Ausstrahlung – selbst bei empfindlicher Haut hervorrage",
-          "segment": "skincare-first",
-          "mood": "enthusiastic"
-        }
-      ],
-      "hope:acne": [
-        {
-          "id": "0_225889_26_1443689927764061",
-          "text": "SkinPure – Natürliche Klärung für unreine Haut 🌿Ein pflanzlicher Bioflavonoid-Extrakt aus den Blättern des Maulbeerbaums, der auf mehreren Ebenen gegen Unreinheiten wirkt.✔ Reguliert die Sebumproduktion und reduziert Glanz✔ Antibakteriell gegen Akne-verursachende Bakterien✔ Entzündungshemmend, beruhigt Rötungen und Irritationen✔ Retinol-ähnlich – verfeinert Poren, unterstützt Anti-Aging✔ Auch als ",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_190_3742578254709039472",
-          "text": "#Exosome Needling ist die modernste Form der #Hautverjüngung: Reparatur von innen, sichtbare Ergebnisse, echte Hautheilung.✅ Zellregeneration – statt nur PflegeExosomen sind biologische Botenstoffe, die deine Hautzellen \"neu programmieren\" – sie starten Reparaturprozesse tief in der Dermis.✅ Kollagen-Boost wie keine andere BehandlungDie Haut gewinnt verloren gegangenes Kollagen zurück – bis zu 1 J",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3768079079858573366",
-          "text": "Retinol = Vitamin A für deine Haut – eines der bestuntersuchten Wirkstoffe in der Hautpflege.So wirkt es: Es beschleunigt die Zellerneuerung (glattere Textur &amp; mehr Glow), unterstützt die Kollagenbildung (mehr Festigkeit, weniger feine Linien), reguliert Talg (weniger Unreinheiten) und hilft, Pigmentflecken/uneinheitlichen Hautton zu mildern. ✨So startest du richtig: 2–3 Abende pro Woche, eine",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_15_33375537604287122",
-          "text": "Bestes Retinol-Serum: Wundermittel Vitamin A – diese 7 Produkte helfen wirklich Vitamin A ist ein Mittel gegen Falten, Pigmentflecken und Akne. Wir klären, was das beste Retinol-Serum ist und wie du es effektiv anwendest, damit es dir bei Hautproblemen hilft. Retinol-Seren sind der heimliche Superstar in der Hautpflege. Sie helfen gegen Falten und Akne und sorgen für strahlende Haut. Doch welches ",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3798448624611373508",
-          "text": "Wundermittel Retinol 😍 Hast du gewusst was Retinol alles kann? ........1. Hautberuhigend gegen Irritationen 2. Talgregulierend 3. Entzündungshemmend4. Zellanregend 5. Anti Hyperpigmentierung 6. Anti Aging 7. gegen Akne8. Feuchtigkeitsspendend9. Ausgleichend 10. Lieben und wollen es nicht mehr vermissen #retinolserum #naturkosmetik #skincare #beauty #inlovewithretinol",
-          "segment": "skincare-first",
-          "mood": "disappointed"
-        },
-        {
-          "id": "0_225889_126_t1_nyzz0ea",
-          "text": "30 geworden. Was an Skin Care bringt wirklich was um langsamer alt auszusehen? Die heilige drei Faltigkeit Cleanser, Feuchtigkeitscreme und Sonneschutz. Alles andere ist \"Spielerei\" bzw. zweckbedingt eingesetzt. Also wenn du zum Beispiel aktiv gegen Akne vorgehen möchtest oder Unreinheiten, Rötungen etc. Die bewährtesten und aus der Studienlage effizientesten Mittel gegen Hautalterung, neben Sonne",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_126_t1_nz4zdo7",
-          "text": "Tretinoin oder nicht? als klär es definitiv mal mit deinem Hautarzt ab aber ich bezweifle eigentlich das Tretinoin da helfen würde - also ja, es hilft bei der Bekämpfung von Hautalterung und auch gegen Akne aber ob es in diesem Falle hilft bleibt fraglich. Denn wenn es so regelmäßig auftritt und sich ankündigt klingt es ja definitiv danach, als würde es eine Ursache geben und auch wenn ihr Hormone",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_140_7610090434995555617",
-          "text": "1. Täglicher Sonnenschutz (LSF 50). Der beste Anti-Aging-Schutz. Auch im Winter. 2. Sanfte Reinigung statt „Quietsch-sauber\".aggressives Überreinigen zerstört die Hautbarriere. 3. Retinol abends. Goldstandard gegen Akne, Falten und Pigmentflecken. (Langsam rantasten) 4. Vitamin C morgens. Antioxidativer Schutz + Glow. 5. Weniger Produkte, mehr Wirkung. Überpflege macht Haut oft schlechter. 6. Feuc",
-          "segment": "unknown",
-          "mood": "satisfied"
-        }
-      ],
-      "hope:confidence": [
-        {
-          "id": "0_225889_190_3742578254709039472",
-          "text": "#Exosome Needling ist die modernste Form der #Hautverjüngung: Reparatur von innen, sichtbare Ergebnisse, echte Hautheilung.✅ Zellregeneration – statt nur PflegeExosomen sind biologische Botenstoffe, die deine Hautzellen \"neu programmieren\" – sie starten Reparaturprozesse tief in der Dermis.✅ Kollagen-Boost wie keine andere BehandlungDie Haut gewinnt verloren gegangenes Kollagen zurück – bis zu 1 J",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3744259067326778791",
-          "text": "✨ Skinretin Xpert Treatment ✨Erlebe die Kraft von Retinol – für glatte, strahlende und verjüngte Haut! 💆‍♀️Diese 2-Phasen-Behandlung regeneriert, strafft und revitalisiert deine Haut von innen heraus. 💫Perfekt bei müder, fahler oder reifer Haut – sichtbare Ergebnisse schon nach der ersten Anwendung! ✨📍 Jetzt Termin sichern – deine Haut wird es lieben 💖#mesoestetic #skinretin #antiaging #retinol #b",
-          "segment": "procedure-open",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_140_7566191113963343126",
-          "text": "Für alle, die sichtbare Ergebnisse lieben.😍 #Retinal #AntiAging #HautpflegeRoutine #GlowSkin #BeautyTok",
-          "segment": "unknown",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_190_3755629444401608330",
-          "text": "Echte Erfahrungen. Sichtbare Ergebnisse.Ein sanftes, aber wirkungsvolles Retinal, das die Haut über Nacht regeneriert und für spürbar mehr Glow sorgt ✨#nimaberlin #moonlightretinal #nightcare #retinalcream #cleanbeauty #naturkosmetik #berlinbeauty #glowskin #antiaging #skincareroutine #beautysleep #skincarelover #skinrenewal #skincaregoals #healthyglow",
-          "segment": "unknown",
-          "mood": "enthusiastic"
-        },
-        {
-          "id": "0_225889_26_1163196679331707",
-          "text": "Kennst du schon unser neuestes YouTube-Video?💛 Die beste Anti-Aging-Skincare-Routine Ü50 – einfach, wirksam &amp; ohne 9-Step-Zirkus!MIRI zeigt dir ihre minimalistische Morgen- und Abendroutine für reife Haut – inspiriert von Dermatologin Dr. Sam Ellis. Mit Vitamin C, Retinal &amp; Ceramiden für sichtbare Ergebnisse statt Produktchaos. Wissenschaftlich fundiert, anfängerfreundlich &amp; mit ganz v",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        },
-        {
-          "id": "0_225889_190_3765948758891473819",
-          "text": "🤔 Dein Badezimmerregal ist voll mit Pflegeprodukten, aber keines von ihnen bringt sichtbare Ergebnisse?🤗 Höchstwahrscheinlich fehlen ihnen die richtigen Wirkstoffe.Diese vier kraftvollen aktiven Inhaltsstoffe können - richtig angewendet - den Zustand der Haut auf zellulärer Ebene wirklich verändern.🔹 Salicylsäure (BHA) - löst überschüssigen Talg und reinigt die Poren.Sie reduziert effektiv Mitesse",
-          "segment": "skincare-first",
-          "mood": "conflicted"
-        },
-        {
-          "id": "0_225889_190_3768079079858573366",
-          "text": "Retinol = Vitamin A für deine Haut – eines der bestuntersuchten Wirkstoffe in der Hautpflege.So wirkt es: Es beschleunigt die Zellerneuerung (glattere Textur &amp; mehr Glow), unterstützt die Kollagenbildung (mehr Festigkeit, weniger feine Linien), reguliert Talg (weniger Unreinheiten) und hilft, Pigmentflecken/uneinheitlichen Hautton zu mildern. ✨So startest du richtig: 2–3 Abende pro Woche, eine",
-          "segment": "skincare-first",
-          "mood": "satisfied"
-        },
-        {
-          "id": "0_225889_26_1421278673333590",
-          "text": "Professionelle Ergebnisse beginnen mit professionellen Behandlungen.Mit den SKEYNDOR Power-Programmen holst du dir High-End-Expertise, sichtbare Resultate und maximale Kundenzufriedenheit in dein Studio.Von Luxury Anti-Aging über intensives Lifting, Glow, Feuchtigkeit, Regeneration, Hauterneuerung bis zur Stärkung sensibler Haut –jedes Programm ist ein Power-Tool, das deine Behandlungen auf das nä",
-          "segment": "skincare-first",
-          "mood": "seeking"
-        }
-      ],
-      "fear:slow-results": [
+      "fear:time-patience": [
         {
           "id": "0_225889_26_1394216789371539",
           "text": "Ich schwöre auf Retinol – aber mit Geduld! 🧖🏽‍♀️Die Haut braucht Zeit, sich an den Wirkstoff zu gewöhnen.Start langsam, 1–2x pro Woche, und du wirst den Unterschied sehen. ✨#antiaging #retinol #skincare",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_26_1434412774963108",
-          "text": "Fang jetzt an, etwas zu verändern! 💫✅ Erst speichern, dann weiterlesen!Warum natürliche Anti-Aging-Pflege so wichtig ist:Je mehr wir unsere Haut mit milden und natürlichen Inhaltsstoffen pflegen, desto besser kann sie sich regenerieren und strahlen – ganz ohne aggressive Chemie. So verhindern wir langfristig das Austrocknen und vorzeitige Faltenbildung und schenken unserer Haut, was sie wirklich b",
+          "text": "Fang jetzt an, etwas zu verändern! 💫✅ Erst speichern, dann weiterlesen!Warum natürliche Anti-Aging-Pflege so wichtig ist:Je mehr wir unsere Haut mit milden und natürlichen Inhaltsstoffen pflegen, desto besser kann sie sich regenerieren und strahlen – ganz ohne aggressive Chemie. So verhindern wir langfristig das Austro",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3778088488818712548",
-          "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trockenheit, Spannungsgefühl oder noch mehr Ölproduktion.2️⃣ Kein Sonnenschutz im Allta",
+          "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trocken",
           "segment": "skincare-first",
-          "mood": "disappointed"
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3871262691952202666",
-          "text": "Beauty-ABC Teil 5✨ Retinol – Dein Haut-Gamechanger ✨Retinol (Retinol) gehört zu den effektivsten Wirkstoffen in der Hautpflege – und das aus gutem Grund 👇💡 Was kann Retinol?✔️ Glättet feine Linien &amp; Falten✔️ Fördert die Zellerneuerung✔️ Verfeinert Poren✔️ Hilft bei Unreinheiten✔️ Sorgt für ein ebenmäßiges Hautbild⚠️ Wichtig für die Anwendung:🌙 Nur abends verwenden🌱 Langsam starten (2–3x/Woche)",
+          "text": "Beauty-ABC Teil 5✨ Retinol – Dein Haut-Gamechanger ✨Retinol (Retinol) gehört zu den effektivsten Wirkstoffen in der Hautpflege – und das aus gutem Grund 👇💡 Was kann Retinol?✔️ Glättet feine Linien &amp; Falten✔️ Fördert die Zellerneuerung✔️ Verfeinert Poren✔️ Hilft bei Unreinheiten✔️ Sorgt für ein ebenmäßiges Hautbild⚠",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3894513879334036814",
-          "text": "Du benutzt seit zwei Wochen Retinol und siehst keine Veränderung?Willkommen in der Realität.Retinol ist kein Zauberstab für über Nacht.Es arbeitet tief in deiner Haut und verändert dort die Zellerneuerung.Das braucht Zeit.Wirkliche Ergebnisse bei Fältchen, Hautstruktur und vergrößerten Poren siehst du oft erst nach 12 bis 24 Wochen konsequenter Anwendung.Und genau hier machen die meisten den Fehle",
+          "text": "Du benutzt seit zwei Wochen Retinol und siehst keine Veränderung?Willkommen in der Realität.Retinol ist kein Zauberstab für über Nacht.Es arbeitet tief in deiner Haut und verändert dort die Zellerneuerung.Das braucht Zeit.Wirkliche Ergebnisse bei Fältchen, Hautstruktur und vergrößerten Poren siehst du oft erst nach 12 ",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_140_7638726993130835233",
-          "text": "Du benutzt seit zwei Wochen Retinol und siehst keine Veränderung? Willkommen in der Realität. Retinol ist kein Zauberstab für über Nacht. Es arbeitet tief in deiner Haut und verändert dort die Zellerneuerung. Das braucht Zeit. Wirkliche Ergebnisse bei Fältchen, Hautstruktur und vergrößerten Poren siehst du oft erst nach 12 bis 24 Wochen konsequenter Anwendung. Und genau hier machen die meisten den",
+          "text": "Du benutzt seit zwei Wochen Retinol und siehst keine Veränderung? Willkommen in der Realität. Retinol ist kein Zauberstab für über Nacht. Es arbeitet tief in deiner Haut und verändert dort die Zellerneuerung. Das braucht Zeit. Wirkliche Ergebnisse bei Fältchen, Hautstruktur und vergrößerten Poren siehst du oft erst nac",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "TikTok",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3906915849495801569",
-          "text": "Retinol ist ein echter Goldstandard in der Dermatologie – und das aus gutem Grund. ✨Als Vitamin-A unterstützt es die Zellerneuerung, regt die Kollagenbildung an und kann dadurch feine Linien, Pigmentverschiebungen und Unreinheiten sichtbar verbessern. 💛Gleichzeitig sorgt es langfristig für ein ebenmäßigeres, glatteres Hautbild. 🤩Aber: Retinol ist kein Sprint, sondern ein Marathon. Die Haut braucht",
+          "text": "Retinol ist ein echter Goldstandard in der Dermatologie – und das aus gutem Grund. ✨Als Vitamin-A unterstützt es die Zellerneuerung, regt die Kollagenbildung an und kann dadurch feine Linien, Pigmentverschiebungen und Unreinheiten sichtbar verbessern. 💛Gleichzeitig sorgt es langfristig für ein ebenmäßigeres, glatteres ",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3909029109849018058",
-          "text": "„Sephora Kids\" – wenn Kinderhaut zum Experimentierfeld wird Neun-, zehn- oder zwölfjährige Kinder mit teuren Seren, Anti-Aging-Cremes und aufwendigen Skincare-Routinen? Was auf TikTok und Instagram als harmloser Trend erscheint, kann für junge Haut problematisch sein.Immer mehr Kinder und Tweens greifen zu Hautpflege- und Kosmetikprodukten, die eigentlich für Erwachsene entwickelt wurden. Dabei is",
+          "text": "„Sephora Kids\" – wenn Kinderhaut zum Experimentierfeld wird Neun-, zehn- oder zwölfjährige Kinder mit teuren Seren, Anti-Aging-Cremes und aufwendigen Skincare-Routinen? Was auf TikTok und Instagram als harmloser Trend erscheint, kann für junge Haut problematisch sein.Immer mehr Kinder und Tweens greifen zu Hautpflege- ",
           "segment": "procedure-curious",
-          "mood": "conflicted"
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         }
       ],
-      "fear:interplay": [
+      "hope:tolerability-irritation": [
+        {
+          "id": "0_225889_190_3767688553011366436",
+          "text": "🌙✨ Gib deiner Haut die nächtliche Pflege, die sie verdient!💙🩵 Wir präsentieren Forever Bakuchiol, eine nährende Gesichts-„Milch\" mit seidiger, serumähnlicher Textur – eine pflanzliche Alternative zu Retinol, die die Hautstruktur verbessert und das Erscheinungsbild feiner Linien und Falten reduziert.🌿 Mit 1 % Bakuchiol,",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_9_yt.L8tv_SF_f60",
+          "text": "Jean d'Arcel PERFECTION CORPS Bakuchiol Körpercreme – sanftes Anti-Aging für glattere Haut Sanfte Glättung, mehr Elastizität und dieses wunderbar gepflegte Hautgefühl – genau darum geht's heute.In diesem Video zeige ich Dir die Jean d'Arcel PERFECTION CORPS Crème Corps Bakuchiol und erkläre Dir in einfachen Worten, war",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Youtube",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3789546162747880101",
+          "text": "Heute zeige ich dir meine Dr.Bouhon Lieblinge 2025, wobei mir die Entscheidung echt schwergefallen ist!Los gehts mit dem THE RETINAL NIGHT SERUM, weil es einfach so ein super effektives und dabei sogut verträgliches Anti-Aging-Produkt ist, das die Hautzellerneuerung so richtig ankurbelt und meine Haut strahlen lässt.Ga",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3789758346992909388",
+          "text": "Reti Fusion Vecti+ Peel ist eine moderne Express-Verjüngungsbehandlung, die Vektor-Retinol mit den Vitaminen A, C und E kombiniert. Die Wirkstoffe werden kontrolliert freigesetzt, um die Hautstruktur zu glätten, Zeichen der Lichtalterung zu reduzieren und die Hautdichte sichtbar zu verbessern. Ideal für Kund:innen, die",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_140_7585544506401901846",
+          "text": "🌿 Koffein (5 %) •Effekt: wirkt  Durchblutung und Lymphfluss anregen → hellt dunkle Augenringe und reduziert Schwellungen. •Wissenschaftlich: Studien zeigen, dass Koffein bei Augenpflege hilft . Retinol (8 %)hoch ! •Effekt: Fördert Zellumsatz, stimuliert Kollagen → glättet feine Linien und verbessert Hautstruktur. 🧬 Pep",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "TikTok",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_26_1201794185264687",
+          "text": "Anzeige* - Anti-Aging Wirkstoffpflege im Winter mit Vitamin C, Retinal &amp; Co. von Beyer &amp; SöhneDer Winter stellt unsere Haut vor besondere Herausforderungen. Kälte, trockene Heizungsluft und weniger Licht können die Hautbarriere schwächen, Feuchtigkeit entziehen und feine Linien schneller sichtbar machen. Gerade",
+          "segment": "unknown",
+          "mood": "seeking",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_140_7594601139039980811",
+          "text": "1) Dermaceutic Advanced Cleanser Sanfter Reinigungsschaum, der die Haut gründlich reinigt, ohne sie auszutrocknen. ✔ Entfernt Schmutz, Talg &amp; Make-up ✔ Schützt die Hautbarriere (Xylitol, Glycerin, Urea) Ideal für die tägliche Anwendung – auch bei empfindlicher Haut. ⸻ 2) Dermaceutic Foamer 5 Reinigung und sanftes P",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "TikTok",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3811973814201179760",
+          "text": "Retinol 0,3 % Serum ist ein hochwirksames, mikroverkapseltes Retinol, das besonders stabil, sicher und gut verträglich und eine hochwirksame Anti-Aging Pflege auf Emulsionsbasis ist.Es regt die Zellerneuerung an, fördert die Kollagenbildung und glättet die Haut.#liviany #antiaging #retinol #antiwrinkle #skincareroutine",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        }
+      ],
+      "fear:dosage-control": [
+        {
+          "id": "0_225889_190_3778088488818712548",
+          "text": "‼️ REALTALK ‼️ Diese Fehler sehe ich JEDEN Tag 😑 Und ja, vielleicht ertappst du dich bei dem einen oder anderen Punkt selbst: 1️⃣ Zu aggressive Reinigung➡️ Viele nutzen stark schäumende oder alkoholhaltige Reiniger. Diese entfernen nicht nur Schmutz, sondern auch wertvolle Hautlipide – die Haut reagiert oft mit Trocken",
+          "segment": "skincare-first",
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3948966836955866278",
+          "text": "Retinol ist einer der wirksamsten Anti-Aging-Wirkstoffe überhaupt.Aber auch einer der am häufigsten falsch angewendeten. 🌙Was er wirklich macht: Retinol aktiviert die Kollagenproduktion und beschleunigt die Zellerneuerung. Der Effekt ist gut belegt, aber er kostet Zeit. Sichtbare Ergebnisse brauchen mehrere Wochen bis ",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_26_1366269788831591",
+          "text": "Eine ersbensgroße Menge Retinolserum genügt niemals für das ganze Gesicht und du benutzt mindestens 3 mal so viel Produkt?🫣Warum das viel zu viel ist und bei welchen Produkten du wahrscheinlich auch noch zu viel benutzt, was langfristig ganz schön teuer werden kann, erfährst du heute auf unserem Blog💡_____________#kbea",
+          "segment": "unknown",
+          "mood": "seeking",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_190_3742422094740061290",
+          "text": "Das Power Trio:✨⭐️ True Balance sos mask ⭐️ Intense hydrating mask ⭐️ Bio-Retinol Gold mask Die True Balance Maske: Diese klassische Tonerde-Maske wirkt beruhigend, klärend und mattierend. Mit pflanzlichen Wirkstoffen wie Weidenrinde, Moringa und Noni peelt die Maske sanft und harmonisiert die Haut mit jeder Anwendung.",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_190_3759233266701062180",
+          "text": "Vitamin A- Ein Allrounder? 🙃Wusstest du, dass Vitamin A mehr kann als „nur\" für gute Sicht zu sorgen? Hier sind drei wichtige Gründe, warum sich Vitamin A lohnt:1.Seh‑ &amp; Hautfunktion stärkenVitamin A (als „vorformiertes\" Retinol oder als Provitamin A‑Carotinoide) ist entscheidend für die Sehfunktion bei Dämmerung u",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_190_3816575089068844684",
+          "text": "Die Suchanfragen zu AHA/BHA zeigen: Wir wollen neue Haut! Aber Achtung: Zu aggressive Säuren, zu oft angewendet, zerstören deinen Säureschutzmantel. Das Ergebnis: Rötungen und Irritationen.Unsere Haltung: Hauterneuerung soll sanft sein - nicht konfrontativ. Statt Säuren setzen wir auf Bakuchiol: Die pflanzliche Alterna",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_140_7599031051918396694",
+          "text": "Bevor wir über aktive Wirkstoffe, Säuren, Retinol, Retinal und Co. sprechen, müssen wir über etwas viel Fundamentaleres reden 🤌🏼 die Hautbarriere. Für mich ist gute Hautpflege seit eh und je kein „höher, schneller, intensiver, stärker\", sondern, erst nähren, stabilisieren, schützen, dann stimulieren. Und genau hier spi",
+          "segment": "skincare-first",
+          "mood": "cautioning",
+          "source": "TikTok",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225895_190_3819202254855109077",
+          "text": "🌍 Im Internet findet man unzählige Informationen zu Vitaminen. Viele davon klingen plausibel, doch nicht alles ist wissenschaftlich gesichert. Wie sieht es zum Beispiel bei Vitamin A aus?🥕 Vitamin A (Retinol) ist wichtig für Haut und Schleimhäute. Zudem unterstützt es die Wundheilung des Körpers. So weit ist sich die W",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        }
+      ],
+      "fear:ingredient-combo": [
         {
           "id": "0_225889_190_3779419198410951913",
-          "text": "Hautpflege-Mythen im Faktencheck!💡Was ist dran an Aussagen wie „Retinol macht die Haut dünn\" oder „Vitamin C und Retinol darf man nicht kombinieren\"? 🔍Kennt ihr weitere Hautpflege-Mythen, die wir uns mal anschauen sollten? Schreibt sie uns gern in die Kommentare. 🩵#mythen #hautpflege #naturkosmetik #antiagingskincare #antiaging #cleanbeauty #veganskincare #beyerundsoehne",
+          "text": "Hautpflege-Mythen im Faktencheck!💡Was ist dran an Aussagen wie „Retinol macht die Haut dünn\" oder „Vitamin C und Retinol darf man nicht kombinieren\"? 🔍Kennt ihr weitere Hautpflege-Mythen, die wir uns mal anschauen sollten? Schreibt sie uns gern in die Kommentare. 🩵#mythen #hautpflege #naturkosmetik #antiagingskincare #",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3812971842713973019",
-          "text": "Double Retinol Ritual.💞For visible glow and refined skin.In ruhigen Abendmomenten entfaltet dieses Duo seine Stärke.Die Retinol Maske bereitet die Haut vor.Die Retinol Creme ergänzt gezielt und schließt die Pflege ab.Ein durchdachtes Ritual für das Gesicht.Reduziert. Effektiv. Professionell.Retinal richtig integrieren:– Abends starten– 1–2 Anwendungen pro Woche– Nur auf intakter, ruhiger Haut– Lan",
+          "text": "Double Retinol Ritual.💞For visible glow and refined skin.In ruhigen Abendmomenten entfaltet dieses Duo seine Stärke.Die Retinol Maske bereitet die Haut vor.Die Retinol Creme ergänzt gezielt und schließt die Pflege ab.Ein durchdachtes Ritual für das Gesicht.Reduziert. Effektiv. Professionell.Retinal richtig integrieren:",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225889_190_3862140824796561727",
-          "text": "Retinoide – was steckt dahinter?Retinoide sind Vitamin-A-Derivate und gehören zu den wirksamsten Wirkstoffen in der Hautpflege. Sie fördern die Zellerneuerung, unterstützen die Kollagenbildung, verfeinern das Hautbild und helfen bei Unreinheiten, Fältchen und Pigmentflecken.Retinal ist eine moderne Form der Retinoide. In der Haut wird es direkt in die aktive Form (Retinsäure) umgewandelt, wodurch ",
+          "text": "Retinoide – was steckt dahinter?Retinoide sind Vitamin-A-Derivate und gehören zu den wirksamsten Wirkstoffen in der Hautpflege. Sie fördern die Zellerneuerung, unterstützen die Kollagenbildung, verfeinern das Hautbild und helfen bei Unreinheiten, Fältchen und Pigmentflecken.Retinal ist eine moderne Form der Retinoide. ",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225890_190_3767228093325677042",
-          "text": "Retinol – der Gamechanger für deine Haut ✨Kaum ein Wirkstoff ist so gut erforscht und so wirksam wie Retinol. Aber warum lieben es alle?🔬 Was macht Retinol?Retinol ist eine Form von Vitamin A und unterstützt die Haut dabei, sich schneller zu erneuern.• reduziert feine Linien &amp; Falten• glättet die Hautstruktur• mildert Pigmentflecken &amp; Aknenarben• beugt Unreinheiten vor• stärkt die Kollagen",
+          "text": "Retinol – der Gamechanger für deine Haut ✨Kaum ein Wirkstoff ist so gut erforscht und so wirksam wie Retinol. Aber warum lieben es alle?🔬 Was macht Retinol?Retinol ist eine Form von Vitamin A und unterstützt die Haut dabei, sich schneller zu erneuern.• reduziert feine Linien &amp; Falten• glättet die Hautstruktur• mild",
           "segment": "skincare-first",
-          "mood": "enthusiastic"
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225895_190_3776428274386208061",
-          "text": "Tag und Nacht entscheiden darüber, wie gut ein Wirkstoff wirkt.Am Tag schützen Antioxidantien wie Vitamin C oder Niacinamid deine Haut vor freien Radikalen und Umweltstress. Feuchtigkeitsspeicher wie Hyaluron halten die Barriere stabil.In der Nacht arbeitet die Haut intensiver, sie repariert Schäden, baut Kollagen auf und verliert mehr Wasser. Daher wirken Retinol, Säuren oder Azelainsäure in dies",
+          "text": "Tag und Nacht entscheiden darüber, wie gut ein Wirkstoff wirkt.Am Tag schützen Antioxidantien wie Vitamin C oder Niacinamid deine Haut vor freien Radikalen und Umweltstress. Feuchtigkeitsspeicher wie Hyaluron halten die Barriere stabil.In der Nacht arbeitet die Haut intensiver, sie repariert Schäden, baut Kollagen auf ",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
         },
         {
           "id": "0_225895_26_1253007566851983",
           "text": "Hautpflege-Mythen im Faktencheck!💡Was ist dran an Aussagen wie „Retinol macht die Haut dünn\" oder „Vitamin C und Retinol darf man nicht kombinieren\"? 🔍Kennt ihr weitere Hautpflege-Mythen, die wir uns mal anschauen sollten? Schreibt sie uns gern in die Kommentare. 🩵",
           "segment": "skincare-first",
-          "mood": "cautioning"
+          "mood": "cautioning",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
         },
         {
           "id": "0_225895_126_t3_1rycvqe",
-          "text": "Welcher Toner, welche Seren und was ist mit Kapseln? Tipps und Empfehlungen Hallo,ich benutze aktuell gar keine Toner und habe auch gar keine Ahnung, welchen Toner ich benutzen sollte.Gibt es Inhaltsstoffe auf die man achten sollte? Sollte man den Toner auf seinen Hauttyp anpassen?Meine Haut ist sehr empfindlich und sensibel und an der T-Zone trocken und porig mit ab und zukleinen Pickelchen um di",
+          "text": "Welcher Toner, welche Seren und was ist mit Kapseln? Tipps und Empfehlungen Hallo,ich benutze aktuell gar keine Toner und habe auch gar keine Ahnung, welchen Toner ich benutzen sollte.Gibt es Inhaltsstoffe auf die man achten sollte? Sollte man den Toner auf seinen Hauttyp anpassen?Meine Haut ist sehr empfindlich und se",
           "segment": "procedure-curious",
-          "mood": "seeking"
+          "mood": "seeking",
+          "source": "Reddit",
+          "axis": "experienced"
         },
         {
           "id": "0_225895_190_3865690655105999559",
-          "text": "80% Frauen benutzen Retinol falsch.Ich habe diesen Fehler auch gemacht.Retinol gehört zu den effektivsten Wirkstoffen —aber auch zu den am meisten falsch verwendeten.Retinol ist kein \"Glow-Produkt\".Es ist ein Wirkstoff, der die Haut zwingt, schneller zu arbeiten.Das bedeutet:• beschleunigte Zellerneuerung• feinere Poren• glattere HautstrukturAber:Falsche Anwendung zerstört die Hautbarriere.Meine R",
+          "text": "80% Frauen benutzen Retinol falsch.Ich habe diesen Fehler auch gemacht.Retinol gehört zu den effektivsten Wirkstoffen —aber auch zu den am meisten falsch verwendeten.Retinol ist kein \"Glow-Produkt\".Es ist ein Wirkstoff, der die Haut zwingt, schneller zu arbeiten.Das bedeutet:• beschleunigte Zellerneuerung• feinere Pore",
           "segment": "skincare-first",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "experienced"
         }
       ],
-      "hope:payoff": [
+      "hope:time-patience": [
+        {
+          "id": "0_225889_190_3801040078139631905",
+          "text": "Wusstest du, dass insbesondere chronische UV-Exposition zu den stärksten Treibern sichtbarer Hautalterung zählt – deutlich stärker als genetische Faktoren?Deshalb gilt: das konsequente Auftragen einer Sonnenschutzcreme mit hohem LSF ist der beste \"Skincare Hack\" überhaupt.Retinoide wiederum gehören zu den wenigen Wirks",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3837719781160329104",
+          "text": "✨ Retinol Cream Renew — eine Nachtpflege mit starkem Anti-Aging-Potenzial.Wenn die Haut an Glätte verliert, erste Fältchen sichtbar werden oder der Teint uneben wirkt, integriere ich Retinol Cream Renew häufig in die Heimpflege. Es handelt sich nicht um ein „Sofort-Effekt-Produkt\", sondern um eine gezielte, langfristig",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3859139748795567564",
+          "text": "Sind Augenpads sinnvoll ? 🤔 Augenpads wirken primär über einen okklusiven Effekt auf der Haut. Durch diese Okklusion wird der transepidermale Wasserverlust (TEWL) reduziert, wodurch die Haut kurzfristig mehr Feuchtigkeit speichern kann. Das führt dazu, dass die Haut direkt nach der Anwendung glatter und praller erschei",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_140_7620412388130491680",
+          "text": "Sind Augenpads sinnvoll ? 🤔  Augenpads wirken primär über einen okklusiven Effekt auf der Haut. Durch diese Okklusion wird der transepidermale Wasserverlust (TEWL) reduziert, wodurch die Haut kurzfristig mehr Feuchtigkeit speichern kann. Das führt dazu, dass die Haut direkt nach der Anwendung glatter und praller ersche",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "TikTok",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_190_3801168365666596654",
+          "text": "➡️ Ich habe schnell gemerkt, dass meine Haut auf klassische Retinol-Seren sehr empfindlich reagiert hat mit Rötungen, Spannungsgefühl, kleine Irritationen. Genau deshalb habe ich lange an meinem eigenen Serum und an den idealen Inhaltsstoffen geforscht und schließlich mein Skin Perfection Night Serum entwickelt.Was für",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225895_26_2063286697773222",
+          "text": "Der Frühling bringt Licht ☀️ zurück ABER Deine Haut wirkt noch müde, fahl oder gestresst vom Winter❓️Und überall liest Du: „Vitamin C für den perfekten Glow.\"Klingt gut. Brennt nur leider oft.Viele frei verkäufliche Produkte setzen auf extrem saure Formulierungen. Intensiv – ja. Aber häufig auf Kosten Deiner Hautbarrie",
+          "segment": "procedure-open",
+          "mood": "disappointed",
+          "source": "Facebook Pages",
+          "axis": "experienced"
+        },
         {
           "id": "0_225895_26_1569395691555832",
-          "text": "Poren gehören zu einer gesunden Haut und lassen sich nicht dauerhaft verkleinern. Ihr Erscheinungsbild kann jedoch sichtbar verbessert werden.🥰Mit dieser Behandlung werden die Poren mithilfe eines Vakuums intensiv gereinigt. Talg, abgestorbene Hautzellen und Ablagerungen werden sanft entfernt. Die Haut wirkt frischer, ebenmäßiger und ist optimal auf die nachfolgende Pflege vorbereitet.Für eine lan",
+          "text": "Poren gehören zu einer gesunden Haut und lassen sich nicht dauerhaft verkleinern. Ihr Erscheinungsbild kann jedoch sichtbar verbessert werden.🥰Mit dieser Behandlung werden die Poren mithilfe eines Vakuums intensiv gereinigt. Talg, abgestorbene Hautzellen und Ablagerungen werden sanft entfernt. Die Haut wirkt frischer, ",
           "segment": "procedure-open",
-          "mood": "satisfied"
+          "mood": "satisfied",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        }
+      ],
+      "fear:collagen-deep": [
+        {
+          "id": "0_225889_190_3811970279183427278",
+          "text": "Firming Retinal Serum. Das Firming Retinal Serum wurde entwickelt, um die Haut gezielt in ihrer natürlichen Fähigkeit zur Regeneration, Zellerneuerung und Barrierefunktion zu unterstützen. Statt die Hautalterung nur oberflächlich zu kaschieren, stärkt es die biologischen Prozesse, die für ein langfristig gesundes, stra",
+          "segment": "skincare-first",
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_26_122196196172515806",
+          "text": "Die gesamte Beauty-Industrie feiert Retinol gerade als das Nonplusultra für junge Haut. Doch in der Wissenschaft taucht immer öfter ein Stoff auf, der Retinol in Studien in fast jedem Aspekt in den Schatten stellt. Die Rede ist von Methylenblau.Während Retinol zweifellos wirkt, ist es für viele Hauttypen oft aggressiv ",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3880317372859199716",
+          "text": "Wirken Anti-Aging-Cremes wirklich? Die ehrliche Antwort: Jein.Die meisten Cremes verbessern nur kurzfristig das Hautbild (Feuchtigkeit = glattere Haut), aber entfernen keine Falten.Was Studien zeigen:✔️ Retinoide können Falten sichtbar reduzieren (nach Wochen)✔️ Sonnenschutz ist die effektivste Anti-Aging-Maßnahme❌ Hya",
+          "segment": "unknown",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_26_1642502941217800",
+          "text": "Gestern habe ich erzählt, dass ich bei einer Creme nicht zuerst auf den Wirkstoff schaue.Heute zeige ich Dir warum.🧱 Stell Dir Deine Haut wie eine Mauer vor.Die Hautzellen sind die Ziegel.Die Lipide zwischen den Zellen sind der Mörtel.Dieser Mörtel hält die Hautbarriere stabil, schützt vor Feuchtigkeitsverlust und hilf",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225890_190_3853910185526180563",
+          "text": "Retinol mit Vektortechnologie – Maximale Anti Age Wirkung ohne IrritationenDie Reti Fusion® Vecti+ Linie von Arkana nutzt einen biotechnologischen Ansatz durch intelligente Vektorträger. 🔹Anstatt nur oberflächlich zu wirken, verschmelzen diese „Nanokapseln\" mit den Hautzellen und schleusen Retinol sowie die Vitamine A,",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225890_190_3876007146676826600",
+          "text": "Glatter Teint, verfeinerte Poren, strahlende Haut – was ist dein Ziel?Chemische Peelings können mehr als nur oberflächlich wirken:Sie können Akne lindern, Poren verfeinern, Pigmentflecken ausgleichen und Fältchen glätten – individuell abgestimmt auf deine Haut.Von Glycolic Acid bis Retinol: Jede Peeling-Art hat ihre ei",
+          "segment": "procedure-curious",
+          "mood": "cautioning",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_126_t3_1sr3gpc",
+          "text": "Wie kriege ich meine Haut endlich rein? (W31) Ich bin einfach nur genervt. Ich nutze morgens und abends Cerave Waschlotion oder die von Acnemy, Vitamin C von G&amp;G morgens, meist eine Koreanische Sonnencreme und an paar Tagen Retinol (G&amp;G oder Tranparent Lab Beauty Sleep Mas) abends. Zwischendurch Azelainsäure, a",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Reddit",
+          "axis": "anticipated"
+        }
+      ],
+      "hope:sun-seasonality": [
+        {
+          "id": "0_225889_126_t1_o9bcnjb",
+          "text": "Tagesroutine und Produkte Geek & Gorgeous Retinal? nur wenn dir falten resp. frühzeitige hautalterung egal ist. dafür ist die uva strahlung zuständig. die hast du immer, so bald du ohne künstliches licht sehen kannst. gerade wenn man actives wie retinol verwendet, ist ganzjähriger sonnenschutz ein muss. sonst bewirkt m",
+          "segment": "skincare-first",
+          "mood": "cautioning",
+          "source": "Reddit",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3893347646538780856",
+          "text": "Kollagenverlust ab 20: ~1 % pro Jahr. Was hilft wirklich gegen Hautalterung — und was ist Geldverschwendung? 👇Ab dem 20. Lebensjahr beginnt der natürliche Kollagenabbau. Etwa 1 % pro Jahr — so fasst die aktuelle Studienlage den Prozess zusammen (Wlaschek et al. 2021). Mit 40 können bereits rund 20 % fehlen.Doch nicht j",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_23_20471070080543995",
+          "text": "Toller Ganzjahres-Sonnenschutz mit Anti-Aging-Bonus! ⭐⭐⭐⭐⭐ [Ich habe dieses Produkt im Austausch für meine ehrliche Bewertung erhalten] Ich durfte die neue Ladival Anti-Aging Ganzjährige Sonnenschutz-Creme für das Gesicht (LSF 50+) testen und bin wirklich sehr angetan. Da ich im Alltag viel Wert auf Sonnenschutz und gl",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Reviews",
+          "axis": "experienced"
+        },
+        {
+          "id": "0_225889_190_3926622621292215084",
+          "text": "Ich werde auch oft jünger geschätzt und das einzige, worauf ich achte bei meiner anti aging oder skin longevity Pflege ist guter Schlaf und Vitamin A (Retinol, Retinal). Ich hab vergessen das Vitamin A im Video zu erwähnen. Ja, ganzjährig. Auch im Sommer. Seit ich 28 war. #slowbeauty #beautyreels #unperfekt #calcium #t",
+          "segment": "skincare-first",
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_190_3940493434422872507",
+          "text": "Anti-Aging: Diese 3 Wirkstoffe kaufen Hautärzte wirklich. 🛒Der Pflegemarkt ist voll, die Versprechen sind groß, und trotzdem bleiben nach dem Kauf oft mehr Fragen als Ergebnisse. Dabei zählen nach aktueller Studienlage vor allem drei Dinge für sichtbar gesündere, langsamer alternde Haut.1. Breitband-Sonnenschutz. UV-St",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_26_1652237740236296",
+          "text": "Überpigmentierungen gehören zu den hartnäckigsten Hautproblemen. Sie entstehen, weil die Haut zu viel Melanin produziert oder dieses ungleichmäßig verteilt wird.Die Ursachen sind vielfältig und oft kombiniert. .Häufige Ursachen von Überpigmentierungen:➡️ UV-Strahlung (häufigster Auslöser)• Sonne stimuliert die Melaninp",
+          "segment": "procedure-open",
+          "mood": "conflicted",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225890_26_1377747541024412",
+          "text": "🧴 Was schadet Ihrer Haut – obwohl es „Pflege\" sein soll?Die Haut kann unter falscher oder übertriebener Pflege leiden. Besonders häufig sehen wir in unserer Praxis diese typischen Fehler:❌ Zu häufiges Peeling &amp; zu viele Wirkstoffe gleichzeitig– Ob mechanisch oder chemisch: Zu viel reizt und schwächt die Hautbarrier",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        }
+      ],
+      "hope:ingredient-combo": [
+        {
+          "id": "0_225889_190_3862054732789499653",
+          "text": "Das Kupferpeptid GHK-Cu wird gerade richtig interessant in der Hautpflege 👀Man sieht immer mehr Produkte damit und das nicht ohne Grund. Der Wirkstoff gilt als vielversprechend im Anti-Aging Bereich und könnte in Zukunft noch eine größere Rolle spielen.Spannend ist auch, dass er im Fitnessbereich teilweise schon ganz a",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_26_1589846529814659",
+          "text": "SEREN – Deine Hautpflege-Helden nach der Reinigung ✨Nach der Gesichtsreinigung ist die Haut besonders aufnahmefähig – der perfekte Zeitpunkt für gezielte Wirkstoffpflege! 💧 Ob Glow, Anti-Aging oder Beruhigung: Mit dem richtigen Serum bringst du deine Haut auf das nächste Level.Hier findest du eine Auswahl an unseren ho",
+          "segment": "skincare-first",
+          "mood": "enthusiastic",
+          "source": "Facebook Pages",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225889_140_7653445800772652310",
+          "text": "Womit lässt sich ein Antioxidant Vitamin Serum gut kombinieren?Mit einer Pflegeroutine, die sinnvoll aufgebaut ist.Leichte Feuchtigkeitspflege, sanftes Niacinamid, Hyaluronsäure und SPF passen in der Regel sehr gut dazu.Wichtig ist nicht, mehr zu mischen, sondern je nach Hautzustand besser zu kombinieren. ✨ #biothermsk",
+          "segment": "unknown",
+          "mood": "satisfied",
+          "source": "TikTok",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_126_t1_o2aycmq",
+          "text": "Skincare Routine aufbauen - welche Produkte in welcher Reihenfolge? Zuallererst solltest du die Haut mit dem Zitclean säubern. Dann könntest du die Toner benutzen von Nø. Jedenfalls würde ich weitermachen mit dünnflüssigen Wirkstoffen wie Hyaluron und Retinol und Niacinamid. Das kann man alles sehr gut kombinieren. Wic",
+          "segment": "skincare-first",
+          "mood": "seeking",
+          "source": "Reddit",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_190_3898900466402866335",
+          "text": "Günstiger als Amazon: K-Beauty Arencia Vitamin C Booster Shot 30ml - Leichte Textur für jede Skincare-Routine mit Vitamin E und CDer Arencia Vitamin C Booster Shot 30ml ist ein hochkonzentriertes Serum für einen ebenmäßigeren, frischen Teint. Die Formel kombiniert pure Vitamin C Wirkstoffe mit Glutathione und unterstüt",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        }
+      ],
+      "fear:wrinkle-texture": [
+        {
+          "id": "0_225890_126_t1_nz7rgj0",
+          "text": "Mein Programm gegen Augenringe und Talgfilamente Also dir Haut unter den Augen ist sehr dünn und oft ist was man dort an Problemstellen kennt genetisch veranlagt. Aber ohne dir das abzusprechen, welche Augenringe? Also no joke, die Haut die ich da unter deinen Augen sehe, sieht total nach dem aus was dort sein sollte u",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Reddit",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225897_9_15126649488097392",
+          "text": "Vitamin D beeinflusst bis zu 3000 Gene und ist ausschlaggebend beim Kalziumstoffwechsel. es ist ja schon die Frechheit, dass nur das 25-OH gemessen wird. das ist das VD im Blut und sagt noch gar nichts aus, ob es in die Zellen ankommt. (1,25-OH). zu wenig Vitamin D im Blut und das Kalzium wird AUS dem Knochen geholt. i",
+          "segment": "skincare-first",
+          "mood": "disappointed",
+          "source": "Youtube",
+          "axis": "anticipated"
+        }
+      ],
+      "fear:scientific-credibility": [
+        {
+          "id": "0_225894_190_3752120939766253311",
+          "text": "Besonders Nr. 6, 10, 13, 18 und 20 ⤵️🫶🏽Produktroulette statt Geduld: Routinen werden ständig gewechselt, weil schnelle Ergebnisse erwartet werden. Wirkstoffe brauchen aber acht bis zwölf Wochen, bis sich die Haut stabilisiert.Auf Marketingbegriffe reinfallen: Begriffe wie „non-comedogen\" sind nicht reguliert. Viele Pro",
+          "segment": "skincare-first",
+          "mood": "conflicted",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        },
+        {
+          "id": "0_225895_190_3743867649499783335",
+          "text": "Wir alle haben sie schon unzählige Male auf Verpackungen gelesen…👀diese vermeintlich „vertrauenerweckenden\" Claims.Aber die Wahrheit ist: Viele von ihnen bedeuten nicht das, was wir denken.💭 Und das ist kein Vorwurf ! Marken formulieren solche Begriffe bewusst so, dass sie beruhigend klingen. Also lass uns gemeinsam ei",
+          "segment": "skincare-first",
+          "mood": "disappointed",
+          "source": "Instagram Public",
+          "axis": "anticipated"
+        }
+      ],
+      "hope:purging-bad-phase": [
+        {
+          "id": "0_225895_190_3932480068571902013",
+          "text": "Ich dachte immer die Pickel, die ich vom BHA bekomme, sind ein Zeichen, dass alles rauskommt 👇doch es war kein Purging. Purging oder auch eine leichte Erstverschlimmerung kann tatsächlich bei aktiven Wirkstoffen vorkommen. wie bei: 👉 Niacinamiden, Retinol/ Bakuchiol, Säuren, Vitamin C… Bei Feuchtigkeitsspendern passier",
+          "segment": "skincare-first",
+          "mood": "satisfied",
+          "source": "Instagram Public",
+          "axis": "experienced"
         }
       ]
     },
     "by_segment": {
       "skincare-first": {
         "n": 6957,
-        "fears": {
-          "irritation": 715,
-          "photosensitivity": 159,
-          "over-drying": 386,
-          "overuse": 68,
-          "health": 119,
-          "slow-results": 35,
-          "interplay": 11,
-          "purging": 23
+        "fear": {
+          "tolerability-irritation": 763,
+          "sun-seasonality": 158,
+          "health-lifestage": 118,
+          "time-patience": 34,
+          "dosage-control": 19,
+          "ingredient-combo": 11,
+          "collagen-deep": 5,
+          "purging-bad-phase": 21,
+          "wrinkle-texture": 2,
+          "scientific-credibility": 2
         },
-        "hopes": {
-          "collagen": 1423,
-          "wrinkle-reduction": 318,
-          "gold-standard": 229,
-          "pigmentation": 47,
-          "texture": 86,
-          "acne": 73,
-          "confidence": 97
+        "hope": {
+          "collagen-deep": 773,
+          "wrinkle-texture": 300,
+          "scientific-credibility": 87,
+          "pigmentation-evenness": 52,
+          "dosage-control": 82,
+          "tolerability-irritation": 73,
+          "time-patience": 5,
+          "sun-seasonality": 6,
+          "ingredient-combo": 4,
+          "purging-bad-phase": 1
+        },
+        "experienced": {
+          "tolerability-irritation": 122,
+          "collagen-deep": 56,
+          "wrinkle-texture": 28,
+          "sun-seasonality": 20,
+          "health-lifestage": 11,
+          "dosage-control": 17,
+          "scientific-credibility": 4,
+          "pigmentation-evenness": 6,
+          "purging-bad-phase": 6,
+          "time-patience": 2,
+          "ingredient-combo": 3
+        },
+        "anticipated": {
+          "collagen-deep": 722,
+          "wrinkle-texture": 274,
+          "tolerability-irritation": 714,
+          "scientific-credibility": 85,
+          "pigmentation-evenness": 46,
+          "dosage-control": 84,
+          "sun-seasonality": 144,
+          "health-lifestage": 107,
+          "time-patience": 37,
+          "ingredient-combo": 12,
+          "purging-bad-phase": 16
         }
       },
       "unknown": {
         "n": 1801,
-        "fears": {
-          "irritation": 47,
-          "health": 40,
-          "over-drying": 13,
-          "photosensitivity": 10,
-          "overuse": 21,
-          "purging": 2,
-          "slow-results": 2
+        "fear": {
+          "tolerability-irritation": 49,
+          "health-lifestage": 39,
+          "sun-seasonality": 10,
+          "collagen-deep": 1,
+          "dosage-control": 11,
+          "purging-bad-phase": 2,
+          "time-patience": 2
         },
-        "hopes": {
-          "gold-standard": 32,
-          "confidence": 8,
-          "collagen": 181,
-          "wrinkle-reduction": 17,
-          "acne": 20,
-          "pigmentation": 1,
-          "texture": 7
+        "hope": {
+          "scientific-credibility": 13,
+          "collagen-deep": 62,
+          "wrinkle-texture": 18,
+          "tolerability-irritation": 6,
+          "dosage-control": 16,
+          "pigmentation-evenness": 1,
+          "ingredient-combo": 1
+        },
+        "experienced": {},
+        "anticipated": {
+          "tolerability-irritation": 55,
+          "scientific-credibility": 13,
+          "health-lifestage": 39,
+          "collagen-deep": 63,
+          "wrinkle-texture": 18,
+          "sun-seasonality": 10,
+          "dosage-control": 27,
+          "pigmentation-evenness": 1,
+          "ingredient-combo": 1,
+          "purging-bad-phase": 2,
+          "time-patience": 2
         }
       },
       "procedure-curious": {
         "n": 671,
-        "fears": {
-          "purging": 3,
-          "irritation": 97,
-          "health": 22,
-          "photosensitivity": 10,
-          "over-drying": 30,
-          "slow-results": 4,
-          "overuse": 7,
-          "interplay": 1
+        "fear": {
+          "purging-bad-phase": 3,
+          "tolerability-irritation": 101,
+          "health-lifestage": 21,
+          "sun-seasonality": 10,
+          "time-patience": 4,
+          "collagen-deep": 1,
+          "ingredient-combo": 1
         },
-        "hopes": {
-          "collagen": 119,
-          "wrinkle-reduction": 21,
-          "gold-standard": 24,
-          "texture": 5,
-          "confidence": 12,
-          "pigmentation": 6,
-          "acne": 4
+        "hope": {
+          "collagen-deep": 60,
+          "wrinkle-texture": 21,
+          "scientific-credibility": 12,
+          "pigmentation-evenness": 9,
+          "dosage-control": 10,
+          "tolerability-irritation": 1
+        },
+        "experienced": {
+          "tolerability-irritation": 9,
+          "scientific-credibility": 1,
+          "wrinkle-texture": 2,
+          "dosage-control": 3,
+          "sun-seasonality": 2,
+          "collagen-deep": 2,
+          "ingredient-combo": 1,
+          "health-lifestage": 1
+        },
+        "anticipated": {
+          "collagen-deep": 59,
+          "wrinkle-texture": 19,
+          "purging-bad-phase": 3,
+          "scientific-credibility": 11,
+          "tolerability-irritation": 93,
+          "pigmentation-evenness": 9,
+          "health-lifestage": 20,
+          "sun-seasonality": 8,
+          "time-patience": 4,
+          "dosage-control": 7
         }
       },
       "procedure-open": {
         "n": 192,
-        "fears": {
-          "over-drying": 7,
-          "photosensitivity": 6,
-          "irritation": 29,
-          "health": 6,
-          "slow-results": 1,
-          "purging": 2
+        "fear": {
+          "tolerability-irritation": 31,
+          "sun-seasonality": 6,
+          "health-lifestage": 6,
+          "time-patience": 1,
+          "purging-bad-phase": 2
         },
-        "hopes": {
-          "confidence": 11,
-          "collagen": 29,
-          "wrinkle-reduction": 5,
-          "gold-standard": 8,
-          "texture": 2,
-          "acne": 2,
-          "payoff": 1
+        "hope": {
+          "collagen-deep": 18,
+          "wrinkle-texture": 6,
+          "sun-seasonality": 1,
+          "time-patience": 2,
+          "scientific-credibility": 1,
+          "dosage-control": 1
+        },
+        "experienced": {
+          "collagen-deep": 5,
+          "tolerability-irritation": 12,
+          "wrinkle-texture": 1,
+          "health-lifestage": 1,
+          "time-patience": 1,
+          "purging-bad-phase": 1,
+          "sun-seasonality": 1
+        },
+        "anticipated": {
+          "collagen-deep": 13,
+          "wrinkle-texture": 5,
+          "tolerability-irritation": 19,
+          "sun-seasonality": 6,
+          "health-lifestage": 5,
+          "time-patience": 2,
+          "scientific-credibility": 1,
+          "purging-bad-phase": 1,
+          "dosage-control": 1
         }
       }
-    }
+    },
+    "fears": [
+      {
+        "id": "tolerability-irritation",
+        "label": "Tolerability & Irritation",
+        "count": 944,
+        "side": "fear"
+      },
+      {
+        "id": "purging-bad-phase",
+        "label": "Purging & The Bad Phase",
+        "count": 28,
+        "side": "fear"
+      },
+      {
+        "id": "time-patience",
+        "label": "Time to Results & Patience",
+        "count": 41,
+        "side": "fear"
+      },
+      {
+        "id": "wrinkle-texture",
+        "label": "Wrinkle & Texture Efficacy",
+        "count": 2,
+        "side": "fear"
+      },
+      {
+        "id": "pigmentation-evenness",
+        "label": "Pigmentation & Evenness",
+        "count": 0,
+        "side": "fear"
+      },
+      {
+        "id": "collagen-deep",
+        "label": "Collagen & Deep Action",
+        "count": 7,
+        "side": "fear"
+      },
+      {
+        "id": "scientific-credibility",
+        "label": "Scientific Credibility",
+        "count": 2,
+        "side": "fear"
+      },
+      {
+        "id": "sun-seasonality",
+        "label": "Sun Sensitivity & Seasonality",
+        "count": 184,
+        "side": "fear"
+      },
+      {
+        "id": "dosage-control",
+        "label": "Correct Use & Dosage Control",
+        "count": 30,
+        "side": "fear"
+      },
+      {
+        "id": "ingredient-combo",
+        "label": "Ingredient Combination",
+        "count": 12,
+        "side": "fear"
+      },
+      {
+        "id": "health-lifestage",
+        "label": "Health & Life Stage Safety",
+        "count": 184,
+        "side": "fear"
+      }
+    ],
+    "hopes": [
+      {
+        "id": "tolerability-irritation",
+        "label": "Tolerability & Irritation",
+        "count": 80,
+        "side": "hope"
+      },
+      {
+        "id": "purging-bad-phase",
+        "label": "Purging & The Bad Phase",
+        "count": 1,
+        "side": "hope"
+      },
+      {
+        "id": "time-patience",
+        "label": "Time to Results & Patience",
+        "count": 7,
+        "side": "hope"
+      },
+      {
+        "id": "wrinkle-texture",
+        "label": "Wrinkle & Texture Efficacy",
+        "count": 345,
+        "side": "hope"
+      },
+      {
+        "id": "pigmentation-evenness",
+        "label": "Pigmentation & Evenness",
+        "count": 62,
+        "side": "hope"
+      },
+      {
+        "id": "collagen-deep",
+        "label": "Collagen & Deep Action",
+        "count": 913,
+        "side": "hope"
+      },
+      {
+        "id": "scientific-credibility",
+        "label": "Scientific Credibility",
+        "count": 113,
+        "side": "hope"
+      },
+      {
+        "id": "sun-seasonality",
+        "label": "Sun Sensitivity & Seasonality",
+        "count": 7,
+        "side": "hope"
+      },
+      {
+        "id": "dosage-control",
+        "label": "Correct Use & Dosage Control",
+        "count": 109,
+        "side": "hope"
+      },
+      {
+        "id": "ingredient-combo",
+        "label": "Ingredient Combination",
+        "count": 5,
+        "side": "hope"
+      },
+      {
+        "id": "health-lifestage",
+        "label": "Health & Life Stage Safety",
+        "count": 0,
+        "side": "hope"
+      }
+    ]
   },
   "conversationLandscape": {
     "eyebrow": "2. Conversation Cluster",
