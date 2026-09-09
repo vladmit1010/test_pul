@@ -31,6 +31,7 @@ data/*
 !data/dashboard_comments.js
 !data/dashboard-reference.json
 !data/definite_remove_terms.json
+!data/conversation_themes.json
 
 # Explicit heavy patterns (if paths move outside data/)
 **/classified_*.jsonl

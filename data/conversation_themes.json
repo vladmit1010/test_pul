@@ -1,0 +1,186 @@
+{
+  "title": "Conversation Cluster",
+  "eyebrow": "2. Conversation Cluster",
+  "themes": [
+    {
+      "id": "prevention",
+      "label": "Prevention",
+      "signals": [
+        "vorbeugen", "prävention", "fruh anfangen", "früh anfangen", "bevor es zu spät",
+        "erste fältchen", "erste faltchen", "anti-aging ab 20", "anti-aging ab 25", "anti-aging ab 30",
+        "vorbeugende pflege", "sonnenschutz als bester", "lieber vorbeugen", "prejuvenation",
+        "rechtzeitig anfangen", "je früher desto", "je fruher desto", "bevor die falten",
+        "solange noch nichts da", "sonnenschäden vorbeugen", "sonnenschaden vorbeugen",
+        "uv-schäden", "uv-schaden", "frühzeitig schützen", "fruhzeitig schutzen",
+        "lichtschutz von anfang"
+      ]
+    },
+    {
+      "id": "proactive-aging",
+      "label": "Proactive Aging",
+      "signals": [
+        "aktiv etwas tun", "routine durchziehen", "konsequent pflegen", "dranbleiben",
+        "investiere in mich", "disziplin", "jeden tag sonnencreme", "langfristig denken",
+        "am ball bleiben", "regelmäßig anwenden", "regelmassig anwenden",
+        "konsequenz zahlt", "mein ritual", "jeden abend", "seit monaten dabei",
+        "selbstfürsorge", "selbstfursorge", "tue etwas für mich", "tue etwas fur mich",
+        "nicht aufgeben", "fortschritt durch dranbleiben"
+      ]
+    },
+    {
+      "id": "longevity",
+      "label": "Longevity",
+      "signals": [
+        "longevity", "gesund altern", "lebensspanne", "health-span", "healthspan",
+        "von innen jung", "biohacking", "zellalterung", "nad+", "kollagen-booster von innen",
+        "anti-aging beginnt im körper", "anti-aging beginnt im korper",
+        "biologisches alter", "bio-age", "epigenetik", "zellerneuerung", "senolytika",
+        "autophagie", "intervallfasten", "spermidin", "resveratrol", "nahrungsergänzung",
+        "nahrungserganzung", "supplements", "trinkkollagen", "kollagen trinken",
+        "von innen heraus", "schlaf als anti-aging", "ernährung und haut", "ernahrung und haut",
+        "sport gegen hautalterung", "gesunde lebensjahre", "longevity-klinik"
+      ]
+    },
+    {
+      "id": "aging-gracefully",
+      "label": "Aging Gracefully",
+      "signals": [
+        "natürlich altern", "naturlich altern", "aging gracefully", "mit würde altern",
+        "mitwurde altern", "falten gehören dazu", "falten gehoren dazu", "ich mag meine falten",
+        "authentisch altern", "schönheitswahn", "schonheitswahn", "alter als stärke",
+        "alter als starke", "graue haare feiern", "pro-aging", "anti-anti-aging",
+        "nicht aussehen wie 20", "gesicht erzählt", "gesicht erzhlt", "lachfalten sind schön",
+        "lachfalten sind schon", "alter annehmen", "selbstbewusst altern", "ungefiltert",
+        "ohne filter", "grauen haare wachsen", "silberhaar", "so wie ich bin"
+      ]
+    },
+    {
+      "id": "debunking-myths",
+      "label": "Debunking Myths",
+      "signals": [
+        "stimmt das überhaupt", "stimmt das uberhaupt", "mythos", "fake", "das ist gelogen",
+        "wissenschaftlich widerlegt", "studie zeigt das gegenteil", "aufklärung", "aufklarung",
+        "faktencheck", "wissenschaftlich nicht haltbar", "keine studien dazu",
+        "in-vitro", "kollagencreme kann gar nicht", "molekül zu groß", "molekul zu gross",
+        "dringt gar nicht ein", "halbwissen", "broscience", "evidenz", "peer-reviewed",
+        "peer reviewed"
+      ]
+    },
+    {
+      "id": "marketing-skepsis",
+      "label": "Marketing Skepsis",
+      "signals": [
+        "nur marketing", "reine werbung", "glaube ich nicht", "werbeversprechen",
+        "fake-testimonial", "bezahlte werbung", "unrealistische erwartungen", "greenwashing",
+        "leere versprechen", "hält nicht was versprochen", "halt nicht was versprochen",
+        "werbelüge", "werbeluge", "überteuert", "uberteuert", "gleiche formel wie in der drogerie",
+        "marketing-sprech", "buzzwords", "klingt gut, bringt nichts", "gesponsert",
+        "affiliate", "pr-paket", "schleichwerbung"
+      ]
+    },
+    {
+      "id": "innovative-ingredients",
+      "label": "Innovative Ingredients",
+      "signals": [
+        "neuer wirkstoff", "innovation", "durchbruch", "exosomen", "bakuchiol",
+        "growth factors", "wachstumsfaktoren", "peptid-komplex", "neueste formel",
+        "wirkstoff-trend", "polynukleotide", "ectoin", "retinal statt retinol",
+        "neue generation retinoide", "tranexamsäure", "tranexamsaure", "alpha-arbutin",
+        "azelainsäure", "azelainsaure", "ceramide", "postbiotika", "fermentierte wirkstoffe",
+        "hype-wirkstoff", "trend-inhaltsstoff"
+      ]
+    },
+    {
+      "id": "next-gen-actives",
+      "label": "Next-Gen Actives",
+      "signals": [
+        "biotech", "ki-entwickelt", "delivery-system", "mikroverkapselung", "next-generation",
+        "next gen", "laborinnovation", "nanotechnologie", "patentierte technologie",
+        "encapsulation", "time-release", "liposomen", "trägersystem", "tragersystem",
+        "bioverfügbarkeit", "bioverfugbarkeit", "penetrationsverstärker", "penetrationsverstarker",
+        "im labor entwickelt", "biofermentiert", "ki-gestützte", "ki-gestutzte",
+        "klinisch getestete technologie", "tiefenwirkung durch technologie"
+      ]
+    },
+    {
+      "id": "social-pressure",
+      "label": "Social Pressure & Beauty Standards",
+      "signals": [
+        "erwartungsdruck", "muss jung aussehen", "schönheitsideal", "schonheitsideal",
+        "filter-druck", "filterdruck", "gesellschaftlicher druck", "vergleich mit anderen",
+        "alter wird abgewertet", "jugendkult", "instagram-gesicht", "alle sehen gleich aus",
+        "ageism", "altersdiskriminierung", "im job zählt das aussehen", "im job zahlt das aussehen",
+        "unsichtbar ab 40", "unsichtbar werden", "zoom-face", "frontkamera",
+        "vergleiche mich ständig", "vergleiche mich standig", "perfektionsdruck"
+      ]
+    },
+    {
+      "id": "celebrity-influencer",
+      "label": "Celebrity & Influencer Discourse",
+      "signals": [
+        "hat sie oder hat sie nicht", "promi-vergleich", "influencer verrät", "influencer verrat",
+        "testimonial", "celebrity-werbung", "geoutet", "natürlich gealtert oder op",
+        "naturlich gealtert oder op", "promi-beichte", "hat zugegeben", "vorher-nachher-promi",
+        "sieht aus wie 30", "influencerin zeigt", "get ready with me", "markenbotschafterin",
+        "behauptet, es sei nur creme", "behauptet es sei nur creme"
+      ]
+    },
+    {
+      "id": "cost-value",
+      "label": "Cost & Value Discourse",
+      "signals": [
+        "lohnt sich das", "zu teuer", "preis-leistung", "preis leistung", "ratenzahlung",
+        "günstige alternative", "gunstige alternative", "investition in mich", "was kostet",
+        "schnäppchen", "schnappchen", "dupe", "drogerie statt luxus", "lohnt der aufpreis",
+        "preis pro milliliter", "kosten pro sitzung", "finanzierung", "krankenkasse zahlt nicht",
+        "sparen für", "sparen fur", "teuer heißt nicht besser", "teuer heisst nicht besser",
+        "abo-falle"
+      ]
+    },
+    {
+      "id": "recovery-side-effects",
+      "label": "Recovery & Side Effects",
+      "signals": [
+        "ausfallzeit", "nebenwirkung", "erholungsphase", "nachsorge", "komplikation",
+        "purging", "reizung", "lange gedauert bis es besser", "downtime", "schwellung",
+        "blutergüsse", "blutergusse", "blaue flecken", "rötung nach der behandlung",
+        "rotung nach der behandlung", "krusten", "schälphase", "schalphase", "heilungsphase",
+        "wie lange sieht man das", "unverträglichkeit", "unvertraglichkeit",
+        "allergische reaktion", "barriereschaden", "überpflegt", "uberpflegt"
+      ]
+    },
+    {
+      "id": "menopause-hormonal",
+      "label": "Menopause & Hormonal Aging",
+      "signals": [
+        "wechseljahre", "menopause", "perimenopause", "hormonumstellung", "östrogenmangel",
+        "ostrogenmangel", "seit den wechseljahren", "hormonschwankungen",
+        "haut hat sich komplett verändert", "haut hat sich komplett verandert",
+        "plötzlich trocken", "plotzlich trocken", "ab 45 ging alles", "kollagenverlust in den wechseljahren",
+        "hormoncreme", "hrt", "hitzewallungen", "hormonell bedingte"
+      ]
+    },
+    {
+      "id": "professional-guidance",
+      "label": "Professional Guidance & Trust",
+      "signals": [
+        "hautärztin", "hautarztin", "hautarzt", "dermatologin", "dermatologe", "kosmetikerin",
+        "facharzt", "seriöser anbieter", "serioser anbieter", "zertifiziert",
+        "wem kann man vertrauen", "beratungsgespräch", "beratungsgesprach", "zweite meinung",
+        "empfehlung vom arzt", "erfahrung des behandlers", "praxis statt kosmetikstudio",
+        "billiganbietern", "wer darf das überhaupt", "wer darf das uberhaupt", "qualifikation"
+      ]
+    },
+    {
+      "id": "athome-diy",
+      "label": "At-Home Devices & DIY",
+      "signals": [
+        "led-maske", "led maske", "rotlicht", "mikrostrom", "microcurrent", "dermaroller",
+        "derma-pen", "dermapen", "radiofrequenzgerät", "radiofrequenzgerat", "gua sha",
+        "face yoga", "gesichtsmassage", "kryo-roller", "heimanwendung", "gerät für zuhause",
+        "gerat fur zuhause", "lohnt sich das gerät", "lohnt sich das gerat",
+        "selbst gemacht statt kosmetikerin"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /**
- * Chart 9 — Conversation Landscape (force-directed topic network).
+ * Chart 2 — Conversation Cluster (force-directed theme network).
  * Interactive: node/edge/cluster select · neighbor highlight · detail panel
  */
 window.PulsarConversationLandscape = {
@@ -95,7 +95,7 @@ window.PulsarConversationLandscape = {
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     svg.setAttribute('class', 'landscape-svg');
-    svg.setAttribute('aria-label', 'Conversation landscape network');
+    svg.setAttribute('aria-label', 'Conversation cluster network');
     containerEl.appendChild(svg);
 
     const gRoot = document.createElementNS(svgNS, 'g');
@@ -335,9 +335,12 @@ window.PulsarConversationLandscape = {
     toolbar.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-act]');
       if (!btn) return;
+      markUserView();
       const act = btn.dataset.act;
-      if (act === 'reset') resetView();
-      else if (act === 'in') zoomAt(W / 2, H / 2, scale * 1.25);
+      if (act === 'reset') {
+        userAdjustedView = false;
+        resetView();
+      } else if (act === 'in') zoomAt(W / 2, H / 2, scale * 1.25);
       else if (act === 'out') zoomAt(W / 2, H / 2, scale / 1.25);
     });
 
@@ -345,6 +348,7 @@ window.PulsarConversationLandscape = {
       'wheel',
       (e) => {
         e.preventDefault();
+        markUserView();
         const p = clientToSvg(e.clientX, e.clientY);
         zoomAt(p.x, p.y, scale * (e.deltaY < 0 ? 1.12 : 1 / 1.12));
       },
@@ -353,11 +357,23 @@ window.PulsarConversationLandscape = {
 
     let panning = false;
     let panMoved = false;
+    let userAdjustedView = false;
     let lastX = 0;
     let lastY = 0;
+
+    function markUserView() {
+      userAdjustedView = true;
+    }
+
     svg.addEventListener('pointerdown', (e) => {
       if (e.button !== 0) return;
-      if (e.target.closest('.landscape-node') || e.target.closest('.landscape-edge')) return;
+      if (
+        e.target.closest('.landscape-node') ||
+        e.target.closest('.landscape-edge') ||
+        e.target.closest('.landscape-edge-hit')
+      ) {
+        return;
+      }
       panning = true;
       panMoved = false;
       lastX = e.clientX;
@@ -369,7 +385,10 @@ window.PulsarConversationLandscape = {
       if (!panning) return;
       const dx = e.clientX - lastX;
       const dy = e.clientY - lastY;
-      if (Math.abs(dx) + Math.abs(dy) > 2) panMoved = true;
+      if (Math.abs(dx) + Math.abs(dy) > 2) {
+        panMoved = true;
+        markUserView();
+      }
       lastX = e.clientX;
       lastY = e.clientY;
       const rect = svg.getBoundingClientRect();
@@ -386,11 +405,27 @@ window.PulsarConversationLandscape = {
       } catch (_) {
         /* ignore */
       }
-      if (!panMoved && !e.target.closest('.landscape-node') && !e.target.closest('.landscape-edge')) {
+      const didPan = panMoved;
+      panMoved = false;
+      if (
+        !didPan &&
+        !e.target.closest('.landscape-node') &&
+        !e.target.closest('.landscape-edge') &&
+        !e.target.closest('.landscape-edge-hit')
+      ) {
         selection = null;
         activeCluster = null;
         clearFocus();
         renderDetailDefault();
+      }
+      if (didPan) {
+        // Swallow the click that browsers fire after a drag
+        const swallow = (ev) => {
+          ev.stopPropagation();
+          ev.preventDefault();
+          svg.removeEventListener('click', swallow, true);
+        };
+        svg.addEventListener('click', swallow, true);
       }
     });
     svg.addEventListener('dblclick', (e) => {
@@ -429,7 +464,6 @@ window.PulsarConversationLandscape = {
         if (typeof hideTip === 'function') hideTip();
       };
       const onClick = (ev) => {
-        if (panMoved) return;
         ev.stopPropagation();
         if (typeof hideTip === 'function') hideTip();
         selectEdge(e);
@@ -480,7 +514,6 @@ window.PulsarConversationLandscape = {
         if (typeof hideTip === 'function') hideTip();
       });
       g.addEventListener('click', (ev) => {
-        if (panMoved) return;
         ev.stopPropagation();
         if (typeof hideTip === 'function') hideTip();
         selectNode(n);
@@ -566,9 +599,9 @@ window.PulsarConversationLandscape = {
     function loop() {
       tick();
       frames += 1;
-      if (frames === 1 || frames % 40 === 0) resetView();
+      if (!userAdjustedView && (frames === 1 || frames % 40 === 0)) resetView();
       if (frames < 220) raf = requestAnimationFrame(loop);
-      else resetView();
+      else if (!userAdjustedView) resetView();
     }
     applyView();
     renderDetailDefault();

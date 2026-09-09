@@ -1,5 +1,6 @@
 /** AUTO-GENERATED — do not edit by hand */
-window.DashboardData = {
+window.DashboardData =
+{
   "meta": {
     "schema_version": 2,
     "source": "PULSAR classified_v10 (filter v10 · promo cut · spectrum moods)",
@@ -51,7 +52,7 @@ window.DashboardData = {
     "wordclouds": "v2 from classified_v10",
     "chart6": "agingPaths v2",
     "chart7": "retinolDeepDive v1",
-    "conversationLandscape": "v1 topic co-occurrence"
+    "conversationLandscape": "v2 conversation themes"
   },
   "moodMap": {
     "eyebrow": "1. Mood Map",
@@ -101,166 +102,9 @@ window.DashboardData = {
     "eyebrow": "2. Topic Landscape",
     "title": "The top conversations driving the category",
     "topN": 20,
-    "blocks": {
-      "A": "Verfahren & Wirkstoffe",
-      "B": "Kontext & Haltung"
-    },
-    "candidates": [
-      {
-        "id": "botox",
-        "label": "Botox / Neuromodulatoren",
-        "block": "A",
-        "count": 8296,
-        "positive": 4114,
-        "neutral": 2730,
-        "negative": 1452
-      },
-      {
-        "id": "fillers",
-        "label": "Hyaluron-Filler",
-        "block": "A",
-        "count": 7070,
-        "positive": 4230,
-        "neutral": 1685,
-        "negative": 1155
-      },
-      {
-        "id": "laser",
-        "label": "Laser-Therapien",
-        "block": "A",
-        "count": 8110,
-        "positive": 4209,
-        "neutral": 2425,
-        "negative": 1476
-      },
-      {
-        "id": "threads",
-        "label": "Fadenlifting & Ultraschall-Lifting",
-        "block": "A",
-        "count": 2625,
-        "positive": 1726,
-        "neutral": 610,
-        "negative": 289
-      },
-      {
-        "id": "facelift",
-        "label": "Chirurgische Eingriffe",
-        "block": "A",
-        "count": 5779,
-        "positive": 3497,
-        "neutral": 1533,
-        "negative": 749
-      },
-      {
-        "id": "peel",
-        "label": "Peeling & Microneedling",
-        "block": "A",
-        "count": 32609,
-        "positive": 20351,
-        "neutral": 7749,
-        "negative": 4509
-      },
-      {
-        "id": "retinol",
-        "label": "Retinoide",
-        "block": "A",
-        "count": 15637,
-        "positive": 7872,
-        "neutral": 4123,
-        "negative": 3642
-      },
-      {
-        "id": "vitamin-c",
-        "label": "Vitamin C",
-        "block": "A",
-        "count": 18615,
-        "positive": 9992,
-        "neutral": 3979,
-        "negative": 4644
-      },
-      {
-        "id": "hyaluronic-acid",
-        "label": "Hyaluronsäure (topisch)",
-        "block": "A",
-        "count": 14701,
-        "positive": 8677,
-        "neutral": 3262,
-        "negative": 2762
-      },
-      {
-        "id": "niacinamide-peptides",
-        "label": "Niacinamid & Peptide",
-        "block": "A",
-        "count": 14916,
-        "positive": 9059,
-        "neutral": 3573,
-        "negative": 2284
-      },
-      {
-        "id": "spf",
-        "label": "Sonnenschutz & Prävention",
-        "block": "A",
-        "count": 20891,
-        "positive": 8102,
-        "neutral": 8752,
-        "negative": 4037
-      },
-      {
-        "id": "aging-signs",
-        "label": "Hautalterungs-Zeichen",
-        "block": "B",
-        "count": 138286,
-        "positive": 77861,
-        "neutral": 31673,
-        "negative": 28752
-      },
-      {
-        "id": "price",
-        "label": "Kosten & Preis-Leistung",
-        "block": "B",
-        "count": 15655,
-        "positive": 5996,
-        "neutral": 6178,
-        "negative": 3481
-      },
-      {
-        "id": "pressure",
-        "label": "Gesellschaftlicher Druck",
-        "block": "B",
-        "count": 270,
-        "positive": 74,
-        "neutral": 109,
-        "negative": 87
-      },
-      {
-        "id": "safety",
-        "label": "Sicherheit & Vertrauen",
-        "block": "B",
-        "count": 2576,
-        "positive": 760,
-        "neutral": 838,
-        "negative": 978
-      },
-      {
-        "id": "natural",
-        "label": "Natürlichkeit & Authentizität",
-        "block": "B",
-        "count": 1576,
-        "positive": 774,
-        "neutral": 366,
-        "negative": 436
-      },
-      {
-        "id": "celebrity",
-        "label": "Prominente & Influencer-Diskurs",
-        "block": "B",
-        "count": 1534,
-        "positive": 783,
-        "neutral": 437,
-        "negative": 314
-      }
-    ],
-    "note": "Mehrfachnennungen möglich, Summe über 100 % · Sentiment aus Mood (Chart 1)"
+    "note": "Replaced by Conversation Cluster network",
+    "hidden": true,
+    "candidates": []
   },
   "segmentation": {
     "eyebrow": "3. Consumer Segmentation",
@@ -5197,173 +5041,410 @@ window.DashboardData = {
     }
   },
   "conversationLandscape": {
-    "eyebrow": "9. Conversation Landscape",
-    "title": "How anti-aging conversations cluster together",
-    "axis_note": "Knoten = Thema · Größe = Häufigkeit · Linie = gemeinsame Erwähnung im selben Kommentar (nur stärkste Paare) · Farbe = Community",
-    "note": "Klick Thema oder Linie → Quotes · Hover → Nachbarn · Cluster unüberwacht (greedy modularity) · Fruchtnamen = Lesbarkeit",
+    "eyebrow": "2. Conversation Cluster",
+    "title": "Conversation Cluster",
+    "axis_note": "Knoten = Conversation-Thema · Größe = Treffer · Linie = gemeinsame Erwähnung im selben Kommentar (nur stärkste Paare) · Farbe = Community",
+    "note": "Themen = vorgegebene Conversation Cluster (Signalwörter) · Klick Thema/Linie → Quotes · Hover → Nachbarn",
     "how_to": [
-      "Kreis = Thema (größer = öfter genannt)",
+      "Kreis = Conversation-Thema (größer = öfter erkannt)",
       "Linie = Themen fallen oft im selben Kommentar zusammen",
-      "Farbe = Community (Themen, die untereinander stärker vernetzt sind)",
-      "Klick auf Kreis oder Linie öffnet passende Kommentare rechts"
+      "Farbe = Community (stärker vernetzte Themen)",
+      "Klick auf Kreis oder Linie öffnet passende Kommentare im Quotes-Panel"
     ],
     "n_total": 331195,
-    "n_comments_with_topics": 213266,
-    "method": "topic co-occurrence + greedy_modularity_communities · sparse top edges",
+    "n_comments_with_topics": 89295,
+    "method": "conversation-theme keywords + co-occurrence + greedy_modularity",
+    "themeSignals": {
+      "prevention": [
+        "sonnenschutz als bester",
+        "sonnenschaden vorbeugen",
+        "lichtschutz von anfang",
+        "solange noch nichts da",
+        "rechtzeitig anfangen",
+        "fruhzeitig schutzen",
+        "vorbeugende pflege",
+        "anti-aging ab 30",
+        "anti-aging ab 20",
+        "bevor es zu spat",
+        "bevor die falten",
+        "anti-aging ab 25",
+        "lieber vorbeugen",
+        "je fruher desto",
+        "erste faltchen",
+        "fruh anfangen",
+        "prejuvenation",
+        "pravention",
+        "uv-schaden",
+        "vorbeugen"
+      ],
+      "proactive-aging": [
+        "fortschritt durch dranbleiben",
+        "jeden tag sonnencreme",
+        "regelmassig anwenden",
+        "routine durchziehen",
+        "investiere in mich",
+        "konsequent pflegen",
+        "seit monaten dabei",
+        "langfristig denken",
+        "tue etwas fur mich",
+        "konsequenz zahlt",
+        "aktiv etwas tun",
+        "am ball bleiben",
+        "nicht aufgeben",
+        "selbstfursorge",
+        "dranbleiben",
+        "mein ritual",
+        "jeden abend",
+        "disziplin"
+      ],
+      "longevity": [
+        "anti-aging beginnt im korper",
+        "kollagen-booster von innen",
+        "sport gegen hautalterung",
+        "schlaf als anti-aging",
+        "gesunde lebensjahre",
+        "biologisches alter",
+        "ernahrung und haut",
+        "nahrungserganzung",
+        "von innen heraus",
+        "kollagen trinken",
+        "longevity-klinik",
+        "intervallfasten",
+        "von innen jung",
+        "zellerneuerung",
+        "gesund altern",
+        "trinkkollagen",
+        "lebensspanne",
+        "zellalterung",
+        "resveratrol",
+        "health-span",
+        "supplements",
+        "biohacking",
+        "senolytika",
+        "healthspan",
+        "epigenetik",
+        "autophagie",
+        "spermidin",
+        "longevity",
+        "bio-age",
+        "nad+"
+      ],
+      "aging-gracefully": [
+        "lachfalten sind schon",
+        "nicht aussehen wie 20",
+        "selbstbewusst altern",
+        "grauen haare wachsen",
+        "ich mag meine falten",
+        "falten gehoren dazu",
+        "graue haare feiern",
+        "authentisch altern",
+        "alter als starke",
+        "naturlich altern",
+        "aging gracefully",
+        "mit wurde altern",
+        "mitwurde altern",
+        "anti-anti-aging",
+        "gesicht erzahlt",
+        "gesicht erzhlt",
+        "so wie ich bin",
+        "alter annehmen",
+        "schonheitswahn",
+        "ohne filter",
+        "ungefiltert",
+        "silberhaar",
+        "pro-aging"
+      ],
+      "debunking-myths": [
+        "wissenschaftlich nicht haltbar",
+        "kollagencreme kann gar nicht",
+        "wissenschaftlich widerlegt",
+        "studie zeigt das gegenteil",
+        "stimmt das uberhaupt",
+        "dringt gar nicht ein",
+        "keine studien dazu",
+        "molekul zu gross",
+        "das ist gelogen",
+        "peer reviewed",
+        "peer-reviewed",
+        "faktencheck",
+        "aufklarung",
+        "halbwissen",
+        "broscience",
+        "in-vitro",
+        "evidenz",
+        "mythos",
+        "fake"
+      ],
+      "marketing-skepsis": [
+        "gleiche formel wie in der drogerie",
+        "halt nicht was versprochen",
+        "unrealistische erwartungen",
+        "klingt gut, bringt nichts",
+        "leere versprechen",
+        "werbeversprechen",
+        "fake-testimonial",
+        "marketing-sprech",
+        "bezahlte werbung",
+        "glaube ich nicht",
+        "schleichwerbung",
+        "nur marketing",
+        "reine werbung",
+        "greenwashing",
+        "uberteuert",
+        "gesponsert",
+        "buzzwords",
+        "werbeluge",
+        "affiliate",
+        "pr-paket"
+      ],
+      "innovative-ingredients": [
+        "neue generation retinoide",
+        "fermentierte wirkstoffe",
+        "retinal statt retinol",
+        "trend-inhaltsstoff",
+        "wachstumsfaktoren",
+        "neuer wirkstoff",
+        "wirkstoff-trend",
+        "polynukleotide",
+        "neueste formel",
+        "hype-wirkstoff",
+        "peptid-komplex",
+        "growth factors",
+        "alpha-arbutin",
+        "tranexamsaure",
+        "azelainsaure",
+        "postbiotika",
+        "durchbruch",
+        "innovation",
+        "bakuchiol",
+        "ceramide",
+        "exosomen",
+        "ectoin"
+      ],
+      "next-gen-actives": [
+        "tiefenwirkung durch technologie",
+        "klinisch getestete technologie",
+        "patentierte technologie",
+        "penetrationsverstarker",
+        "im labor entwickelt",
+        "mikroverkapselung",
+        "bioverfugbarkeit",
+        "nanotechnologie",
+        "next-generation",
+        "delivery-system",
+        "laborinnovation",
+        "biofermentiert",
+        "encapsulation",
+        "ki-entwickelt",
+        "time-release",
+        "ki-gestutzte",
+        "tragersystem",
+        "liposomen",
+        "next gen",
+        "biotech"
+      ],
+      "social-pressure": [
+        "im job zahlt das aussehen",
+        "gesellschaftlicher druck",
+        "vergleiche mich standig",
+        "alle sehen gleich aus",
+        "altersdiskriminierung",
+        "vergleich mit anderen",
+        "alter wird abgewertet",
+        "muss jung aussehen",
+        "unsichtbar werden",
+        "instagram-gesicht",
+        "unsichtbar ab 40",
+        "perfektionsdruck",
+        "schonheitsideal",
+        "erwartungsdruck",
+        "filter-druck",
+        "filterdruck",
+        "frontkamera",
+        "jugendkult",
+        "zoom-face",
+        "ageism"
+      ],
+      "celebrity-influencer": [
+        "behauptet, es sei nur creme",
+        "behauptet es sei nur creme",
+        "hat sie oder hat sie nicht",
+        "naturlich gealtert oder op",
+        "vorher-nachher-promi",
+        "markenbotschafterin",
+        "influencerin zeigt",
+        "celebrity-werbung",
+        "get ready with me",
+        "influencer verrat",
+        "sieht aus wie 30",
+        "promi-vergleich",
+        "promi-beichte",
+        "hat zugegeben",
+        "testimonial",
+        "geoutet"
+      ],
+      "cost-value": [
+        "teuer heisst nicht besser",
+        "krankenkasse zahlt nicht",
+        "drogerie statt luxus",
+        "preis pro milliliter",
+        "gunstige alternative",
+        "investition in mich",
+        "kosten pro sitzung",
+        "lohnt der aufpreis",
+        "preis leistung",
+        "preis-leistung",
+        "lohnt sich das",
+        "ratenzahlung",
+        "finanzierung",
+        "schnappchen",
+        "was kostet",
+        "sparen fur",
+        "abo-falle",
+        "zu teuer",
+        "dupe"
+      ],
+      "recovery-side-effects": [
+        "lange gedauert bis es besser",
+        "rotung nach der behandlung",
+        "wie lange sieht man das",
+        "allergische reaktion",
+        "unvertraglichkeit",
+        "barriereschaden",
+        "erholungsphase",
+        "blaue flecken",
+        "heilungsphase",
+        "nebenwirkung",
+        "komplikation",
+        "blutergusse",
+        "ausfallzeit",
+        "schalphase",
+        "schwellung",
+        "uberpflegt",
+        "nachsorge",
+        "downtime",
+        "reizung",
+        "krusten",
+        "purging"
+      ],
+      "menopause-hormonal": [
+        "kollagenverlust in den wechseljahren",
+        "haut hat sich komplett verandert",
+        "seit den wechseljahren",
+        "hormonell bedingte",
+        "hormonschwankungen",
+        "plotzlich trocken",
+        "hormonumstellung",
+        "ab 45 ging alles",
+        "hitzewallungen",
+        "ostrogenmangel",
+        "perimenopause",
+        "wechseljahre",
+        "hormoncreme",
+        "menopause",
+        "hrt"
+      ],
+      "professional-guidance": [
+        "praxis statt kosmetikstudio",
+        "erfahrung des behandlers",
+        "wem kann man vertrauen",
+        "wer darf das uberhaupt",
+        "empfehlung vom arzt",
+        "beratungsgesprach",
+        "serioser anbieter",
+        "billiganbietern",
+        "zweite meinung",
+        "qualifikation",
+        "zertifiziert",
+        "dermatologin",
+        "kosmetikerin",
+        "dermatologe",
+        "hautarztin",
+        "facharzt",
+        "hautarzt"
+      ],
+      "athome-diy": [
+        "selbst gemacht statt kosmetikerin",
+        "lohnt sich das gerat",
+        "radiofrequenzgerat",
+        "gerat fur zuhause",
+        "gesichtsmassage",
+        "heimanwendung",
+        "microcurrent",
+        "dermaroller",
+        "kryo-roller",
+        "mikrostrom",
+        "led-maske",
+        "led maske",
+        "derma-pen",
+        "face yoga",
+        "rotlicht",
+        "dermapen",
+        "gua sha"
+      ]
+    },
+    "themeLabels": {
+      "prevention": "Prevention",
+      "proactive-aging": "Proactive Aging",
+      "longevity": "Longevity",
+      "aging-gracefully": "Aging Gracefully",
+      "debunking-myths": "Debunking Myths",
+      "marketing-skepsis": "Marketing Skepsis",
+      "innovative-ingredients": "Innovative Ingredients",
+      "next-gen-actives": "Next-Gen Actives",
+      "social-pressure": "Social Pressure & Beauty Standards",
+      "celebrity-influencer": "Celebrity & Influencer Discourse",
+      "cost-value": "Cost & Value Discourse",
+      "recovery-side-effects": "Recovery & Side Effects",
+      "menopause-hormonal": "Menopause & Hormonal Aging",
+      "professional-guidance": "Professional Guidance & Trust",
+      "athome-diy": "At-Home Devices & DIY"
+    },
     "clusters": [
       {
         "id": "c0",
         "fruit": "Pomegranate",
         "label": "Pomegranate",
-        "subtitle": "Hautalterungs-Zeichen · Peeling & Microneedling · Sonnenschutz & Prävention",
+        "subtitle": "Menopause & Hormonal Aging · Recovery & Side Effects · Professional Guidance & Trust",
         "color": "#e07098",
-        "share_pct": 82.7,
-        "n_nodes": 7,
-        "weight": 255655,
+        "share_pct": 62.3,
+        "n_nodes": 11,
+        "weight": 68379,
         "top_topics": [
-          "aging-signs",
-          "peel",
-          "spf",
-          "vitamin-c",
-          "retinol"
+          "menopause-hormonal",
+          "recovery-side-effects",
+          "professional-guidance",
+          "proactive-aging",
+          "athome-diy"
         ]
       },
       {
         "id": "c1",
         "fruit": "Orange",
         "label": "Orange",
-        "subtitle": "Kosten & Preis-Leistung · Botox / Neuromodulatoren · Laser-Therapien",
+        "subtitle": "Longevity · Innovative Ingredients · Prevention",
         "color": "#e08a4a",
-        "share_pct": 17.3,
-        "n_nodes": 10,
-        "weight": 53491,
+        "share_pct": 37.7,
+        "n_nodes": 4,
+        "weight": 41335,
         "top_topics": [
-          "price",
-          "botox",
-          "laser",
-          "fillers",
-          "facelift"
+          "longevity",
+          "innovative-ingredients",
+          "prevention",
+          "next-gen-actives"
         ]
       }
     ],
     "nodes": [
       {
-        "id": "threads",
-        "label": "Fadenlifting & Ultraschall-Lifting",
-        "weight": 2625,
-        "r": 8.48,
-        "x": 0.2683,
-        "y": -0.2848,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_140_7556050662585388318",
-            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_190_3734381648364997599",
-            "text": "✨Face Contouring! ✨Mit Hyaluronsäure an den Hebepunkten des Gesichts – direkt auf den Knochen injiziert – für ein besonders langanhaltendes Ergebnis- mit neuem Präparat. 🔥🚀 Effekt: Natürliches Lifting, definierte Konturen &amp; frische Ausstrahlung.Das innovative Präparat sorgt f",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3734483816837559453",
-            "text": "✨ Aptos Full Face Fadenlifting mit Excellence Visage ✨Stellen Sie sich vor: ein jugendliches, strahlendes Gesicht – ohne OP, ohne lange Ausfallzeit.Unsere speziellen Excellence Visage Aptos-Fäden sind nicht nur Lifting-Fäden, sondern wirken zusätzlich wie ein Skinbooster.🔹 Wie fu",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "hyaluronic-acid",
-        "label": "Hyaluronsäure (topisch)",
-        "weight": 14701,
-        "r": 11.87,
-        "x": -0.0088,
-        "y": 0.0827,
+        "id": "menopause-hormonal",
+        "label": "Menopause & Hormonal Aging",
+        "weight": 17804,
+        "r": 22.38,
+        "x": 0.0804,
+        "y": -0.0031,
         "cluster": "c0",
         "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733394547247031516",
-            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733630882956237309",
-            "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733635691390559679",
-            "text": "#Aufgebraucht 🗑 💖☺️💖 *ANZEIGE - selbst gekauft! 💎 ♻️ #Elaimei Eye Mask aus der \"Marine Collagen\" Reihe auf #Amazon bestellt - \"Deep Sea Love\" ♥️ + \"Sparkling Pearl\" ♥️ - beide mit 5 wichtigen Anti-Aging Inhaltsstoffen: Meeres-Kollagen, Perlen-Extrakt, Hyaluronsäure, Rote Alge &am",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "laser",
-        "label": "Laser-Therapien",
-        "weight": 8110,
-        "r": 10.36,
-        "x": -0.0881,
-        "y": -0.228,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733788131255505289",
-            "text": "📍Monaco | 26.–28. MärzWeltweit führender Kongress für Ästhetische und Anti-Aging-Medizin💉✨ Innovation. Austausch. Exzellenz.Ich freue mich, beim international renommierten Kongress im Grimaldi Forum in Monaco dabei zu sein – ein Hotspot für die neuesten Entwicklungen, spannende I",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733871191602527717",
-            "text": "Der Thulium-Laser ist ein modernes Gerät, das ermöglicht: ▫️𝙃𝙖𝙪𝙩𝙫𝙚𝙧𝙟𝙪̈𝙣𝙜𝙪𝙣𝙜 – stimuliert die Kollagenproduktion und verbessert die Spannkraft ▫️ 𝙍𝙚𝙙𝙪𝙠𝙩𝙞𝙤𝙣 𝙫𝙤𝙣 𝙋𝙞𝙜𝙢𝙚𝙣𝙩𝙛𝙡𝙚𝙘𝙠𝙚𝙣 – gleicht den Hautton aus und hellt dunkle Stellen auf ▫️ 𝙑𝙚𝙧𝙗𝙚𝙨𝙨𝙚𝙧𝙪𝙣𝙜 𝙙𝙚𝙧 𝙃𝙖𝙪𝙩𝙨𝙩𝙧𝙪𝙠𝙩𝙪𝙧 – verfeinert Poren",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733937497182144423",
-            "text": "Stören dich hartnäckige Pigmentflecken oder ein unruhiger Teint? ✨Dann zeigt dir @doc.katharina heute ihre Top 6 Behandlungen für einen ebenmäßigen, strahlenden Hautton – wissenschaftlich fundiert, modern und wirksam.📌 CO₂-LaserTrägt die obersten Hautschichten präzise ab und erne",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "niacinamide-peptides",
-        "label": "Niacinamid & Peptide",
-        "weight": 14916,
-        "r": 11.91,
-        "x": -0.095,
-        "y": 0.0699,
-        "cluster": "c0",
-        "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733394547247031516",
-            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733607129212004577",
-            "text": "Sanft, aber stark im Anti-Aging.💛Age Limit mit 0,05% Retinal, Panthenol, Bisabolol und Allantoin wirkt gegen Falten und Flecken; die wasserbasierte Textur zieht blitzschnell ein.#elynslab.de #agelimit #retinal #antiaging #panthenol #serum",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733626724086019705",
-            "text": "Ich habe die Vichy @vichylaboratoires NEOVADIOL Longevity Pro-Volumen Creme kostenlos zum Testen vom @hometesterclubde erhalten. Mir gefällt die zarte Textur, der leichte blumige Duft und dass sie schnell einzieht – meine Haut mit über 50 braucht besondere Pflege, und die Creme s",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "botox",
-        "label": "Botox / Neuromodulatoren",
-        "weight": 8296,
-        "r": 10.41,
-        "x": 0.2058,
-        "y": 0.0909,
-        "cluster": "c1",
-        "color": "#e08a4a",
         "quotes": [
           {
             "id": "0_225889_140_7555907735510895894",
@@ -5376,26 +5457,451 @@ window.DashboardData = {
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733675137149977565",
-            "text": "✨ Nach 14 Tagen – das Ergebnis kann sich sehen lassen!Botox entfaltet seine volle Wirkung innerhalb von zwei Wochen: Falten wirken glatter, der Ausdruck entspannter und das Gesicht frischer – ganz ohne starr oder unnatürlich auszusehen. 💉✨📌 Hinweis: Jede Behandlung ist individuel",
+            "id": "0_225889_26_1654990209224273",
+            "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als stark",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "id": "longevity",
+        "label": "Longevity",
+        "weight": 21502,
+        "r": 24.0,
+        "x": -0.0538,
+        "y": 0.0544,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_26_1094920645962435",
+            "text": "BENTHEIM GESUND: Einladung zum Vortrag:  𝗟𝗼𝗻𝗴𝗲𝘃𝗶𝘁𝘆 – 𝗩𝗼𝗻 𝗱𝗲𝗿 𝗞𝘂𝗻𝘀𝘁, 𝗴𝗲𝘀𝘂𝗻𝗱 𝗮𝗹𝘁 𝘇𝘂 𝘄𝗲𝗿𝗱𝗲𝗻Was wäre, wenn Altern nicht automatisch Krankheit und Abbau bedeutet?Die Longevity-Bewegung zeigt: Es geht nicht nur um mehr Lebensjahre, sondern vor allem um mehr gesunde, aktive Jahre.In sei",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733559649329874061",
+            "text": "Einladung zum Vortrag:  𝗟𝗼𝗻𝗴𝗲𝘃𝗶𝘁𝘆 – 𝗩𝗼𝗻 𝗱𝗲𝗿 𝗞𝘂𝗻𝘀𝘁, 𝗴𝗲𝘀𝘂𝗻𝗱 𝗮𝗹𝘁 𝘇𝘂 𝘄𝗲𝗿𝗱𝗲𝗻Was wäre, wenn Altern nicht automatisch Krankheit und Abbau bedeutet?Die Longevity-Bewegung zeigt: Es geht nicht nur um mehr Lebensjahre, sondern vor allem um mehr gesunde, aktive Jahre.In seinem Vortrag nimmt",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733589090667874780",
+            "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "id": "safety",
-        "label": "Sicherheit & Vertrauen",
-        "weight": 2576,
-        "r": 8.46,
-        "x": -0.2416,
-        "y": 0.2093,
+        "id": "celebrity-influencer",
+        "label": "Celebrity & Influencer Discourse",
+        "weight": 212,
+        "r": 7.79,
+        "x": -1.0,
+        "y": -0.6644,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_140_7557350460835794196",
+            "text": "Jennifer Lopez mit 56 Jahren und sieht aus wie 30 😱💃 Ihre Geheimnisse: superintensives Training, strikte Ernährung und perfekter Schlaf 💪🥗🛌 Willst du wissen, wie sie so energiegeladen bleibt? Schau dir das Video an! 🔥 #jenniferlopez #antiaging #motivation #fakten",
+            "source": "TikTok"
+          },
+          {
+            "id": "0_225889_190_3743945093640534107",
+            "text": "In dieser epischen Nacht haben wir die Zeit zurückgedreht. 💜🤍💙Beim Community x Creator Event zum Launch des neuen NIVEA CELLULAR Epigenetics Verjüngenden Serums stand alles im Zeichen der Zukunft der Skincare – und der Frage, wie wir das Hautalter in nur zwei Wochen sichtbare zur",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3752534282569548108",
+            "text": "#AlpsPure #PurityEyes #truu #HexagonalesWasser #mikroplastik #AntiAging #Zellgesundheit #wasserfilter #Altersflecken #NatürlichSchön #EZWasser #Wasserpflege #BioBeauty #Hautverjüngung #Wasserrevolution #Testimonial",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "proactive-aging",
+        "label": "Proactive Aging",
+        "weight": 4829,
+        "r": 14.53,
+        "x": 0.0176,
+        "y": -0.2514,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733755736330348534",
+            "text": "Veränderung bedeutet WachstumIch habe mich persönlich und beruflich weiterentwickelt - und so darf auch mein Institut wachsen.Ab 01.11.2025 heiße ich euch in meinen neuen Räumen willkommen.Mehr Platz für individuelle Beratung, innovative Hauttherapien &amp; eure ganz persönlichen",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733788131255505289",
+            "text": "📍Monaco | 26.–28. MärzWeltweit führender Kongress für Ästhetische und Anti-Aging-Medizin💉✨ Innovation. Austausch. Exzellenz.Ich freue mich, beim international renommierten Kongress im Grimaldi Forum in Monaco dabei zu sein – ein Hotspot für die neuesten Entwicklungen, spannende I",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733944701000023757",
+            "text": "Schluss mit den Mythen!Seit Jahren beobachten wir eine stille Epidemie: 9 von 10 Menschen in Deutschland leiden unter einem Mangel, der ihre Energie, ihren Fokus und ihre Langlebigkeit sabotiert – oft, ohne es zu wissen. Wir schieben es auf Stress, zu viel Arbeit oder das Alter.E",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "professional-guidance",
+        "label": "Professional Guidance & Trust",
+        "weight": 15601,
+        "r": 21.33,
+        "x": 0.0977,
+        "y": 0.1452,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733394547247031516",
+            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733589090667874780",
+            "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733617246208849569",
+            "text": "Ich bin Expertin für unreine Haut &amp; Anti-Ageing Behandlungen und arbeite mit Wirkstoffkosmetik aus 100 % natürlichen Inhaltsstoffen und hochwertiger Naturkosmetik.Meine Behandlungen sind immer individuell auf die Haut meiner Kundinnen abgestimmt – fachlich fundiert und ehrlic",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "next-gen-actives",
+        "label": "Next-Gen Actives",
+        "weight": 1603,
+        "r": 10.91,
+        "x": -0.3066,
+        "y": 0.3593,
         "cluster": "c1",
         "color": "#e08a4a",
         "quotes": [
           {
-            "id": "0_225889_15_29652566885882260",
-            "text": "Vorsicht, wenn der Ring vom Finger rutscht Prof. Dr. Dorothee Volkert bedauert, dass in der Ärzteausbildung Ernährung nur eine untergeordnete Rolle spielt. Viele ältere Menschen essen zu wenig oder zu einseitig – mit oft gravierenden Folgen: höheres Risiko für Infektionen, schlec",
-            "source": "Blogs"
+            "id": "0_225889_26_24469278246086987",
+            "text": "Antiaging, Longevity…. Heute in aller Munde. Nicht nur körperlich wollen wir jung bleiben, aber vor allem geistig auf der Höhe bleiben. Demenz ist leider eine immer größere Bedrohung fèr uns alle, die Angst macht.   Was deshalb eher in aller Munde sein sollte, ist eine ausreichen",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733683675863771016",
+            "text": "🔬 Morphiya – Exosome verpackt in einem Hybrosom 🔬Exosome könnten zu den spannendsten Innovationen in der modernen Dermatologie zählen. Sie würden als mikroskopisch kleine Vesikel wirken, die Signalmoleküle transportieren und dadurch Prozesse der Zellkommunikation anregen.Bei Morp",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735307134830384595",
+            "text": "✨TRICOLLAGEN Serum und Booster🤩Unser starkes Pflege-Duo mit stark revitalisierendem Effekt für reife, müde Haut mit Faltenbildung und Konturverlust🌱 die Haut wird gestrafft🌱 fördert die Kollagenneubildung 🌱 mit neu entwickeltem Trägersystem dringen Wirkstoffe bis in die Dermis🌱 e",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "innovative-ingredients",
+        "label": "Innovative Ingredients",
+        "weight": 13458,
+        "r": 20.24,
+        "x": -0.0471,
+        "y": 0.1831,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_26_1654990209224273",
+            "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als stark",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733683675863771016",
+            "text": "🔬 Morphiya – Exosome verpackt in einem Hybrosom 🔬Exosome könnten zu den spannendsten Innovationen in der modernen Dermatologie zählen. Sie würden als mikroskopisch kleine Vesikel wirken, die Signalmoleküle transportieren und dadurch Prozesse der Zellkommunikation anregen.Bei Morp",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "athome-diy",
+        "label": "At-Home Devices & DIY",
+        "weight": 4388,
+        "r": 14.13,
+        "x": -0.2885,
+        "y": 0.0473,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733618650067519262",
+            "text": "🇩🇪 Workout für deine Haut – ganz ohne Fitnessstudio ✨Face Yoga ist der Trend, der deine Haut natürlich strafft, entspannt und zum Strahlen bringt. 🌿💆‍♀️Die Vorteile sprechen für sich:💎 Unterstützt die straffende Wirkung unseres Umibudō Serums🌱 Der Jade-Stein wirkt belebend &amp; ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733617920661165360",
+            "text": "🌿✨ Praxis MedOx – Ihre Premium-Adresse in Dortmund für Gesundheit, Schönheit und Wohlbefinden ✨🌿In unserer Praxis finden Sie alles, was Sie brauchen, um Körper, Geist und Seele in Balance zu bringen. Unser Ziel ist es, Ihnen nicht nur Behandlungen, sondern ein ganzheitliches Erle",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733643689609467799",
+            "text": "Sanfte Berührung, tiefe Entspannung Loslassen, Energie fließen lassen und Harmonie spüren.Anti- Aging Effekt #akkupressur#gesichtsmassage#tcm#tcmhealing#naturkosmetik#energyhealing#loslassen#entspannungpur#selfcare#guasha#selflove#stressabbau#harmony#reikivibes#gesundheit#wellnes",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "recovery-side-effects",
+        "label": "Recovery & Side Effects",
+        "weight": 16926,
+        "r": 21.97,
+        "x": -0.0142,
+        "y": -0.0319,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_26_1128490679431437",
+            "text": "✨ Die Vorteile des Vital Injector 2 auf einen Blick: ✨✅ Minimiert feine Linien &amp; Falten✅ Verbessert Aknenarben✅ Verkleinert Poren✅ Verfeinert Hautstruktur &amp; TeintDer Vital Injector 2 ist Ihr All-in-One Beauty-Tool – für sichtbare Ergebnisse in kürzester Zeit, mit weniger ",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733665301541027555",
+            "text": "Strahlender Blick in jedem Moment – sag müden Augen den Kampf an! Mit der L'Oréal Paris Anti-Aging-Augenpflege mit Dreifachpower erlebst du neue Frische und Vitalität, die nicht nur deine Haut, sondern auch dein Selbstbewusstsein strahlen lässt. - ✨ Mildert sichtbar Fältchen - 💧 ",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "aging-gracefully",
+        "label": "Aging Gracefully",
+        "weight": 1728,
+        "r": 11.1,
+        "x": 0.4506,
+        "y": -0.2221,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733901204095762632",
+            "text": "✨ Myofasziale Gesichtsmassage – mehr als nur Entspannung ✨Dein Gesicht erzählt Geschichten – von Stress, Haltung, Emotionen und gelebten Momenten. Linien, Spannungen und Verklebungen in den Faszien sind nicht nur Spuren der Zeit, sondern ein Spiegel deiner Lebensgeschichte.Bei me",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734510219771627478",
+            "text": "✨ Self-Care Thursday bei The Kickstart Concept ✨„Self-Care bedeutet, sich selbst mit derselben Fürsorge zu behandeln, die man seinen Liebsten schenkt.\" 💛Ursprünglich kommt der Begriff Self-Care aus der Gesundheits- und Achtsamkeitsbewegung. Es geht dabei nicht um Egoismus oder üb",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734744716211165097",
+            "text": "𝐵𝑟𝑎𝑛𝑑𝑒𝑑 𝐶𝑜𝑛𝑡𝑒𝑛𝑡 / 𝐴𝑛𝑧𝑒𝑖𝑔𝑒 / 𝑈𝑛𝑏𝑒𝑧𝑎𝑙𝑡𝑒 𝑊𝑒𝑟𝑏𝑢𝑛𝑔 ✨ Mein Glow-Geheimnis?Ich habe die NOP Multi-Lift Serie entdeckt 💎💧 Hydra Serum – zieht sofort ein und schenkt frische, strahlende Haut ganz ohne Filter.🌸 Anti-Aging Creme – macht meine Haut fester, glatter und gesünder.👁️ Augenpflege",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "debunking-myths",
+        "label": "Debunking Myths",
+        "weight": 4379,
+        "r": 14.12,
+        "x": 0.2725,
+        "y": 0.0568,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3733862349397334015",
+            "text": "Die größten Morgen-Routine-Fehler – und warum deine Haut schon vor 9 Uhr sauer auf dich ist. ❌😅Manchmal sind es nicht die teuren Produkte, sondern die kleinen Alltagsfehler, die deine Haut ärgern:❌ Duschgel fürs Gesicht – zerstört die Hautbarriere❌ Keine Pflege, „Make-up reicht s",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733896672595192115",
+            "text": "Vitamin-Infusionen – Trend oder evidenzbasierte Unterstützung für Ihren Körper? 🫣💊💉 Warum funktioniert das?Bei der intravenösen Verabreichung werden Vitamine und Mikronährstoffe nahezu zu 100 % vom Körper aufgenommen.Im Gegensatz zu oralen Präparaten, deren Wirksamkeit durch den ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733999661606806823",
+            "text": "Hier die Lösung,Zu viele Produkte auf einmal → Überpflege-Effekt (Skin Flooding).Was sich nach mehr Pflege anfühlt, zerstört in Wahrheit die natürliche Schutzschicht deiner Haut.Hautbarriere = Schutzschild gegen Bakterien, Umwelt &amp; Wasserverlust.Wenn sie gestört ist → Mikroen",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "social-pressure",
+        "label": "Social Pressure & Beauty Standards",
+        "weight": 585,
+        "r": 8.97,
+        "x": 0.4911,
+        "y": -0.6993,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3734626103953243726",
+            "text": "❔Fragen in der ästhetischen Beratung – ein feiner, aber entscheidender Unterschied ❔In der ästhetischen Medizin macht es einen großen Unterschied, wie eine Frage gestellt wird und was wir auf Fragen antworten.*Was würden Sie an mir verändern?* Eine häufig gestellte Frage unserer ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3738299097104082318",
+            "text": "🌸„Ein neues Verständnis von Schönheit\"Ich habe den Beauty-Markt lange genug gesehen, erlebt und hinterfragt.Über 25 Jahre Erfahrung, unzählige Schulungen und Kongresse – und doch war eines immer gleich:Dogmen, Vorgaben und Schönheitsideale, die uns glauben machen, es gäbe nur ein",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3741138123838203195",
+            "text": "Feminism in a nutshell part 4 🫰🏼🩷 #viral #feminism #feminismus #kyliejennerlips #haileybieber #schönheit #schönheitsideale #filler #lipfiller #beautyop #antiaging #patriarchy #Patriarchat #frauen #womenhood",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "id": "marketing-skepsis",
+        "label": "Marketing Skepsis",
+        "weight": 1029,
+        "r": 9.94,
+        "x": 0.4084,
+        "y": 0.4354,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_26_1321194086466459",
+            "text": "🌿 Strahlende Haut kennt kein Alter! Du willst eine Haut, die gesund aussieht – und sich auch so anfühlt? Dann bist du hier genau richtig.Ich bin Silvia und mein 💕 Herzensthema ist es, Frauen wie dich dabei zu unterstützen, ihre Haut sichtbar zu verbessern – ganz ohne leere Verspr",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3736800674970450630",
+            "text": "„Ich hab mir eine teure Creme gekauft – sie sollte mich jung machen.\"Klingt vertraut, oder? Wir alle suchen nach dieser einen Pflege, die uns wieder strahlen lässt.Aber hier ist die Wahrheit:Keine Creme der Welt kann das, was Skinbooster tun.Warum?Weil Cremes nur auf der Oberfläc",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1378547364279136",
+            "text": "LONGEVITY, Teil 1:oder: Strategien für ein gesundes langes Leben. In den kommenden Tagen werde ich in 13 aufeinanderfolgenden Kapiteln über dieses aktuelle Thema berichten. Auffällig ist, dass es zu diesem wichtigen Thema sehr wenig seriöse Informationen gibt und bei der Umsetzun",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "id": "cost-value",
+        "label": "Cost & Value Discourse",
+        "weight": 898,
+        "r": 9.68,
+        "x": 0.0573,
+        "y": 0.7185,
+        "cluster": "c0",
+        "color": "#e07098",
+        "quotes": [
+          {
+            "id": "0_225889_190_3735334548322964296",
+            "text": "Tipp von einer weisen Dame 👵🏼: Sunlight before Screenlight für einen richtig geilen Schlaf. Und wenn du noch nicht weißt, dass Schlaf die Nr. 1 im Longevity-Game ist, dann folge mir gern für weitere superduper Tipps während meiner Low-Budget-Longevity-Challenge.#Gesundheit #ColdS",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3738933315731670464",
+            "text": "Welche Tagespflege beugt Pigmentflecken und Falten vor? Zwei Dermatologinnen haben zehn Anti-Aging-Cremes aus der Drogerie getestet. Die beste Pflege ist gleichzeitig auch Preis-Leistungs-Sieger. Den SZ-Plus-Link zum Artikel aus dem Archiv finden Sie in der Bio.Protokolle: Verena",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1390013782492792",
+            "text": "Welche Tagespflege beugt Pigmentflecken und Falten vor? Zwei Dermatologinnen haben zehn Anti-Aging-Cremes aus der Drogerie getestet. Die beste Pflege ist gleichzeitig auch Preis-Leistungs-Sieger. (SZ Plus/Archiv)",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "label": "Prevention",
+        "weight": 4772,
+        "r": 14.48,
+        "x": -0.1654,
+        "y": -0.1277,
+        "cluster": "c1",
+        "color": "#e08a4a",
+        "quotes": [
+          {
+            "id": "0_225889_26_24469278246086987",
+            "text": "Antiaging, Longevity…. Heute in aller Munde. Nicht nur körperlich wollen wir jung bleiben, aber vor allem geistig auf der Höhe bleiben. Demenz ist leider eine immer größere Bedrohung fèr uns alle, die Angst macht.   Was deshalb eher in aller Munde sein sollte, ist eine ausreichen",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733712995793520830",
+            "text": "Viele Anti-Falten-Cremes und Seren versprechen eine sichtbare Glättung bestehender Falten – doch wissenschaftlich betrachtet ist das so nicht möglich. 🧬Warum? Die meisten Inhaltsstoffe können die Hautbarriere nicht tief genug durchdringen, um in den Schichten zu wirken, in denen ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733825337533672667",
+            "text": "Die meisten von uns denken erst über Hautpflege nach, wenn die ersten Fältchen schon sichtbar sind. Aber wusstest du, dass die Hautalterung viel früher beginnt, als wir glauben?👉 Die Wahrheit ist: Vorbeugen ist leichter, als Falten später zu bekämpfen!Regelmäßige, professionelle ",
+            "source": "Instagram Public"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "menopause-hormonal",
+        "target": "longevity",
+        "weight": 1761,
+        "width": 3.9,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_1654990209224273",
+            "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als stark",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_26_24469278246086987",
+            "text": "Antiaging, Longevity…. Heute in aller Munde. Nicht nur körperlich wollen wir jung bleiben, aber vor allem geistig auf der Höhe bleiben. Demenz ist leider eine immer größere Bedrohung fèr uns alle, die Angst macht.   Was deshalb eher in aller Munde sein sollte, ist eine ausreichen",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733918002006763458",
+            "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 ",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "longevity",
+        "target": "innovative-ingredients",
+        "weight": 1715,
+        "width": 3.82,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_26_1654990209224273",
+            "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als stark",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733683675863771016",
+            "text": "🔬 Morphiya – Exosome verpackt in einem Hybrosom 🔬Exosome könnten zu den spannendsten Innovationen in der modernen Dermatologie zählen. Sie würden als mikroskopisch kleine Vesikel wirken, die Signalmoleküle transportieren und dadurch Prozesse der Zellkommunikation anregen.Bei Morp",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "menopause-hormonal",
+        "target": "recovery-side-effects",
+        "weight": 1478,
+        "width": 3.39,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733918002006763458",
+            "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 ",
+            "source": "Instagram Public"
           },
           {
             "id": "0_225889_190_3734337879494387801",
@@ -5403,1028 +5909,609 @@ window.DashboardData = {
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_140_7557699826125655318",
-            "text": "مرزه (Savory): فواید معجزه‌گر مرزه برای گوارش، ایمنی و آرامش، آنتی بیوتیکی طبیعی برای بدن در این ویدیو، خواص شگفت‌انگیز مرزه (Savory / مرزه تابستانی) را دقیق و کامل بررسی می‌کنیم؛ از ترکیبات فعال آن (کارواکرول، تیمول، پاراسیمن و ترپنین‌ها) گرفته تا تأثیرشان روی گوارش، سیستم ایمنی",
-            "source": "TikTok"
-          }
-        ]
-      },
-      {
-        "id": "natural",
-        "label": "Natürlichkeit & Authentizität",
-        "weight": 1576,
-        "r": 7.92,
-        "x": 0.4895,
-        "y": -0.0105,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_190_3736512065901745709",
-            "text": "𝗠𝗢𝗡𝗔𝗧 – 𝗺𝗲𝗵𝗿 𝗮𝗹𝘀 𝗻𝘂𝗿 𝗛𝗮𝗮𝗿𝗽𝗳𝗹𝗲𝗴𝗲. 𝗘𝗶𝗻𝗲 𝗕𝗲𝘄𝗲𝗴𝘂𝗻𝗴. 𝗘𝗶𝗻 𝗟𝗶𝗳𝗲𝘀𝘁𝘆𝗹𝗲. 𝗘𝗶𝗻𝗲 𝗖𝗵𝗮𝗻𝗰𝗲𝐖𝐚𝐬, 𝐰𝐞𝐧𝐧 𝐝𝐮 𝐏𝐫𝐨𝐝𝐮𝐤𝐭𝐞 𝐡ä𝐭𝐭𝐞𝐬𝐭, 𝐝𝐢𝐞 𝐧𝐢𝐜𝐡𝐭 𝐧𝐮𝐫 𝐬𝐜𝐡ö𝐧 𝐦𝐚𝐜𝐡𝐞𝐧 – 𝐬𝐨𝐧𝐝𝐞𝐫𝐧 𝐰𝐢𝐫𝐤𝐥𝐢𝐜𝐡 𝐰𝐢𝐫𝐤𝐞𝐧?🌿 vegan, tierversuchsfrei &amp; clean💧 mit patentiertem Rejuveniqe™-Öl🌸 für Haut, Haar &amp; ganzheitliches Wohlbefinden𝘔𝘖",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3736711933245309187",
-            "text": "Faltenfrei ist kein Zustand – es ist eine Entscheidung.Wer nur Hyaluron will, aber nicht an sich arbeitet, sucht eine Illusion.Ästhetik beginnt da, wo Verantwortung und Ergebnis sich treffen.#faltenfrei #beautydoc #aesthetic #medicalbeauty #hyaluron #threads #mintpdo #skinbooster",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3736725366099436563",
-            "text": "✨ 14 Tage Lymph-Reset ✨Dein natürlicher Anti-Aging-Kick für mehr Leichtigkeit, frische Ausstrahlung &amp; sichtbar definierte Konturen 💧🌿Fühlst du dich manchmal aufgedunsen, geschwollen oder einfach nicht mehr so strahlend wie früher?Dann ist unser 14-Tage-Lymph-Reset dein Beauty",
+            "id": "0_225889_190_3735085312125700740",
+            "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fäl",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "id": "spf",
-        "label": "Sonnenschutz & Prävention",
-        "weight": 20891,
-        "r": 13.0,
-        "x": -0.1342,
-        "y": -0.098,
-        "cluster": "c0",
-        "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733630882956237309",
-            "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733647324972087042",
-            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733657271394942067",
-            "text": "Das Besondere an dieser Foundation?Sie pflegt deine Haut wie eine Creme - wahrend sie dein Make-up perfektioniert.💛 Präbiotisches Serum - stärkt die Hautbarriere💛 Vitamin E - schützt vor Hautalterung💛 Anti-Aging-Wirkung - kaschiert Linien sofort💛 SPF 12 - schützt vor Sonnenschäde",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "facelift",
-        "label": "Chirurgische Eingriffe",
-        "weight": 5779,
-        "r": 9.68,
-        "x": 0.0885,
-        "y": -0.2925,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_140_7556050662585388318",
-            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_140_7555907735510895894",
-            "text": "Nur dass unser „Menü\" ein bisschen länger hält!😉 __________________________ ⚠️Wir sind spezialisiert auf ästhetische Eingriffe der gesamten Kopf- und Halsregion sowie auf körperformende Operationen. Gesicht &amp; Hals: funktionelle und ästhetische Nasenkorrekturen, Korrekturen vo",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_190_3733542934969625638",
-            "text": "Nur dass unser „Menü\" ein bisschen länger hält!😉__________________________⚠️Wir sind spezialisiert auf ästhetische Eingriffe der gesamten Kopf- und Halsregion sowie auf körperformende Operationen.Gesicht &amp; Hals: funktionelle und ästhetische Nasenkorrekturen, Korrekturen von v",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "retinol",
-        "label": "Retinoide",
-        "weight": 15637,
-        "r": 12.05,
-        "x": -0.1562,
-        "y": 0.041,
-        "cluster": "c0",
-        "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733478883803689483",
-            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_26_1208689084607808",
-            "text": "✨ Entdecke die exklusive BEAUTY JUNGLE XMAS-Kollektion 2025 – Luxuspflege, die dich strahlend schön durch die Festtage begleitet! 🎄Sichere dir jetzt deine Favoriten – die Kollektion ist limitiert:✨ Beauty Jungle Special – Adventskalender der besonderen Art mit 6 Pflege-Highlights",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_190_3733581845637159057",
-            "text": "🌿 Goji-Beeren – kleine Powerfrüchte für deinen Mama-Alltag 🌿Die roten Beeren sind nicht nur lecker, sondern auch wahre Nährstoffbomben:🍒 Vitamine – reich an Vitamin A, C &amp; B-Vitaminen → unterstützen Immunsystem &amp; Energie.💪 Mineralien – Eisen, Zink, Selen → gut für Blutbil",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "fillers",
-        "label": "Hyaluron-Filler",
-        "weight": 7070,
-        "r": 10.07,
-        "x": 0.1679,
-        "y": -0.0766,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733593947705086154",
-            "text": "Die Kirmes ist geschafft, die Sonne scheint und ich bin gleich für Euch am Start ☀️#haan #hilden #düsseldorf #wuppertal #solingen #kosmetik #comfortzone #novarom_beauty #janeiredale #binellamedicalbeauty  #neovita #augenmanufaktur #beautyhillscosmetic #haan_insight #mettmann_insi",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_26_1128490679431437",
-            "text": "✨ Die Vorteile des Vital Injector 2 auf einen Blick: ✨✅ Minimiert feine Linien &amp; Falten✅ Verbessert Aknenarben✅ Verkleinert Poren✅ Verfeinert Hautstruktur &amp; TeintDer Vital Injector 2 ist Ihr All-in-One Beauty-Tool – für sichtbare Ergebnisse in kürzester Zeit, mit weniger ",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_190_3733721803454725222",
-            "text": "Hydrafacial – das Glow-Geheimnis für Deine Haut Mit nur einer Behandlung erreichst Du sichtbar bessere Haut:✅ Entfernt 100 % der Hautunreinheiten und abgestorbenen Zellen✅ Reduziert bis zu 90 % feine Linien &amp; Fältchen✅ Verfeinert Hautton &amp; verbessert die Hauttextur spürba",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "celebrity",
-        "label": "Prominente & Influencer-Diskurs",
-        "weight": 1534,
-        "r": 7.9,
-        "x": -0.3549,
-        "y": -0.3177,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733977440628815268",
-            "text": "✨ Strahlende Haut ist kein Zufall – sie ist Pflege ✨Viele von uns kennen die Herausforderungen:👉 Rosacea, die Hautrötungen sichtbar macht👉 Akne &amp; unreine Haut, die oft das Selbstbewusstsein belasten👉 Fältchen &amp; Linien, die sich mit der Zeit einschleichenMit der Health Not",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3735180263878845867",
-            "text": "Du zahlst für Kollagen – aber schluckst du wirklich das, was dein Körper braucht… oder nur teures Wasser?\" 💧💸Es gibt unzählige Kollagen-Produkte… doch die Frage ist: Bleibt davon überhaupt etwas in deinem Körper? Oder flutscht es einfach durch und landet als teures Wasser im Abfl",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3739054744514916805",
-            "text": "✨ Celebrity Check: J.Lo ✨Mit über 50 sieht Jennifer Lopez frischer und jugendlicher aus als je zuvor – aber was steckt dahinter? 💉💫Dr. Grittern schaut genauer hin: Von clever eingesetzten Treatments über modernste Skin-Tools bis hin zu kleinen Beauty-Secrets – J.Lo zeigt, wie man",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "price",
-        "label": "Kosten & Preis-Leistung",
-        "weight": 15655,
-        "r": 12.06,
-        "x": 0.0778,
-        "y": 0.0109,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_26_1225135836296932",
-            "text": "Seit ihr gespannt auf unsere Box ❓❓❓Wieder ein Knaller und ein riesen Lob an LimeLife für das 3x infolge einen so tolle Pflege Box📦*Ihr bekommt sie jeden Monat 1x über euer Kundenkonto für 45€ versandfrei*, egal welcher wert enthalten ist. Im Oktober Wert 85€. https://www.limelif",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_190_3733648718981847066",
-            "text": "Seit ihr gespannt auf unsere Box ❓❓❓Wieder ein Knaller und ein riesen Lob an LimeLife für das 3x infolge einen so tolle Pflege Box📦*Ihr bekommt sie jeden Monat 1x über euer Kundenkonto für 45€ versandfrei*, egal welcher wert enthalten ist. Im Oktober Wert 85€. https://www.limelif",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_26_789195373711446",
-            "text": "Mehr Jugendlichkeit im Gesicht durch NaturBrows 1000€ Sanfte Anpassung mit sichtbarem Anti-Aging-Effekt.„Wer hätte gedacht, dass Augenbrauen Jahre von deinem Gesicht nehmen können? Mit NaturBrows 1000€ haben wir die Form leicht angehoben, um den Blick zu öffnen, und eine sanfte, ",
-            "source": "Facebook Pages"
-          }
-        ]
-      },
-      {
-        "id": "vitamin-c",
-        "label": "Vitamin C",
-        "weight": 18615,
-        "r": 12.6,
-        "x": -0.2131,
-        "y": -0.021,
-        "cluster": "c0",
-        "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733610685780566953",
-            "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Fei",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "peel",
-        "label": "Peeling & Microneedling",
-        "weight": 32609,
-        "r": 14.74,
-        "x": -0.0068,
-        "y": -0.1153,
-        "cluster": "c0",
-        "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733478883803689483",
-            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733589090667874780",
-            "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733608589408340521",
-            "text": "Meine Leidenschaft ist es, speziell Frauen mit meinen Händen und meiner Stimme auf einer tieferen Ebene zu Berühren. Ich gebe Dir dass Gefühl dich fallen lassen zu können, in deiner goldenen Mitte ankommen zu können. Nach einer Behandlung bei mir fühlst du dich schöner, entspannt",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "aging-signs",
-        "label": "Hautalterungs-Zeichen",
-        "weight": 138286,
-        "r": 24.0,
-        "x": -0.0224,
-        "y": -0.0602,
-        "cluster": "c0",
-        "color": "#e07098",
-        "quotes": [
-          {
-            "id": "0_225889_190_3733394547247031516",
-            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_140_7556050662585388318",
-            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_190_3733478883803689483",
-            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "id": "pressure",
-        "label": "Gesellschaftlicher Druck",
-        "weight": 270,
-        "r": 6.8,
-        "x": 0.0234,
-        "y": 1.0,
-        "cluster": "c1",
-        "color": "#e08a4a",
-        "quotes": [
-          {
-            "id": "0_225889_26_1398367725625033",
-            "text": "👶✨️ Packungsbeilage beachten! Gezeichnet beim diesjährigen \"Inselwitz\" auf Baltrum zum Thema \"Cartoons für alte Leute\"#schönheitswahn #antiaging #skinscare #humor",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_9_yt.Wrr_hEvOj4A",
-            "text": "Schönheitsideale werden immer wilder Überall wird geliftet, gespritzt, getaped und „Baby-Botoxed\". Promis altern rückwärts, 30-Jährige bekommen Panik vor ihren ersten Falten und Schönheitschirurg*innen analysieren auf TikTok, wer welches Gesicht wo verändert hat. Anti-Aging-Produ",
-            "source": "Youtube"
-          },
-          {
-            "id": "0_225889_15_38522496369994195",
-            "text": "Kate Winslet äußert Bedenken über Schönheitsoperationen und Diät-Injektionen Kate Winslet äußert ihre Sorgen über den ansteigenden Trend von Schönheitsoperationen und Abnehmspritzen. Die talentierte britische Schauspielerin ist ein Fan der natürlichen Schönheit und findet es „beä",
-            "source": "Blogs"
-          }
-        ]
-      }
-    ],
-    "edges": [
-      {
-        "source": "peel",
-        "target": "aging-signs",
-        "weight": 19670,
-        "width": 3.9,
+        "source": "menopause-hormonal",
+        "target": "professional-guidance",
+        "weight": 1273,
+        "width": 3.01,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3733478883803689483",
-            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
+            "id": "0_225889_190_3733742512730069065",
+            "text": "Microneedling ist eine meiner absoluten Lieblingsbehandlungen, wenn es um Hautverbesserung geht.Beim Microneedling wird die Haut mit feinsten, sterilen Nadeln behandelt.Dadurch entstehen winzige Mikrokanäle in der obersten Hautschicht.Deine Haut startet sofort ihren Selbstheilung",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733589090667874780",
-            "text": "#halloOktober #HerbstGlow #Microneedling #Fruchtsäurepeeling #SkinGlow #MedicalBeauty #SkincareGoals #GlowSkin #SkincareRoutine #BeautyStudio #Kosmetikerin #StrahlendeHaut #SkincareTips #Zellerneuerung #BeautyHannover #Hautpflege #SkinCareLover #BeautyRoutine #SkincareCommunity #",
+            "id": "0_225889_190_3735311718198579378",
+            "text": "💪 Krafttraining = weniger Wechseljahresbeschwerden!In 20 Jahren Praxis sehe ich es immer wieder: Frauen, die regelmäßig Krafttraining machen, kommen oft viel besser durch hormonelle Umstellungen. Das ist kein Zufall! Ab 30 verlierst du automatisch 1-2% Muskelmasse pro Jahr – und ",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733647324972087042",
-            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "id": "0_225889_140_7557011951054884118",
+            "text": "💪 Krafttraining = weniger Wechseljahresbeschwerden! In 20 Jahren Praxis sehe ich es immer wieder: Frauen, die regelmäßig Krafttraining machen, kommen oft viel besser durch hormonelle Umstellungen. Das ist kein Zufall! Ab 30 verlierst du automatisch 1-2% Muskelmasse pro Jahr – und",
+            "source": "TikTok"
+          }
+        ]
+      },
+      {
+        "source": "professional-guidance",
+        "target": "recovery-side-effects",
+        "weight": 1200,
+        "width": 2.88,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3734399460030692687",
+            "text": "✨ Gesichtsmaske – ein kleines Ritual für große Schönheit ✨Masken sind nicht nur ein angenehmer Bonus in der Hautpflege, sondern ein konzentrierter Cocktail wertvoller Inhaltsstoffe. Sie wirken gezielt und lösen spezifische Hautprobleme:🌿 Feuchtigkeitsspendend – versorgen die Haut",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735094033317225286",
+            "text": "Posted @withregram • @vonlupin_cosmetic Von strahlenden Augenblicken kannst du gar nicht genug bekommen? Dann wirst du die VON LUPIN Augenpflege lieben. Wähle deinen Favoriten:👁 Rich Eye Cream: Enthält das besondere Mikropeptid Argireline, das als »natürliches Botox light« gilt. ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735986733109258674",
+            "text": "Unsere Peelings- für ein frischeres, reineresHautbild mit mehr Glow, Verbesserung der Oberflächenstruktur für eine feinporigere und farblich ebenmäßigere Haut-• Fruchtsäure (Glykol)-Peeling• Salicylpeeling• TCA (Trichloressigsäure)-PeelingEine erfolgversprechende Peelingtherapie ",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "spf",
-        "target": "aging-signs",
-        "weight": 11984,
-        "width": 2.65,
-        "same_cluster": true,
+        "source": "longevity",
+        "target": "recovery-side-effects",
+        "weight": 1163,
+        "width": 2.81,
+        "same_cluster": false,
         "quotes": [
           {
             "id": "0_225889_190_3733647324972087042",
             "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733657271394942067",
-            "text": "Das Besondere an dieser Foundation?Sie pflegt deine Haut wie eine Creme - wahrend sie dein Make-up perfektioniert.💛 Präbiotisches Serum - stärkt die Hautbarriere💛 Vitamin E - schützt vor Hautalterung💛 Anti-Aging-Wirkung - kaschiert Linien sofort💛 SPF 12 - schützt vor Sonnenschäde",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733671040086766936",
-            "text": "✨ Straffere, glattere Haut in nur 4 Wochen – klinisch bewiesen! ✨Die Eucerin Hyaluron-Filler 3x Effect Pflege mit hochkonzentriertem 5% B5 und 2 Arten von Hyaluronsäure mildert sichtbar Falten und stärkt die Hautbarriere.Dank LSF 30 wird die Haut zusätzlich vor UV-bedingter Hauta",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "niacinamide-peptides",
-        "target": "aging-signs",
-        "weight": 8090,
-        "width": 2.02,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733394547247031516",
-            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733626724086019705",
-            "text": "Ich habe die Vichy @vichylaboratoires NEOVADIOL Longevity Pro-Volumen Creme kostenlos zum Testen vom @hometesterclubde erhalten. Mir gefällt die zarte Textur, der leichte blumige Duft und dass sie schnell einzieht – meine Haut mit über 50 braucht besondere Pflege, und die Creme s",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "hyaluronic-acid",
-        "target": "aging-signs",
-        "weight": 7465,
-        "width": 1.91,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733394547247031516",
-            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "retinol",
-        "target": "aging-signs",
-        "weight": 6091,
-        "width": 1.69,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733478883803689483",
-            "text": "Liebe ZEITLOSE SCHÖNHEIT ✨️ Nacht für Nacht stärker 🌙 💤 Unsere ÉLIXIR MÉTAMORPHOSE Retinol Drops: wenn Retinol auf Pflegeöl trifft, passiert Magie.Was sie können:• Stimuliert die Kollagenproduktion &amp; fördert den Zellumsatz – für sichtbar feinere, gleichmäßigere Haut. • Erhöht",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
             "source": "Instagram Public"
           },
           {
             "id": "0_225889_190_3733720916267213444",
             "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелки",
             "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733918002006763458",
+            "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 ",
+            "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "vitamin-c",
-        "target": "aging-signs",
-        "weight": 5816,
-        "width": 1.65,
+        "source": "longevity",
+        "target": "prevention",
+        "weight": 1162,
+        "width": 2.81,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3733610685780566953",
-            "text": "Reich an Vitamin E (dem „Vitamin der Jugend\") und essenziellen Fettsäuren, nährt tief, regeneriert und schützt vor freien Radikalen.Wirkt wie ein Jungbrunnen – glättet, strafft und verleiht einen strahlenden Teint.Ideal für trockene, reife und empfindliche Haut.• Hydrolat aus Fei",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "price",
-        "target": "aging-signs",
-        "weight": 5104,
-        "width": 1.53,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_26_789195373711446",
-            "text": "Mehr Jugendlichkeit im Gesicht durch NaturBrows 1000€ Sanfte Anpassung mit sichtbarem Anti-Aging-Effekt.„Wer hätte gedacht, dass Augenbrauen Jahre von deinem Gesicht nehmen können? Mit NaturBrows 1000€ haben wir die Form leicht angehoben, um den Blick zu öffnen, und eine sanfte, ",
+            "id": "0_225889_26_24469278246086987",
+            "text": "Antiaging, Longevity…. Heute in aller Munde. Nicht nur körperlich wollen wir jung bleiben, aber vor allem geistig auf der Höhe bleiben. Demenz ist leider eine immer größere Bedrohung fèr uns alle, die Angst macht.   Was deshalb eher in aller Munde sein sollte, ist eine ausreichen",
             "source": "Facebook Pages"
           },
           {
-            "id": "0_225889_26_1438781807598330",
-            "text": "Face-Lift ohne OP❓Das geht mit Micro Needling PRO❗Micro Needling PRO ist ein erfolgreiches Verfahren im Bereich Anti-Aging und Problemhaut-Behandlung. Die nicht-ablative Hautverjüngungs-Technik ermöglicht es, die Haut an Gesicht, Augen, Lippen, Hals, Dekolleté zu verbessern und z",
+            "id": "0_225889_26_1333489144800851",
+            "text": "Muss ich jetzt Medikamente nehmen?Heute ist internationaler Longevity-Tag und passend dazu habe ich eine tolle Neuigkeit für dich! Endlich ist es soweit: Die Auswertung meines umfangreichen Longevity-Experiments steht an! Dr. med. Andrea Gartenbach, Ärztin für Präventionsmedizin,",
             "source": "Facebook Pages"
           },
           {
-            "id": "0_225889_190_3733959938646220549",
-            "text": "🍂 Microneedling im Herbst – die perfekte Zeit für strahlende Haut! 🍂Weniger Sonne, mehr Regeneration – genau jetzt ist der beste Moment, deiner Haut etwas Gutes zu tun.✨ Unser Herbst-Special:Microneedling inkl. Mikrodermabrasion &amp; Wirkstoffmaske – für nur 165 € (statt 179 €).",
+            "id": "0_225889_190_3733860404750519048",
+            "text": "Muss ich jetzt Medikamente nehmen?⁠⁠Heute ist internationaler Longevity-Tag und passend dazu habe ich eine tolle Neuigkeit für dich! ⁠⁠Endlich ist es soweit: Die Auswertung meines umfangreichen Longevity-Experiments steht an! Dr. med. Andrea Gartenbach, Ärztin für Präventionsmedi",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "laser",
-        "target": "aging-signs",
-        "weight": 3799,
-        "width": 1.32,
+        "source": "innovative-ingredients",
+        "target": "recovery-side-effects",
+        "weight": 1092,
+        "width": 2.68,
         "same_cluster": false,
         "quotes": [
           {
-            "id": "0_225889_190_3733871191602527717",
-            "text": "Der Thulium-Laser ist ein modernes Gerät, das ermöglicht: ▫️𝙃𝙖𝙪𝙩𝙫𝙚𝙧𝙟𝙪̈𝙣𝙜𝙪𝙣𝙜 – stimuliert die Kollagenproduktion und verbessert die Spannkraft ▫️ 𝙍𝙚𝙙𝙪𝙠𝙩𝙞𝙤𝙣 𝙫𝙤𝙣 𝙋𝙞𝙜𝙢𝙚𝙣𝙩𝙛𝙡𝙚𝙘𝙠𝙚𝙣 – gleicht den Hautton aus und hellt dunkle Stellen auf ▫️ 𝙑𝙚𝙧𝙗𝙚𝙨𝙨𝙚𝙧𝙪𝙣𝙜 𝙙𝙚𝙧 𝙃𝙖𝙪𝙩𝙨𝙩𝙧𝙪𝙠𝙩𝙪𝙧 – verfeinert Poren",
+            "id": "0_225889_190_3733647324972087042",
+            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733937497182144423",
-            "text": "Stören dich hartnäckige Pigmentflecken oder ein unruhiger Teint? ✨Dann zeigt dir @doc.katharina heute ihre Top 6 Behandlungen für einen ebenmäßigen, strahlenden Hautton – wissenschaftlich fundiert, modern und wirksam.📌 CO₂-LaserTrägt die obersten Hautschichten präzise ab und erne",
+            "id": "0_225889_190_3733918002006763458",
+            "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 ",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3734455757673363862",
-            "text": "✨ CO₂-Laserbehandlung – das Geheimnis für straffere Haut ✨Mit dem CO₂-Laser kann ich die Haut sichtbar glätten und ihre Elastizität verbessern. Durch die Anregung der Kollagenbildung wirkt die Haut frischer, straffer und ebenmäßiger.👩‍⚕️ Besonders geeignet ist die Behandlung bei ",
+            "id": "0_225889_26_1498544361787661",
+            "text": "🌟 OSMOTISCHE AUGENCREME – Jetzt mit innovativem Metall-Applikator! 🌟Präzise Anwendung, kühlende Frische und sichtbare Anti-Aging-Ergebnisse – das bietet die neue Verpackung unserer bewährten Augenpflege.✨ Was steckt drin?Osmoshield® schützt vor vorzeitiger HautalterungMicrocerami",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "source": "menopause-hormonal",
+        "target": "innovative-ingredients",
+        "weight": 952,
+        "width": 2.43,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_1654990209224273",
+            "text": "Wie verjüngt die Anti-Aging-Innovation von Farfalla mit NAD+ und Q10 das Hautbild? Die Kombination aus NAD+ und Q10 wirkt in der Naturkosmetik gezielt auf den Zellstoffwechsel: NAD+ steigert die Energieproduktion der Hautzellen und fördert ihre Regeneration, während Q10 als stark",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733918002006763458",
+            "text": "Retinol ist ein bewährter Wirkstoff gegen Hautalterung, aber er kann die Haut reizen und ist für viele zu aggressiv.Bakuchiol gilt als sanftere pflanzliche Alternative: Studien zeigen, dass es ähnliche Effekte haben kann, ohne die typische Hautreizung von Retinol hervorzurufen.🌿 ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734588271885079892",
+            "text": "Bye bye Tränenrinne!Wer sie hat, weiß, wie störend sie sein kann: Die Tränenrinne. Sie kann uns tatsächlich älter aussehen lassen, als wir in Wirklichkeit sind. Bei vielen Menschen tritt die Tränenrinne bereits in jungem Alter auf, was genetisch bedingt sein kann - doch meistens ",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "retinol",
-        "target": "vitamin-c",
-        "weight": 3423,
-        "width": 1.26,
+        "source": "professional-guidance",
+        "target": "innovative-ingredients",
+        "weight": 933,
+        "width": 2.4,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733974908720419927",
+            "text": "✨ NEU bei Hira Beauty: Cellu M6 Infinity® ✨Erleben Sie die neuste Generation der Endermologie® – eine nicht-invasive Technologie zur natürlichen Aktivierung deiner Haut- und Körperzellen. Die Cellu M6 Infinity® bietet multidimensionale Stimulation mit patentierten Innovationen, g",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3733977890116382737",
+            "text": "✨ NEU bei Hira Beauty: Cellu M6 Infinity® ✨Erleben Sie die neuste Generation der Endermologie® – eine nicht-invasive Technologie zur natürlichen Aktivierung deiner Haut- und Körperzellen. Die Cellu M6 Infinity® bietet multidimensionale Stimulation mit patentierten Innovationen, g",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1581338446253620",
+            "text": "💉 Sculptra vs. Polynukleotide – wer braucht was?Dr. Kasten beantwortet diese Frage im Video 🎥✨👉 Welches Treatment interessiert euch mehr? Kommentiert gern! 💬#Sculptra #Polynukleotide #DrKasten #Hautklinik #Dermatologie #AntiAging #SkinCareTipps #ÄsthetischeDermatologie #BeautyRou",
+            "source": "Facebook Pages"
+          }
+        ]
+      },
+      {
+        "source": "athome-diy",
+        "target": "recovery-side-effects",
+        "weight": 573,
+        "width": 1.74,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "id": "0_225889_190_3733901204095762632",
+            "text": "✨ Myofasziale Gesichtsmassage – mehr als nur Entspannung ✨Dein Gesicht erzählt Geschichten – von Stress, Haltung, Emotionen und gelebten Momenten. Linien, Spannungen und Verklebungen in den Faszien sind nicht nur Spuren der Zeit, sondern ein Spiegel deiner Lebensgeschichte.Bei me",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "id": "0_225889_190_3734058655608787919",
+            "text": "✨ Face Yoga für strahlende Augen ✨Heute dreht sich alles um deine Augenmuskulatur – genauer gesagt um den Musculus Orbicularis Oculi 👁️.Mit sanften Fingerdruck entspannen wir diesen Muskel, was dabei helfen kann:💆‍♀️ Augenfältchen zu glätten🌿 Schwellungen zu reduzieren💧 Augenscha",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_15_17451107528918889",
-            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
-            "source": "Blogs"
+            "id": "0_225889_190_3735085312125700740",
+            "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fäl",
+            "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "fillers",
-        "target": "aging-signs",
-        "weight": 3036,
+        "source": "recovery-side-effects",
+        "target": "debunking-myths",
+        "weight": 518,
+        "width": 1.64,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3741919593817083946",
+            "text": "Unterspritzungen gelten grundsätzlich als sicher, da die verwendeten Produkte umfangreich geprüft und kontrolliert werden.Dennoch können Nebenwirkungen, abhängig von der jeweiligen Behandlung, auftreten. Entscheidend ist daher eine gründliche ärztliche Aufklärung und Beratung.#bo",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1420428736758718",
+            "text": "Beauty NoGo 🚫Inhaltsstoffe ignorieren? Voll daneben! Weißt Du eigentlich, was wirklich in Deiner Kosmetik steckt? Viele Produkte enthalten Parabene, Duftstoffe oder Alkohol – und das kann Allergien, Hautreizungen oder sogar vorzeitige Hautalterung verursachen! 😱Noch schlimmer: Bi",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3745348321264355233",
+            "text": "Östradiol auf die Haut? 🧴Gelangt das nicht immer in den Blutkreislauf? Mit welchen Nebenwirkungen muss ich bei Hormoncremes rechnen? @apothekerin_ihres_vertrauens im Gespräch mit Dermatologin Prof. Dr. Christiane Bayerl über den aktuellen Stand in punkto Östradiol gegen Falten un",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "longevity",
+        "target": "debunking-myths",
+        "weight": 506,
+        "width": 1.62,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733896672595192115",
+            "text": "Vitamin-Infusionen – Trend oder evidenzbasierte Unterstützung für Ihren Körper? 🫣💊💉 Warum funktioniert das?Bei der intravenösen Verabreichung werden Vitamine und Mikronährstoffe nahezu zu 100 % vom Körper aufgenommen.Im Gegensatz zu oralen Präparaten, deren Wirksamkeit durch den ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734667459178549650",
+            "text": "Denn das meiste „Collagen\" da draußen ist weder clean noch nachhaltig – es ist voll mit Zusätzen, künstlichen Stoffen und stammt oft aus tierischen Abfällen. 🛑🐄👉 Aber dein Körper braucht keine Abfälle, sondern die richtigen Bausteine für seine eigene Kollagenbildung. Yes, das ist",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3736625298201675990",
+            "text": "Hautalterung ist ein kontinuierlicher, physiologischer Prozess.Eine gesunde Haut lässt sich nicht über Nacht verändern, sondern Schritt für Schritt unterstützen: durch konsequenten Schutz, angepasste Pflege und gezielte regenerative Verfahren die die zelluläre Regeneration aktivi",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "longevity",
+        "target": "proactive-aging",
+        "weight": 506,
+        "width": 1.62,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733957781733138416",
+            "text": "✨ Longevity is the new Birkin ✨ – ein Statement für Selbstfürsorge, Achtsamkeit und ein Leben voller Gesundheit.Pinktober ist Breast Cancer Awareness Month 🎗️💕Ein Monat, der uns daran erinnert, wie wichtig Prävention, Achtsamkeit und ganzheitliche Gesundheit sind – nicht nur zur ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3736082540894397878",
+            "text": "Mit 30+ braucht dein Körper mehr Unterstützung Vitamine, Mineralstoffe &amp; Balance.🤍#Gesundheit#Vitamine#Nahrungsergänzung#Hautpflege#AntiAging#Selbstfürsorge#Kollagen#VitaminD#Zink#FrauenGesundheit#Wohlbefinden#GesunderLebensstil#SchönheitVonInnen#EnergyBoost#Hautgesundheit#M",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3736115368554177089",
+            "text": "HEAL &amp; GLOW PUR – Trauben-OPC-Saft🌿 Zutaten✔️ 1 große Schüssel reife, dunkle Garten-Trauben (am besten mit Kernen, Bio oder ungespritzt)✔️kein Zucker, kein Wasser, keine Zusätze🌀 ZubereitungDie Trauben gründlich waschen und abtropfen lassen.Nur die dicken Hauptstiele grob ent",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "menopause-hormonal",
+        "target": "proactive-aging",
+        "weight": 485,
+        "width": 1.58,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_26_1385681463096736",
+            "text": "🇩🇪 Unsere OKTOBER-EMPFEHLUNGEN! ✨Wir verraten dir, auf welche Produkte du im Oktober nicht verzichten solltest:👉🏼 Dekolleté- &amp; Hals-Pflege: Bewahre die Jugendlichkeit deines Dekolletés mit einer täglichen Pflege👉🏼 Alpine Concept Anti-Aging Handcreme: Intensive Pflege, Schutz ",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3738273564580481701",
+            "text": "Unsere OKTOBER-EMPFEHLUNGEN! ✨Wir verraten dir, auf welche Produkte du im Oktober nicht verzichten solltest:👉🏼 Dekolleté- &amp; Hals-Pflege: Bewahre die Jugendlichkeit deines Dekolletés mit einer täglichen Pflege👉🏼 Alpine Concept Anti-Aging Handcreme: Intensive Pflege, Schutz und",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3738372022872215827",
+            "text": "🌸 Natürlich schön – mit der Kraft ätherischer Öle 🌸Wenn sich der Tag verabschiedet und Du Dir einen Moment nur für Dich nimmst … dann darf auch Deine Haut zur Ruhe kommen. 💧Dieses Anti-Aging-Gesichtsserum ist ein echter Herzensbegleiter für Deine Abendroutine – nährend, ausgleich",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "professional-guidance",
+        "target": "debunking-myths",
+        "weight": 470,
+        "width": 1.55,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3738954501924397038",
+            "text": "Das hilft wirklich für schöne Haut ab 35 - Facharzt klärt auf.Hast du dich auch schon gefragt, was medizinisch wirklich für schöne Haut ab 35 funktioniert? Zwischen Trends, Halbwahrheiten und Marketingversprechen ist das oft gar nicht so leicht zu erkennen.In unserem neuen Reel b",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3739361157254515106",
+            "text": "Longevity &amp; Better-Aging beginnt heute und in dir. Mehr Energie. Mehr Leben. Mehr Klarheit. Mehr du.Stell dir vor: Dein Körper bleibt länger jung, leistungsfähig und klar weil du deiner Gesundheit die richtigen Impulse gibst.Minerva-Vita steht für eine neue Generation von Lon",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3743973599959852330",
+            "text": "Als Hautärztin sehe ich es jeden Tag: Prävention ist der wahre Anti-Aging-Gamechanger. 🧴💡So geht's:1️⃣ Täglicher Sonnenschutz – das A und O! ☀️➡️ Mindestens LSF 30, besser noch mehr – das ganze Jahr über.2️⃣ Pflege mit Antioxidantien – sie neutralisieren freie Radikale.➡️ Achte a",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "longevity",
+        "target": "next-gen-actives",
+        "weight": 396,
+        "width": 1.42,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_26_24469278246086987",
+            "text": "Antiaging, Longevity…. Heute in aller Munde. Nicht nur körperlich wollen wir jung bleiben, aber vor allem geistig auf der Höhe bleiben. Demenz ist leider eine immer größere Bedrohung fèr uns alle, die Angst macht.   Was deshalb eher in aller Munde sein sollte, ist eine ausreichen",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733683675863771016",
+            "text": "🔬 Morphiya – Exosome verpackt in einem Hybrosom 🔬Exosome könnten zu den spannendsten Innovationen in der modernen Dermatologie zählen. Sie würden als mikroskopisch kleine Vesikel wirken, die Signalmoleküle transportieren und dadurch Prozesse der Zellkommunikation anregen.Bei Morp",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735806213360477420",
+            "text": "💊✨ Klassische Multivitamine vs. das 94-Inhaltsstoffe-Mundwasser – wo liegt der Unterschied?🔹 Klassische Multivitamine👉 liefern die Vitamine direkt (A, B-Komplex, C, D, E) – oft synthetisch oder isoliert👉 der Körper muss sie erst aufnehmen, umbauen &amp; aktivieren, damit sie wirk",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "menopause-hormonal",
+        "target": "prevention",
+        "weight": 355,
+        "width": 1.35,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_24469278246086987",
+            "text": "Antiaging, Longevity…. Heute in aller Munde. Nicht nur körperlich wollen wir jung bleiben, aber vor allem geistig auf der Höhe bleiben. Demenz ist leider eine immer größere Bedrohung fèr uns alle, die Angst macht.   Was deshalb eher in aller Munde sein sollte, ist eine ausreichen",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3733825337533672667",
+            "text": "Die meisten von uns denken erst über Hautpflege nach, wenn die ersten Fältchen schon sichtbar sind. Aber wusstest du, dass die Hautalterung viel früher beginnt, als wir glauben?👉 Die Wahrheit ist: Vorbeugen ist leichter, als Falten später zu bekämpfen!Regelmäßige, professionelle ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3734299609867499878",
+            "text": "„Anti-Aging-Hype oder echtes Puzzleteil: Welche Rolle spielt Taurin wirklich?\"Taurin für viele nur ein Energydrink-Zusatz.Doch neue Daten zeigen: Taurinspiegel sinken mit dem Alter und genau das könnte mit Entzündungen, Stoffwechselproblemen und Zellalterung zusammenhängen.Besond",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "longevity",
+        "target": "athome-diy",
+        "weight": 352,
+        "width": 1.34,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3734290229449490852",
+            "text": "Strahlende Haut am MorgenRotlicht &amp; Blaulicht für Glow und Balance.EMS unterstützt das tiefe Einziehen von Seren &amp; Cremes.Sanfte Vibrationen für ein natürlich gestrafftes Hautgefühl.Ein kleiner Hack für mehr Selfcare im Alltag Probierst du lieber Rotlicht oder Blaulicht? ",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735068248531316843",
+            "text": "🇩🇪 Hängende Gesichtszüge und fahler Teint? Mit Face Yoga kannst du das Blatt wenden.Warum? Weil es natürliche Pflege durch unser neues Umibudō-Serum mit sichtbaren Effekten vereint – zusätzlich verstärkt durch die Anwendung unseres Gua-Sha-Steins. Durch gezielte Übungen und einer",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3735085312125700740",
+            "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fäl",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "professional-guidance",
+        "target": "prevention",
+        "weight": 321,
+        "width": 1.28,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_26_1581338446253620",
+            "text": "💉 Sculptra vs. Polynukleotide – wer braucht was?Dr. Kasten beantwortet diese Frage im Video 🎥✨👉 Welches Treatment interessiert euch mehr? Kommentiert gern! 💬#Sculptra #Polynukleotide #DrKasten #Hautklinik #Dermatologie #AntiAging #SkinCareTipps #ÄsthetischeDermatologie #BeautyRou",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_26_1432179715577703",
+            "text": "Skinbooster, Profhilo® &amp; Co.: Unsere Longevity-Behandlungen setzen frühzeitig an, um sichtbare Zeichen des Alterns zu minimieren. 💉✨🗓️Vereinbare jetzt Dein persönliches Beratungsgespräch, um zu erfahren, wie Du Alterserscheinungen bestmöglich vorbeugen kannst. #linkinbio#cali",
+            "source": "Facebook Pages"
+          },
+          {
+            "id": "0_225889_190_3737513979615757145",
+            "text": "Braucht eure reife Haut mehr Komfort und Glow? ✨ Mein Favorit für die tägliche Reinigung: Woman Definition Reinigungsschaum von ARKANA.Warum ich ihn liebe:- sanft, aber effektiv – Make‑up runter, Hautbarriere bleibt ruhig 🫧- mit Phytoöstrogen‑Komplex und Femage: unterstützt Elast",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "next-gen-actives",
+        "target": "innovative-ingredients",
+        "weight": 302,
+        "width": 1.25,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3733683675863771016",
+            "text": "🔬 Morphiya – Exosome verpackt in einem Hybrosom 🔬Exosome könnten zu den spannendsten Innovationen in der modernen Dermatologie zählen. Sie würden als mikroskopisch kleine Vesikel wirken, die Signalmoleküle transportieren und dadurch Prozesse der Zellkommunikation anregen.Bei Morp",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3739765322301039114",
+            "text": "Biomimetische Mikroemulsion mit 8 Peptiden und 4 verjüngenden Wachstumsfaktoren – eingekapselt für Stabilität und bessere Aufnahme.Sie stimulieren die Zellerneuerung, fördern die Kollagenproduktion &amp; bekämpfen feine Linien &amp; Falten.Unterstützt durch Biotechnologie. Entwic",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3743155746717392955",
+            "text": "PHYTO EXOSOMES. Die neue Ära intelligenter Hautpflege Unsere Haut kommuniziert. Mit jedem Impuls, jeder Zelle, jeder Regeneration. Die BODY BOOST CREAM mit PHYTO EXOSOMES nutzt die bahnbrechende Kraft pflanzlicher Exosomen aus Grapefruit- und Wassermelonenextrakten. Winzige, natü",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "menopause-hormonal",
+        "target": "athome-diy",
+        "weight": 272,
         "width": 1.19,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733721803454725222",
-            "text": "Hydrafacial – das Glow-Geheimnis für Deine Haut Mit nur einer Behandlung erreichst Du sichtbar bessere Haut:✅ Entfernt 100 % der Hautunreinheiten und abgestorbenen Zellen✅ Reduziert bis zu 90 % feine Linien &amp; Fältchen✅ Verfeinert Hautton &amp; verbessert die Hauttextur spürba",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733743565055728339",
-            "text": "🔹 Unsere Signature Therapie✨ Radiesse® + Skinbooster+PRP 👉 Mehr Fibroblasten-Stimulation👉 Aufbau von Kollagen &amp; Elastin👉 Sichtbar mehr Glow 🌟 Sofort frischer Teint🌟 Straffung + Lifting-Effekt🌟 Natürlich &amp; minimal-invasiv 💎 Glow von innen heraus💎 Langzeitwirkung für deine ",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733799857665142305",
-            "text": "Microneedling – jetzt ist die perfekte Zeit dafür! ✨Microneedling gehört zu den effektivsten Methoden, um die Haut sichtbar zu verschönern – und die Ergebnisse sind einfach mega! 💎Durch die feinen Mikrokanäle wird die Haut angeregt, neues Kollagen und Elastin zu bilden. Das sorgt",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "hyaluronic-acid",
-        "target": "niacinamide-peptides",
-        "weight": 2680,
-        "width": 1.14,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3733394547247031516",
-            "text": "✨ Straffere Haut. Weniger Falten. Mehr Glow. ✨Das Peptide Anti-Aging Serum kombiniert Peptide + Hyaluron + Ginkgo-Extrakt für sichtbar glattere, prallere und jugendlich strahlende Haut 💎💧🌿 Power-Wirkstoffe:💧 Hyaluronsäure für intensive Feuchtigkeit🍇 Antioxidantienreiche Blaubeers",
+            "id": "0_225889_190_3734338680430341197",
+            "text": "✨ cosmelan® – die weltweit führende Depigmentierungsmethode ✨Wie sieht die cosmelan®-Behandlung zu Hause aus?Nach der ersten Sitzung im Institut wird die Hautpflege mit dem speziellen cosmelan®-Heimpaket fortgeführt – ein essenzieller Schritt für maximale Ergebnisse.💡 Was ist cos",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733692099141862993",
-            "text": "✨Feuchtigkeit in 7 Tagen ✨✨ Die Intensiv-Feuchtigkeitskur von Doctor Babor ist eine innovative Dreifach-Formel, die die Haut vollständig von Trockenheit und Dehydrierung befreit. Aktive Tripeptide stimulieren die Produktion der körpereigenen Hyaluronsäure, Polyglutaminsäure binde",
+            "id": "0_225889_190_3735085312125700740",
+            "text": "📍Der Herbst ist die perfekte Zeit, um aktive Wirkstoffe in die Hautpflege einzubauen. 🍂Warum? Weil die Sonne weniger intensiv ist und die Haut jetzt besonders gut von Regeneration profitiert.Zu den wichtigsten Wirkstoffen gehören:– Retinol: regt die Zellerneuerung an, glättet Fäl",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "id": "0_225889_190_3747720312012934534",
+            "text": "🎃 Kein Platz für „spooky skin\" – wir bringen dein Strahlen zurück!Statt einem gruseligen Hautzustand schenken wir dir mit unserer medizinischen LED-Lichttherapie einen gesunden, glatten und strahlenden Teint.💡 Unsere neue LED-Maske nutzt wissenschaftlich belegte Lichtwellen, um d",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "niacinamide-peptides",
-        "target": "vitamin-c",
-        "weight": 2521,
+        "source": "proactive-aging",
+        "target": "professional-guidance",
+        "weight": 227,
         "width": 1.11,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3733788557925081038",
-            "text": "✨ Teil 1:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (1/2)💧 Hyaluronsäure – speichert Feuchtigkeit &amp; polstert die Haut auf.🌟 Retinol – regt die Zellerneuerung an &amp; glättet Fältchen.🍊🛡️ Vitamin C &amp; E – antioxidatives Power-Duo, schützt vor freien Radika",
+            "id": "0_225889_190_3736661053829671172",
+            "text": "☔ Goodbye Summer – Hello Glow! ✨Der Sommer war wunderschön – aber Sonne &amp; Meer haben Spuren hinterlassen. Jetzt ist die Zeit, deiner Haut eine Extraportion Pflege zu schenken. 💆‍♀🌿Mit meiner „Goodbye Summer Mask\" bringst du deine Haut wieder ins Gleichgewicht – frisch, strahl",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_15_17451107528918889",
-            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
-            "source": "Blogs"
-          },
-          {
-            "id": "0_225889_190_3734632463499809090",
-            "text": "✨ NEU BEI UNS: die #cerave Skin Renewing Serie!✨Vier Produkte, die deine Haut erneuern, Feuchtigkeit spenden und für ein strahlendes Hautbild sorgen 💜 - entwickelt mit Dermatologen für deine tägliche Anti-Aging-Routine.🌙 Peptid Creme: Reichhaltige #nachtpflege mit Ceramiden, Hyal",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "spf",
-        "target": "retinol",
-        "weight": 2163,
-        "width": 1.05,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
+            "id": "0_225889_190_3743023519596956466",
+            "text": "Du hast Lust auf eine Auszeit für dich und deine Haut? 💆‍♀️Dann buch dir jetzt deinen Termin bei mir – egal ob für eine Anti-Aging-Behandlung, eine entspannende Wellness-Massage, ein BB-Glow oder eine computergestützte Hautanalyse.So findest du genau die Pflege, die zu dir passt ",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_190_3733720916267213444",
-            "text": "✨ Ageless Plus Retinol 0,5% от Image Skincare ✨Ретинол – один из самых эффективных ингредиентов в антивозрастном уходе, и в премиальной серии Ageless Plus он раскрывает свой потенциал на 100%.🔹 Что делает ретинол 0,5%?•Стимулирует обновление клеток кожи•Сглаживает морщины и мелки",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_15_17451107528918889",
-            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
-            "source": "Blogs"
-          }
-        ]
-      },
-      {
-        "source": "spf",
-        "target": "vitamin-c",
-        "weight": 2100,
-        "width": 1.04,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_15_17451107528918889",
-            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
-            "source": "Blogs"
-          },
-          {
-            "id": "0_225889_190_3734578837972625757",
-            "text": "Sonnencreme ist wichtig, weil sie deine Haut vor UV-Strahlen schützt, aber dieser Schutz allein reicht nicht aus. Umweltverschmutzung, blaues Licht und Infrarotstrahlen verursachen freie Radikale, die die Haut schädigen und die Hautalterung beschleunigen. Hier kommen Antioxidanti",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "price",
-        "target": "peel",
-        "weight": 1991,
-        "width": 1.02,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_26_1438781807598330",
-            "text": "Face-Lift ohne OP❓Das geht mit Micro Needling PRO❗Micro Needling PRO ist ein erfolgreiches Verfahren im Bereich Anti-Aging und Problemhaut-Behandlung. Die nicht-ablative Hautverjüngungs-Technik ermöglicht es, die Haut an Gesicht, Augen, Lippen, Hals, Dekolleté zu verbessern und z",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_190_3733959938646220549",
-            "text": "🍂 Microneedling im Herbst – die perfekte Zeit für strahlende Haut! 🍂Weniger Sonne, mehr Regeneration – genau jetzt ist der beste Moment, deiner Haut etwas Gutes zu tun.✨ Unser Herbst-Special:Microneedling inkl. Mikrodermabrasion &amp; Wirkstoffmaske – für nur 165 € (statt 179 €).",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_26_1350002366911206",
-            "text": "🍂 Herbstzeit = Hauterneuerungszeit 🍂Der Sommer hat unsere Haut stark beansprucht – Sonne, Chlor &amp; Salzwasser hinterlassen oft Spuren wie trockene Stellen, Pigmentflecken oder kleine Unreinheiten. Genau jetzt ist die perfekte Zeit für eine Fruchtsäure-Behandlung als Kur! ✨Waru",
+            "id": "0_225889_26_1380029284133264",
+            "text": "Du hast Lust auf eine Auszeit für dich und deine Haut? 💆‍♀️Dann buch dir jetzt deinen Termin bei mir – egal ob für eine Anti-Aging-Behandlung, eine entspannende Wellness-Massage, ein BB-Glow oder eine computergestützte Hautanalyse.So findest du genau die Pflege, die zu dir passt ",
             "source": "Facebook Pages"
           }
         ]
       },
       {
-        "source": "spf",
-        "target": "peel",
-        "weight": 1886,
-        "width": 1.01,
+        "source": "marketing-skepsis",
+        "target": "professional-guidance",
+        "weight": 138,
+        "width": 0.95,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3733647324972087042",
-            "text": "🍂🍁Herbstzeit=Peelingzeit✨Die Natur wirft ihre Blätter ab , was macht unsere Haut?Wenn die Tage kürzer werden, die Sonne sich weniger zeigt und die Temperaturen sinken, verändert sich auch jedes Jahr unsere Haut.😊Während im Sommer der Fokus auf Sonnenschutz  steht, dürfen wir der ",
+            "id": "0_225889_190_3756876427497942438",
+            "text": "Interview mit Constantin, Facharzt für Plastische Chirurgie &amp; Gründer @kalialab Im Instagram-Dschungel, wo Trends und Treatments schwer gehypt und Beauty-Produkte der Haut ewige Jugend und unglaubliche Schönheit binnen kürzester Zeit bringen sollen, habe ich beschlossen, von ",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_26_1658033418956470",
-            "text": "✨ Teil 2:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (2/2)🌿 Bakuchiol – sanfte, pflanzliche Retinol-Alternative.🛡️ Ceramide – schützen die Hautbarriere &amp; verhindern Feuchtigkeitsverlust.🔄 Coenzym Q10 – Energiebooster für die Zellen, schützt vor oxidativem Stre",
+            "id": "0_225889_190_3757884163861795516",
+            "text": "Du liebst das Besondere – das, was nicht jeder hat. ✨Etwas, das Stil hat, Qualität ausstrahlt und für sich selbst spricht. So wie du und deine Arbeit. 💋Wenn du im Beauty-Bereich tätig bist – als Friseurin, Kosmetikerin, Dermatologin oder Inhaberin eines Studios – dann weißt du:Qu",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3762043644367357547",
+            "text": "Du siehst es. Deine Hängebäckchen. Jeden Tag. SCHMERZLICHDeine Jawline ist weg.Statt Kontur: weiche Übergänge, schwammige Wangen, Hängebäckchen wie bei deiner Mutter.Und du fragst dich insgeheim:„Wann ist das passiert?\"Es kam schleichend.Mit den Jahren, die du durchgezogen hast, ",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "aging-gracefully",
+        "target": "longevity",
+        "weight": 116,
+        "width": 0.91,
+        "same_cluster": false,
+        "quotes": [
+          {
+            "id": "0_225889_190_3737486150735803516",
+            "text": "🧊 Natürlich altern oder den Körper mit moderner Technologie verjüngen?Die heutige Wissenschaft gibt uns die Wahl:🌿 Das Altern als natürlichen Teil des Lebens akzeptieren —oder ❄️ es mit modernen Methoden wie Kryotherapie, Biohacking und Kältekuren hinauszögern.Manche sagen, das i",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3744525622476054943",
+            "text": "Trockene Heizungsluft, fahler Teint und die Sommerbräune kommt auch erstmal nicht mehr wieder?🍂Genau jetzt ist die perfekte Zeit, deiner Haut ein Fresh-up zu gönnen!🥰Bei einer Microdermabrasion Behandlung werden abgestorbene Hautschüppchen sanft entfernt, die Zellerneuerung anger",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_190_3746598495009120517",
+            "text": "🚨 Unreine Haut? Ölig? Pigmentflecken?Diese Frau hat die Lösung gefunden – ganz ohne Filter! 💫Lumi + Collagen+ = sichtbare Veränderung ✨Reine Haut, keine Pigmentflecken mehr und kräftiges Haar – natürlich &amp; spürbar von innen heraus 💖💬 Hör dir ihre echte Erfahrung an – das Erge",
+            "source": "Instagram Public"
+          }
+        ]
+      },
+      {
+        "source": "cost-value",
+        "target": "professional-guidance",
+        "weight": 99,
+        "width": 0.88,
+        "same_cluster": true,
+        "quotes": [
+          {
+            "id": "0_225889_190_3738933315731670464",
+            "text": "Welche Tagespflege beugt Pigmentflecken und Falten vor? Zwei Dermatologinnen haben zehn Anti-Aging-Cremes aus der Drogerie getestet. Die beste Pflege ist gleichzeitig auch Preis-Leistungs-Sieger. Den SZ-Plus-Link zum Artikel aus dem Archiv finden Sie in der Bio.Protokolle: Verena",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_26_1390013782492792",
+            "text": "Welche Tagespflege beugt Pigmentflecken und Falten vor? Zwei Dermatologinnen haben zehn Anti-Aging-Cremes aus der Drogerie getestet. Die beste Pflege ist gleichzeitig auch Preis-Leistungs-Sieger. (SZ Plus/Archiv)",
             "source": "Facebook Pages"
           },
           {
-            "id": "0_225889_190_3735098963134114324",
-            "text": "✨ Teil 2:Anti-Aging Wirkstoffe – kleine Moleküle mit großer Wirkung! (2/2)🌿 Bakuchiol – sanfte, pflanzliche Retinol-Alternative.🛡️ Ceramide – schützen die Hautbarriere &amp; verhindern Feuchtigkeitsverlust.🔄 Coenzym Q10 – Energiebooster für die Zellen, schützt vor oxidativem Stre",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "facelift",
-        "target": "aging-signs",
-        "weight": 1695,
-        "width": 0.98,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_140_7556050662585388318",
-            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_140_7556119489209928991",
-            "text": "Keine Lust mehr auf schlaffe Haut? Testen Sie meine minimalinvasive Facelift-Methode – ganz ohne große OP oder Nähte für ein umwerfendes Ergebnis! Kleine Schnitte für ein natürlich jugendliches Aussehen. Was ist Ihr Schönheitsgeheimnis? Folgen Sie mir und schreiben Sie mir eine p",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_140_7556257839212203295",
-            "text": "Bekämpfen Sie Falten und schlaffe Haut: Meine exklusive minimalinvasive Facelift-Technik – erstaunliche Ergebnisse ohne große Operation oder Nähte! Kleine Schnitte für ein natürlich jüngeres Aussehen. Was sind Ihre Anti-Aging-Geheimnisse? Folgen Sie mir und senden Sie mir eine pr",
-            "source": "TikTok"
-          }
-        ]
-      },
-      {
-        "source": "hyaluronic-acid",
-        "target": "spf",
-        "weight": 1569,
-        "width": 0.96,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733630882956237309",
-            "text": "✨ NEU: HYALU B5 SURACTIVATED CREAM &amp; WATER GEL ✨Dein Must-Have gegen Falten, müde Haut &amp; Trockenheit – mit Hyaluronsäure + Vitamin B5 für sichtbar frische, strahlende Haut!💧 HYALU B5 SURACTIVATED CREAMStraffend. Aufpolsternd. Intensiv feuchtigkeitsspendend (bis zu 72h).✔️",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733693077631318893",
-            "text": "Alle Produkte auch sehr günstig bei mir in der Praxis erhältlich 💛 frag mich gerne!✨ So alterst du schöner ✨Gesunde Haut ist kein Zufall – sie braucht die richtige Pflege und ein paar smarte Gewohnheiten.Unsere Essentials:☀️ Sun Drops SPF 50 – täglicher Schutz vor UV-Strahlen🍊 Vi",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_15_17451107528918889",
-            "text": "Kollagen – Das unterschätzte Schönheitsprotein Das körpereigene Strukturprotein ist in jüngster Zeit verstärkt in den Fokus der Kosmetikindustrie gerückt. Schließlich hat es vielfältige positive Wirkungen, nicht nur auf die Haut. Allerdings wird es im Lauf des Lebens vom Körper i",
-            "source": "Blogs"
-          }
-        ]
-      },
-      {
-        "source": "botox",
-        "target": "aging-signs",
-        "weight": 1369,
-        "width": 0.92,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733675137149977565",
-            "text": "✨ Nach 14 Tagen – das Ergebnis kann sich sehen lassen!Botox entfaltet seine volle Wirkung innerhalb von zwei Wochen: Falten wirken glatter, der Ausdruck entspannter und das Gesicht frischer – ganz ohne starr oder unnatürlich auszusehen. 💉✨📌 Hinweis: Jede Behandlung ist individuel",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3735368997970692804",
-            "text": "🌸 Wo sollte man diese Behandlungen am besten durchführen lassen? Natürlich bei NOVAJU! 🙂Warum? Weil jede Behandlung bei uns individuell auf die Bedürfnisse deiner Haut abgestimmt wird – keine Standardschemata, sondern Zuhören und gezielte Beratung. 🍀Bei NOVAJU setzen wir auf natü",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3736073808747692609",
-            "text": "Unsere liebe Jasmin Hoppe war heute wieder bei uns zu Besuch ✨Diesmal haben wir im Bereich der Augen und der Mundwinkel mit Polynukleotiden gearbeitet.Polynukleotide sind Bausteine, die die Hautzellen regenerieren, Feuchtigkeit spenden und die Kollagenbildung anregen für eine str",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "spf",
-        "target": "price",
-        "weight": 894,
-        "width": 0.85,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3735249397550759331",
-            "text": "Süß kann teuer werden – zumindest für unsere Haut. 🍭✨ Hast du schon mal von Glykation gehört? Dabei bindet sich Zucker an unser Kollagen und Elastin – die beiden sorgen eigentlich für Spannkraft und jugendliche Haut. Das Ergebnis: Das Haut-Trampolin verliert langsam seine Sprungk",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3742516033937401101",
-            "text": "✨ RETINOL POWER 0.5% – das kleine Hautwunder für große Ergebnisse! ✨ jetzt für 69,90€ statt 98,90€ 😍Unser aktivierendes Retinol Serum 0.5% wirkt wie ein sanftes Lifting über Zeit 💫 – für glattere, ebenmäßigere und sichtbar verjüngte Haut.Dank reinem Phosphatidylcholin als „Taxi\" ",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3742601841486862791",
-            "text": "Reine Haut ist kein Zufall.Sie ist Disziplin, Stil und Teil deiner Identität als High-Value-Mann.Wenn du gepflegt aussiehst, wirkst du automatisch teurer, präsenter und souveräner.Hier ist deine 4-Schritte Skincare Routine, die jeder Mann mit Klasse kennen sollte:1️⃣ Reinigen (Cl",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "threads",
-        "target": "aging-signs",
-        "weight": 828,
-        "width": 0.83,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_140_7556050662585388318",
-            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
-            "source": "TikTok"
-          },
-          {
-            "id": "0_225889_190_3734483816837559453",
-            "text": "✨ Aptos Full Face Fadenlifting mit Excellence Visage ✨Stellen Sie sich vor: ein jugendliches, strahlendes Gesicht – ohne OP, ohne lange Ausfallzeit.Unsere speziellen Excellence Visage Aptos-Fäden sind nicht nur Lifting-Fäden, sondern wirken zusätzlich wie ein Skinbooster.🔹 Wie fu",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_171_3734487114953042279",
-            "text": "💎 Das Resultat: straffe Haut, weniger Falten, frische Ausstrahlung – ganz ohne unnatürlichen Effekt.👉 Sehen Sie selbst: bereits nach 2 Wochen wirkt das Gesicht deutlich erholter, frisch und jugendlich!⸻Hashtags#Fadenlifting #Aptos #FullFaceLifting #ExcellenceVisage #CollagenStimu",
-            "source": "Threads"
-          }
-        ]
-      },
-      {
-        "source": "botox",
-        "target": "fillers",
-        "weight": 768,
-        "width": 0.82,
-        "same_cluster": true,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733900499184553064",
-            "text": "Hier seht ihr eine Behandlung der sogenannten Krähenfüße mit Botox ✨Botox sorgt für ein glattes, frisches Aussehen – ganz ohne die natürliche Mimik zu verlieren. Das Ergebnis: jünger, entspannter &amp; sofort sichtbar. #Botox#Hyaluron#Skinbooster#JawlineContouring#Lippenaufspritz",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3735838699242581848",
-            "text": "💡wusstest du das??!😱: Botox wirkt nur bei mimischen Falten (z. B. Stirn, Zornesfalte, Lachfalten).Bei Schlaf-Falten braucht die Haut andere Lösungen wie Hyaluron oder Skinbooster – Botox kann hier nicht helfen.😵‍💫#botoxbayreuth#botox #aesthetic ##botulinumtoxin #plastischechirurg",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3735977362337585859",
-            "text": "💉✨ Hyaluron &amp; Botox Event im Permanent Beauty School✨💉Am 12.10.25 von 13.00-16.00 habt ihr die exklusive Möglichkeit, in unserem Kosmetikstudio professionelle Unterspritzungen mit Hyaluron und Botox durchführen zu lassen.👨‍⚕️ Ein erfahrener Arzt wird vor Ort sein, euch indivi",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "celebrity",
-        "target": "aging-signs",
-        "weight": 699,
-        "width": 0.81,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733977440628815268",
-            "text": "✨ Strahlende Haut ist kein Zufall – sie ist Pflege ✨Viele von uns kennen die Herausforderungen:👉 Rosacea, die Hautrötungen sichtbar macht👉 Akne &amp; unreine Haut, die oft das Selbstbewusstsein belasten👉 Fältchen &amp; Linien, die sich mit der Zeit einschleichenMit der Health Not",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3739054744514916805",
-            "text": "✨ Celebrity Check: J.Lo ✨Mit über 50 sieht Jennifer Lopez frischer und jugendlicher aus als je zuvor – aber was steckt dahinter? 💉💫Dr. Grittern schaut genauer hin: Von clever eingesetzten Treatments über modernste Skin-Tools bis hin zu kleinen Beauty-Secrets – J.Lo zeigt, wie man",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_26_1741383830133887",
-            "text": "Sag Falten, Pigmentflecken &amp; Schlupflidern bye-bye – ganz ohne Skalpell! ⚡️Der Plasma Pen ist unser kleiner \"Zauberstab\" für straffere, glattere und ebenmäßigere Haut 💫Ob Lidstraffung, Narben, Pigmentflecken, Seitenlift, Dehnungsstreifen uvm...Auf unserem Profil und unserer H",
+            "id": "0_225889_26_1390056889155148",
+            "text": "Welche Tagespflege beugt Pigmentflecken und Falten vor? Zwei Dermatologinnen haben zehn Anti-Aging-Cremes aus der Drogerie getestet. Die beste Pflege ist gleichzeitig auch Preis-Leistungs-Sieger (SZ Plus/Archiv): https://sz-magazin.sueddeutsche.de/gut-getestet/anti-aging-creme-te",
             "source": "Facebook Pages"
           }
         ]
       },
       {
-        "source": "laser",
-        "target": "peel",
-        "weight": 685,
-        "width": 0.81,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733937497182144423",
-            "text": "Stören dich hartnäckige Pigmentflecken oder ein unruhiger Teint? ✨Dann zeigt dir @doc.katharina heute ihre Top 6 Behandlungen für einen ebenmäßigen, strahlenden Hautton – wissenschaftlich fundiert, modern und wirksam.📌 CO₂-LaserTrägt die obersten Hautschichten präzise ab und erne",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3735946748028446718",
-            "text": "🌿✨ Strahlende Haut beginnt mit reiner Pflege! ✨🌿Sagen Sie Milien den Kampf an – für einen ebenmäßigen, glatten Teint.Dank unserer professionellen Hautreinigung gehören störende weiße Pünktchen der Vergangenheit an.🔹 Sanfte Entfernung von Milien🔹 Porentiefe Reinigung🔹 Sichtbar fri",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3735951126663674132",
-            "text": "Gesichtsreinigung 🌿✨ Strahlende Haut beginnt mit reiner Pflege! ✨🌿Sagen Sie Milien den Kampf an – für einen ebenmäßigen, glatten Teint.Dank unserer professionellen Hautreinigung gehören störende weiße Pünktchen der Vergangenheit an.🔹 Sanfte Entfernung von Milien🔹 Porentiefe Reini",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "fillers",
-        "target": "peel",
-        "weight": 662,
-        "width": 0.81,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3733799857665142305",
-            "text": "Microneedling – jetzt ist die perfekte Zeit dafür! ✨Microneedling gehört zu den effektivsten Methoden, um die Haut sichtbar zu verschönern – und die Ergebnisse sind einfach mega! 💎Durch die feinen Mikrokanäle wird die Haut angeregt, neues Kollagen und Elastin zu bilden. Das sorgt",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3733964367621570820",
-            "text": "Direkt nach dem Radiofrequenz-Needling ist die Haut wie ein offenes Tor – die feinen Mikrokanäle sind perfekt, um Wirkstoffe tief einzuschleusen.👉 Hyaluronsäure, Polynukleotide, Exosomen oder PRP – genau jetzt können sie ihre volle Wirkung entfalten.Das Ergebnis: maximale Regener",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3734705392958751909",
-            "text": "✨ RF Microneedling kombiniert feine Mikro-Nadeln mit Radiofrequenzenergie, um die Haut von innen heraus zu straffen und zu regenerieren. 💫 Kollagen und Elastinproduktion werden angeregt, für ein glatteres, strahlenderes Hautbild. 🌸 Ideal bei feinen Linien, Narben oder erweiterten",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "safety",
-        "target": "aging-signs",
-        "weight": 551,
-        "width": 0.79,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_26_1378061917658287",
-            "text": "Hast Du schon vom neuen Biostimulator Profhilo structura gehört ? Auf komplett natürliche Weise wird durch die Injektion dieses  hochreinen HA-Produktes dem Gesicht wieder Spannkraft verliehen und die Hautstruktur verbessert. ▶️Wie das geht ? Durch Regeneration der stützenden Unt",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_190_3742587814996233028",
-            "text": "🧴 Profhilo Structura – Die Revolution für straffe, jugendliche Haut!✨ Innovative Kollagen-Booster mit hochkonzentrierter Hyaluronsäure (90 mg/2ml) für intensive Hydratation und sichtbaren Lifting-Effekt – ganz ohne OP.Was macht Profhilo Structura einzigartig?- Volumenaufbau &amp;",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3743154208967817375",
-            "text": "Polynucleotide – Absolute Highlights1.Fördert Hautregeneration•Unterstützt Zellwachstum und Reparatur.•Verbessert die Hautstruktur und Festigkeit.2.Steigert Kollagen- und Elastinbildung•Sichtbare Straffung und Glättung der Haut.•Reduziert Falten und feine Linien.3.Verbessert Feuc",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "laser",
-        "target": "price",
-        "weight": 468,
+        "source": "menopause-hormonal",
+        "target": "social-pressure",
+        "weight": 45,
         "width": 0.78,
         "same_cluster": true,
         "quotes": [
           {
-            "id": "0_225889_190_3741630664606008313",
-            "text": "Byonik® Biolifting – das Beauty-Upgrade für Deine Haut!Diese Hightech-Behandlung verbindet modernste Lasertechnologie mit hochkonzentrierter Hyaluronsäure und Antioxidantien. Der Laser passt sich Deinem Puls an und schleust Wirkstoffe genau dann ein, wenn Deine Zellen am aufnahme",
+            "id": "0_225889_126_t1_nsh45a0",
+            "text": "Kann bitte irgendjemand diesen widerlichen Botox-Hyalauron-Glow-Up-Hype stoppen? Vielleicht rührt das nicht nur vom „Versagen\" einer Eltern-Generation her, sondern von mehreren Entwicklungen, die gleichzeitig zusammengekommen sind. In den letzten 20–30 Jahren hat sich der gesells",
+            "source": "Reddit"
+          },
+          {
+            "id": "0_225889_190_3796039138076810032",
+            "text": "✨ Die Wahrheit über Deinen Glow: Dein bester Anti-Aging-Booster sitzt IM Kopf! 🤯Als Expertin für Haut sowie innere und äußere Schönheit verrate ich Euch heute ein Geheimnis, das besser wirkt als jede Luxuscreme: Euer Selbstwertgefühl.Gerade in unseren 30ern, 40ern und 50ern, wenn",
             "source": "Instagram Public"
           },
           {
-            "id": "0_225889_26_1245124470982821",
-            "text": "Farb- und Typberatung in der KleingruppeFarben sind das beste Anti-Aging-Programm. Die richtigen Farben lassen uns erstrahlen und rücken uns ins beste Licht. Durch die Farbanalyse werden Sie erleben, welcher Farbtyp Sie sind und in welchen Farben Sie sich am wohlsten fühlen. Es i",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_190_3760496061996425484",
-            "text": "💫 Was kostet die Laser-Oberarmstraffung? 💶✨Der Preis richtet sich nach der Laserkombination und dem gewünschten Ergebnis – jede Haut reagiert individuell 🌸.Eine Behandlungssitzung kostet ab 800 Euro und sorgt für eine sichtbar straffere, glattere Haut an den Oberarmen 💪.Sanft, ef",
+            "id": "0_225889_190_3796078021674046362",
+            "text": "✨ Die Wahrheit über Deinen Glow: Dein bester Anti-Aging-Booster sitzt IM Kopf! 🤯Als Expertin für Haut sowie innere und äußere Schönheit verrate ich Euch heute ein Geheimnis, das besser wirkt als jede Luxuscreme: Euer Selbstwertgefühl.Gerade in unseren 30ern, 40ern und 50ern, wenn",
             "source": "Instagram Public"
           }
         ]
       },
       {
-        "source": "threads",
-        "target": "facelift",
-        "weight": 435,
-        "width": 0.77,
-        "same_cluster": true,
+        "source": "celebrity-influencer",
+        "target": "longevity",
+        "weight": 15,
+        "width": 0.73,
+        "same_cluster": false,
         "quotes": [
           {
-            "id": "0_225889_140_7556050662585388318",
-            "text": "Straffen Sie Ihre Haut ganz einfach: Probieren Sie mein minimalinvasives Facelifting aus – es ist unglaublich effektiv, im Gegensatz zu einem Facelift oder Fadenlifting! Die Genesung erfolgt schnell. Was sind Ihre Schönheitsgeheimnisse? Verraten Sie es uns! #Facelifting #Anti-Fal",
+            "id": "0_225889_190_3816514758241996626",
+            "text": "Anzeige Get ready with me für unseren Skitag🤭 gerade beim Skifahren ist Skincare durch die Kälte extrem wichtig! @paulaschoicede hat jetzt ganz neu das Cellular Youth Longevity Serum rausgebracht 💜 das bekämpft 12 Anzeichen der Hautalterung und dadurch ist die Haut schon nach dre",
+            "source": "Instagram Public"
+          },
+          {
+            "id": "0_225889_140_7598591561030487328",
+            "text": "Anzeige Get ready with me für unseren Skitag🤭 gerade beim Skifahren ist Skincare durch die Kälte extrem wichtig! @Paula's Choice DACH hat jetzt ganz neu das Cellular Youth Longevity Serum rausgebracht 💜 das bekämpft 12 Anzeichen der Hautalterung und dadurch ist die Haut schon nac",
             "source": "TikTok"
           },
           {
-            "id": "0_225889_190_3734381648364997599",
-            "text": "✨Face Contouring! ✨Mit Hyaluronsäure an den Hebepunkten des Gesichts – direkt auf den Knochen injiziert – für ein besonders langanhaltendes Ergebnis- mit neuem Präparat. 🔥🚀 Effekt: Natürliches Lifting, definierte Konturen &amp; frische Ausstrahlung.Das innovative Präparat sorgt f",
+            "id": "0_225889_190_3839662531267553243",
+            "text": "Kennst du schon den Trend für dein Hautjahr 2026?Er heißt LONGEVITY! 🧬✨ Longevity beginnt mit den kleinen Dingen im Alltag. Hör auf unsere Markenbotschafterin @nazaneckes und lass das CELLULAR Epigenetics Verjüngende Serum Teil deiner täglichen Pflegeroutine werden. Der revolutio",
             "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3734483816837559453",
-            "text": "✨ Aptos Full Face Fadenlifting mit Excellence Visage ✨Stellen Sie sich vor: ein jugendliches, strahlendes Gesicht – ohne OP, ohne lange Ausfallzeit.Unsere speziellen Excellence Visage Aptos-Fäden sind nicht nur Lifting-Fäden, sondern wirken zusätzlich wie ein Skinbooster.🔹 Wie fu",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "aging-signs",
-        "target": "natural",
-        "weight": 349,
-        "width": 0.76,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_190_3736725366099436563",
-            "text": "✨ 14 Tage Lymph-Reset ✨Dein natürlicher Anti-Aging-Kick für mehr Leichtigkeit, frische Ausstrahlung &amp; sichtbar definierte Konturen 💧🌿Fühlst du dich manchmal aufgedunsen, geschwollen oder einfach nicht mehr so strahlend wie früher?Dann ist unser 14-Tage-Lymph-Reset dein Beauty",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3737191026839410241",
-            "text": "🌿 Ab wann sollte man mit Gesichtspflege &amp; Gesichtsmassage beginnen?🧴 Bereits ab 14 Jahren beginnt die Haut, sich zu verändern.In dieser Phase ist regelmäßige Gesichtspflege besonders wichtig, um die Hautbarriere zu stärken, Unreinheiten vorzubeugen und ein gesundes Hautbild z",
-            "source": "Instagram Public"
-          },
-          {
-            "id": "0_225889_190_3741883888386765997",
-            "text": "Mein Gesicht hat Rötungen, Augenringe, kleine Unebenheiten, Lachlinien, Falten – und es werden sicher noch mehr.Wir müssen keinem Ideal entsprechen.Wir dürfen altern.Wir dürfen zeigen, dass wir leben.Wir müssen nicht ewig jung bleiben – nur weil wir Frauen sind.Ich sehe Eingriffe",
-            "source": "Instagram Public"
-          }
-        ]
-      },
-      {
-        "source": "aging-signs",
-        "target": "pressure",
-        "weight": 51,
-        "width": 0.71,
-        "same_cluster": false,
-        "quotes": [
-          {
-            "id": "0_225889_26_1398367725625033",
-            "text": "👶✨️ Packungsbeilage beachten! Gezeichnet beim diesjährigen \"Inselwitz\" auf Baltrum zum Thema \"Cartoons für alte Leute\"#schönheitswahn #antiaging #skinscare #humor",
-            "source": "Facebook Pages"
-          },
-          {
-            "id": "0_225889_9_yt.Wrr_hEvOj4A",
-            "text": "Schönheitsideale werden immer wilder Überall wird geliftet, gespritzt, getaped und „Baby-Botoxed\". Promis altern rückwärts, 30-Jährige bekommen Panik vor ihren ersten Falten und Schönheitschirurg*innen analysieren auf TikTok, wer welches Gesicht wo verändert hat. Anti-Aging-Produ",
-            "source": "Youtube"
-          },
-          {
-            "id": "0_225889_15_38522496369994195",
-            "text": "Kate Winslet äußert Bedenken über Schönheitsoperationen und Diät-Injektionen Kate Winslet äußert ihre Sorgen über den ansteigenden Trend von Schönheitsoperationen und Abnehmspritzen. Die talentierte britische Schauspielerin ist ein Fan der natürlichen Schönheit und findet es „beä",
-            "source": "Blogs"
           }
         ]
       }

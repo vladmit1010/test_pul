@@ -166,6 +166,54 @@
     return TOPIC_SENTIMENT[sentiment]?.moods || [];
   }
 
+  function foldText(s) {
+    return String(s || '')
+      .toLowerCase()
+      .replace(/ß/g, 'ss')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function themeSignalsFor(id) {
+    return D.conversationLandscape?.themeSignals?.[id] || [];
+  }
+
+  function commentMatchesTheme(c, themeId) {
+    const signals = themeSignalsFor(themeId);
+    if (!signals.length) return false;
+    const t = foldText(c.text);
+    return signals.some((sig) => t.includes(sig));
+  }
+
+  function commentsMatchingTheme(themeId) {
+    const pool = commentPool.length ? commentPool : D.comments || [];
+    const out = [];
+    for (let i = 0; i < pool.length; i += 1) {
+      if (commentMatchesTheme(pool[i], themeId)) {
+        out.push(pool[i]);
+        if (out.length >= 200) break;
+      }
+    }
+    return out;
+  }
+
+  function landscapeNodeQuotes(themeId) {
+    return (D.conversationLandscape?.nodes || []).find((n) => n.id === themeId)?.quotes || [];
+  }
+
+  function landscapeEdgeQuotes(a, b) {
+    const edges = D.conversationLandscape?.edges || [];
+    const hit = edges.find(
+      (e) => (e.source === a && e.target === b) || (e.source === b && e.target === a),
+    );
+    return hit?.quotes || [];
+  }
+
+  function topClusterTheme() {
+    const nodes = [...(D.conversationLandscape?.nodes || [])].sort((a, b) => (b.weight || 0) - (a.weight || 0));
+    return nodes[0] || null;
+  }
+
   function filterComments(filter) {
     if (!filter) return [];
     // Ensure late-loaded comment index is picked up
@@ -208,6 +256,17 @@
         : (D.comments || []).filter((c) => (c.topics || []).includes(filter.a));
       return base.filter((c) => (c.topics || []).includes(filter.b));
     }
+    if (filter.type === 'cluster-theme') {
+      const embedded = landscapeNodeQuotes(filter.id);
+      if (embedded.length) return embedded;
+      return commentsMatchingTheme(filter.id).slice(0, 120);
+    }
+    if (filter.type === 'cluster-theme-pair') {
+      const embedded = landscapeEdgeQuotes(filter.a, filter.b);
+      if (embedded.length) return embedded;
+      const a = commentsMatchingTheme(filter.a);
+      return a.filter((c) => commentMatchesTheme(c, filter.b)).slice(0, 120);
+    }
     if (commentIndex) {
       if (filter.type === 'mood') return poolComments(commentIndex.mood?.[filter.id]);
       if (filter.type === 'topic') return poolComments(commentIndex.topic?.[filter.id]);
@@ -232,7 +291,12 @@
     if (!filter) return 0;
     if (filter.type === 'mood') return D.moodMap.moods.find((x) => x.id === filter.id)?.count || 0;
     if (filter.type === 'topic') return findTopic(filter.id)?.count || 0;
-    if (filter.type === 'topic-pair') return filter.weight || commentsFor(filter).length;
+    if (filter.type === 'topic-pair') return filter.weight || filterComments(filter).length;
+    if (filter.type === 'cluster-theme') {
+      const n = (D.conversationLandscape?.nodes || []).find((x) => x.id === filter.id);
+      return n?.weight || 0;
+    }
+    if (filter.type === 'cluster-theme-pair') return filter.weight || filterComments(filter).length;
     if (filter.type === 'topic-sentiment') {
       const t = findTopic(filter.id);
       if (!t) return 0;
@@ -270,7 +334,7 @@
     if (a.type === 'word') return a.id === b.id && a.segment === b.segment;
     if (a.type === 'path') return a.id === b.id && a.parentId === b.parentId;
     if (a.type === 'topic-sentiment') return a.id === b.id && a.sentiment === b.sentiment;
-    if (a.type === 'topic-pair') {
+    if (a.type === 'topic-pair' || a.type === 'cluster-theme-pair') {
       return (
         (a.a === b.a && a.b === b.b) ||
         (a.a === b.b && a.b === b.a)
@@ -392,7 +456,16 @@
       quoteContext.textContent = `Topic: ${t?.label || filter.id}`;
       chips.push(t?.label, `${t?.count || 0} mentions`);
     }
-    if (filter.type === 'topic-pair') {
+    if (filter.type === 'cluster-theme') {
+      const label =
+        D.conversationLandscape?.themeLabels?.[filter.id] ||
+        (D.conversationLandscape?.nodes || []).find((x) => x.id === filter.id)?.label ||
+        filter.id;
+      const n = (D.conversationLandscape?.nodes || []).find((x) => x.id === filter.id);
+      quoteContext.textContent = `Thema: ${label}`;
+      chips.push(label, n?.weight ? `${n.weight} Treffer` : null);
+    }
+    if (filter.type === 'topic-pair' || filter.type === 'cluster-theme-pair') {
       quoteContext.textContent = `Paar: ${filter.labelA || filter.a} + ${filter.labelB || filter.b}`;
       chips.push('gemeinsam genannt', filter.weight ? `${filter.weight}×` : null);
     }
@@ -473,7 +546,7 @@
   function renderQuotes() {
     if (!activeFilter) return;
     if (activeFilter.type === 'driver') {
-      quoteList.innerHTML = `<div class="quote-empty"><p>Chart 6 uses fixed Appinio survey values — no PULSAR comment filter.</p></div>`;
+      quoteList.innerHTML = `<div class="quote-empty"><p>Chart 8 uses fixed Appinio survey values — no PULSAR comment filter.</p></div>`;
       quoteMeta.textContent = '';
       if (quotePrev) quotePrev.disabled = true;
       if (quoteNext) quoteNext.disabled = true;
@@ -555,12 +628,20 @@
       .filter((m) => m.id === 'enthusiastic' || m.id === 'satisfied')
       .reduce((s, m) => s + m.count, 0);
     const advisory = moods.find((m) => m.id === 'warning' || m.id === 'cautioning' || m.id === 'advisory')?.count || 0;
-    const topTopic = flatTopicsForKpi()[0] || [...topicPool()].sort((a, b) => b.count - a.count)[0];
+    const topTheme = topClusterTheme();
+    const topTopic = topTheme
+      ? { label: topTheme.label, count: topTheme.weight }
+      : flatTopicsForKpi()[0] || [...topicPool()].sort((a, b) => b.count - a.count)[0];
     row.innerHTML = [
       { label: 'Comments', value: String(total), hint: 'klassifizierter Korpus', color: 'var(--rose)' },
       { label: 'Positive mood', value: `${Math.round((pos / total) * 100)}%`, hint: 'enthusiastic + satisfied', color: 'var(--mint)' },
       { label: 'Warning', value: `${Math.round((advisory / total) * 100)}%`, hint: 'warnings to others', color: 'var(--sky)' },
-      { label: `Top topic`, value: String(topTopic?.count || 0), hint: topTopic?.label || '', color: 'var(--lavender)' },
+      {
+        label: 'Top theme',
+        value: String(topTopic?.count || 0),
+        hint: topTopic?.label || '',
+        color: 'var(--lavender)',
+      },
     ]
       .map(
         (k) => `<article class="kpi-card" style="--kpi-color:${k.color}">
@@ -693,98 +774,8 @@
   }
 
   function renderTopics() {
-    const tl = D.topicLandscape;
-    document.getElementById('topic-eyebrow').textContent = tl.eyebrow;
-    document.getElementById('topic-title').textContent = tl.title;
-    const display = displayTopics();
-    const root = document.getElementById('topics-chart');
-    const legend = document.querySelector('.topic-split-legend');
-    if (legend) {
-      legend.innerHTML =
-        '<span class="topic-split-legend__pos">positive</span>' +
-        '<span class="topic-split-legend__neu">neutral</span>' +
-        '<span class="topic-split-legend__neg">negative / warning</span>';
-    }
-
-    function renderBlock(topics, title) {
-      const max = topics.reduce((m, t) => Math.max(m, t.count), 0) || 1;
-      const head = title ? `<h4 class="topic-block-title">${esc(title)}</h4>` : '';
-      const bars = topics
-        .map((t) => {
-          const scale = Math.max(0.06, t.count / max);
-          const pos = t.positive || 0;
-          const neu = t.neutral || Math.max(0, (t.count || 0) - pos - (t.negative || 0));
-          const neg = t.negative || 0;
-          const seg = (key, n, cls) =>
-            n > 0
-              ? `<span class="${cls}" data-sentiment="${key}" title="${key}: ${n}" style="flex:${n} 1 0"></span>`
-              : '';
-          return `<button type="button" class="topic-bar" data-id="${esc(t.id)}" role="listitem">
-          <span class="topic-bar__label">${esc(t.label)}</span>
-          <span class="topic-bar__track-split" aria-hidden="true">
-            <span class="topic-bar__magnitude" style="--bar-scale:${scale.toFixed(4)}">
-              ${seg('positive', pos, 'topic-bar__fill-pos')}
-              ${seg('neutral', neu, 'topic-bar__fill-neu')}
-              ${seg('negative', neg, 'topic-bar__fill-neg')}
-            </span>
-          </span>
-          <span class="topic-bar__value">${t.count.toLocaleString('de-DE')}</span>
-        </button>`;
-        })
-        .join('');
-      return `${head}<div class="topic-block">${bars}</div>`;
-    }
-
-    let html = '';
-    let allTopics = [];
-    if (display && display.grouped) {
-      const labels = tl.blocks || { A: 'Verfahren & Wirkstoffe', B: 'Kontext & Haltung' };
-      html = renderBlock(display.A, labels.A) + renderBlock(display.B, labels.B);
-      allTopics = [...display.A, ...display.B];
-    } else {
-      allTopics = display || [];
-      html = renderBlock(allTopics, null);
-    }
-    root.innerHTML = html;
-    root.querySelectorAll('.topic-bar').forEach((el) => {
-      const t = allTopics.find((x) => x.id === el.dataset.id);
-      el.addEventListener('click', (e) => {
-        const seg = e.target.closest('[data-sentiment]');
-        if (seg && el.contains(seg)) {
-          e.stopPropagation();
-          setFilter({ type: 'topic-sentiment', id: el.dataset.id, sentiment: seg.dataset.sentiment });
-          return;
-        }
-        setFilter({ type: 'topic', id: el.dataset.id });
-      });
-      el.addEventListener('mousemove', (e) => {
-        const seg = e.target.closest('[data-sentiment]');
-        const pos = t.positive || 0;
-        const neu = t.neutral || 0;
-        const neg = t.negative || 0;
-        if (seg) {
-          const key = seg.dataset.sentiment;
-          const n = key === 'positive' ? pos : key === 'neutral' ? neu : neg;
-          const label = TOPIC_SENTIMENT[key]?.label || key;
-          showTip(
-            `<strong>${esc(t.label)}</strong><br>${esc(label)}: ${n.toLocaleString('de-DE')} · Klick für Zitate`,
-            e.clientX,
-            e.clientY,
-          );
-          return;
-        }
-        showTip(
-          `<strong>${esc(t.label)}</strong><br>${t.count} mentions · +${pos} / ~${neu} / −${neg}`,
-          e.clientX,
-          e.clientY,
-        );
-      });
-      el.addEventListener('mouseleave', hideTip);
-    });
-    ensureFootnote(
-      'topics-chart',
-      [...corpusFooterBits(), tl.note || 'Mehrfachnennungen möglich'].filter(Boolean).join(' · '),
-    );
+    // Topic Landscape bar chart removed — Conversation Cluster is chart 2.
+    return;
   }
 
   function renderSegmentation() {
@@ -1037,8 +1028,8 @@
   function renderConversationLandscape() {
     if (!window.PulsarConversationLandscape || !D.conversationLandscape) return;
     const block = D.conversationLandscape;
-    document.getElementById('landscape-eyebrow').textContent = block.eyebrow || '9. Conversation Landscape';
-    document.getElementById('landscape-title').textContent = block.title || 'Conversation clusters';
+    document.getElementById('landscape-eyebrow').textContent = block.eyebrow || '2. Conversation Cluster';
+    document.getElementById('landscape-title').textContent = block.title || 'Conversation Cluster';
     window.PulsarConversationLandscape.render({
       containerEl: document.getElementById('landscape-chart'),
       hintEl: document.getElementById('landscape-hint'),
@@ -1052,7 +1043,7 @@
         if (!sel) return;
         if (sel.type === 'topic-pair') {
           setFilter({
-            type: 'topic-pair',
+            type: 'cluster-theme-pair',
             a: sel.a,
             b: sel.b,
             labelA: sel.labelA,
@@ -1061,14 +1052,14 @@
           });
           return;
         }
-        if (sel.type === 'topic') setFilter({ type: 'topic', id: sel.id });
+        if (sel.type === 'topic') setFilter({ type: 'cluster-theme', id: sel.id });
       },
     });
     ensureFootnote(
       'landscape-chart',
       [
         ...corpusFooterBits(),
-        block.method || 'topic co-occurrence',
+        block.method || 'conversation themes',
         `${(block.nodes || []).length} Themen · ${(block.edges || []).length} Paare · ${(block.clusters || []).length} Cluster`,
       ]
         .filter(Boolean)
@@ -1116,7 +1107,6 @@
 
   safe('kpis', renderKpis);
   safe('mood', renderMoodMap);
-  safe('topics', renderTopics);
   safe('segmentation', renderSegmentation);
   safe('wordclouds', renderWordclouds);
   safe('agingPaths', renderAgingPaths);

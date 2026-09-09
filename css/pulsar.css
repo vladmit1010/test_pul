@@ -2416,18 +2416,17 @@ body.pulsar-page {
   }
 }
 
-/* Chart 9 — Conversation Landscape */
+/* Chart 2 — Conversation Cluster */
 .chart-panel--landscape {
   align-items: stretch;
   gap: 0.75rem;
 }
 
 .landscape-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   width: 100%;
-  align-items: stretch;
 }
 
 .landscape-howto {
@@ -2452,14 +2451,15 @@ body.pulsar-page {
 }
 
 .landscape-side {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(0, 1.4fr);
+  gap: 0.85rem 1rem;
+  align-items: start;
   min-height: 0;
 }
 
 .landscape-side__label {
-  margin: 0;
+  margin: 0 0 0.4rem;
   font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -2468,8 +2468,8 @@ body.pulsar-page {
 
 .landscape-chart {
   width: 100%;
-  min-height: 620px;
-  height: min(74vh, 760px);
+  min-height: 560px;
+  height: min(68vh, 720px);
   border-radius: 12px;
   border: 1px solid var(--panel-border, rgba(255, 255, 255, 0.08));
   background: radial-gradient(ellipse at 40% 35%, rgba(232, 160, 191, 0.06), transparent 55%),
@@ -2569,9 +2569,13 @@ body.pulsar-page {
 }
 
 .landscape-legend {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.4rem;
+}
+
+.landscape-legend > .landscape-side__label {
+  grid-column: 1 / -1;
 }
 
 .landscape-detail {
@@ -2581,7 +2585,7 @@ body.pulsar-page {
   padding: 0.7rem 0.8rem;
   font-size: 0.8rem;
   line-height: 1.35;
-  max-height: min(42vh, 360px);
+  max-height: 280px;
   overflow-y: auto;
 }
 
@@ -2705,7 +2709,7 @@ body.pulsar-page {
 }
 
   @media (max-width: 900px) {
-  .landscape-layout {
+  .landscape-side {
     grid-template-columns: 1fr;
   }
 
@@ -2715,5 +2719,10 @@ body.pulsar-page {
 
   .landscape-detail {
     max-height: none;
+  }
+
+  .landscape-chart {
+    min-height: 420px;
+    height: min(58vh, 560px);
   }
 }

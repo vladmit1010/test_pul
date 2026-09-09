@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revitalift — Dashboard (PULSAR data)</title>
   <link rel="stylesheet" href="css/style.css?v=10">
-  <link rel="stylesheet" href="css/pulsar.css?v=10c">
+  <link rel="stylesheet" href="css/pulsar.css?v=10f">
 </head>
 <body class="pulsar-page">
   <header class="header pulsar-header">
@@ -34,7 +34,7 @@
         <p class="pulsar-eyebrow">Revitalift · Anti-aging insights</p>
         <h1 class="pulsar-title">German consumer conversation dashboard</h1>
         <p class="pulsar-desc">
-          Live view from <strong>classified German comments</strong> (filter v9 + spectrum moods).
+          Live view from <strong>classified German comments</strong> (filter v10 + spectrum moods).
           Data: <code>data/dashboard_generated.js</code> · Chart 8: fixed Appinio survey.
         </p>
       </div>
@@ -54,14 +54,23 @@
           </div>
         </section>
 
-        <section class="chart-section" id="topic-landscape">
+        <section class="chart-section" id="conversation-landscape">
           <div class="section-head">
-            <p class="pulsar-eyebrow" id="topic-eyebrow"></p>
-            <h2 class="section-title" id="topic-title"></h2>
+            <p class="pulsar-eyebrow" id="landscape-eyebrow"></p>
+            <h2 class="section-title" id="landscape-title"></h2>
           </div>
-          <div class="chart-panel chart-panel--topics">
-            <p class="topic-split-legend"><span class="topic-split-legend__pos">positive</span><span class="topic-split-legend__neg">negative / warning</span></p>
-            <div id="topics-chart" class="topics-chart" role="list"></div>
+          <div class="chart-panel chart-panel--landscape">
+            <p class="bubble-hint" id="landscape-hint"></p>
+            <ul class="landscape-howto" id="landscape-howto" hidden></ul>
+            <div class="landscape-layout">
+              <div id="landscape-chart" class="landscape-chart" aria-label="Conversation cluster network"></div>
+              <aside class="landscape-side">
+                <div id="landscape-legend" class="landscape-legend"></div>
+                <div id="landscape-detail" class="landscape-detail" aria-live="polite">
+                  <p class="landscape-detail__empty">Klicke ein Thema oder eine Linie, um Details zu sehen.</p>
+                </div>
+              </aside>
+            </div>
           </div>
         </section>
 
@@ -138,26 +147,6 @@
             <div id="drivers-chart" class="drivers-chart"></div>
           </div>
         </section>
-
-        <section class="chart-section" id="conversation-landscape">
-          <div class="section-head">
-            <p class="pulsar-eyebrow" id="landscape-eyebrow"></p>
-            <h2 class="section-title" id="landscape-title"></h2>
-          </div>
-          <div class="chart-panel chart-panel--landscape">
-            <p class="bubble-hint" id="landscape-hint"></p>
-            <ul class="landscape-howto" id="landscape-howto" hidden></ul>
-            <div class="landscape-layout">
-              <div id="landscape-chart" class="landscape-chart" aria-label="Conversation landscape"></div>
-              <aside class="landscape-side">
-                <div id="landscape-legend" class="landscape-legend"></div>
-                <div id="landscape-detail" class="landscape-detail" aria-live="polite">
-                  <p class="landscape-detail__empty">Klicke ein Thema oder eine Linie, um Details zu sehen.</p>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </section>
       </div>
 
       <aside class="quotes-panel" id="quotes-panel">
@@ -186,12 +175,12 @@
   <div id="pulsar-tip" class="pulsar-tip" hidden></div>
 
   <script src="js/dashboard-taxonomy-de.js?v=10"></script>
-  <script src="data/dashboard_generated.js?v=10c"></script>
+  <script src="data/dashboard_generated.js?v=10f"></script>
   <script src="js/dashboard-utils.js?v=10"></script>
   <script src="js/wordcloud.js?v=10"></script>
   <script src="js/paths-drilldown.js?v=10"></script>
   <script src="js/retinol-tornado.js?v=10"></script>
-  <script src="js/conversation-landscape.js?v=10c"></script>
-  <script src="js/dashboard-app.js?v=10c"></script>
+  <script src="js/conversation-landscape.js?v=10f"></script>
+  <script src="js/dashboard-app.js?v=10f"></script>
 </body>
 </html>
